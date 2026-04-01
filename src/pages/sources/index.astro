@@ -1,0 +1,51 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import YAML from 'yaml';
+import Layout from '../../layouts/Layout.astro';
+
+interface SourceRecord {
+	label: string;
+	kind: string;
+	authorial_status: string;
+	priority: number;
+	base_url: string;
+}
+
+const sources = (YAML.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'manifests', 'sources.yaml'), 'utf8')) ?? []) as SourceRecord[];
+---
+
+<Layout title="Sources | 20th Century Democide">
+	<section class="stack">
+		<div class="panel">
+			<p class="kicker">Sources</p>
+			<h1>Capture origins and priority order.</h1>
+		</div>
+		<div class="panel">
+			<table>
+				<thead>
+					<tr>
+						<th>Source</th>
+						<th>Kind</th>
+						<th>Authorial status</th>
+						<th>Priority</th>
+						<th>Base URL</th>
+					</tr>
+				</thead>
+				<tbody>
+					{
+						sources.map((source) => (
+							<tr>
+								<td>{source.label}</td>
+								<td><span class="badge">{source.kind}</span></td>
+								<td>{source.authorial_status}</td>
+								<td>{source.priority}</td>
+								<td><a href={source.base_url}>{source.base_url}</a></td>
+							</tr>
+						))
+					}
+				</tbody>
+			</table>
+		</div>
+	</section>
+</Layout>

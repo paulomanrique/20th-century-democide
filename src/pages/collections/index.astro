@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+const collections = (await getCollection('collections')).sort((a, b) => a.data.sequence - b.data.sequence);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+---
+
+<Layout title="Collections | 20th Century Democide">
+	<section class="stack">
+		<div class="panel">
+			<p class="kicker">Collections</p>
+			<h1>Editorial groupings for the preserved corpus.</h1>
+		</div>
+		<div class="grid cards">
+			{
+				collections.map((entry) => (
+					<article class="panel">
+						<h2><a href={toBase(`collections/${entry.id}/`)}>{entry.data.title}</a></h2>
+						<p>{entry.data.summary}</p>
+					</article>
+				))
+			}
+		</div>
+	</section>
+</Layout>

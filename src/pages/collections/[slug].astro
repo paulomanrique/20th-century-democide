@@ -1,0 +1,79 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const collections = await getCollection('collections');
+	return collections.map((entry) => ({
+		params: { slug: entry.id },
+		props: { entry },
+	}));
+}
+
+const items = await getCollection('items', ({ data }) => !data.draft);
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const collectionItems = items
+	.filter((item) => item.data.collection === entry.data.collectionId)
+	.sort((a, b) => a.data.title.localeCompare(b.data.title));
+const noteCount = collectionItems.filter((item) => item.id.includes('note')).length;
+const figureCount = collectionItems.filter((item) => item.data.originalFormat === 'image').length;
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+---
+
+<Layout title={`${entry.data.title} | 20th Century Democide`}>
+	<section class="stack">
+		<div class="panel">
+			<p class="kicker">Collection</p>
+			<div class="eyebrow">
+				<div>
+					<h1>{entry.data.title}</h1>
+					<p>{entry.data.summary}</p>
+				</div>
+				<div class="badge-row">
+					<span class="badge">{collectionItems.length} published items</span>
+					<span class="badge">Default language: {entry.data.defaultLanguage}</span>
+					<span class="badge">{entry.data.translationReady ? 'translation-ready' : 'source-only'}</span>
+				</div>
+			</div>
+		</div>
+		<div class="panel prose">
+			<Content />
+		</div>
+		<div class="grid metrics">
+			<div class="metric">
+				<span class="kicker">Textual items</span>
+				<strong>{collectionItems.length - figureCount}</strong>
+				<small>Articles, chapters, and notes preserved as local Markdown pages.</small>
+			</div>
+			<div class="metric">
+				<span class="kicker">Figures</span>
+				<strong>{figureCount}</strong>
+				<small>Standalone images and tables kept as primary visual artifacts.</small>
+			</div>
+			<div class="metric">
+				<span class="kicker">Notes</span>
+				<strong>{noteCount}</strong>
+				<small>Supporting note pages and bibliographic apparatus within this collection.</small>
+			</div>
+		</div>
+		<div class="panel">
+			<h2>Published items</h2>
+			<ul class="link-list">
+				{
+					collectionItems.length > 0 ? (
+						collectionItems.map((item) => (
+							<li>
+								<a href={toBase(`items/${item.id}/`)}>{item.data.title}</a>
+								<span class="badge">{item.data.originalFormat}</span>
+								<span class="badge">{item.data.sourceType}</span>
+							</li>
+						))
+					) : (
+						<li>No published items yet in this collection.</li>
+					)
+				}
+			</ul>
+		</div>
+	</section>
+</Layout>

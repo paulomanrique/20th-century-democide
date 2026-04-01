@@ -1,0 +1,289 @@
+---
+interface Props {
+	title?: string;
+	description?: string;
+}
+
+const {
+	title = '20th Century Democide',
+	description = 'Preserved source material from the R.J. Rummel powerkills corpus.',
+} = Astro.props;
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="generator" content={Astro.generator} />
+		<meta name="description" content={description} />
+		<link rel="icon" type="image/svg+xml" href={toBase('favicon.svg')} />
+		<link rel="icon" href={toBase('favicon.ico')} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<div class="shell">
+			<header class="site-header">
+				<div>
+					<a class="brand" href={toBase()}>20th Century Democide</a>
+					<p class="tagline">Open preservation project for the R.J. Rummel corpus.</p>
+				</div>
+				<nav>
+					<a href={toBase('collections/')}>Collections</a>
+					<a href={toBase('sources/')}>Sources</a>
+					<a href={toBase('dashboard/')}>Dashboard</a>
+					<a href={toBase('contributing/')}>Contributing</a>
+					<a href={toBase('rights/')}>Rights</a>
+				</nav>
+			</header>
+			<main>
+				<slot />
+			</main>
+			<footer class="site-footer">
+				<p>Preserved source material is hosted locally with provenance metadata, source references, and translation-ready content records.</p>
+			</footer>
+		</div>
+	</body>
+</html>
+
+<style>
+	:root {
+		--bg: #f5efe2;
+		--ink: #1d1a17;
+		--muted: #655f58;
+		--line: rgba(29, 26, 23, 0.14);
+		--paper: rgba(255, 252, 246, 0.92);
+		--accent: #7a2e1f;
+		--mono:
+			ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New,
+			monospace;
+	}
+
+	html {
+		background:
+			radial-gradient(circle at top left, rgba(234, 210, 189, 0.8), transparent 35%),
+			linear-gradient(180deg, #f3ebda 0%, var(--bg) 48%, #ece3d1 100%);
+		color: var(--ink);
+		font-family: Georgia, Cambria, Times New Roman, Times, serif;
+	}
+
+	body {
+		margin: 0;
+		min-height: 100vh;
+	}
+
+	a {
+		color: var(--accent);
+	}
+
+	.shell {
+		max-width: 1160px;
+		margin: 0 auto;
+		padding: 1.5rem;
+	}
+
+	.site-header,
+	.site-footer {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		align-items: end;
+		padding: 1rem 0;
+		border-bottom: 1px solid var(--line);
+	}
+
+	.site-footer {
+		align-items: start;
+		border-bottom: 0;
+		border-top: 1px solid var(--line);
+		margin-top: 2rem;
+	}
+
+	.brand {
+		font-size: 1.25rem;
+		font-weight: 700;
+		text-decoration: none;
+		color: var(--ink);
+	}
+
+	.tagline,
+	.site-footer p {
+		margin: 0.25rem 0 0;
+		color: var(--muted);
+		font-size: 0.95rem;
+	}
+
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+
+	nav a {
+		text-decoration: none;
+		font-size: 0.95rem;
+	}
+
+	main {
+		padding-top: 1.5rem;
+	}
+
+	.panel {
+		background: var(--paper);
+		border: 1px solid var(--line);
+		border-radius: 18px;
+		padding: 1.2rem;
+		box-shadow: 0 22px 50px rgba(68, 48, 25, 0.08);
+	}
+
+	.grid {
+		display: grid;
+		gap: 1rem;
+	}
+
+	.metrics {
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+	}
+
+	.cards {
+		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	}
+
+	.metric {
+		padding: 1rem;
+		border: 1px solid var(--line);
+		border-radius: 14px;
+		background: rgba(255, 255, 255, 0.5);
+	}
+
+	.metric strong {
+		display: block;
+		font-size: 1.9rem;
+	}
+
+	.metric small {
+		display: block;
+		margin-top: 0.3rem;
+		color: var(--muted);
+		line-height: 1.4;
+	}
+
+	.kicker {
+		font-size: 0.82rem;
+		text-transform: uppercase;
+		letter-spacing: 0.08em;
+		color: var(--muted);
+	}
+
+	.badge {
+		display: inline-flex;
+		align-items: center;
+		padding: 0.18rem 0.55rem;
+		border-radius: 999px;
+		font-size: 0.74rem;
+		border: 1px solid var(--line);
+		background: rgba(255, 255, 255, 0.7);
+	}
+
+	.badge-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.45rem;
+	}
+
+	.link-list,
+	.meta-list {
+		padding-left: 1.1rem;
+		margin: 0.8rem 0 0;
+	}
+
+	.link-list li,
+	.meta-list li {
+		line-height: 1.6;
+	}
+
+	.eyebrow {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		align-items: start;
+		flex-wrap: wrap;
+	}
+
+	.progress {
+		height: 0.7rem;
+		border-radius: 999px;
+		background: rgba(29, 26, 23, 0.08);
+		overflow: hidden;
+		margin-top: 0.7rem;
+	}
+
+	.progress > span {
+		display: block;
+		height: 100%;
+		background: linear-gradient(90deg, #a2462a 0%, var(--accent) 100%);
+	}
+
+	.subtle {
+		color: var(--muted);
+	}
+
+	.columns {
+		display: grid;
+		grid-template-columns: 2fr 1fr;
+		gap: 1rem;
+	}
+
+	.callout {
+		border-left: 4px solid var(--accent);
+		padding-left: 1rem;
+	}
+
+	.stack > * + * {
+		margin-top: 1rem;
+	}
+
+	table {
+		width: 100%;
+		border-collapse: collapse;
+		font-size: 0.95rem;
+	}
+
+	th,
+	td {
+		padding: 0.7rem 0.5rem;
+		border-bottom: 1px solid var(--line);
+		text-align: left;
+		vertical-align: top;
+	}
+
+	code {
+		font-family: var(--mono);
+		font-size: 0.92em;
+	}
+
+	pre {
+		overflow-x: auto;
+		padding: 1rem;
+		border-radius: 14px;
+		background: #221f1b;
+		color: #f8f4ed;
+	}
+
+	@media (max-width: 720px) {
+		.shell {
+			padding: 1rem;
+		}
+
+		.columns {
+			grid-template-columns: 1fr;
+		}
+
+		.site-header,
+		.site-footer {
+			flex-direction: column;
+			align-items: start;
+		}
+	}
+</style>

@@ -1,0 +1,96 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+
+export async function getStaticPaths() {
+	const items = await getCollection('items', ({ data }) => !data.draft);
+	return items.map((entry) => ({
+		params: { slug: entry.id },
+		props: { entry },
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+const collectionEntries = await getCollection('collections');
+const collectionEntry = collectionEntries.find((candidate) => candidate.data.collectionId === entry.data.collection);
+const siblingItems = (await getCollection('items', ({ data }) => !data.draft))
+	.filter((candidate) => candidate.data.collection === entry.data.collection && candidate.id !== entry.id)
+	.sort((a, b) => a.data.title.localeCompare(b.data.title))
+	.slice(0, 8);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+---
+
+<Layout title={`${entry.data.title} | 20th Century Democide`}>
+	<section class="stack">
+		<div class="panel">
+			<p class="kicker">Preserved item</p>
+			<h1>{entry.data.title}</h1>
+			<div class="badge-row">
+				<span class="badge">{entry.data.sourceType}</span>
+				<span class="badge">{entry.data.originalFormat}</span>
+				<span class="badge">language: {entry.data.language}</span>
+				<span class="badge">translation: {entry.data.translationStatus}</span>
+			</div>
+			{
+				collectionEntry && (
+					<p class="subtle">
+						Collection: <a href={toBase(`collections/${collectionEntry.id}/`)}>{collectionEntry.data.title}</a>
+					</p>
+				)
+			}
+		</div>
+		<div class="panel">
+			<h2>Provenance</h2>
+			<table>
+				<tbody>
+					<tr><th>Item ID</th><td><code>{entry.data.itemId}</code></td></tr>
+					<tr><th>Original URL</th><td><a href={entry.data.originalUrl}>{entry.data.originalUrl}</a></td></tr>
+					<tr><th>Source used</th><td><a href={entry.data.sourceUsed}>{entry.data.sourceUsed}</a></td></tr>
+					<tr><th>Capture date</th><td>{entry.data.captureDate}</td></tr>
+					<tr><th>Content language</th><td>{entry.data.language}</td></tr>
+					<tr><th>Available locales</th><td>{entry.data.availableLocales.join(', ')}</td></tr>
+					<tr><th>Translation status</th><td>{entry.data.translationStatus}</td></tr>
+					{
+						entry.data.translationSourceItemId && (
+							<tr><th>Translation source item</th><td><code>{entry.data.translationSourceItemId}</code></td></tr>
+						)
+					}
+					<tr><th>Source record</th><td>{entry.data.provenance.sourceId}</td></tr>
+					<tr><th>Raw path</th><td><code>{entry.data.provenance.rawPath}</code></td></tr>
+					<tr><th>SHA-256</th><td><code>{entry.data.provenance.hash}</code></td></tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="panel callout">
+			<h2>Editorial status</h2>
+			<p>
+				This page is the preserved English source item. Future translated editions should keep this page as the
+				audit anchor and record any locale-specific corrections separately.
+			</p>
+		</div>
+		<article class="panel prose">
+			<Content />
+		</article>
+		{
+			entry.data.editorialNotes.length > 0 && (
+				<div class="panel">
+					<h2>Editorial notes</h2>
+					<ul>
+						{entry.data.editorialNotes.map((note) => <li>{note}</li>)}
+					</ul>
+				</div>
+			)
+		}
+		{
+			siblingItems.length > 0 && (
+				<div class="panel">
+					<h2>More from this collection</h2>
+					<ul class="link-list">
+						{siblingItems.map((item) => <li><a href={toBase(`items/${item.id}/`)}>{item.data.title}</a></li>)}
+					</ul>
+				</div>
+			)
+		}
+	</section>
+</Layout>

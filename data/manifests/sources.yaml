@@ -1,0 +1,21 @@
+- source_id: hawaii-powerkills
+  kind: original_site
+  label: University of Hawaii powerkills site
+  base_url: https://www.hawaii.edu/powerkills/
+  authorial_status: self-authored
+  priority: 1
+  notes: Primary source site for the preserved corpus.
+- source_id: freedomspeace-blogspot
+  kind: original_blog
+  label: Freedom's Peace blog
+  base_url: http://freedomspeace.blogspot.com/
+  authorial_status: self-authored
+  priority: 2
+  notes: Blogspot posts used for later reevaluations and updates.
+- source_id: wayback
+  kind: wayback
+  label: Internet Archive Wayback Machine
+  base_url: https://web.archive.org/
+  authorial_status: third-party-host
+  priority: 4
+  notes: Fallback source for missing or degraded originals.

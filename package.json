@@ -1,0 +1,34 @@
+{
+  "name": "20th-century-democide",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "inventory:20th": "node scripts/inventory/extract_20th_index.mjs",
+    "fetch:item": "node scripts/fetch/fetch_item.mjs",
+    "fetch:assets": "node scripts/fetch/fetch_assets.mjs",
+    "normalize:item": "node scripts/normalize/html_to_markdown.mjs",
+    "validate:manifests": "node scripts/validate/check_manifest_consistency.mjs",
+    "validate:links": "node scripts/validate/check_links.mjs",
+    "validate:sync-status": "node scripts/validate/sync_manifest_status.mjs",
+    "validate": "npm run validate:manifests && npm run validate:links && astro check && astro build"
+  },
+  "dependencies": {
+    "astro": "^6.1.2",
+    "cheerio": "^1.2.0",
+    "turndown": "^7.2.2",
+    "yaml": "^2.8.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.8",
+    "@types/node": "^25.5.0",
+    "typescript": "^5.9.3"
+  }
+}

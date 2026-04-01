@@ -1,0 +1,23 @@
+---
+interface Metric {
+	label: string;
+	value: number | string;
+}
+
+interface Props {
+	metrics: Metric[];
+}
+
+const { metrics } = Astro.props;
+---
+
+<div class="grid metrics">
+	{
+		metrics.map((metric) => (
+			<div class="metric">
+				<span class="kicker">{metric.label}</span>
+				<strong>{metric.value}</strong>
+			</div>
+		))
+	}
+</div>

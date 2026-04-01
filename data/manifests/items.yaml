@@ -1,0 +1,963 @@
+- item_id: 20th-century-democide
+  title: 20th Century Democide
+  short_title: 20TH.HTM
+  collection_id: 20th-century-democide
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: democide
+  original_url: https://www.hawaii.edu/powerkills/20TH.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - democide
+    - index
+    - twentieth-century
+  related_item_ids:
+    - reevaluating-chinas-democide
+    - reevaluating-colonial-democide
+- item_id: american-bombing-and-other-democide
+  title: American
+  short_title: SOD.CHAP13.HTM
+  collection_id: statistics-of-democide
+  item_type: chapter
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.CHAP13.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: american-bombing-table
+  title: estimates, calculations, and sources
+  short_title: SOD.TAB13.1.GIF
+  collection_id: statistics-of-democide
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.TAB13.1.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: centi-kilo-murderers
+  title: centi-kilo
+  short_title: SOD.CHAP14.HTM
+  collection_id: statistics-of-democide
+  item_type: chapter
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.CHAP14.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: chinas-bloody-century-note
+  title: China's Bloody Century
+  short_title: NOTE2.HTM
+  collection_id: chinas-bloody-century
+  item_type: note
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/NOTE2.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: death-by-government
+  title: Death by Government
+  short_title: NOTE1.HTM
+  collection_id: death-by-government
+  item_type: note
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/NOTE1.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: death-by-government-chapter-1
+  title: "1900-1987: 169,198,000 Murdered"
+  short_title: DBG Chapter 1
+  collection_id: death-by-government
+  item_type: chapter
+  language: en
+  original_date: 1994
+  site_section: death-by-government
+  original_url: https://www.hawaii.edu/powerkills/DBG.CHAP1.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - death-by-government
+    - chapter
+    - overview
+  related_item_ids:
+    - 20th-century-democide
+- item_id: death-by-government-table-1-2
+  title: Death by Government Table 1.2
+  short_title: DBG.TAB1.2.GIF
+  collection_id: death-by-government
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/DBG.TAB1.2.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: death-or-democracy-note-15
+  title: Death by Government in China and Cambodia Note 15
+  short_title: NOTE15.HTM
+  collection_id: notes-tables-and-figures
+  item_type: note
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/NOTE15.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: definition-and-qualifications
+  title: Definition and qualifications
+  short_title: DBG.CHAP2.HTM
+  collection_id: death-by-government
+  item_type: chapter
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/DBG.CHAP2.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: democide-nazi-genocide-and-mass-murder-note
+  title: "Democide: Nazi Genocide and Mass Murder"
+  short_title: NOTE3.HTM
+  collection_id: democide-nazi-genocide-and-mass-murder
+  item_type: note
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/NOTE3.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: democide-since-world-war-ii
+  title: since World War II
+  short_title: POSTWWII.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/POSTWWII.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: democide-summary-by-regime-table
+  title: Summary by regime table
+  short_title: SOD.TAB16A.1.GIF
+  collection_id: statistics-of-democide
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.TAB16A.1.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: democide-versus-genocide
+  title: Democide versus genocide
+  short_title: GENOCIDE.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/GENOCIDE.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: democide-year-by-year-figure
+  title: Democide year-by-year figure
+  short_title: SOD.FIG23.2.GIF
+  collection_id: statistics-of-democide
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.FIG23.2.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: dimensions
+  title: ""
+  short_title: DIMENSIONS.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/DIMENSIONS.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: gallery
+  title: ""
+  short_title: GALLERY.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/GALLERY.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: holocaust-in-comparative-perspective
+  title: Holocaust
+  short_title: HOLO.PAPER.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/HOLO.PAPER.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: how-many-did-communism-murder
+  title: communism
+  short_title: COM.ART.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/COM.ART.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: khmer-rouge-and-rwandan-genocide-section
+  title: Cambodian democide and Rwandan genocide
+  short_title: WF.CHAP6.HTM
+  collection_id: articles-and-papers
+  item_type: chapter
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/WF.CHAP6.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: lesser
+  title: ""
+  short_title: LESSER.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/LESSER.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: lesser-murderers
+  title: lesser
+  short_title: SOD.CHAP15.HTM
+  collection_id: statistics-of-democide
+  item_type: chapter
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.CHAP15.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: lethal-politics-note
+  title: Lethal Politics
+  short_title: NOTE4.HTM
+  collection_id: lethal-politics
+  item_type: note
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/NOTE4.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: links
+  title: ""
+  short_title: LINKS.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/LINKS.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: list
+  title: ""
+  short_title: LIST.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/LIST.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: mega
+  title: ""
+  short_title: MEGA.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/MEGA.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: miracle
+  title: ""
+  short_title: MIRACLE.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/MIRACLE.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: mortacracies-and-megamurderers-annotated-bibliography
+  title: annotated
+  short_title: CHARNY.CHAP.HTM
+  collection_id: articles-and-papers
+  item_type: chapter
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/CHARNY.CHAP.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: murder
+  title: ""
+  short_title: MURDER.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/MURDER.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: personal
+  title: ""
+  short_title: PERSONAL.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/PERSONAL.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: policy
+  title: ""
+  short_title: POLICY.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/POLICY.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: quasi-state-democide-table
+  title: quasi-states
+  short_title: SOD.TAB14.2.GIF
+  collection_id: statistics-of-democide
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.TAB14.2.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: reevaluating-chinas-democide
+  title: Reevaluating China's Democide to Be 76,702,000
+  short_title: China reevaluation
+  collection_id: chinas-bloody-century
+  item_type: article
+  language: en
+  original_date: 2005-11
+  site_section: blog-revision
+  original_url: http://freedomspeace.blogspot.com/2005/11/reevaluating-chinas-democide-to-be.html
+  preferred_source_id: freedomspeace-blogspot
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - china
+    - reevaluation
+    - democide
+  related_item_ids:
+    - 20th-century-democide
+- item_id: reevaluating-colonial-democide
+  title: Reevaluating Colonial Democide
+  short_title: Colonial reevaluation
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: 2005-12
+  site_section: blog-revision
+  original_url: http://freedomspeace.blogspot.com/2005/12/reevaluating-colonial-democide.html
+  preferred_source_id: freedomspeace-blogspot
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - colonialism
+    - reevaluation
+    - democide
+  related_item_ids:
+    - 20th-century-democide
+- item_id: rm1-rings-of-tears
+  title: ""
+  short_title: RM1.RINGS.OF.TEARS.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/RM1.RINGS.OF.TEARS.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: social-field-democide-types-table
+  title: Types of democide table
+  short_title: SOD.TAB16.1.GIF
+  collection_id: statistics-of-democide
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.TAB16.1.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: social-field-descriptive-statistics-table
+  title: Descriptive statistics table
+  short_title: SOD.TAB16.2.GIF
+  collection_id: statistics-of-democide
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.TAB16.2.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: social-field-factors-table
+  title: Factors table
+  short_title: SOD.TAB16.4.GIF
+  collection_id: statistics-of-democide
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.TAB16.4.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: social-field-intercorrelations-table
+  title: Intercorrelations table
+  short_title: SOD.TAB16.3.GIF
+  collection_id: statistics-of-democide
+  item_type: figure
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.TAB16.3.GIF
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: social-field-of-democide
+  title: social field
+  short_title: SOD.CHAP16.HTM
+  collection_id: statistics-of-democide
+  item_type: chapter
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.CHAP16.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: statistics-of-democide-note
+  title: Statistics of Democide
+  short_title: NOTE5.HTM
+  collection_id: notes-tables-and-figures
+  item_type: note
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/NOTE5.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: statistics-of-democide-notes
+  title: Statistics of Democide notes
+  short_title: SOD.NOTE.HTM
+  collection_id: statistics-of-democide
+  item_type: note
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.NOTE.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: statistics-of-democide-sources
+  title: Statistics of Democide sources
+  short_title: SOD.REF.HTM
+  collection_id: statistics-of-democide
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/SOD.REF.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: tech
+  title: ""
+  short_title: TECH.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/TECH.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: theory
+  title: ""
+  short_title: THEORY.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/THEORY.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: violence
+  title: ""
+  short_title: VIOLENCE.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/VIOLENCE.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: war-isnt-this-centurys-biggest-killer
+  title: "pilot study:"
+  short_title: WSJ.ART.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/WSJ.ART.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: welcome
+  title: ""
+  short_title: welcome.html
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/welcome.html
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: what-is-genocide
+  title: Genocide?
+  short_title: GENOCIDE.ENCY.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/GENOCIDE.ENCY.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []
+- item_id: why
+  title: ""
+  short_title: WHY.HTM
+  collection_id: articles-and-papers
+  item_type: article
+  language: en
+  original_date: unknown
+  site_section: 20th-index
+  original_url: https://www.hawaii.edu/powerkills/WHY.HTM
+  preferred_source_id: hawaii-powerkills
+  fallback_source_ids:
+    - wayback
+  capture_status: published
+  rights_note: Preserved source material, rights retained by original rights
+    holders unless stated otherwise.
+  translation_status: not-started
+  tags:
+    - 20th-century-democide
+  related_item_ids: []

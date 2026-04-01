@@ -1,0 +1,27 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contributing | 20th Century Democide">
+	<section class="stack">
+		<div class="panel">
+			<p class="kicker">Contributing</p>
+			<h1>Preservation work should be auditable, incremental, and source-based.</h1>
+			<p>
+				Open pull requests for source recovery, metadata corrections, and normalization improvements. Keep
+				editorial intervention outside the preserved body text and include provenance for every substantive
+				change.
+			</p>
+		</div>
+		<div class="panel">
+			<h2>Recommended flow</h2>
+			<ol>
+				<li>Update the relevant manifest entry.</li>
+				<li>Capture or recover the raw source.</li>
+				<li>Record hashes and source metadata.</li>
+				<li>Normalize into Markdown only after the raw capture is stable.</li>
+				<li>Run <code>npm run validate</code>.</li>
+			</ol>
+		</div>
+	</section>
+</Layout>

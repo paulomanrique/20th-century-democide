@@ -1,0 +1,175 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { getCollection } from 'astro:content';
+import YAML from 'yaml';
+import Layout from '../layouts/Layout.astro';
+import ManifestStats from '../components/ManifestStats.astro';
+
+interface ManifestItem {
+	item_id: string;
+	title: string;
+	collection_id: string;
+	item_type: string;
+	capture_status: string;
+	translation_status?: string;
+}
+
+interface SourceRecord {
+	source_id: string;
+}
+
+const root = path.join(process.cwd(), 'data', 'manifests');
+const items = (YAML.parse(fs.readFileSync(path.join(root, 'items.yaml'), 'utf8')) ?? []) as ManifestItem[];
+const sources = (YAML.parse(fs.readFileSync(path.join(root, 'sources.yaml'), 'utf8')) ?? []) as SourceRecord[];
+const collectionEntries = await getCollection('collections');
+const publishedEntries = await getCollection('items', ({ data }) => !data.draft);
+
+const byStatus = items.reduce<Record<string, number>>((acc, item) => {
+	acc[item.capture_status] = (acc[item.capture_status] ?? 0) + 1;
+	return acc;
+}, {});
+
+const metrics = [
+	{ label: 'Indexed Items', value: items.length },
+	{ label: 'Published Items', value: publishedEntries.length },
+	{ label: 'Sources', value: sources.length },
+	{ label: 'Collections', value: collectionEntries.length },
+	{ label: 'Pending', value: byStatus.pending ?? 0 },
+	{ label: 'Blocked', value: byStatus.blocked ?? 0 },
+];
+
+const completion = items.length === 0 ? 0 : Math.round(((byStatus.published ?? 0) / items.length) * 100);
+const collectionStats = collectionEntries
+	.map((entry) => {
+		const group = items.filter((item) => item.collection_id === entry.data.collectionId);
+		return {
+			id: entry.id,
+			title: entry.data.title,
+			summary: entry.data.summary,
+			total: group.length,
+			published: group.filter((item) => item.capture_status === 'published').length,
+			textItems: group.filter((item) => ['article', 'chapter'].includes(item.item_type)).length,
+			referenceItems: group.filter((item) => ['note', 'figure'].includes(item.item_type)).length,
+		};
+	})
+	.sort((a, b) => a.title.localeCompare(b.title));
+
+const readingSet = publishedEntries
+	.slice()
+	.sort((a, b) => a.data.title.localeCompare(b.data.title))
+	.slice(0, 6);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+---
+
+<Layout title="20th Century Democide" description="Preserved source material from the R.J. Rummel powerkills corpus.">
+	<section class="stack">
+		<div class="panel">
+			<p class="kicker">Preservation-first archive</p>
+			<h1>R.J. Rummel's scattered democide corpus, rebuilt as a local, auditable library.</h1>
+			<p>
+				This project preserves source material from <code>hawaii.edu/powerkills</code>, self-authored blogs,
+				and archival fallbacks. Each published item keeps its provenance trail, capture metadata, and a local
+				copy of the content required to render it without relying on the original host.
+			</p>
+			<div class="badge-row">
+				<span class="badge">{completion}% of the founder slice published</span>
+				<span class="badge">English preservation edition</span>
+				<span class="badge">Translation-ready metadata</span>
+			</div>
+		</div>
+		<ManifestStats metrics={metrics} />
+		<div class="columns">
+			<div class="panel">
+				<p class="kicker">Collections</p>
+				<h2>Archive map</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Collection</th>
+							<th>Published</th>
+							<th>Profile</th>
+						</tr>
+					</thead>
+					<tbody>
+						{
+							collectionStats.map((entry) => (
+								<tr>
+									<td>
+										<a href={toBase(`collections/${entry.id}/`)}>{entry.title}</a>
+										<div class="subtle">{entry.summary}</div>
+									</td>
+									<td>{entry.published}/{entry.total}</td>
+									<td class="subtle">
+										{entry.textItems} text, {entry.referenceItems} notes/figures
+									</td>
+								</tr>
+							))
+						}
+					</tbody>
+				</table>
+			</div>
+			<div class="panel">
+				<p class="kicker">Reading set</p>
+				<h2>Published sample</h2>
+				<ul class="link-list">
+					{
+						readingSet.map((entry) => (
+							<li>
+								<a href={toBase(`items/${entry.id}/`)}>{entry.data.title}</a>
+							</li>
+						))
+					}
+				</ul>
+				<p><a href={toBase('dashboard/')}>Open the preservation dashboard</a></p>
+			</div>
+		</div>
+		<div class="grid cards">
+			<div class="panel">
+				<p class="kicker">Provenance</p>
+				<h2>How recovery works</h2>
+				<p>
+					The tooling prefers originals, then authorial mirrors, then Wayback snapshots. Raw captures,
+					checksums, normalized Markdown, and local assets remain in the repository.
+				</p>
+				<p><a href={toBase('sources/')}>Browse sources and priorities</a></p>
+			</div>
+			<div class="panel">
+				<p class="kicker">Editorial policy</p>
+				<h2>Preservation before interpretation</h2>
+				<p>
+					Text is preserved with minimal intervention. Project notes stay separate from the body, and any
+					future translation will point back to the preserved English source item.
+				</p>
+				<p><a href={toBase('contributing/')}>Read contribution and correction rules</a></p>
+			</div>
+			<div class="panel">
+				<p class="kicker">Rights</p>
+				<h2>Code and source material stay separate</h2>
+				<p>
+					The repository's code is open-source infrastructure. Preserved texts and images remain attributed
+					source material unless a source says otherwise.
+				</p>
+				<p><a href={toBase('rights/')}>Review rights and attribution</a></p>
+			</div>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	h1 {
+		font-size: clamp(2rem, 5vw, 4rem);
+		line-height: 0.95;
+		max-width: 14ch;
+		margin: 0.25rem 0 1rem;
+	}
+
+	h2 {
+		margin: 0.25rem 0 0.75rem;
+	}
+
+	p,
+	li {
+		line-height: 1.65;
+	}
+</style>

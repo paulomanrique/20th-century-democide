@@ -1,0 +1,183 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { getCollection } from 'astro:content';
+import YAML from 'yaml';
+import Layout from '../layouts/Layout.astro';
+
+interface DashboardItem {
+	item_id: string;
+	title: string;
+	collection_id: string;
+	item_type: string;
+	capture_status: string;
+	translation_status?: string;
+	original_url: string;
+}
+
+const items = (YAML.parse(
+	fs.readFileSync(path.join(process.cwd(), 'data', 'manifests', 'items.yaml'), 'utf8'),
+) ?? []) as DashboardItem[];
+const collectionEntries = await getCollection('collections');
+
+const statuses = ['pending', 'captured', 'normalized', 'published', 'blocked'];
+const counts = Object.fromEntries(
+	statuses.map((status) => [status, items.filter((item) => item.capture_status === status).length]),
+);
+const translationCounts = items.reduce<Record<string, number>>((acc, item) => {
+	const key = item.translation_status ?? 'not-started';
+	acc[key] = (acc[key] ?? 0) + 1;
+	return acc;
+}, {});
+
+const collectionTitleById = Object.fromEntries(
+	collectionEntries.map((record) => [record.data.collectionId, record.data.title]),
+);
+const byCollection = Object.entries(
+	items.reduce<Record<string, DashboardItem[]>>((acc, item) => {
+		(acc[item.collection_id] ??= []).push(item);
+		return acc;
+	}, {}),
+)
+	.map(([collectionId, group]) => ({
+		collectionId,
+		title: collectionTitleById[collectionId] ?? collectionId,
+		total: group.length,
+		published: group.filter((item) => item.capture_status === 'published').length,
+		figures: group.filter((item) => item.item_type === 'figure').length,
+		notes: group.filter((item) => item.item_type === 'note').length,
+		articles: group.filter((item) => ['article', 'chapter'].includes(item.item_type)).length,
+	}))
+	.sort((a, b) => b.published - a.published || a.title.localeCompare(b.title));
+
+const byType = Object.entries(
+	items.reduce<Record<string, number>>((acc, item) => {
+		acc[item.item_type] = (acc[item.item_type] ?? 0) + 1;
+		return acc;
+	}, {}),
+)
+	.map(([itemType, count]) => ({ itemType, count }))
+	.sort((a, b) => b.count - a.count || a.itemType.localeCompare(b.itemType));
+
+const completion = items.length === 0 ? 0 : Math.round((counts.published / items.length) * 100);
+const recentPublished = items
+	.filter((item) => item.capture_status === 'published')
+	.slice()
+	.sort((a, b) => a.title.localeCompare(b.title))
+	.slice(0, 12);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+---
+
+<Layout title="Dashboard | 20th Century Democide">
+	<section class="stack">
+		<div class="panel">
+			<p class="kicker">Preservation dashboard</p>
+			<div class="eyebrow">
+				<div>
+					<h1>Inventory status for the `20TH.HTM` recovery track.</h1>
+					<p class="subtle">
+						The founder slice is now fully published. This dashboard shows how the archive breaks down by
+						collection, item type, and translation readiness.
+					</p>
+				</div>
+				<div class="badge-row">
+					<span class="badge">{completion}% published</span>
+					<span class="badge">{items.length} indexed items</span>
+				</div>
+			</div>
+			<div class="progress" aria-label="Preservation completion">
+				<span style={`width: ${completion}%`}></span>
+			</div>
+		</div>
+		<div class="grid metrics">
+			{
+				statuses.map((status) => (
+					<div class="metric">
+						<span class="kicker">{status}</span>
+						<strong>{counts[status]}</strong>
+					</div>
+				))
+			}
+			<div class="metric">
+				<span class="kicker">Translation status</span>
+				<strong>{translationCounts['not-started'] ?? 0}</strong>
+				<small>Items are preserved in English and ready for future locale-specific drafts.</small>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="panel">
+				<h2>Completion by collection</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>Collection</th>
+							<th>Published</th>
+							<th>Profile</th>
+						</tr>
+					</thead>
+					<tbody>
+						{
+							byCollection.map((entry) => (
+								<tr>
+									<td>
+										<a href={toBase(`collections/${entry.collectionId}/`)}>{entry.title}</a>
+									</td>
+									<td>{entry.published}/{entry.total}</td>
+									<td class="subtle">
+										{entry.articles} text, {entry.notes} notes, {entry.figures} figures
+									</td>
+								</tr>
+							))
+						}
+					</tbody>
+				</table>
+			</div>
+			<div class="panel">
+				<h2>Inventory by type</h2>
+				<ul class="meta-list">
+					{
+						byType.map((entry) => (
+							<li>
+								<strong>{entry.count}</strong> {entry.itemType}
+							</li>
+						))
+					}
+				</ul>
+			</div>
+		</div>
+		<div class="panel">
+			<h2>Published item sample</h2>
+			<table>
+				<thead>
+					<tr>
+						<th>Item</th>
+						<th>Collection</th>
+						<th>Type</th>
+						<th>Origin</th>
+					</tr>
+				</thead>
+				<tbody>
+					{
+						recentPublished.map((item) => (
+							<tr>
+								<td>
+									<a href={toBase(`items/${item.item_id}/`)}>{item.title}</a>
+								</td>
+								<td>{collectionTitleById[item.collection_id] ?? item.collection_id}</td>
+								<td><span class="badge">{item.item_type}</span></td>
+								<td><a href={item.original_url}>source</a></td>
+							</tr>
+						))
+					}
+				</tbody>
+			</table>
+		</div>
+	</section>
+</Layout>
+
+<style>
+	h1 {
+		margin: 0.25rem 0 0.75rem;
+		font-size: clamp(1.8rem, 3.5vw, 3rem);
+	}
+</style>
