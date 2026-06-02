@@ -17,8 +17,9 @@
     "normalize:item": "node scripts/normalize/html_to_markdown.mjs",
     "validate:manifests": "node scripts/validate/check_manifest_consistency.mjs",
     "validate:links": "node scripts/validate/check_links.mjs",
+    "validate:i18n": "node scripts/validate/check_i18n.mjs",
     "validate:sync-status": "node scripts/validate/sync_manifest_status.mjs",
-    "validate": "npm run validate:manifests && npm run validate:links && astro check && astro build"
+    "validate": "npm run validate:manifests && npm run validate:links && npm run validate:i18n && astro check && astro build"
   },
   "dependencies": {
     "astro": "^6.1.2",

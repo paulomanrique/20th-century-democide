@@ -1,0 +1,52 @@
+import type { Lang } from '../index';
+
+export const common: Record<string, Record<Lang, string>> = {
+  'common.deaths.label': {
+    pt: 'mortes estimadas',
+    en: 'estimated deaths',
+    es: 'muertes estimadas',
+    fr: 'morts estimées',
+    it: 'morti stimate',
+    de: 'geschätzte Tode',
+    zh: '估计死亡人数',
+    ja: '推定死者数',
+  },
+  'common.period.label': {
+    pt: 'período',
+    en: 'period',
+    es: 'período',
+    fr: 'période',
+    it: 'periodo',
+    de: 'Zeitraum',
+    zh: '时期',
+    ja: '時期',
+  },
+  'common.sources.kicker': {
+    pt: 'Fontes primárias preservadas',
+    en: 'Preserved primary sources',
+    es: 'Fuentes primarias preservadas',
+    fr: 'Sources primaires préservées',
+    it: 'Fonti primarie preservate',
+    de: 'Erhaltene Primärquellen',
+    zh: '保存的原始资料',
+    ja: '保存された一次資料',
+  },
+  'common.see.analysis': {
+    pt: 'Ver análise →',
+    en: 'See analysis →',
+    es: 'Ver análisis →',
+    fr: "Voir l'analyse →", it: 'Vedi analisi →', de: 'Analyse ansehen →',
+    zh: '查看分析 →',
+    ja: '分析を見る →',
+  },
+  'common.democidios.breadcrumb': {
+    pt: 'Democídios',
+    en: 'Democides',
+    es: 'Democidios',
+    fr: 'Démocides',
+    it: 'Democidi',
+    de: 'Demokratizide',
+    zh: '民主灭绝',
+    ja: 'デモサイド',
+  },
+};

@@ -1,0 +1,44 @@
+import type { Lang } from '../index';
+
+export const home: Record<string, Record<Lang, string>> = {
+  'home.overline': {
+    pt: 'Arquivo de preservação · R.J. Rummel · corpus <em>powerkills</em>',
+    en: 'Preservation archive · R.J. Rummel · <em>powerkills</em> corpus',
+    es: 'Archivo de preservación · R.J. Rummel · corpus <em>powerkills</em>',
+    fr: 'Archive de préservation · R.J. Rummel · corpus <em>powerkills</em>',
+    it: 'Archivio di preservazione · R.J. Rummel · corpus <em>powerkills</em>',
+    de: 'Erhaltungsarchiv · R.J. Rummel · <em>powerkills</em>-Korpus',
+    zh: '保存档案 · R.J. Rummel · <em>powerkills</em> 语料库',
+    ja: '保存アーカイブ · R.J. Rummel · <em>powerkills</em> コーパス',
+  },
+  'home.h1': {
+    pt: 'Governos mataram <em>262 milhões</em> de pessoas no século\u00a0XX.',
+    en: 'Governments killed <em>262 million</em> people in the 20th\u00a0century.',
+    es: 'Los gobiernos mataron a <em>262 millones</em> de personas en el siglo\u00a0XX.',
+    fr: 'Les gouvernements ont tué <em>262 millions</em> de personnes au XX<sup>e</sup>\u00a0siècle.',
+    it: 'I governi hanno ucciso <em>262 milioni</em> di persone nel XX\u00a0secolo.',
+    de: 'Regierungen töteten <em>262 Millionen</em> Menschen im 20.\u00a0Jahrhundert.',
+    zh: '20世纪，各国政府杀害了 <em>2.62亿</em> 人。',
+    ja: '20世紀、政府は <em>2億6200万人</em> を殺害しました。',
+  },
+  'home.intro1': {
+    pt: 'Mais do que todas as guerras do período combinadas. O cientista político R.J.\u00a0Rummel passou quarenta anos documentando isso — produzindo o registro estatístico mais abrangente já realizado sobre assassinatos em massa praticados por governos.',
+    en: 'More than all the wars of the period combined. Political scientist R.J.\u00a0Rummel spent forty years documenting this — producing the most comprehensive statistical record ever made of mass killings carried out by governments.',
+    es: 'Más que todas las guerras del período combinadas. El politólogo R.J.\u00a0Rummel pasó cuarenta años documentando esto — produciendo el registro estadístico más completo jamás realizado sobre asesinatos en masa cometidos por gobiernos.',
+    fr: 'Plus que toutes les guerres de la période réunies. Le politologue R.J.\u00a0Rummel a passé quarante ans à documenter cela — produisant le registre statistique le plus complet jamais réalisé sur les massacres commis par les gouvernements.',
+    it: "Più di tutte le guerre del periodo messe insieme. Il politologo R.J.\u00a0Rummel ha trascorso quarant'anni a documentare questo — producendo il registro statistico più completo mai realizzato sulle uccisioni di massa perpetrate dai governi.",
+    de: 'Mehr als alle Kriege des Zeitraums zusammen. Der Politikwissenschaftler R.J.\u00a0Rummel verbrachte vierzig Jahre damit, dies zu dokumentieren — und schuf das umfassendste statistische Register, das je über Massentötungen durch Regierungen erstellt wurde.',
+    zh: '超过同期所有战争的总和。政治学家 R.J.\u00a0Rummel 花了四十年记录这一切——制作了迄今为止最全面的政府大规模屠杀统计记录。',
+    ja: 'この時代のすべての戦争を合わせたよりも多い数字です。政治学者 R.J.\u00a0Rummel は40年をかけてこれを記録し、政府による大量虐殺に関する史上最も包括的な統計記録を作成しました。',
+  },
+  'home.intro2': {
+    pt: 'Rummel chamou esse fenômeno de <strong>democídio</strong>: o assassinato de qualquer pessoa ou povo pelo seu próprio governo. Sua obra foi publicada no site da Universidade do Havaí e corre risco de ser perdida. Este projeto preserva esse corpus e oferece contexto editorial para compreendê-lo.',
+    en: 'Rummel called this phenomenon <strong>democide</strong>: the murder of any person or people by their own government. His work was published on the University of Hawaii website and is at risk of being lost. This project preserves that corpus and provides editorial context to understand it.',
+    es: 'Rummel llamó a este fenómeno <strong>democidio</strong>: el asesinato de cualquier persona o pueblo por su propio gobierno. Su obra fue publicada en el sitio web de la Universidad de Hawái y corre el riesgo de perderse. Este proyecto preserva ese corpus y ofrece contexto editorial para comprenderlo.',
+    fr: "Rummel a appelé ce phénomène <strong>démocide</strong>\u00a0: le meurtre de toute personne ou peuple par son propre gouvernement. Son œuvre a été publiée sur le site de l'Université d'Hawaï et risque d'être perdue. Ce projet préserve ce corpus et offre un contexte éditorial pour le comprendre.",
+    it: "Rummel chiamò questo fenomeno <strong>democidio</strong>: l'omicidio di qualsiasi persona o popolo da parte del proprio governo. La sua opera è stata pubblicata sul sito dell'Università delle Hawaii e rischia di andare perduta. Questo progetto preserva quel corpus e offre un contesto editoriale per comprenderlo.",
+    de: 'Rummel nannte dieses Phänomen <strong>Demokratizid</strong>: den Mord an einer Person oder einem Volk durch die eigene Regierung. Sein Werk wurde auf der Website der Universität Hawaii veröffentlicht und droht verloren zu gehen. Dieses Projekt bewahrt dieses Korpus und bietet redaktionellen Kontext zum Verständnis.',
+    zh: 'Rummel 将这种现象称为<strong>民主灭绝</strong>：政府对任何人或人民的谋杀。他的作品发表在夏威夷大学网站上，面临失传的风险。本项目保存了该语料库，并提供理解它的编辑背景。',
+    ja: 'ルンメルはこの現象を<strong>デモサイド</strong>と呼びました：政府による人々の殺害。彼の研究はハワイ大学のウェブサイトに公開されており、失われる危険があります。このプロジェクトはそのコーパスを保存し、理解するための編集的文脈を提供します。',
+  },
+};
