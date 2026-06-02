@@ -1,0 +1,372 @@
+---
+import Layout from '../../layouts/Layout.astro';
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+
+const casos = [
+	{
+		regime: 'União Soviética',
+		periodo: '1917–1987',
+		mortes: '61,9M',
+		mortes_num: 61.9,
+		ideologia: 'Socialismo',
+		slug: 'socialismo',
+		destaque: ['Gulag', 'Holodomor', 'Grande Terror', 'Deportações em massa'],
+		desc: 'O maior democídio do século XX. Stalin sozinho é responsável por mais de 40 milhões de mortes.',
+		descKey: 'democidios.caso.soviets.desc',
+		tagKey: 'democidios.tag.socialismo',
+	},
+	{
+		regime: 'China (Mao Tsé-Tung)',
+		periodo: '1949–1976',
+		mortes: '76,7M',
+		mortes_num: 76.7,
+		ideologia: 'Socialismo',
+		slug: 'socialismo',
+		destaque: ['Grande Salto Adiante', 'Revolução Cultural', 'Reforma agrária'],
+		desc: 'A estimativa revisada de Rummel (2005) coloca a China comunista como o maior democídio individual.',
+		descKey: 'democidios.caso.china.desc',
+		tagKey: 'democidios.tag.socialismo',
+	},
+	{
+		regime: 'Alemanha Nazista',
+		periodo: '1933–1945',
+		mortes: '20,9M',
+		mortes_num: 20.9,
+		ideologia: 'Nazismo',
+		slug: 'nazismo',
+		destaque: ['Holocausto', 'Programa T4', 'Prisioneiros soviéticos', 'Trabalho forçado'],
+		desc: 'O regime que sistematizou o extermínio industrial. O Holocausto foi o maior componente, mas não o único.',
+		descKey: 'democidios.caso.nazismo.desc',
+		tagKey: 'democidios.tag.nazismo',
+	},
+	{
+		regime: 'China Nacionalista (KMT)',
+		periodo: '1928–1949',
+		mortes: '10,2M',
+		mortes_num: 10.2,
+		ideologia: 'Ditadura',
+		slug: null,
+		destaque: ['Guerras civis', 'Execuções políticas', 'Fome de 1942–43'],
+		desc: 'Frequentemente esquecida nas discussões sobre o século XX chinês.',
+		descKey: 'democidios.caso.kmt.desc',
+		tagKey: 'democidios.tag.ditadura',
+	},
+	{
+		regime: 'Japão Imperial',
+		periodo: '1900–1945',
+		mortes: '5,9M',
+		mortes_num: 5.9,
+		ideologia: 'Militarismo',
+		slug: null,
+		destaque: ['Nanquim', 'Manchúria', 'Filipinas', 'Prisioneiros de guerra'],
+		desc: 'Democídio praticado principalmente em territórios ocupados na Ásia.',
+		descKey: 'democidios.caso.japan.desc',
+		tagKey: 'democidios.tag.militarismo',
+	},
+	{
+		regime: 'Camboja (Khmer Vermelho)',
+		periodo: '1975–1979',
+		mortes: '2,0M',
+		mortes_num: 2.0,
+		ideologia: 'Socialismo',
+		slug: 'socialismo',
+		destaque: ['Evacuação forçada', 'Campos de trabalho', 'S-21', 'Campos da morte'],
+		desc: 'Em quatro anos, o Khmer Vermelho eliminou aproximadamente 25% da população cambojana.',
+		descKey: 'democidios.caso.cambodia.desc',
+		tagKey: 'democidios.tag.socialismo',
+	},
+	{
+		regime: 'Turquia Otomana',
+		periodo: '1900–1923',
+		mortes: '1,9M',
+		mortes_num: 1.9,
+		ideologia: 'Etnonacionalismo',
+		slug: null,
+		destaque: ['Genocídio Armênio', 'Gregos e Assírios', 'Marchas da morte'],
+		desc: 'Inclui o genocídio armênio de 1915–1916 e a perseguição de outras minorias cristãs.',
+		descKey: 'democidios.caso.turkey.desc',
+		tagKey: 'democidios.tag.etnonacionalismo',
+	},
+	{
+		regime: 'Colônias Europeias',
+		periodo: '1900–1960',
+		mortes: '~870K',
+		mortes_num: 0.87,
+		ideologia: 'Colonialismo',
+		slug: 'colonialismo',
+		destaque: ['Congo Belga', 'África do Sudoeste Alemã', 'Índia Britânica', 'Fomes coloniais'],
+		desc: 'As estimativas de Rummel para o período colonial foram revisadas para cima em 2005.',
+		descKey: 'democidios.caso.colonies.desc',
+		tagKey: 'democidios.tag.colonialismo',
+	},
+	{
+		regime: 'Ditaduras Latino-Americanas',
+		periodo: '1960–1990',
+		mortes: '~300K',
+		mortes_num: 0.3,
+		ideologia: 'Autoritarismo',
+		slug: 'ditaduras-latinas',
+		destaque: ['Argentina', 'Chile', 'Guatemala', 'Brasil'],
+		desc: 'Regimes apoiados ou tolerados durante a Guerra Fria que desapareceram e torturaram dezenas de milhares.',
+		descKey: 'democidios.caso.latins.desc',
+		tagKey: 'democidios.tag.autoritarismo',
+	},
+];
+
+const categorias = [
+	{ slug: 'nazismo', label: 'Nazismo', desc: 'O Terceiro Reich e o extermínio sistematizado.' },
+	{ slug: 'socialismo', label: 'Socialismo', desc: 'URSS, China, Camboja e outros regimes comunistas.' },
+	{ slug: 'colonialismo', label: 'Colonialismo', desc: 'Democídio nas colônias europeias.' },
+	{ slug: 'ditaduras-latinas', label: 'Ditaduras Latinas', desc: 'América Latina no século XX.' },
+];
+---
+
+<Layout title="Democídios | 20th Century Democide" description="Os principais casos de democídio do século XX, com contexto, estimativas e fontes primárias.">
+
+	<header class="page-header">
+		<p class="kicker">03</p>
+		<h1 data-i18n="democidios.h1">Democídios</h1>
+		<p class="intro" data-i18n="democidios.intro">
+			Os principais casos documentados por Rummel, ordenados por estimativa de mortes.
+			Selecione uma categoria para aprofundamento, ou explore os casos individualmente.
+		</p>
+
+		<nav class="cat-nav">
+			{categorias.map((cat) => (
+				<a href={toBase(`democidios/${cat.slug}/`)} class="cat-pill">
+					{cat.label}
+				</a>
+			))}
+		</nav>
+	</header>
+
+	<div class="cases-grid">
+		{casos.map((caso) => (
+			<div class={`case-card ${caso.slug ? 'case-card--linked' : ''}`}>
+				<div class="case-top">
+					<div class="case-deaths">
+						<span class="deaths-num">{caso.mortes}</span>
+						<span class="deaths-label" data-i18n="common.deaths.label">mortes estimadas</span>
+					</div>
+					<span class="case-tag" data-i18n={caso.tagKey}>{caso.ideologia}</span>
+				</div>
+				<h3 class="case-regime">{caso.regime}</h3>
+				<p class="case-period">{caso.periodo}</p>
+				<p class="case-desc" data-i18n={caso.descKey}>{caso.desc}</p>
+				<ul class="case-highlights">
+					{caso.destaque.map((item) => (
+						<li>{item}</li>
+					))}
+				</ul>
+				{caso.slug && (
+					<a href={toBase(`democidios/${caso.slug}/`)} class="case-link">
+						Ver análise →
+					</a>
+				)}
+			</div>
+		))}
+	</div>
+
+	<div class="total-bar">
+		<span class="total-label kicker" data-i18n="democidios.total.label">Total estimado por Rummel — 20th century democide</span>
+		<span class="total-num" data-i18n="democidios.total.num">262 milhões de mortes</span>
+	</div>
+
+</Layout>
+
+<style>
+	.page-header {
+		margin-bottom: 2.5rem;
+	}
+
+	h1 {
+		font-family: var(--display);
+		font-size: clamp(2.2rem, 6vw, 3.8rem);
+		font-weight: 900;
+		font-style: italic;
+		margin: 0.2rem 0 0.75rem;
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+	}
+
+	.intro {
+		max-width: 58ch;
+		color: var(--muted);
+		line-height: 1.65;
+		margin: 0 0 1.5rem;
+		font-size: 1rem;
+	}
+
+	/* ── Category nav ─────────────────────────────────── */
+
+	.cat-nav {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+	}
+
+	.cat-pill {
+		padding: 0.3rem 0.9rem;
+		border: 1px solid var(--rule-strong);
+		border-radius: 99px;
+		font-family: var(--mono);
+		font-size: 0.7rem;
+		letter-spacing: 0.04em;
+		color: var(--muted);
+		text-decoration: none;
+		background: rgba(255, 252, 240, 0.8);
+		transition: all 0.12s;
+	}
+
+	.cat-pill:hover {
+		background: var(--accent);
+		border-color: var(--accent);
+		color: #fff;
+	}
+
+	/* ── Cases grid ───────────────────────────────────── */
+
+	.cases-grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1px;
+		border: 1px solid var(--rule-strong);
+		border-radius: 3px;
+		overflow: hidden;
+		background: var(--rule-strong);
+		margin-bottom: 1px;
+	}
+
+	.case-card {
+		padding: 1.5rem;
+		background: rgba(255, 252, 240, 0.9);
+		display: flex;
+		flex-direction: column;
+	}
+
+	.case-top {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 0.85rem;
+	}
+
+	.case-deaths {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.deaths-num {
+		font-family: var(--display);
+		font-size: 1.8rem;
+		font-weight: 900;
+		color: var(--accent);
+		line-height: 1;
+	}
+
+	.deaths-label {
+		font-family: var(--mono);
+		font-size: 0.58rem;
+		color: var(--faint);
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		margin-top: 0.2rem;
+	}
+
+	.case-tag {
+		font-family: var(--mono);
+		font-size: 0.6rem;
+		color: var(--muted);
+		border: 1px solid var(--rule-strong);
+		border-radius: 2px;
+		padding: 0.15rem 0.45rem;
+		letter-spacing: 0.03em;
+	}
+
+	.case-regime {
+		font-family: var(--display);
+		font-size: 1.05rem;
+		font-weight: 700;
+		color: var(--ink);
+		margin: 0 0 0.2rem;
+		line-height: 1.2;
+	}
+
+	.case-period {
+		font-family: var(--mono);
+		font-size: 0.65rem;
+		color: var(--faint);
+		margin: 0 0 0.7rem;
+		letter-spacing: 0.03em;
+	}
+
+	.case-desc {
+		font-size: 0.88rem;
+		color: var(--muted);
+		line-height: 1.55;
+		margin: 0 0 0.85rem;
+		flex: 1;
+	}
+
+	.case-highlights {
+		list-style: none;
+		padding: 0;
+		margin: 0 0 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.3rem;
+	}
+
+	.case-highlights li {
+		font-family: var(--mono);
+		font-size: 0.6rem;
+		color: var(--muted);
+		border: 1px solid var(--rule);
+		border-radius: 2px;
+		padding: 0.12rem 0.4rem;
+		letter-spacing: 0.02em;
+	}
+
+	.case-link {
+		font-family: var(--mono);
+		font-size: 0.68rem;
+		letter-spacing: 0.04em;
+		color: var(--accent);
+		text-decoration: none;
+		margin-top: auto;
+	}
+
+	.case-link:hover { text-decoration: underline; }
+
+	/* ── Total bar ────────────────────────────────────── */
+
+	.total-bar {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 1rem 1.5rem;
+		border: 1px solid var(--rule-strong);
+		border-radius: 0 0 3px 3px;
+		background: rgba(122, 46, 31, 0.06);
+		gap: 1rem;
+		flex-wrap: wrap;
+	}
+
+	.total-label { margin: 0; }
+
+	.total-num {
+		font-family: var(--display);
+		font-size: 1.2rem;
+		font-weight: 900;
+		color: var(--accent);
+		letter-spacing: -0.01em;
+	}
+
+	@media (max-width: 900px) {
+		.cases-grid { grid-template-columns: repeat(2, 1fr); }
+	}
+
+	@media (max-width: 580px) {
+		.cases-grid { grid-template-columns: 1fr; }
+	}
+</style>

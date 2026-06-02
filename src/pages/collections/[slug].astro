@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
+import { displayTitle } from '../../lib/title';
 
 export async function getStaticPaths() {
 	const collections = await getCollection('collections');
@@ -64,7 +65,7 @@ const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\
 					collectionItems.length > 0 ? (
 						collectionItems.map((item) => (
 							<li>
-								<a href={toBase(`items/${item.id}/`)}>{item.data.title}</a>
+								<a href={toBase(`items/${item.id}/`)}>{displayTitle(item.data.title, item.id)}</a>
 								<span class="badge">{item.data.originalFormat}</span>
 								<span class="badge">{item.data.sourceType}</span>
 							</li>

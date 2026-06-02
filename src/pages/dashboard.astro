@@ -4,6 +4,7 @@ import path from 'node:path';
 import { getCollection } from 'astro:content';
 import YAML from 'yaml';
 import Layout from '../layouts/Layout.astro';
+import { displayTitle } from '../lib/title';
 
 interface DashboardItem {
 	item_id: string;
@@ -161,7 +162,7 @@ const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\
 						recentPublished.map((item) => (
 							<tr>
 								<td>
-									<a href={toBase(`items/${item.item_id}/`)}>{item.title}</a>
+									<a href={toBase(`items/${item.item_id}/`)}>{displayTitle(item.title, item.item_id)}</a>
 								</td>
 								<td>{collectionTitleById[item.collection_id] ?? item.collection_id}</td>
 								<td><span class="badge">{item.item_type}</span></td>

@@ -1,0 +1,296 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import { displayTitle } from '../lib/title';
+
+const items = await getCollection('items', ({ data }) => !data.draft);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+
+function link(id: string) {
+	const e = items.find((i) => i.id === id);
+	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
+}
+
+const obras = [
+	{ item: link('death-by-government'), year: '1994', desc: 'O livro que sintetizou décadas de pesquisa. Apresenta o conceito de democídio e o dado dos 262 milhões.', i18nKey: 'autor.obra1.desc' },
+	{ item: link('statistics-of-democide-note'), year: '1997', desc: 'A obra metodológica central. Detalha as fontes, estimativas e cálculos para dezenas de regimes.', i18nKey: 'autor.obra2.desc' },
+	{ item: link('chinas-bloody-century-note'), year: '1991', desc: 'Estudo detalhado dos massacres cometidos pelos governos da China no século XX.', i18nKey: 'autor.obra3.desc' },
+	{ item: link('lethal-politics-note'), year: '1990', desc: 'Documentação do democídio soviético desde a Revolução de 1917 até 1987.', i18nKey: 'autor.obra4.desc' },
+	{ item: link('democide-nazi-genocide-and-mass-murder-note'), year: '1992', desc: 'Análise do extermínio nazista dentro do framework do democídio.', i18nKey: 'autor.obra5.desc' },
+];
+---
+
+<Layout title="O Autor | 20th Century Democide" description="Quem foi R.J. Rummel e por que sua obra importa.">
+	<div class="page-layout">
+		<div class="content">
+
+			<header class="page-header">
+				<p class="kicker">01</p>
+				<h1 data-i18n="autor.h1">O Autor</h1>
+				<p class="subtitle" data-i18n="autor.subtitle">R.J. Rummel (1932–2014)</p>
+			</header>
+
+			<div class="prose-section">
+				<h2 data-i18n="autor.trajectory.h2">Trajetória</h2>
+				<p data-i18n="autor.trajectory.p1">
+					Rudolph Joseph Rummel nasceu em 1932 em Cleveland, Ohio. Obteve seu doutorado em
+					ciência política pela Northwestern University em 1963 e passou a maior parte de sua
+					carreira na Universidade do Havaí, onde lecionou por mais de três décadas.
+				</p>
+				<p data-i18n="autor.trajectory.p2">
+					Seu trabalho inicial focou em relações internacionais e análise de conflitos. Com o
+					tempo, sua pesquisa convergiu para uma questão que poucos acadêmicos haviam enfrentado
+					sistematicamente: quantas pessoas os governos mataram no século XX?
+				</p>
+				<p data-i18n="autor.trajectory.p3">
+					Rummel passou quarenta anos respondendo a essa pergunta. O resultado foi o corpus mais
+					abrangente já produzido sobre assassinatos em massa cometidos por governos —
+					dezenas de estudos de caso, análises estatísticas multivariadas e revisões
+					metodológicas que continuou publicando até sua morte em 2014.
+				</p>
+			</div>
+
+			<div class="prose-section">
+				<h2 data-i18n="autor.contribution.h2">A contribuição central</h2>
+				<p data-i18n="autor.contribution.p1" data-i18n-html>
+					Rummel cunhou o termo <strong>democídio</strong> para descrever o que estava
+					documentando: o assassinato de qualquer pessoa ou povo pelo seu próprio governo.
+					O conceito era mais amplo do que genocídio — que exige intenção de destruir um grupo
+					específico — e capturava formas de violência estatal que vinham sendo sistematicamente
+					subcontadas: fomes forçadas, campos de trabalho, execuções em massa de oponentes
+					políticos, bombardeios deliberados de civis.
+				</p>
+				<p data-i18n="autor.contribution.p2" data-i18n-html>
+					Sua estimativa principal: governos mataram aproximadamente
+					<strong>262 milhões de pessoas</strong> entre 1900 e 1999. Quase quatro vezes o número
+					de mortos em todos os conflitos armados do mesmo período.
+				</p>
+				<p data-i18n="autor.contribution.p3">
+					A tese que emergiu desses dados — que o poder político sem freios é o principal
+					preditor de massacres em massa, e que governos democráticos raramente cometem
+					democídio — tornou-se sua contribuição mais duradoura para a ciência política.
+				</p>
+			</div>
+
+			<div class="prose-section">
+				<h2 data-i18n="autor.legacy.h2">Reconhecimento e legado</h2>
+				<p data-i18n="autor.legacy.p1">
+					Rummel foi indicado ao Prêmio Nobel da Paz em 1996. Embora sua obra não tenha
+					alcançado o público geral da forma que merecia, tornou-se referência fundamental em
+					estudos sobre genocídio, direitos humanos e resolução de conflitos.
+				</p>
+				<p data-i18n="autor.legacy.p2">
+					Após sua aposentadoria, continuou revisando e atualizando suas estimativas em um
+					blog pessoal, onde publicou revisões significativas — incluindo uma reavaliação
+					do democídio chinês que dobrou sua estimativa original para 76 milhões. Esse material
+					também está preservado neste arquivo.
+				</p>
+			</div>
+
+		</div>
+
+		<aside class="sidebar">
+			<div class="sidebar-block">
+				<p class="kicker" data-i18n="autor.sidebar.works">Obras principais</p>
+				<ul class="obra-list">
+					{obras.map(({ item, year, desc, i18nKey }) => item && (
+						<li class="obra-item">
+							<div class="obra-meta">
+								<a href={toBase(`items/${item.id}/`)} class="obra-title">{item.title}</a>
+								<span class="obra-year">{year}</span>
+							</div>
+							<p class="obra-desc" data-i18n={i18nKey}>{desc}</p>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			<div class="sidebar-block">
+				<p class="kicker" data-i18n="autor.sidebar.stats">Em números</p>
+				<div class="stat-list">
+					<div class="stat">
+						<span class="stat-num">262M</span>
+						<span class="stat-label" data-i18n="autor.stat1.label">mortes por democídio estimadas no século XX</span>
+					</div>
+					<div class="stat">
+						<span class="stat-num">40</span>
+						<span class="stat-label" data-i18n="autor.stat2.label">anos de pesquisa</span>
+					</div>
+					<div class="stat">
+						<span class="stat-num">5</span>
+						<span class="stat-label" data-i18n="autor.stat3.label">livros sobre democídio publicados</span>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div>
+</Layout>
+
+<style>
+	.page-layout {
+		display: grid;
+		grid-template-columns: 1fr 280px;
+		gap: 4rem;
+		align-items: start;
+	}
+
+	.page-header {
+		margin-bottom: 2.5rem;
+		padding-bottom: 2rem;
+		border-bottom: 1px solid var(--rule-strong);
+	}
+
+	h1 {
+		font-family: var(--display);
+		font-size: clamp(2.2rem, 6vw, 3.8rem);
+		font-weight: 900;
+		font-style: italic;
+		margin: 0.2rem 0 0.4rem;
+		line-height: 1.05;
+		letter-spacing: -0.02em;
+	}
+
+	.subtitle {
+		font-family: var(--mono);
+		font-size: 0.75rem;
+		color: var(--muted);
+		letter-spacing: 0.04em;
+		margin: 0;
+	}
+
+	/* ── Prose sections ───────────────────────────────── */
+
+	.prose-section {
+		margin-bottom: 2.5rem;
+		padding-bottom: 2.5rem;
+		border-bottom: 1px solid var(--rule);
+	}
+
+	.prose-section:last-child {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+
+	h2 {
+		font-family: var(--display);
+		font-size: 1.2rem;
+		font-weight: 700;
+		margin: 0 0 0.9rem;
+		color: var(--ink);
+	}
+
+	.prose-section p {
+		font-size: 1.05rem;
+		line-height: 1.78;
+		color: var(--ink);
+		margin: 0 0 1em;
+		max-width: 65ch;
+	}
+
+	.prose-section p:last-child { margin: 0; }
+
+	.prose-section strong { font-weight: 600; }
+
+	/* ── Sidebar ──────────────────────────────────────── */
+
+	.sidebar {
+		position: sticky;
+		top: 1.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+	}
+
+	.sidebar-block {
+		padding: 1.25rem 1.5rem;
+		border: 1px solid var(--rule-strong);
+		border-radius: 3px;
+		background: rgba(255, 252, 240, 0.85);
+	}
+
+	.sidebar-block .kicker { margin-bottom: 0.85rem; }
+
+	/* ── Obras ────────────────────────────────────────── */
+
+	.obra-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+
+	.obra-item {
+		padding: 0.85rem 0;
+		border-bottom: 1px solid var(--rule);
+	}
+
+	.obra-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+	.obra-meta {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		gap: 0.5rem;
+		margin-bottom: 0.3rem;
+	}
+
+	.obra-title {
+		font-size: 0.9rem;
+		font-weight: 600;
+		color: var(--ink);
+		text-decoration: none;
+		line-height: 1.3;
+	}
+
+	.obra-title:hover { color: var(--accent); }
+
+	.obra-year {
+		font-family: var(--mono);
+		font-size: 0.62rem;
+		color: var(--faint);
+		flex-shrink: 0;
+		letter-spacing: 0.04em;
+	}
+
+	.obra-desc {
+		font-size: 0.78rem;
+		color: var(--muted);
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	/* ── Stats ────────────────────────────────────────── */
+
+	.stat-list {
+		display: flex;
+		flex-direction: column;
+		gap: 0.85rem;
+	}
+
+	.stat {
+		display: flex;
+		align-items: baseline;
+		gap: 0.75rem;
+	}
+
+	.stat-num {
+		font-family: var(--display);
+		font-size: 1.6rem;
+		font-weight: 900;
+		color: var(--accent);
+		line-height: 1;
+		flex-shrink: 0;
+	}
+
+	.stat-label {
+		font-family: var(--mono);
+		font-size: 0.65rem;
+		color: var(--muted);
+		letter-spacing: 0.03em;
+		line-height: 1.4;
+	}
+
+	@media (max-width: 860px) {
+		.page-layout { grid-template-columns: 1fr; }
+		.sidebar { position: static; }
+	}
+</style>

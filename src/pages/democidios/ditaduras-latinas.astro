@@ -1,0 +1,176 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { displayTitle } from '../../lib/title';
+
+const items = await getCollection('items', ({ data }) => !data.draft);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+function link(id: string) {
+	const e = items.find((i) => i.id === id);
+	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
+}
+const fontes = [
+	link('democide-since-world-war-ii'),
+	link('lesser-murderers'),
+	link('definition-and-qualifications'),
+].filter(Boolean);
+
+const paises = [
+	{
+		pais: 'Guatemala',
+		mortes: '~200K',
+		periodo: '1954–1996',
+		desc: 'A Guerra Civil guatemalteca e as ditaduras que a conduziram produziram o maior democídio proporcional da América Latina. A Comissão para o Esclarecimento Histórico (ONU) concluiu que o Estado cometeu atos de genocídio contra populações indígenas Maia, particularmente durante o governo de Ríos Montt (1982–1983), apoiado pelos EUA.',
+		metodos: ['Massacres de aldeia', 'Terra arrasada', 'Desaparecimentos', 'Tortura sistemática'],
+	},
+	{
+		pais: 'Argentina — Guerra Suja',
+		mortes: '10–30K',
+		periodo: '1976–1983',
+		desc: 'A junta militar argentina implementou um programa sistemático de sequestro, tortura e assassinato de opositores políticos. Os "desaparecidos" eram frequentemente jogados vivos ao mar. A Comissão Nacional sobre o Desaparecimento de Pessoas documentou 8.961 casos, mas estima-se que o número real seja de 10 a 30 mil.',
+		metodos: ['Centros clandestinos de detenção', 'Voos da morte', 'Tortura', 'Sequestro de crianças'],
+	},
+	{
+		pais: 'Chile — Pinochet',
+		mortes: '~3K diretas',
+		periodo: '1973–1990',
+		desc: 'O golpe de 11 de setembro de 1973 foi seguido pela Caravana da Morte e por uma sistemática eliminação de opositores. O Informe Rettig documentou 2.279 mortos e desaparecidos; o Informe Valech, 27.000 torturados. O número de mortos é menor que outros casos, mas o programa de tortura foi excepcionalmente abrangente.',
+		metodos: ['Estádio Nacional', 'Villa Grimaldi', 'Tortura sistemática', 'Exílio forçado'],
+	},
+	{
+		pais: 'Brasil — Ditadura Militar',
+		mortes: '~400–500 documentados',
+		periodo: '1964–1985',
+		desc: 'A ditadura brasileira foi relativamente menos letal em mortes diretas do que Argentina e Chile, mas operou uma vasta rede de tortura. A Comissão Nacional da Verdade (2014) documentou 434 mortos e desaparecidos políticos. A tortura foi usada sistematicamente contra presos políticos, com cumplicidade de setores da Igreja e do Judiciário.',
+		metodos: ['DOI-CODI', 'Tortura', 'Desaparecimentos', 'Censura e perseguição'],
+	},
+	{
+		pais: 'El Salvador',
+		mortes: '~70–75K',
+		periodo: '1979–1992',
+		desc: 'A Guerra Civil salvadorenha incluiu o Massacre de El Mozote (1981), onde forças militares assassinaram cerca de 900 civis, incluindo crianças. Os Esquadrões da Morte — vinculados ao Estado — operaram com impunidade. O relatório da ONU atribuiu 85% das violações às forças governamentais.',
+		metodos: ['Esquadrões da Morte', 'El Mozote', 'Massacre sistemático', 'Tortura'],
+	},
+];
+---
+
+<Layout title="Ditaduras Latinas | Democídios | 20th Century Democide" description="O democídio nas ditaduras latino-americanas do século XX.">
+	<div class="page-layout">
+		<div class="content">
+			<nav class="breadcrumb">
+				<a href={toBase('democidios/')}>Democídios</a>
+				<span>›</span>
+				<span>Ditaduras Latinas</span>
+			</nav>
+
+			<header class="page-header">
+				<h1>Ditaduras Latinas</h1>
+				<p class="subtitle">América Latina · Séculos XX</p>
+				<p class="header-intro">
+					As ditaduras latino-americanas do século XX produziram democídio em escala menor
+					do que os regimes totalitários soviético e nazista, mas com métodos igualmente
+					sistemáticos. Muitas operaram com apoio ou tolerância dos Estados Unidos no
+					contexto da Guerra Fria. Na taxonomia de Rummel, enquadram-se entre os "menores
+					assassinos" — regimes que mataram entre mil e um milhão de pessoas.
+				</p>
+			</header>
+
+			{paises.map((p) => (
+				<div class="country-section">
+					<div class="country-header">
+						<h2>{p.pais}</h2>
+						<div class="country-stats">
+							<span class="cstat-num">{p.mortes}</span>
+							<span class="cstat-period">{p.periodo}</span>
+						</div>
+					</div>
+					<p class="country-desc">{p.desc}</p>
+					<div class="methods">
+						{p.metodos.map((m) => <span class="method-tag">{m}</span>)}
+					</div>
+				</div>
+			))}
+
+			<div class="prose-section">
+				<h2>O contexto de Rummel</h2>
+				<p>
+					Rummel classifica a maioria das ditaduras latino-americanas entre o que chama de
+					"centi-killers" e "lesser murderers" — regimes que mataram entre mil e cem mil
+					pessoas. Numericamente menores do que os megamurderers, mas não menos
+					importantes para compreender o fenômeno do democídio.
+				</p>
+				<p>
+					Um padrão recorrente em sua análise: o envolvimento dos Estados Unidos. Seja no
+					golpe chileno (operação CONDOR), no treinamento de militares argentinos, no
+					apoio à Junta guatemalteca ou na contrainsurgência salvadorenha, a potência
+					democrática mais poderosa do mundo repetidamente apoiou regimes que praticavam
+					democídio — uma contradição que Rummel não evita discutir.
+				</p>
+			</div>
+		</div>
+
+		<aside class="sidebar">
+			<div class="sidebar-block sidebar-block--accent">
+				<p class="kicker">Padrão comum</p>
+				<p class="sidebar-note">Apoio ou tolerância dos EUA, tortura sistemática, desaparecimentos, impunidade garantida por anistias.</p>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker">Por país</p>
+				<ul class="breakdown">
+					<li><span>Guatemala</span><span>~200K</span></li>
+					<li><span>El Salvador</span><span>~70K</span></li>
+					<li><span>Argentina</span><span>10–30K</span></li>
+					<li><span>Chile</span><span>~3K</span></li>
+					<li><span>Brasil</span><span>~500</span></li>
+				</ul>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker">Fontes primárias preservadas</p>
+				<ul class="source-list">
+					{fontes.map((item) => item && (
+						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>
+					))}
+				</ul>
+			</div>
+		</aside>
+	</div>
+</Layout>
+
+<style>
+	.page-layout { display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
+	.breadcrumb { font-family: var(--mono); font-size: 0.68rem; color: var(--faint); margin-bottom: 1.5rem; display: flex; gap: 0.4rem; align-items: center; }
+	.breadcrumb a { color: var(--muted); text-decoration: none; } .breadcrumb a:hover { color: var(--accent); }
+	.page-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule-strong); }
+	h1 { font-family: var(--display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; font-style: italic; margin: 0 0 0.3rem; line-height: 1.05; letter-spacing: -0.02em; }
+	.subtitle { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; margin: 0 0 0.85rem; }
+	.header-intro { font-size: 1rem; line-height: 1.7; color: var(--muted); max-width: 60ch; margin: 0; }
+	.country-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.country-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.85rem; flex-wrap: wrap; }
+	h2 { font-family: var(--display); font-size: 1.25rem; font-weight: 700; margin: 0; color: var(--ink); }
+	.country-stats { text-align: right; }
+	.cstat-num { display: block; font-family: var(--display); font-size: 1.25rem; font-weight: 900; color: var(--accent); line-height: 1; }
+	.cstat-period { display: block; font-family: var(--mono); font-size: 0.6rem; color: var(--faint); letter-spacing: 0.04em; margin-top: 0.15rem; }
+	.country-desc { font-size: 1rem; line-height: 1.75; color: var(--ink); margin: 0 0 0.85rem; max-width: 65ch; }
+	.methods { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+	.method-tag { font-family: var(--mono); font-size: 0.62rem; color: var(--muted); border: 1px solid var(--rule-strong); border-radius: 2px; padding: 0.15rem 0.45rem; letter-spacing: 0.02em; }
+	.prose-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.prose-section:last-child { border-bottom: none; }
+	.prose-section h2 { font-family: var(--display); font-size: 1.2rem; font-weight: 700; margin: 0 0 0.9rem; }
+	.prose-section p { font-size: 1.05rem; line-height: 1.78; color: var(--ink); margin: 0 0 1em; max-width: 65ch; }
+	.prose-section p:last-child { margin: 0; }
+	.sidebar { position: sticky; top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+	.sidebar-block { padding: 1.25rem 1.5rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: rgba(255,252,240,0.85); }
+	.sidebar-block--accent { border-top: 3px solid var(--accent); }
+	.sidebar-block .kicker { margin-bottom: 0.75rem; }
+	.sidebar-note { font-size: 0.85rem; color: var(--muted); line-height: 1.55; margin: 0; }
+	.breakdown { list-style: none; padding: 0; margin: 0; }
+	.breakdown li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
+	.breakdown li:last-child { border-bottom: none; }
+	.breakdown li span:last-child { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); flex-shrink: 0; }
+	.source-list { list-style: none; padding: 0; margin: 0; }
+	.source-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); }
+	.source-list li:last-child { border-bottom: none; }
+	.source-list a { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: block; line-height: 1.45; }
+	.source-list a:hover { color: var(--accent); }
+	@media (max-width: 860px) { .page-layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
+</style>

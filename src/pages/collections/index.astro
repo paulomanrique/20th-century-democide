@@ -7,20 +7,123 @@ const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\
 ---
 
 <Layout title="Collections | 20th Century Democide">
-	<section class="stack">
-		<div class="panel">
-			<p class="kicker">Collections</p>
-			<h1>Editorial groupings for the preserved corpus.</h1>
-		</div>
-		<div class="grid cards">
-			{
-				collections.map((entry) => (
-					<article class="panel">
-						<h2><a href={toBase(`collections/${entry.id}/`)}>{entry.data.title}</a></h2>
-						<p>{entry.data.summary}</p>
-					</article>
-				))
-			}
-		</div>
-	</section>
+	<header class="page-header">
+		<p class="kicker">Archive</p>
+		<h1>Collections</h1>
+		<p class="page-intro">
+			The corpus is organised into editorial collections — each grouping the works from a
+			single book, article series, or thematic cluster.
+		</p>
+	</header>
+
+	<ol class="collection-list">
+		{
+			collections.map((entry, i) => (
+				<li class="collection-item">
+					<a href={toBase(`collections/${entry.id}/`)} class="collection-link">
+						<span class="seq">{String(i + 1).padStart(2, '0')}</span>
+						<div class="collection-body">
+							<h2>{entry.data.title}</h2>
+							<p>{entry.data.summary}</p>
+						</div>
+						<span class="arrow">→</span>
+					</a>
+				</li>
+			))
+		}
+	</ol>
 </Layout>
+
+<style>
+	.page-header {
+		margin-bottom: 2.5rem;
+	}
+
+	h1 {
+		font-family: var(--display);
+		font-size: clamp(2.2rem, 6vw, 3.8rem);
+		font-weight: 900;
+		font-style: italic;
+		line-height: 1.05;
+		margin: 0.2rem 0 0.75rem;
+		letter-spacing: -0.02em;
+	}
+
+	.page-intro {
+		max-width: 52ch;
+		color: var(--muted);
+		line-height: 1.65;
+		margin: 0;
+		font-size: 1.05rem;
+	}
+
+	/* ── List ─────────────────────────────────────────── */
+
+	.collection-list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		border-top: 1px solid var(--rule-strong);
+	}
+
+	.collection-item {
+		border-bottom: 1px solid var(--rule);
+	}
+
+	.collection-link {
+		display: grid;
+		grid-template-columns: 2.5rem 1fr auto;
+		gap: 1.25rem;
+		align-items: center;
+		padding: 1.25rem 0;
+		text-decoration: none;
+		color: inherit;
+		transition: background 0.1s;
+	}
+
+	.collection-link:hover h2 { color: var(--accent); }
+	.collection-link:hover .arrow { transform: translateX(4px); color: var(--accent); }
+
+	.seq {
+		font-family: var(--mono);
+		font-size: 0.65rem;
+		color: var(--faint);
+		letter-spacing: 0.05em;
+		align-self: start;
+		padding-top: 0.3rem;
+	}
+
+	.collection-body {
+		min-width: 0;
+	}
+
+	h2 {
+		font-family: var(--display);
+		font-size: 1.15rem;
+		font-weight: 700;
+		margin: 0 0 0.3rem;
+		color: var(--ink);
+		line-height: 1.25;
+		transition: color 0.15s;
+	}
+
+	.collection-body p {
+		margin: 0;
+		font-size: 0.92rem;
+		color: var(--muted);
+		line-height: 1.55;
+	}
+
+	.arrow {
+		font-family: var(--mono);
+		font-size: 0.85rem;
+		color: var(--faint);
+		flex-shrink: 0;
+		transition: transform 0.15s, color 0.15s;
+	}
+
+	@media (max-width: 540px) {
+		.collection-link { grid-template-columns: 2rem 1fr; }
+		.arrow { display: none; }
+	}
+</style>

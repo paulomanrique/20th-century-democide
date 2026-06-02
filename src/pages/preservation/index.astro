@@ -1,0 +1,97 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { getCollection } from 'astro:content';
+import YAML from 'yaml';
+import Layout from '../../layouts/Layout.astro';
+
+interface ManifestItem { item_id: string; capture_status: string; }
+const items = (YAML.parse(fs.readFileSync(path.join(process.cwd(), 'data', 'manifests', 'items.yaml'), 'utf8')) ?? []) as ManifestItem[];
+const collectionEntries = await getCollection('collections');
+const publishedCount = items.filter((i) => i.capture_status === 'published').length;
+const completion = items.length === 0 ? 0 : Math.round((publishedCount / items.length) * 100);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+---
+
+<Layout title="Preservation | 20th Century Democide" description="Textos originais de Rummel preservados localmente, com metadados de proveniência.">
+	<header class="page-header">
+		<h1 data-i18n="preservation.h1">Preservation</h1>
+		<p class="intro" data-i18n="preservation.intro">
+			Os textos originais de R.J. Rummel, preservados com metadados de proveniência,
+			checksums e cópias locais de ativos. Nada foi editado ou interpretado.
+		</p>
+		<div class="status">
+			<span class="status-num">{publishedCount}/{items.length}</span>
+			<span class="status-label" data-i18n="preservation.items.label">itens publicados</span>
+			<div class="progress"><span style={`width:${completion}%`}></span></div>
+			<span class="status-pct">{completion}%</span>
+		</div>
+	</header>
+
+	<div class="pres-grid">
+		<div class="pres-section">
+			<h2 data-i18n="preservation.collections.h2">Coleções</h2>
+			<p class="section-desc" data-i18n="preservation.collections.desc">Textos agrupados por obra, série de artigos ou tema.</p>
+			<ul class="coll-list">
+				{collectionEntries.sort((a,b) => a.data.sequence - b.data.sequence).map((entry) => (
+					<li>
+						<a href={toBase(`collections/${entry.id}/`)}>
+							<span class="coll-title">{entry.data.title}</span>
+							<span class="coll-summary">{entry.data.summary}</span>
+						</a>
+					</li>
+				))}
+			</ul>
+		</div>
+		<div class="pres-links">
+			<a href={toBase('dashboard/')} class="pres-link">
+				<span class="pl-title" data-i18n="preservation.link.dashboard.title">Dashboard</span>
+				<span class="pl-desc" data-i18n="preservation.link.dashboard.desc">Status completo de captura por item.</span>
+			</a>
+			<a href={toBase('sources/')} class="pres-link">
+				<span class="pl-title" data-i18n="preservation.link.sources.title">Fontes de captura</span>
+				<span class="pl-desc" data-i18n="preservation.link.sources.desc">Originais, mirrors e snapshots do Wayback.</span>
+			</a>
+			<a href={toBase('contributing/')} class="pres-link">
+				<span class="pl-title" data-i18n="preservation.link.contributing.title">Contribuição</span>
+				<span class="pl-desc" data-i18n="preservation.link.contributing.desc">Como reportar erros e adicionar itens.</span>
+			</a>
+			<a href={toBase('rights/')} class="pres-link">
+				<span class="pl-title" data-i18n="preservation.link.rights.title">Direitos</span>
+				<span class="pl-desc" data-i18n="preservation.link.rights.desc">Licença do código e status dos textos preservados.</span>
+			</a>
+		</div>
+	</div>
+</Layout>
+
+<style>
+	.page-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule-strong); }
+	h1 { font-family: var(--display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; font-style: italic; margin: 0.2rem 0 0.75rem; line-height: 1.05; letter-spacing: -0.02em; }
+	.intro { max-width: 55ch; color: var(--muted); line-height: 1.65; margin: 0 0 1.25rem; font-size: 1rem; }
+	.status { display: flex; align-items: center; gap: 1rem; font-family: var(--mono); flex-wrap: wrap; }
+	.status-num { font-family: var(--display); font-size: 1.4rem; font-weight: 900; color: var(--ink); }
+	.status-label { font-size: 0.65rem; color: var(--faint); letter-spacing: 0.05em; text-transform: uppercase; }
+	.progress { height: 3px; border-radius: 99px; background: var(--rule); overflow: hidden; width: 120px; }
+	.progress > span { display: block; height: 100%; background: var(--accent); }
+	.status-pct { font-size: 0.68rem; color: var(--accent); letter-spacing: 0.04em; }
+
+	.pres-grid { display: grid; grid-template-columns: 1fr 240px; gap: 3rem; align-items: start; }
+
+	h2 { font-family: var(--display); font-size: 1.15rem; font-weight: 700; margin: 0 0 0.4rem; }
+	.section-desc { font-size: 0.88rem; color: var(--muted); margin: 0 0 1.1rem; }
+	.coll-list { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--rule-strong); }
+	.coll-list li { border-bottom: 1px solid var(--rule); }
+	.coll-list a { display: flex; flex-direction: column; padding: 0.85rem 0; text-decoration: none; color: inherit; }
+	.coll-list a:hover .coll-title { color: var(--accent); }
+	.coll-title { font-size: 0.95rem; font-weight: 600; color: var(--ink); line-height: 1.25; margin-bottom: 0.2rem; transition: color 0.12s; }
+	.coll-summary { font-size: 0.82rem; color: var(--muted); line-height: 1.45; }
+
+	.pres-links { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--rule-strong); border-radius: 3px; overflow: hidden; background: var(--rule-strong); }
+	.pres-link { display: flex; flex-direction: column; padding: 1rem 1.25rem; background: rgba(255,252,240,0.9); text-decoration: none; color: inherit; transition: background 0.12s; }
+	.pres-link:hover { background: var(--accent-pale); }
+	.pl-title { font-weight: 600; font-size: 0.9rem; color: var(--ink); margin-bottom: 0.2rem; }
+	.pres-link:hover .pl-title { color: var(--accent); }
+	.pl-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.45; }
+
+	@media (max-width: 720px) { .pres-grid { grid-template-columns: 1fr; } }
+</style>

@@ -1,0 +1,192 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { displayTitle } from '../../lib/title';
+
+const items = await getCollection('items', ({ data }) => !data.draft);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+function link(id: string) {
+	const e = items.find((i) => i.id === id);
+	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
+}
+const fontes = [
+	link('holocaust-in-comparative-perspective'),
+	link('democide-nazi-genocide-and-mass-murder-note'),
+	link('definition-and-qualifications'),
+].filter(Boolean);
+---
+
+<Layout title="Nazismo | Democídios | 20th Century Democide" description="O democídio nazista — o Holocausto e os demais grupos exterminados pelo Terceiro Reich.">
+	<div class="page-layout">
+		<div class="content">
+			<nav class="breadcrumb">
+				<a href={toBase('democidios/')}>Democídios</a>
+				<span>›</span>
+				<span>Nazismo</span>
+			</nav>
+
+			<header class="page-header">
+				<h1 data-i18n="nazismo.h1">Nazismo</h1>
+				<div class="header-stats">
+					<div class="hstat"><span class="hstat-num">20,9M</span><span class="hstat-label" data-i18n="nazismo.deaths.label">mortes estimadas por Rummel</span></div>
+					<div class="hstat"><span class="hstat-num">1933–1945</span><span class="hstat-label" data-i18n="common.period.label">período</span></div>
+				</div>
+			</header>
+
+			<div class="prose-section">
+				<h2 data-i18n="nazismo.section1.h2">O extermínio sistematizado</h2>
+				<p data-i18n="nazismo.section1.p1">
+					O regime nazista foi singular na história do democídio não pela escala absoluta —
+					a União Soviética e a China comunista superaram seus números — mas pelo grau de
+					sistematização industrial aplicado ao extermínio. O Terceiro Reich construiu uma
+					burocracia dedicada ao assassinato em massa, com linhas ferroviárias, campos de
+					concentração, câmaras de gás e crematórios organizados como infraestrutura estatal.
+				</p>
+				<p data-i18n="nazismo.section1.p2">
+					Na análise de Rummel, o democídio nazista totaliza aproximadamente 20,9 milhões de
+					mortes entre 1933 e 1945. O Holocausto representa o maior componente — mas não o
+					único. O regime assassinou sistematicamente várias outras categorias de pessoas que
+					considerava indesejáveis ou perigosas.
+				</p>
+			</div>
+
+			<div class="prose-section">
+				<h2 data-i18n="nazismo.section2.h2">O Holocausto</h2>
+				<p data-i18n="nazismo.section2.p1">
+					A "Solução Final" — o programa nazista de extermínio dos judeus europeus — resultou
+					na morte de aproximadamente 5,3 a 6 milhões de judeus, segundo as estimativas de
+					Rummel. O processo evoluiu de perseguições legais e violência de rua (1933–1939)
+					para deportações em massa e fuzilamentos por esquadrões móveis (Einsatzgruppen)
+					no leste europeu (1941–1942), culminando na operação industrial dos campos de
+					extermínio — Auschwitz-Birkenau, Treblinka, Sobibor, Belzec, Chelmno, Majdanek.
+				</p>
+				<p data-i18n="nazismo.section2.p2">
+					Rummel enquadra o Holocausto como o exemplo mais puro de genocídio dentro do
+					espectro do democídio: havia intenção explícita e documentada de destruir o povo
+					judeu como grupo. Mas seu trabalho coloca o Holocausto em perspectiva comparativa
+					com outros democídios do século, algo que a historiografia convencional raramente faz.
+				</p>
+			</div>
+
+			<div class="case-block">
+				<h3 data-i18n="nazismo.cases.h3">Outros grupos exterminados</h3>
+				<div class="case-items">
+					<div class="case-item">
+						<span class="ci-label" data-i18n="nazismo.case1.label">Prisioneiros soviéticos de guerra</span>
+						<span class="ci-val" data-i18n="nazismo.case1.val">~3,3M mortos</span>
+						<p data-i18n="nazismo.case1.desc">Deliberadamente mortos por fome, exposição e execução. Uma das maiores atrocidades pouco discutidas da Segunda Guerra.</p>
+					</div>
+					<div class="case-item">
+						<span class="ci-label" data-i18n="nazismo.case2.label">Poloneses não-judeus</span>
+						<span class="ci-val" data-i18n="nazismo.case2.val">~1,8M mortos</span>
+						<p data-i18n="nazismo.case2.desc">Intelectuais, sacerdotes, líderes comunitários e civis nas operações de "limpeza" da população polonesa.</p>
+					</div>
+					<div class="case-item">
+						<span class="ci-label" data-i18n="nazismo.case3.label">Programa T4 (eutanásia)</span>
+						<span class="ci-val" data-i18n="nazismo.case3.val">~200–250K mortos</span>
+						<p data-i18n="nazismo.case3.desc">Pessoas com deficiências físicas e mentais assassinadas sistematicamente como parte da política de "higiene racial".</p>
+					</div>
+					<div class="case-item">
+						<span class="ci-label" data-i18n="nazismo.case4.label">Sinti e Roma</span>
+						<span class="ci-val" data-i18n="nazismo.case4.val">~500K–1M mortos</span>
+						<p data-i18n="nazismo.case4.desc">Perseguição e extermínio dos povos ciganos na Europa ocupada.</p>
+					</div>
+					<div class="case-item">
+						<span class="ci-label" data-i18n="nazismo.case5.label">Trabalho forçado</span>
+						<span class="ci-val" data-i18n="nazismo.case5.val">Centenas de milhares</span>
+						<p data-i18n="nazismo.case5.desc">Trabalhadores forçados de toda a Europa ocupada, em condições deliberadamente letais.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="prose-section">
+				<h2 data-i18n="nazismo.section3.h2">A perspectiva de Rummel</h2>
+				<p data-i18n="nazismo.section3.p1" data-i18n-html>
+					Em <em>Democide: Nazi Genocide and Mass Murder</em> (1992), Rummel analisa o regime
+					nazista usando o mesmo framework metodológico aplicado a todos os outros casos:
+					levantamento exaustivo de fontes, consolidação de estimativas e cálculo de intervalos
+					de confiança. Sua conclusão reforça a tese central: a concentração absoluta de poder
+					político e ideológico foi o que tornou possível o extermínio em escala industrial.
+				</p>
+				<p data-i18n="nazismo.section3.p2">
+					Rummel também coloca o nazismo em perspectiva comparativa explícita com o comunismo
+					soviético e chinês — uma comparação que muitos historiadores evitam por razões
+					políticas, mas que seus dados tornam inevitável.
+				</p>
+			</div>
+		</div>
+
+		<aside class="sidebar">
+			<div class="sidebar-block sidebar-block--accent">
+				<p class="kicker" data-i18n="nazismo.sidebar.estimate.kicker">Estimativa de Rummel</p>
+				<span class="big-num">20,9M</span>
+				<p class="big-num-label" data-i18n="nazismo.sidebar.bignum.label">mortes · 1933–1945</p>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker" data-i18n="nazismo.sidebar.breakdown.kicker">Componentes principais</p>
+				<ul class="breakdown">
+					<li><span>Holocausto (judeus)</span><span>~5,3–6M</span></li>
+					<li><span>POWs soviéticos</span><span>~3,3M</span></li>
+					<li><span>Poloneses</span><span>~1,8M</span></li>
+					<li><span>Sinti e Roma</span><span>~0,5–1M</span></li>
+					<li><span>Programa T4</span><span>~200–250K</span></li>
+				</ul>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker" data-i18n="common.sources.kicker">Fontes primárias preservadas</p>
+				<ul class="source-list">
+					{fontes.map((item) => item && (
+						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>
+					))}
+				</ul>
+			</div>
+		</aside>
+	</div>
+</Layout>
+
+<style>
+	.page-layout { display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
+	.breadcrumb { font-family: var(--mono); font-size: 0.68rem; color: var(--faint); margin-bottom: 1.5rem; display: flex; gap: 0.4rem; align-items: center; }
+	.breadcrumb a { color: var(--muted); text-decoration: none; }
+	.breadcrumb a:hover { color: var(--accent); }
+	.page-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule-strong); }
+	h1 { font-family: var(--display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; font-style: italic; margin: 0 0 1rem; line-height: 1.05; letter-spacing: -0.02em; }
+	.header-stats { display: flex; gap: 2rem; }
+	.hstat { display: flex; flex-direction: column; }
+	.hstat-num { font-family: var(--display); font-size: 1.5rem; font-weight: 900; color: var(--accent); line-height: 1; }
+	.hstat-label { font-family: var(--mono); font-size: 0.6rem; color: var(--faint); letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.2rem; }
+	.prose-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.prose-section:last-child { border-bottom: none; margin-bottom: 0; }
+	h2 { font-family: var(--display); font-size: 1.2rem; font-weight: 700; margin: 0 0 0.9rem; color: var(--ink); }
+	.prose-section p { font-size: 1.05rem; line-height: 1.78; color: var(--ink); margin: 0 0 1em; max-width: 65ch; }
+	.prose-section p:last-child { margin: 0; }
+	.prose-section em { font-style: italic; }
+
+	/* Case block */
+	.case-block { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem; color: var(--ink); }
+	.case-items { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--rule-strong); border-radius: 3px; overflow: hidden; background: var(--rule-strong); }
+	.case-item { padding: 1rem 1.25rem; background: rgba(255,252,240,0.9); }
+	.ci-label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.15rem; }
+	.ci-val { display: block; font-family: var(--mono); font-size: 0.68rem; color: var(--accent); letter-spacing: 0.03em; margin-bottom: 0.4rem; }
+	.case-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.55; margin: 0; }
+
+	/* Sidebar */
+	.sidebar { position: sticky; top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+	.sidebar-block { padding: 1.25rem 1.5rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: rgba(255,252,240,0.85); }
+	.sidebar-block--accent { border-top: 3px solid var(--accent); }
+	.sidebar-block .kicker { margin-bottom: 0.75rem; }
+	.big-num { font-family: var(--display); font-size: 2.4rem; font-weight: 900; color: var(--accent); line-height: 1; display: block; }
+	.big-num-label { font-family: var(--mono); font-size: 0.62rem; color: var(--muted); letter-spacing: 0.04em; margin-top: 0.2rem; display: block; }
+	.breakdown { list-style: none; padding: 0; margin: 0; }
+	.breakdown li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
+	.breakdown li:last-child { border-bottom: none; }
+	.breakdown li span:last-child { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); flex-shrink: 0; }
+	.source-list { list-style: none; padding: 0; margin: 0; }
+	.source-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); }
+	.source-list li:last-child { border-bottom: none; }
+	.source-list a { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: block; line-height: 1.45; }
+	.source-list a:hover { color: var(--accent); }
+
+	@media (max-width: 860px) { .page-layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
+</style>
