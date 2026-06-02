@@ -1,0 +1,159 @@
+---
+interface Props {
+	current: 1 | 2 | 3 | 4;
+	position: 'top' | 'bottom';
+}
+
+const { current, position } = Astro.props;
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+
+const STEPS = [
+	{ n: 1, slug: 'autor/', labelKey: 'trilha.step1.label', teaserKey: 'trilha.step1.teaser',
+		label: 'O Autor', teaser: 'Quem foi R.J. Rummel' },
+	{ n: 2, slug: 'tese/', labelKey: 'trilha.step2.label', teaserKey: 'trilha.step2.teaser',
+		label: 'A Tese', teaser: 'A origem do conceito de democídio' },
+	{ n: 3, slug: 'democidios/', labelKey: 'trilha.step3.label', teaserKey: 'trilha.step3.teaser',
+		label: 'Democídios', teaser: 'Os casos emblemáticos do século XX' },
+	{ n: 4, slug: 'preservation/', labelKey: 'trilha.step4.label', teaserKey: 'trilha.step4.teaser',
+		label: 'Preservação', teaser: 'O corpus preservado, em inglês original' },
+];
+
+const nextStep = STEPS.find((s) => s.n === current + 1);
+const isLast = current === 4;
+---
+
+{position === 'top' && (
+	<nav class="trilha-steps" aria-label="Trilha de leitura">
+		{STEPS.map((s) => (
+			<a
+				href={toBase(s.slug)}
+				class={`trilha-dot ${s.n === current ? 'is-current' : ''}`}
+				aria-current={s.n === current ? 'step' : undefined}
+			>
+				<span class="trilha-num">{String(s.n).padStart(2, '0')}</span>
+				<span class="trilha-label" data-i18n={s.labelKey}>{s.label}</span>
+			</a>
+		))}
+	</nav>
+)}
+
+{position === 'bottom' && !isLast && nextStep && (
+	<a href={toBase(nextStep.slug)} class="trilha-cta">
+		<span class="cta-kicker" data-i18n="trilha.next.kicker">Próximo</span>
+		<span class="cta-num">{String(nextStep.n).padStart(2, '0')}</span>
+		<span class="cta-label" data-i18n={nextStep.labelKey}>{nextStep.label}</span>
+		<span class="cta-teaser" data-i18n={nextStep.teaserKey}>{nextStep.teaser}</span>
+	</a>
+)}
+
+{position === 'bottom' && isLast && (
+	<a href={toBase()} class="trilha-cta trilha-cta--finish">
+		<span class="cta-label" data-i18n="trilha.finish.label">Voltar ao início · explorar o corpus →</span>
+	</a>
+)}
+
+<style>
+	/* ── Top step indicator ───────────────────────────── */
+	.trilha-steps {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1px;
+		margin: 0 0 2.5rem;
+		padding: 0;
+		background: var(--rule);
+		border: 1px solid var(--rule);
+		border-radius: 2px;
+		overflow: hidden;
+	}
+	.trilha-dot {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+		padding: 0.7rem 1rem;
+		background: rgba(255, 252, 240, 0.85);
+		text-decoration: none;
+		color: var(--faint);
+		transition: background 0.12s, color 0.12s;
+		border-top: 2px solid transparent;
+	}
+	.trilha-dot:hover {
+		background: rgba(122, 46, 31, 0.04);
+		color: var(--accent);
+	}
+	.trilha-dot.is-current {
+		border-top-color: var(--accent);
+		color: var(--ink);
+		background: rgba(255, 252, 240, 1);
+	}
+	.trilha-num {
+		font-family: var(--mono);
+		font-size: 0.6rem;
+		letter-spacing: 0.08em;
+		opacity: 0.6;
+	}
+	.trilha-dot.is-current .trilha-num { color: var(--accent); opacity: 1; }
+	.trilha-label {
+		font-family: var(--display);
+		font-size: 0.78rem;
+		font-weight: 700;
+		line-height: 1.2;
+	}
+
+	/* ── Bottom CTA ───────────────────────────────────── */
+	.trilha-cta {
+		display: grid;
+		grid-template-columns: auto auto 1fr;
+		align-items: baseline;
+		gap: 0.75rem 1rem;
+		margin: 3rem 0 0;
+		padding: 1.25rem 1.5rem;
+		border: 1px solid var(--rule-strong);
+		border-top: 3px solid var(--accent);
+		border-radius: 3px;
+		text-decoration: none;
+		color: inherit;
+		background: rgba(122, 46, 31, 0.04);
+		transition: background 0.15s;
+	}
+	.trilha-cta:hover { background: rgba(122, 46, 31, 0.09); }
+	.cta-kicker {
+		font-family: var(--mono);
+		font-size: 0.6rem;
+		letter-spacing: 0.08em;
+		color: var(--accent);
+		text-transform: uppercase;
+	}
+	.cta-num {
+		font-family: var(--mono);
+		font-size: 0.6rem;
+		letter-spacing: 0.08em;
+		color: var(--faint);
+	}
+	.cta-label {
+		font-family: var(--display);
+		font-size: 1.05rem;
+		font-weight: 700;
+		font-style: italic;
+		color: var(--ink);
+	}
+	.cta-teaser {
+		grid-column: 1 / -1;
+		font-size: 0.82rem;
+		color: var(--muted);
+		line-height: 1.5;
+	}
+
+	.trilha-cta--finish {
+		grid-template-columns: 1fr;
+		text-align: center;
+	}
+	.trilha-cta--finish .cta-label {
+		font-style: normal;
+		font-size: 0.95rem;
+	}
+
+	@media (max-width: 560px) {
+		.trilha-steps { grid-template-columns: repeat(2, 1fr); }
+		.trilha-cta { grid-template-columns: auto 1fr; }
+	}
+</style>

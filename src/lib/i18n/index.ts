@@ -26,6 +26,7 @@ import { socialismo } from './strings/socialismo';
 import { colonialismo } from './strings/colonialismo';
 import { ditaduras } from './strings/ditaduras';
 import { preservation } from './strings/preservation';
+import { trilha } from './strings/trilha';
 
 export const ui: Record<string, Record<Lang, string>> = {
   ...nav,
@@ -41,6 +42,7 @@ export const ui: Record<string, Record<Lang, string>> = {
   ...colonialismo,
   ...ditaduras,
   ...preservation,
+  ...trilha,
 };
 
 export function t(key: string, lang: Lang): string {

@@ -1,15 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import TrilhaNav from '../components/TrilhaNav.astro';
 
 const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
 ---
 
 <Layout title="O Autor | 20th Century Democide" description="Quem foi R.J. Rummel e por que sua obra importa.">
+	<TrilhaNav current={1} position="top" />
 	<div class="page-layout">
 		<div class="content">
 
 			<header class="page-header">
-				<p class="kicker">01</p>
 				<h1 data-i18n="autor.h1">O Autor</h1>
 				<p class="subtitle" data-i18n="autor.subtitle">R.J. Rummel (1932–2014)</p>
 			</header>
@@ -106,6 +107,7 @@ const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\
 			</div>
 		</aside>
 	</div>
+	<TrilhaNav current={1} position="bottom" />
 </Layout>
 
 <style>

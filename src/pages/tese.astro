@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+import TrilhaNav from '../components/TrilhaNav.astro';
 import { displayTitle } from '../lib/title';
 
 const items = await getCollection('items', ({ data }) => !data.draft);
@@ -23,11 +24,11 @@ const fontes = [
 ---
 
 <Layout title="A Tese | 20th Century Democide" description="O que é democídio e por que governos democráticos raramente massacram os próprios cidadãos.">
+	<TrilhaNav current={2} position="top" />
 	<div class="page-layout">
 		<div class="content">
 
 			<header class="page-header">
-				<p class="kicker">02</p>
 				<h1 data-i18n="tese.h1">A Tese</h1>
 				<p class="subtitle" data-i18n="tese.subtitle">Poder mata. Poder absoluto mata absolutamente.</p>
 			</header>
@@ -167,6 +168,7 @@ const fontes = [
 			</div>
 		</aside>
 	</div>
+	<TrilhaNav current={2} position="bottom" />
 </Layout>
 
 <style>
