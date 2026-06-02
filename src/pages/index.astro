@@ -19,7 +19,7 @@ const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\
 		</div>
 
 		<nav class="home-nav">
-			<a href={toBase('autor/')} class="home-card">
+			<a href={toBase('autor/')} class="home-card home-card--featured">
 				<span class="card-num">01</span>
 				<h2 data-i18n="card.author.h2">O Autor</h2>
 				<p data-i18n="card.author.p">Quem foi R.J. Rummel, sua trajetória acadêmica e as obras que compõem o corpus preservado aqui.</p>
@@ -29,7 +29,7 @@ const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\
 				<h2 data-i18n="card.thesis.h2">A Tese</h2>
 				<p data-i18n="card.thesis.p">A origem do termo democídio, a distinção de genocídio, e a tese central: poder mata — governos democráticos raramente massacram os próprios cidadãos.</p>
 			</a>
-			<a href={toBase('democidios/')} class="home-card home-card--featured">
+			<a href={toBase('democidios/')} class="home-card">
 				<span class="card-num">03</span>
 				<h2 data-i18n="card.democides.h2">Democídios</h2>
 				<p data-i18n="card.democides.p">Os casos mais emblemáticos — nazismo, socialismo, colonialismo e ditaduras latinas — com contexto, estimativas e acesso às fontes primárias preservadas.</p>

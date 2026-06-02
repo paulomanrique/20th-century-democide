@@ -113,12 +113,6 @@ const casos = [
 	},
 ];
 
-const categorias = [
-	{ slug: 'nazismo', label: 'Nazismo', desc: 'O Terceiro Reich e o extermínio sistematizado.' },
-	{ slug: 'socialismo', label: 'Socialismo', desc: 'URSS, China, Camboja e outros regimes comunistas.' },
-	{ slug: 'colonialismo', label: 'Colonialismo', desc: 'Democídio nas colônias europeias.' },
-	{ slug: 'ditaduras-latinas', label: 'Ditaduras Latinas', desc: 'América Latina no século XX.' },
-];
 ---
 
 <Layout title="Democídios | 20th Century Democide" description="Os principais casos de democídio do século XX, com contexto, estimativas e fontes primárias.">
@@ -128,16 +122,8 @@ const categorias = [
 		<h1 data-i18n="democidios.h1">Democídios</h1>
 		<p class="intro" data-i18n="democidios.intro">
 			Os principais casos documentados por Rummel, ordenados por estimativa de mortes.
-			Selecione uma categoria para aprofundamento, ou explore os casos individualmente.
+			Clique em um caso para aprofundamento — ou veja o total agregado ao fim da lista.
 		</p>
-
-		<nav class="cat-nav">
-			{categorias.map((cat) => (
-				<a href={toBase(`democidios/${cat.slug}/`)} class="cat-pill">
-					{cat.label}
-				</a>
-			))}
-		</nav>
 	</header>
 
 	<div class="cases-grid">
@@ -195,33 +181,6 @@ const categorias = [
 		line-height: 1.65;
 		margin: 0 0 1.5rem;
 		font-size: 1rem;
-	}
-
-	/* ── Category nav ─────────────────────────────────── */
-
-	.cat-nav {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 0.5rem;
-	}
-
-	.cat-pill {
-		padding: 0.3rem 0.9rem;
-		border: 1px solid var(--rule-strong);
-		border-radius: 99px;
-		font-family: var(--mono);
-		font-size: 0.7rem;
-		letter-spacing: 0.04em;
-		color: var(--muted);
-		text-decoration: none;
-		background: rgba(255, 252, 240, 0.8);
-		transition: all 0.12s;
-	}
-
-	.cat-pill:hover {
-		background: var(--accent);
-		border-color: var(--accent);
-		color: #fff;
 	}
 
 	/* ── Cases grid ───────────────────────────────────── */
