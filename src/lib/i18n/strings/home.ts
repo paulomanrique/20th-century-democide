@@ -31,6 +31,16 @@ export const home: Record<string, Record<Lang, string>> = {
     zh: '超过同期所有战争的总和。政治学家 R.J.\u00a0Rummel 花了四十年记录这一切——制作了迄今为止最全面的政府大规模屠杀统计记录。',
     ja: 'この時代のすべての戦争を合わせたよりも多い数字です。政治学者 R.J.\u00a0Rummel は40年をかけてこれを記録し、政府による大量虐殺に関する史上最も包括的な統計記録を作成しました。',
   },
+  'home.startLink': {
+    pt: 'Comece aqui: trilha de leitura curada →',
+    en: 'Start here: curated reading guide →',
+    es: 'Empieza aquí: guía de lectura curada →',
+    fr: 'Commencez ici : guide de lecture curaté →',
+    it: 'Inizia qui: guida alla lettura curata →',
+    de: 'Hier beginnen: kuratierter Leseleitfaden →',
+    zh: '从这里开始：精选阅读指南 →',
+    ja: 'ここから始める：厳選読書ガイド →',
+  },
   'home.intro2': {
     pt: 'Rummel chamou esse fenômeno de <strong>democídio</strong>: o assassinato de qualquer pessoa ou povo pelo seu próprio governo. Sua obra foi publicada no site da Universidade do Havaí e corre risco de ser perdida. Este projeto preserva esse corpus e oferece contexto editorial para compreendê-lo.',
     en: 'Rummel called this phenomenon <strong>democide</strong>: the murder of any person or people by their own government. His work was published on the University of Hawaii website and is at risk of being lost. This project preserves that corpus and provides editorial context to understand it.',

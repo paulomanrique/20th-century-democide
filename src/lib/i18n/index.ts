@@ -27,6 +27,7 @@ import { colonialismo } from './strings/colonialismo';
 import { ditaduras } from './strings/ditaduras';
 import { preservation } from './strings/preservation';
 import { trilha } from './strings/trilha';
+import { guide } from './strings/guide';
 
 export const ui: Record<string, Record<Lang, string>> = {
   ...nav,
@@ -43,6 +44,7 @@ export const ui: Record<string, Record<Lang, string>> = {
   ...ditaduras,
   ...preservation,
   ...trilha,
+  ...guide,
 };
 
 export function t(key: string, lang: Lang): string {

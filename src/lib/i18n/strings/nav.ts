@@ -1,6 +1,11 @@
 import type { Lang } from '../index';
 
 export const nav: Record<string, Record<Lang, string>> = {
+  'nav.start': {
+    pt: 'Comece aqui', en: 'Start here', es: 'Empieza aquí',
+    fr: 'Commencez ici', it: 'Inizia qui', de: 'Hier beginnen',
+    zh: '从这里开始', ja: 'ここから始める',
+  },
   'nav.author': {
     pt: 'O Autor',
     en: 'The Author',

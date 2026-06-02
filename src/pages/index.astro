@@ -18,6 +18,10 @@ const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\
 			</div>
 		</div>
 
+		<a href={toBase('guia/')} class="start-link" data-i18n="home.startLink">
+			Comece aqui: trilha de leitura curada →
+		</a>
+
 		<nav class="home-nav">
 			<a href={toBase('autor/')} class="home-card home-card--featured">
 				<span class="card-num">01</span>
@@ -95,6 +99,28 @@ const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\
 	.intro-body p:last-child { margin: 0; }
 
 	.intro-body strong { color: var(--ink); font-weight: 600; }
+
+	/* ── Start link ───────────────────────────────────── */
+
+	.start-link {
+		display: inline-block;
+		align-self: flex-start;
+		padding: 0.65rem 1.1rem;
+		font-family: var(--mono);
+		font-size: 0.72rem;
+		letter-spacing: 0.06em;
+		color: var(--accent);
+		text-decoration: none;
+		background: var(--accent-pale);
+		border: 1px solid var(--accent);
+		border-radius: 2px;
+		transition: background 0.12s, color 0.12s;
+	}
+
+	.start-link:hover {
+		background: var(--accent);
+		color: var(--bg);
+	}
 
 	/* ── Nav cards ────────────────────────────────────── */
 
