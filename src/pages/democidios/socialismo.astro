@@ -19,37 +19,48 @@ const fontes = [
 
 const casos = [
 	{
+		paisKey: 'socialismo.urss.pais',
 		pais: 'União Soviética',
 		mortes: '61,9M',
 		periodo: '1917–1987',
 		eventos: [
-			{ nome: 'Gulag', mortes: '~39M', desc: 'O sistema de campos de trabalho forçado que Rummel estima ter ceifado cerca de 39 milhões de vidas entre execuções, mortes por condições de trabalho e deportações.' },
-			{ nome: 'Holodomor', mortes: '~5M', desc: 'A fome forçada na Ucrânia de 1932–1933. Rummel a classifica como democídio intencional: o Estado confiscou a produção de alimentos sabendo que a população morreria.' },
-			{ nome: 'Grande Terror', mortes: '~750K diretas', desc: 'As purgas stalinistas de 1936–1938. Cerca de 750 mil execuções documentadas, mais centenas de milhares de mortes nos campos.' },
-			{ nome: 'Deportações em massa', mortes: 'Centenas de milhares', desc: 'Chechenos, tártaros da Crimeia, alemães do Volga e outros povos inteiros deportados para a Sibéria em condições deliberadamente letais.' },
+			{ nomeKey: 'socialismo.urss.gulag.nome', nome: 'Gulag', mortes: '~39M', descKey: 'socialismo.urss.gulag.desc', desc: 'O sistema de campos de trabalho forçado que Rummel estima ter ceifado cerca de 39 milhões de vidas entre execuções, mortes por condições de trabalho e deportações.' },
+			{ nomeKey: 'socialismo.urss.holodomor.nome', nome: 'Holodomor', mortes: '~5M', descKey: 'socialismo.urss.holodomor.desc', desc: 'A fome forçada na Ucrânia de 1932–1933. Rummel a classifica como democídio intencional: o Estado confiscou a produção de alimentos sabendo que a população morreria.' },
+			{ nomeKey: 'socialismo.urss.terror.nome', nome: 'Grande Terror', mortes: '~750K diretas', descKey: 'socialismo.urss.terror.desc', desc: 'As purgas stalinistas de 1936–1938. Cerca de 750 mil execuções documentadas, mais centenas de milhares de mortes nos campos.' },
+			{ nomeKey: 'socialismo.urss.deportacoes.nome', nome: 'Deportações em massa', mortes: 'Centenas de milhares', descKey: 'socialismo.urss.deportacoes.desc', desc: 'Chechenos, tártaros da Crimeia, alemães do Volga e outros povos inteiros deportados para a Sibéria em condições deliberadamente letais.' },
 		],
 	},
 	{
+		paisKey: 'socialismo.china.pais',
 		pais: 'China (Mao Tsé-Tung)',
 		mortes: '76,7M',
 		periodo: '1949–1976',
 		eventos: [
-			{ nome: 'Grande Salto Adiante', mortes: '~35–45M', desc: 'A fome de 1959–1961 causada pela coletivização forçada e pelas quotas de grãos que o Estado continuou exportando enquanto camponeses morriam. A maior fome da história humana.' },
-			{ nome: 'Revolução Cultural', mortes: '~1–3M diretas', desc: 'A campanha de 1966–1976 que destruiu a classe intelectual chinesa, com execuções, suicídios e mortes nos campos de reeducação.' },
-			{ nome: 'Reforma Agrária', mortes: '~1–2M', desc: 'A liquidação dos proprietários de terra após 1949, com julgamentos populares que terminavam em execução pública.' },
-			{ nome: 'Laogai', mortes: 'Centenas de milhares', desc: 'O sistema de trabalho forçado chinês, análogo ao Gulag soviético, operando desde 1950.' },
+			{ nomeKey: 'socialismo.china.grandesalto.nome', nome: 'Grande Salto Adiante', mortes: '~35–45M', descKey: 'socialismo.china.grandesalto.desc', desc: 'A fome de 1959–1961 causada pela coletivização forçada e pelas quotas de grãos que o Estado continuou exportando enquanto camponeses morriam. A maior fome da história humana.' },
+			{ nomeKey: 'socialismo.china.revcultural.nome', nome: 'Revolução Cultural', mortes: '~1–3M diretas', descKey: 'socialismo.china.revcultural.desc', desc: 'A campanha de 1966–1976 que destruiu a classe intelectual chinesa, com execuções, suicídios e mortes nos campos de reeducação.' },
+			{ nomeKey: 'socialismo.china.reformaagraria.nome', nome: 'Reforma Agrária', mortes: '~1–2M', descKey: 'socialismo.china.reformaagraria.desc', desc: 'A liquidação dos proprietários de terra após 1949, com julgamentos populares que terminavam em execução pública.' },
+			{ nomeKey: 'socialismo.china.laogai.nome', nome: 'Laogai', mortes: 'Centenas de milhares', descKey: 'socialismo.china.laogai.desc', desc: 'O sistema de trabalho forçado chinês, análogo ao Gulag soviético, operando desde 1950.' },
 		],
 	},
 	{
+		paisKey: 'socialismo.cambodia.pais',
 		pais: 'Camboja (Khmer Vermelho)',
 		mortes: '2,0M',
 		periodo: '1975–1979',
 		eventos: [
-			{ nome: 'Evacuação de Phnom Penh', mortes: 'Dezenas de milhares', desc: 'Em abril de 1975, toda a população de Phnom Penh (~2 milhões de pessoas) foi forçada a deixar a cidade em marchas letais.' },
-			{ nome: 'Campos de trabalho forçado', mortes: 'Centenas de milhares', desc: 'A população foi redistribuída em "zonas cooperativas" com trabalho escravo, rações mínimas e execução por qualquer infração.' },
-			{ nome: 'S-21 e campos da morte', mortes: '~17.000 em S-21', desc: 'O centro de detenção e tortura em Phnom Penh. Apenas sete prisioneiros sobreviveram. Os campos da morte (Choeung Ek) receberam os restos.' },
+			{ nomeKey: 'socialismo.cambodia.phnompenh.nome', nome: 'Evacuação de Phnom Penh', mortes: 'Dezenas de milhares', descKey: 'socialismo.cambodia.phnompenh.desc', desc: 'Em abril de 1975, toda a população de Phnom Penh (~2 milhões de pessoas) foi forçada a deixar a cidade em marchas letais.' },
+			{ nomeKey: 'socialismo.cambodia.campos.nome', nome: 'Campos de trabalho forçado', mortes: 'Centenas de milhares', descKey: 'socialismo.cambodia.campos.desc', desc: 'A população foi redistribuída em "zonas cooperativas" com trabalho escravo, rações mínimas e execução por qualquer infração.' },
+			{ nomeKey: 'socialismo.cambodia.s21.nome', nome: 'S-21 e campos da morte', mortes: '~17.000 em S-21', descKey: 'socialismo.cambodia.s21.desc', desc: 'O centro de detenção e tortura em Phnom Penh. Apenas sete prisioneiros sobreviveram. Os campos da morte (Choeung Ek) receberam os restos.' },
 		],
 	},
+];
+
+const breakdown = [
+	{ labelKey: 'socialismo.urss.pais', label: 'União Soviética', value: '61,9M' },
+	{ labelKey: 'socialismo.china.pais', label: 'China (Mao)', value: '76,7M' },
+	{ labelKey: 'socialismo.cambodia.pais', label: 'Camboja', value: '2,0M' },
+	{ labelKey: 'socialismo.vietnam.pais', label: 'Vietnã', value: '1,7M' },
+	{ labelKey: 'socialismo.korea.pais', label: 'Coreia do Norte', value: '>1M' },
 ];
 ---
 
@@ -57,15 +68,15 @@ const casos = [
 	<div class="page-layout">
 		<div class="content">
 			<nav class="breadcrumb">
-				<a href={toBase('democidios/')}>Democídios</a>
+				<a href={toBase('democidios/')} data-i18n="common.democidios.breadcrumb">Democídios</a>
 				<span>›</span>
-				<span>Socialismo</span>
+				<span data-i18n="socialismo.h1">Socialismo</span>
 			</nav>
 
 			<header class="page-header">
-				<h1>Socialismo</h1>
-				<p class="subtitle">URSS · China · Camboja · Coreia do Norte</p>
-				<p class="header-intro">
+				<h1 data-i18n="socialismo.h1">Socialismo</h1>
+				<p class="subtitle" data-i18n="socialismo.subtitle">URSS · China · Camboja · Coreia do Norte</p>
+				<p class="header-intro" data-i18n="socialismo.intro">
 					Os regimes comunistas do século XX respondem pela maior parcela do democídio
 					estimado por Rummel. Juntos, a União Soviética e a China comunista somam mais de
 					138 milhões de mortes — mais da metade do total global.
@@ -75,7 +86,7 @@ const casos = [
 			{casos.map((caso) => (
 				<div class="country-section">
 					<div class="country-header">
-						<h2>{caso.pais}</h2>
+						<h2 data-i18n={caso.paisKey}>{caso.pais}</h2>
 						<div class="country-stats">
 							<span class="cstat-num">{caso.mortes}</span>
 							<span class="cstat-period">{caso.periodo}</span>
@@ -85,10 +96,10 @@ const casos = [
 						{caso.eventos.map((ev) => (
 							<div class="event">
 								<div class="event-header">
-									<span class="event-name">{ev.nome}</span>
+									<span class="event-name" data-i18n={ev.nomeKey}>{ev.nome}</span>
 									<span class="event-deaths">{ev.mortes}</span>
 								</div>
-								<p class="event-desc">{ev.desc}</p>
+								<p class="event-desc" data-i18n={ev.descKey}>{ev.desc}</p>
 							</div>
 						))}
 					</div>
@@ -96,14 +107,14 @@ const casos = [
 			))}
 
 			<div class="prose-section">
-				<h2>A perspectiva de Rummel</h2>
-				<p>
+				<h2 data-i18n="socialismo.rummel.h2">A perspectiva de Rummel</h2>
+				<p data-i18n="socialismo.rummel.p1" data-i18n-html>
 					Em <em>"How Many Did Communist Regimes Murder?"</em>, Rummel estima que regimes
 					comunistas mataram entre 110 e 260 milhões de pessoas no século XX, com um valor
 					central próximo de 110 milhões. A revisão de 2005 da estimativa chinesa elevou
 					esse número significativamente.
 				</p>
-				<p>
+				<p data-i18n="socialismo.rummel.p2" data-i18n-html>
 					Rummel é cuidadoso em distinguir os mecanismos: não foi a ideologia socialista
 					<em>per se</em> que produziu o democídio, mas a concentração absoluta de poder
 					que esses regimes criaram. A coletivização forçada, o controle estatal da
@@ -115,22 +126,20 @@ const casos = [
 
 		<aside class="sidebar">
 			<div class="sidebar-block sidebar-block--accent">
-				<p class="kicker">Total combinado</p>
+				<p class="kicker" data-i18n="socialismo.sidebar.total.kicker">Total combinado</p>
 				<span class="big-num">~138M</span>
-				<p class="big-num-label">URSS + China (estimativa Rummel)</p>
+				<p class="big-num-label" data-i18n="socialismo.sidebar.bignum.label">URSS + China (estimativa Rummel)</p>
 			</div>
 			<div class="sidebar-block">
-				<p class="kicker">Por regime</p>
+				<p class="kicker" data-i18n="socialismo.sidebar.regimes.kicker">Por regime</p>
 				<ul class="breakdown">
-					<li><span>União Soviética</span><span>61,9M</span></li>
-					<li><span>China (Mao)</span><span>76,7M</span></li>
-					<li><span>Camboja</span><span>2,0M</span></li>
-					<li><span>Vietnã</span><span>1,7M</span></li>
-					<li><span>Coreia do Norte</span><span>&gt;1M</span></li>
+					{breakdown.map((b) => (
+						<li><span data-i18n={b.labelKey}>{b.label}</span><span>{b.value}</span></li>
+					))}
 				</ul>
 			</div>
 			<div class="sidebar-block">
-				<p class="kicker">Fontes primárias preservadas</p>
+				<p class="kicker" data-i18n="common.sources.kicker">Fontes primárias preservadas</p>
 				<ul class="source-list">
 					{fontes.map((item) => item && (
 						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>

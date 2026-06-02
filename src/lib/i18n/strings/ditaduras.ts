@@ -199,4 +199,121 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '按国家',
     ja: '国別',
   },
+  'ditaduras.guatemala.short': {
+    pt: 'Guatemala', en: 'Guatemala', es: 'Guatemala', fr: 'Guatemala',
+    it: 'Guatemala', de: 'Guatemala', zh: '危地马拉', ja: 'グアテマラ',
+  },
+  'ditaduras.argentina.short': {
+    pt: 'Argentina', en: 'Argentina', es: 'Argentina', fr: 'Argentine',
+    it: 'Argentina', de: 'Argentinien', zh: '阿根廷', ja: 'アルゼンチン',
+  },
+  'ditaduras.chile.short': {
+    pt: 'Chile', en: 'Chile', es: 'Chile', fr: 'Chili',
+    it: 'Cile', de: 'Chile', zh: '智利', ja: 'チリ',
+  },
+  'ditaduras.brasil.short': {
+    pt: 'Brasil', en: 'Brazil', es: 'Brasil', fr: 'Brésil',
+    it: 'Brasile', de: 'Brasilien', zh: '巴西', ja: 'ブラジル',
+  },
+  'ditaduras.elsalvador.short': {
+    pt: 'El Salvador', en: 'El Salvador', es: 'El Salvador', fr: 'Salvador',
+    it: 'El Salvador', de: 'El Salvador', zh: '萨尔瓦多', ja: 'エルサルバドル',
+  },
+  'ditaduras.guatemala.m1': {
+    pt: 'Massacres de aldeia', en: 'Village massacres', es: 'Masacres de aldea',
+    fr: 'Massacres de village', it: 'Massacri di villaggi', de: 'Dorfmassaker',
+    zh: '村庄屠杀', ja: '村落虐殺',
+  },
+  'ditaduras.guatemala.m2': {
+    pt: 'Terra arrasada', en: 'Scorched earth', es: 'Tierra arrasada',
+    fr: 'Terre brûlée', it: 'Terra bruciata', de: 'Verbrannte Erde',
+    zh: '焦土政策', ja: '焦土作戦',
+  },
+  'ditaduras.guatemala.m3': {
+    pt: 'Desaparecimentos', en: 'Disappearances', es: 'Desapariciones',
+    fr: 'Disparitions', it: 'Sparizioni', de: 'Verschwindenlassen',
+    zh: '强迫失踪', ja: '強制失踪',
+  },
+  'ditaduras.guatemala.m4': {
+    pt: 'Tortura sistemática', en: 'Systematic torture', es: 'Tortura sistemática',
+    fr: 'Torture systématique', it: 'Tortura sistematica', de: 'Systematische Folter',
+    zh: '系统性酷刑', ja: '組織的拷問',
+  },
+  'ditaduras.argentina.m1': {
+    pt: 'Centros clandestinos de detenção', en: 'Clandestine detention centers',
+    es: 'Centros clandestinos de detención', fr: 'Centres de détention clandestins',
+    it: 'Centri di detenzione clandestini', de: 'Geheime Haftzentren',
+    zh: '秘密拘留中心', ja: '秘密収容所',
+  },
+  'ditaduras.argentina.m2': {
+    pt: 'Voos da morte', en: 'Death flights', es: 'Vuelos de la muerte',
+    fr: 'Vols de la mort', it: 'Voli della morte', de: 'Todesflüge',
+    zh: '死亡航班', ja: '死のフライト',
+  },
+  'ditaduras.argentina.m3': {
+    pt: 'Tortura', en: 'Torture', es: 'Tortura', fr: 'Torture',
+    it: 'Tortura', de: 'Folter', zh: '酷刑', ja: '拷問',
+  },
+  'ditaduras.argentina.m4': {
+    pt: 'Sequestro de crianças', en: 'Child abduction', es: 'Secuestro de niños',
+    fr: "Enlèvement d'enfants", it: 'Rapimento di bambini', de: 'Kindesentführung',
+    zh: '诱拐儿童', ja: '児童誘拐',
+  },
+  'ditaduras.chile.m1': {
+    pt: 'Estádio Nacional', en: 'National Stadium', es: 'Estadio Nacional',
+    fr: 'Stade national', it: 'Stadio Nazionale', de: 'Nationalstadion',
+    zh: '国家体育场', ja: '国立競技場',
+  },
+  'ditaduras.chile.m2': {
+    pt: 'Villa Grimaldi', en: 'Villa Grimaldi', es: 'Villa Grimaldi',
+    fr: 'Villa Grimaldi', it: 'Villa Grimaldi', de: 'Villa Grimaldi',
+    zh: '格里马尔迪庄园', ja: 'ヴィラ・グリマルディ',
+  },
+  'ditaduras.chile.m3': {
+    pt: 'Tortura sistemática', en: 'Systematic torture', es: 'Tortura sistemática',
+    fr: 'Torture systématique', it: 'Tortura sistematica', de: 'Systematische Folter',
+    zh: '系统性酷刑', ja: '組織的拷問',
+  },
+  'ditaduras.chile.m4': {
+    pt: 'Exílio forçado', en: 'Forced exile', es: 'Exilio forzado',
+    fr: 'Exil forcé', it: 'Esilio forzato', de: 'Zwangsexil',
+    zh: '强制流亡', ja: '強制亡命',
+  },
+  'ditaduras.brasil.m1': {
+    pt: 'DOI-CODI', en: 'DOI-CODI', es: 'DOI-CODI', fr: 'DOI-CODI',
+    it: 'DOI-CODI', de: 'DOI-CODI', zh: 'DOI-CODI', ja: 'DOI-CODI',
+  },
+  'ditaduras.brasil.m2': {
+    pt: 'Tortura', en: 'Torture', es: 'Tortura', fr: 'Torture',
+    it: 'Tortura', de: 'Folter', zh: '酷刑', ja: '拷問',
+  },
+  'ditaduras.brasil.m3': {
+    pt: 'Desaparecimentos', en: 'Disappearances', es: 'Desapariciones',
+    fr: 'Disparitions', it: 'Sparizioni', de: 'Verschwindenlassen',
+    zh: '强迫失踪', ja: '強制失踪',
+  },
+  'ditaduras.brasil.m4': {
+    pt: 'Censura e perseguição', en: 'Censorship and persecution',
+    es: 'Censura y persecución', fr: 'Censure et persécution',
+    it: 'Censura e persecuzione', de: 'Zensur und Verfolgung',
+    zh: '审查与迫害', ja: '検閲と迫害',
+  },
+  'ditaduras.elsalvador.m1': {
+    pt: 'Esquadrões da Morte', en: 'Death squads', es: 'Escuadrones de la Muerte',
+    fr: 'Escadrons de la mort', it: 'Squadroni della morte', de: 'Todesschwadronen',
+    zh: '死亡小队', ja: '暗殺部隊',
+  },
+  'ditaduras.elsalvador.m2': {
+    pt: 'El Mozote', en: 'El Mozote', es: 'El Mozote', fr: 'El Mozote',
+    it: 'El Mozote', de: 'El Mozote', zh: '埃尔莫索特', ja: 'エル・モソテ',
+  },
+  'ditaduras.elsalvador.m3': {
+    pt: 'Massacre sistemático', en: 'Systematic massacre', es: 'Masacre sistemática',
+    fr: 'Massacre systématique', it: 'Massacro sistematico', de: 'Systematisches Massaker',
+    zh: '系统性屠杀', ja: '組織的虐殺',
+  },
+  'ditaduras.elsalvador.m4': {
+    pt: 'Tortura', en: 'Torture', es: 'Tortura', fr: 'Torture',
+    it: 'Tortura', de: 'Folter', zh: '酷刑', ja: '拷問',
+  },
 };

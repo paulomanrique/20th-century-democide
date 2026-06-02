@@ -13,21 +13,28 @@ const fontes = [
 	link('reevaluating-colonial-democide'),
 	link('democide-since-world-war-ii'),
 ].filter(Boolean);
+
+const breakdown = [
+	{ labelKey: 'colonialismo.case.congo', label: 'Congo Belga', value: '1–10M' },
+	{ labelKey: 'colonialismo.case.herero', label: 'Herero e Namaqua', value: '~65–80K' },
+	{ labelKey: 'colonialismo.case.india', label: 'Índia Britânica', value: '12–29M' },
+	{ labelKey: 'colonialismo.case.bengala', label: 'Bengala (1943)', value: '2–3M' },
+];
 ---
 
 <Layout title="Colonialismo | Democídios | 20th Century Democide" description="O democídio colonial — o que as potências europeias fizeram em seus impérios.">
 	<div class="page-layout">
 		<div class="content">
 			<nav class="breadcrumb">
-				<a href={toBase('democidios/')}>Democídios</a>
+				<a href={toBase('democidios/')} data-i18n="common.democidios.breadcrumb">Democídios</a>
 				<span>›</span>
-				<span>Colonialismo</span>
+				<span data-i18n="colonialismo.h1">Colonialismo</span>
 			</nav>
 
 			<header class="page-header">
-				<h1>Colonialismo</h1>
-				<p class="subtitle">O democídio que o século XX herdou e continuou</p>
-				<p class="header-intro">
+				<h1 data-i18n="colonialismo.h1">Colonialismo</h1>
+				<p class="subtitle" data-i18n="colonialismo.subtitle">O democídio que o século XX herdou e continuou</p>
+				<p class="header-intro" data-i18n="colonialismo.intro">
 					Rummel revisou suas estimativas do democídio colonial em 2005, reconhecendo que
 					subestimara significativamente a violência das potências europeias nos seus
 					impérios. O colonialismo produziu democídio de formas diversas: extermínio
@@ -37,15 +44,15 @@ const fontes = [
 			</header>
 
 			<div class="prose-section">
-				<h2>Congo Belga (Estado Livre do Congo)</h2>
-				<p>
+				<h2 data-i18n="colonialismo.congo.h2">Congo Belga (Estado Livre do Congo)</h2>
+				<p data-i18n="colonialismo.congo.p1">
 					O caso mais documentado e extremo do democídio colonial. Entre 1885 e 1908, o
 					rei Leopoldo II da Bélgica administrou o Congo como propriedade pessoal através
 					de um regime de terror destinado a maximizar a extração de borracha. Os métodos
 					incluíam amputação de mãos como punição por cotas não cumpridas, tomada de
 					reféns, execuções em massa e trabalho forçado.
 				</p>
-				<p>
+				<p data-i18n="colonialismo.congo.p2">
 					As estimativas de mortes variam enormemente — de 1 milhão a 10 milhões. A
 					população do Congo caiu pela metade entre 1880 e 1920, por uma combinação de
 					assassinatos diretos, fome, doenças e queda da natalidade causadas pelo regime.
@@ -54,14 +61,14 @@ const fontes = [
 			</div>
 
 			<div class="prose-section">
-				<h2>África do Sudoeste Alemã (Namíbia)</h2>
-				<p>
+				<h2 data-i18n="colonialismo.namibia.h2">África do Sudoeste Alemã (Namíbia)</h2>
+				<p data-i18n="colonialismo.namibia.p1" data-i18n-html>
 					Entre 1904 e 1908, o Império Alemão suprimiu as revoltas dos povos Herero e
 					Namaqua na atual Namíbia com uma campanha de extermínio sistemático. O General
 					Lothar von Trotha emitiu a <em>Vernichtungsbefehl</em> (ordem de extermínio),
 					expulsando os Herero para o deserto do Kalahari e envenenando os poços de água.
 				</p>
-				<p>
+				<p data-i18n="colonialismo.namibia.p2">
 					Estima-se que 65–80% dos Herero e 50% dos Namaqua morreram. É amplamente
 					reconhecido como o primeiro genocídio do século XX, precedendo o Holocausto
 					por três décadas. A Alemanha reconheceu formalmente o genocídio em 2021.
@@ -69,8 +76,8 @@ const fontes = [
 			</div>
 
 			<div class="prose-section">
-				<h2>Índia Britânica — as fomes coloniais</h2>
-				<p>
+				<h2 data-i18n="colonialismo.india.h2">Índia Britânica — as fomes coloniais</h2>
+				<p data-i18n="colonialismo.india.p1">
 					O historiador Mike Davis documentou as "fomes vitordianas tardias" que mataram
 					entre 12 e 29 milhões de indianos entre 1876 e 1902. Rummel analisa o papel do
 					governo colonial britânico nessas fomes: as políticas de exportação de grãos
@@ -78,7 +85,7 @@ const fontes = [
 					recusa em suspender o livre-mercado durante emergências alimentares constituem,
 					em sua análise, democídio por negligência criminal.
 				</p>
-				<p>
+				<p data-i18n="colonialismo.india.p2">
 					A fome de 1943 em Bengala — que matou 2–3 milhões de pessoas durante a Segunda
 					Guerra Mundial — é um exemplo mais recente e documentado, onde as políticas de
 					Churchill de exportação de alimentos e recusa de socorro internacional
@@ -87,14 +94,14 @@ const fontes = [
 			</div>
 
 			<div class="prose-section">
-				<h2>A reavaliação de Rummel (2005)</h2>
-				<p>
+				<h2 data-i18n="colonialismo.reeval.h2">A reavaliação de Rummel (2005)</h2>
+				<p data-i18n="colonialismo.reeval.p1" data-i18n-html>
 					Em sua revisão de 2005, Rummel reconheceu que as estimativas originais para o
 					democídio colonial eram conservadoras demais. O artigo preservado neste arquivo —
 					<em>"Reevaluating Colonial Democide"</em> — atualiza as estimativas levando em
 					conta novos estudos históricos e revisões metodológicas.
 				</p>
-				<p>
+				<p data-i18n="colonialismo.reeval.p2">
 					A dificuldade metodológica do democídio colonial é real: os registros são
 					fragmentados, as mortes foram frequentemente classificadas como "pacificação" ou
 					resultado de "condições naturais", e o interesse político em minimizá-las persiste.
@@ -106,20 +113,19 @@ const fontes = [
 
 		<aside class="sidebar">
 			<div class="sidebar-block sidebar-block--accent">
-				<p class="kicker">Nota metodológica</p>
-				<p class="sidebar-note">As estimativas do democídio colonial têm maior incerteza do que outros casos. Rummel as revisou para cima em 2005.</p>
+				<p class="kicker" data-i18n="colonialismo.sidebar.note.kicker">Nota metodológica</p>
+				<p class="sidebar-note" data-i18n="colonialismo.sidebar.note.text">As estimativas do democídio colonial têm maior incerteza do que outros casos. Rummel as revisou para cima em 2005.</p>
 			</div>
 			<div class="sidebar-block">
-				<p class="kicker">Casos principais</p>
+				<p class="kicker" data-i18n="colonialismo.sidebar.cases.kicker">Casos principais</p>
 				<ul class="breakdown">
-					<li><span>Congo Belga</span><span>1–10M</span></li>
-					<li><span>Herero e Namaqua</span><span>~65–80K</span></li>
-					<li><span>Índia Britânica</span><span>12–29M</span></li>
-					<li><span>Bengala (1943)</span><span>2–3M</span></li>
+					{breakdown.map((b) => (
+						<li><span data-i18n={b.labelKey}>{b.label}</span><span>{b.value}</span></li>
+					))}
 				</ul>
 			</div>
 			<div class="sidebar-block">
-				<p class="kicker">Fontes primárias preservadas</p>
+				<p class="kicker" data-i18n="common.sources.kicker">Fontes primárias preservadas</p>
 				<ul class="source-list">
 					{fontes.map((item) => item && (
 						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>

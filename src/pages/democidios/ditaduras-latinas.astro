@@ -17,40 +17,83 @@ const fontes = [
 
 const paises = [
 	{
+		paisKey: 'ditaduras.guatemala.pais',
 		pais: 'Guatemala',
 		mortes: '~200K',
 		periodo: '1954–1996',
+		descKey: 'ditaduras.guatemala.desc',
 		desc: 'A Guerra Civil guatemalteca e as ditaduras que a conduziram produziram o maior democídio proporcional da América Latina. A Comissão para o Esclarecimento Histórico (ONU) concluiu que o Estado cometeu atos de genocídio contra populações indígenas Maia, particularmente durante o governo de Ríos Montt (1982–1983), apoiado pelos EUA.',
-		metodos: ['Massacres de aldeia', 'Terra arrasada', 'Desaparecimentos', 'Tortura sistemática'],
+		metodos: [
+			{ key: 'ditaduras.guatemala.m1', label: 'Massacres de aldeia' },
+			{ key: 'ditaduras.guatemala.m2', label: 'Terra arrasada' },
+			{ key: 'ditaduras.guatemala.m3', label: 'Desaparecimentos' },
+			{ key: 'ditaduras.guatemala.m4', label: 'Tortura sistemática' },
+		],
 	},
 	{
+		paisKey: 'ditaduras.argentina.pais',
 		pais: 'Argentina — Guerra Suja',
 		mortes: '10–30K',
 		periodo: '1976–1983',
+		descKey: 'ditaduras.argentina.desc',
 		desc: 'A junta militar argentina implementou um programa sistemático de sequestro, tortura e assassinato de opositores políticos. Os "desaparecidos" eram frequentemente jogados vivos ao mar. A Comissão Nacional sobre o Desaparecimento de Pessoas documentou 8.961 casos, mas estima-se que o número real seja de 10 a 30 mil.',
-		metodos: ['Centros clandestinos de detenção', 'Voos da morte', 'Tortura', 'Sequestro de crianças'],
+		metodos: [
+			{ key: 'ditaduras.argentina.m1', label: 'Centros clandestinos de detenção' },
+			{ key: 'ditaduras.argentina.m2', label: 'Voos da morte' },
+			{ key: 'ditaduras.argentina.m3', label: 'Tortura' },
+			{ key: 'ditaduras.argentina.m4', label: 'Sequestro de crianças' },
+		],
 	},
 	{
+		paisKey: 'ditaduras.chile.pais',
 		pais: 'Chile — Pinochet',
 		mortes: '~3K diretas',
 		periodo: '1973–1990',
+		descKey: 'ditaduras.chile.desc',
 		desc: 'O golpe de 11 de setembro de 1973 foi seguido pela Caravana da Morte e por uma sistemática eliminação de opositores. O Informe Rettig documentou 2.279 mortos e desaparecidos; o Informe Valech, 27.000 torturados. O número de mortos é menor que outros casos, mas o programa de tortura foi excepcionalmente abrangente.',
-		metodos: ['Estádio Nacional', 'Villa Grimaldi', 'Tortura sistemática', 'Exílio forçado'],
+		metodos: [
+			{ key: 'ditaduras.chile.m1', label: 'Estádio Nacional' },
+			{ key: 'ditaduras.chile.m2', label: 'Villa Grimaldi' },
+			{ key: 'ditaduras.chile.m3', label: 'Tortura sistemática' },
+			{ key: 'ditaduras.chile.m4', label: 'Exílio forçado' },
+		],
 	},
 	{
+		paisKey: 'ditaduras.brasil.pais',
 		pais: 'Brasil — Ditadura Militar',
 		mortes: '~400–500 documentados',
 		periodo: '1964–1985',
+		descKey: 'ditaduras.brasil.desc',
 		desc: 'A ditadura brasileira foi relativamente menos letal em mortes diretas do que Argentina e Chile, mas operou uma vasta rede de tortura. A Comissão Nacional da Verdade (2014) documentou 434 mortos e desaparecidos políticos. A tortura foi usada sistematicamente contra presos políticos, com cumplicidade de setores da Igreja e do Judiciário.',
-		metodos: ['DOI-CODI', 'Tortura', 'Desaparecimentos', 'Censura e perseguição'],
+		metodos: [
+			{ key: 'ditaduras.brasil.m1', label: 'DOI-CODI' },
+			{ key: 'ditaduras.brasil.m2', label: 'Tortura' },
+			{ key: 'ditaduras.brasil.m3', label: 'Desaparecimentos' },
+			{ key: 'ditaduras.brasil.m4', label: 'Censura e perseguição' },
+		],
 	},
 	{
+		paisKey: 'ditaduras.elsalvador.pais',
 		pais: 'El Salvador',
 		mortes: '~70–75K',
 		periodo: '1979–1992',
+		descKey: 'ditaduras.elsalvador.desc',
 		desc: 'A Guerra Civil salvadorenha incluiu o Massacre de El Mozote (1981), onde forças militares assassinaram cerca de 900 civis, incluindo crianças. Os Esquadrões da Morte — vinculados ao Estado — operaram com impunidade. O relatório da ONU atribuiu 85% das violações às forças governamentais.',
-		metodos: ['Esquadrões da Morte', 'El Mozote', 'Massacre sistemático', 'Tortura'],
+		metodos: [
+			{ key: 'ditaduras.elsalvador.m1', label: 'Esquadrões da Morte' },
+			{ key: 'ditaduras.elsalvador.m2', label: 'El Mozote' },
+			{ key: 'ditaduras.elsalvador.m3', label: 'Massacre sistemático' },
+			{ key: 'ditaduras.elsalvador.m4', label: 'Tortura' },
+		],
 	},
+];
+
+const breakdown = [
+	{ labelKey: 'ditaduras.guatemala.short', label: 'Guatemala', value: '~200K' },
+	{ labelKey: 'ditaduras.elsalvador.short', label: 'El Salvador', value: '~70K' },
+	{ labelKey: 'ditaduras.argentina.short', label: 'Argentina', value: '10–30K' },
+	{ labelKey: 'ditaduras.chile.short', label: 'Chile', value: '~3K' },
+	{ labelKey: 'ditaduras.brasil.short', label: 'Brasil', value: '~500' },
 ];
 ---
 
@@ -58,15 +101,15 @@ const paises = [
 	<div class="page-layout">
 		<div class="content">
 			<nav class="breadcrumb">
-				<a href={toBase('democidios/')}>Democídios</a>
+				<a href={toBase('democidios/')} data-i18n="common.democidios.breadcrumb">Democídios</a>
 				<span>›</span>
-				<span>Ditaduras Latinas</span>
+				<span data-i18n="ditaduras.breadcrumb">Ditaduras Latinas</span>
 			</nav>
 
 			<header class="page-header">
-				<h1>Ditaduras Latinas</h1>
-				<p class="subtitle">América Latina · Séculos XX</p>
-				<p class="header-intro">
+				<h1 data-i18n="ditaduras.h1">Ditaduras Latinas</h1>
+				<p class="subtitle" data-i18n="ditaduras.subtitle">América Latina · Séculos XX</p>
+				<p class="header-intro" data-i18n="ditaduras.intro">
 					As ditaduras latino-americanas do século XX produziram democídio em escala menor
 					do que os regimes totalitários soviético e nazista, mas com métodos igualmente
 					sistemáticos. Muitas operaram com apoio ou tolerância dos Estados Unidos no
@@ -78,28 +121,28 @@ const paises = [
 			{paises.map((p) => (
 				<div class="country-section">
 					<div class="country-header">
-						<h2>{p.pais}</h2>
+						<h2 data-i18n={p.paisKey}>{p.pais}</h2>
 						<div class="country-stats">
 							<span class="cstat-num">{p.mortes}</span>
 							<span class="cstat-period">{p.periodo}</span>
 						</div>
 					</div>
-					<p class="country-desc">{p.desc}</p>
+					<p class="country-desc" data-i18n={p.descKey}>{p.desc}</p>
 					<div class="methods">
-						{p.metodos.map((m) => <span class="method-tag">{m}</span>)}
+						{p.metodos.map((m) => <span class="method-tag" data-i18n={m.key}>{m.label}</span>)}
 					</div>
 				</div>
 			))}
 
 			<div class="prose-section">
-				<h2>O contexto de Rummel</h2>
-				<p>
+				<h2 data-i18n="ditaduras.context.h2">O contexto de Rummel</h2>
+				<p data-i18n="ditaduras.context.p1">
 					Rummel classifica a maioria das ditaduras latino-americanas entre o que chama de
 					"centi-killers" e "lesser murderers" — regimes que mataram entre mil e cem mil
 					pessoas. Numericamente menores do que os megamurderers, mas não menos
 					importantes para compreender o fenômeno do democídio.
 				</p>
-				<p>
+				<p data-i18n="ditaduras.context.p2">
 					Um padrão recorrente em sua análise: o envolvimento dos Estados Unidos. Seja no
 					golpe chileno (operação CONDOR), no treinamento de militares argentinos, no
 					apoio à Junta guatemalteca ou na contrainsurgência salvadorenha, a potência
@@ -111,21 +154,19 @@ const paises = [
 
 		<aside class="sidebar">
 			<div class="sidebar-block sidebar-block--accent">
-				<p class="kicker">Padrão comum</p>
-				<p class="sidebar-note">Apoio ou tolerância dos EUA, tortura sistemática, desaparecimentos, impunidade garantida por anistias.</p>
+				<p class="kicker" data-i18n="ditaduras.sidebar.pattern.kicker">Padrão comum</p>
+				<p class="sidebar-note" data-i18n="ditaduras.sidebar.pattern.text">Apoio ou tolerância dos EUA, tortura sistemática, desaparecimentos, impunidade garantida por anistias.</p>
 			</div>
 			<div class="sidebar-block">
-				<p class="kicker">Por país</p>
+				<p class="kicker" data-i18n="ditaduras.sidebar.countries.kicker">Por país</p>
 				<ul class="breakdown">
-					<li><span>Guatemala</span><span>~200K</span></li>
-					<li><span>El Salvador</span><span>~70K</span></li>
-					<li><span>Argentina</span><span>10–30K</span></li>
-					<li><span>Chile</span><span>~3K</span></li>
-					<li><span>Brasil</span><span>~500</span></li>
+					{breakdown.map((b) => (
+						<li><span data-i18n={b.labelKey}>{b.label}</span><span>{b.value}</span></li>
+					))}
 				</ul>
 			</div>
 			<div class="sidebar-block">
-				<p class="kicker">Fontes primárias preservadas</p>
+				<p class="kicker" data-i18n="common.sources.kicker">Fontes primárias preservadas</p>
 				<ul class="source-list">
 					{fontes.map((item) => item && (
 						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>
