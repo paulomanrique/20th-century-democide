@@ -1,0 +1,189 @@
+---
+import { getCollection } from 'astro:content';
+import type { Lang } from '../../lib/i18n';
+import { t, localizedHref } from '../../lib/i18n';
+import Layout from '../../layouts/Layout.astro';
+import { displayTitle } from '../../lib/title';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const items = await getCollection('items', ({ data }) => !data.draft);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const href = (slug: string) => `${base}${localizedHref(slug, lang)}`;
+
+function link(id: string) {
+	const e = items.find((i) => i.id === id);
+	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
+}
+const fontes = [
+	link('how-many-did-communism-murder'),
+	link('lethal-politics-note'),
+	link('reevaluating-chinas-democide'),
+	link('chinas-bloody-century-note'),
+	link('khmer-rouge-and-rwandan-genocide-section'),
+].filter(Boolean);
+
+const casos = [
+	{ paisKey: 'socialismo.urss.pais', mortes: '61,9M', periodo: '1917–1987',
+		eventos: [
+			{ nomeKey: 'socialismo.urss.gulag.nome', mortes: '~39M', descKey: 'socialismo.urss.gulag.desc' },
+			{ nomeKey: 'socialismo.urss.holodomor.nome', mortes: '~5M', descKey: 'socialismo.urss.holodomor.desc' },
+			{ nomeKey: 'socialismo.urss.terror.nome', mortes: '~750K diretas', descKey: 'socialismo.urss.terror.desc' },
+			{ nomeKey: 'socialismo.urss.deportacoes.nome', mortes: 'Centenas de milhares', descKey: 'socialismo.urss.deportacoes.desc' },
+		],
+	},
+	{ paisKey: 'socialismo.china.pais', mortes: '76,7M', periodo: '1949–1976',
+		eventos: [
+			{ nomeKey: 'socialismo.china.grandesalto.nome', mortes: '~35–45M', descKey: 'socialismo.china.grandesalto.desc' },
+			{ nomeKey: 'socialismo.china.revcultural.nome', mortes: '~1–3M diretas', descKey: 'socialismo.china.revcultural.desc' },
+			{ nomeKey: 'socialismo.china.reformaagraria.nome', mortes: '~1–2M', descKey: 'socialismo.china.reformaagraria.desc' },
+			{ nomeKey: 'socialismo.china.laogai.nome', mortes: 'Centenas de milhares', descKey: 'socialismo.china.laogai.desc' },
+		],
+	},
+	{ paisKey: 'socialismo.cambodia.pais', mortes: '2,0M', periodo: '1975–1979',
+		eventos: [
+			{ nomeKey: 'socialismo.cambodia.phnompenh.nome', mortes: 'Dezenas de milhares', descKey: 'socialismo.cambodia.phnompenh.desc' },
+			{ nomeKey: 'socialismo.cambodia.campos.nome', mortes: 'Centenas de milhares', descKey: 'socialismo.cambodia.campos.desc' },
+			{ nomeKey: 'socialismo.cambodia.s21.nome', mortes: '~17.000 em S-21', descKey: 'socialismo.cambodia.s21.desc' },
+		],
+	},
+];
+
+const breakdown = [
+	{ labelKey: 'socialismo.urss.pais', value: '61,9M' },
+	{ labelKey: 'socialismo.china.pais', value: '76,7M' },
+	{ labelKey: 'socialismo.cambodia.pais', value: '2,0M' },
+	{ labelKey: 'socialismo.vietnam.pais', value: '1,7M' },
+	{ labelKey: 'socialismo.korea.pais', value: '>1M' },
+];
+---
+
+<Layout
+	title={`${t('socialismo.h1', lang)} | ${t('democidios.h1', lang)} | ${t('site.title', lang)}`}
+	description={t('socialismo.intro', lang)}
+	lang={lang}
+	currentPath="democidios/socialismo/"
+>
+	<div class="page-layout">
+		<div class="content">
+			<nav class="breadcrumb">
+				<a href={href('democidios/')}>{t('common.democidios.breadcrumb', lang)}</a>
+				<span>›</span>
+				<span>{t('socialismo.h1', lang)}</span>
+			</nav>
+
+			<header class="page-header">
+				<h1>{t('socialismo.h1', lang)}</h1>
+				<p class="subtitle">{t('socialismo.subtitle', lang)}</p>
+				<p class="header-intro">{t('socialismo.intro', lang)}</p>
+			</header>
+
+			{casos.map((caso) => (
+				<div class="country-section">
+					<div class="country-header">
+						<h2>{t(caso.paisKey, lang)}</h2>
+						<div class="country-stats">
+							<span class="cstat-num">{caso.mortes}</span>
+							<span class="cstat-period">{caso.periodo}</span>
+						</div>
+					</div>
+					<div class="events">
+						{caso.eventos.map((ev) => (
+							<div class="event">
+								<div class="event-header">
+									<span class="event-name">{t(ev.nomeKey, lang)}</span>
+									<span class="event-deaths">{ev.mortes}</span>
+								</div>
+								<p class="event-desc">{t(ev.descKey, lang)}</p>
+							</div>
+						))}
+					</div>
+				</div>
+			))}
+
+			<div class="prose-section">
+				<h2>{t('socialismo.rummel.h2', lang)}</h2>
+				<p set:html={t('socialismo.rummel.p1', lang)} />
+				<p set:html={t('socialismo.rummel.p2', lang)} />
+			</div>
+		</div>
+
+		<aside class="sidebar">
+			<div class="sidebar-block sidebar-block--accent">
+				<p class="kicker">{t('socialismo.sidebar.total.kicker', lang)}</p>
+				<span class="big-num">~138M</span>
+				<p class="big-num-label">{t('socialismo.sidebar.bignum.label', lang)}</p>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker">{t('socialismo.sidebar.regimes.kicker', lang)}</p>
+				<ul class="breakdown">
+					{breakdown.map((b) => (
+						<li><span>{t(b.labelKey, lang)}</span><span>{b.value}</span></li>
+					))}
+				</ul>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker">{t('common.sources.kicker', lang)}</p>
+				<ul class="source-list">
+					{fontes.map((item) => item && (
+						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>
+					))}
+				</ul>
+			</div>
+		</aside>
+	</div>
+</Layout>
+
+<style>
+	.page-layout { display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
+	.breadcrumb { font-family: var(--mono); font-size: 0.68rem; color: var(--faint); margin-bottom: 1.5rem; display: flex; gap: 0.4rem; align-items: center; }
+	.breadcrumb a { color: var(--muted); text-decoration: none; }
+	.breadcrumb a:hover { color: var(--accent); }
+	.page-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule-strong); }
+	h1 { font-family: var(--display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; font-style: italic; margin: 0 0 0.3rem; line-height: 1.05; letter-spacing: -0.02em; }
+	.subtitle { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; margin: 0 0 0.85rem; }
+	.header-intro { font-size: 1rem; line-height: 1.7; color: var(--muted); max-width: 60ch; margin: 0; }
+
+	.country-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.country-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem; flex-wrap: wrap; }
+	h2 { font-family: var(--display); font-size: 1.35rem; font-weight: 700; margin: 0; color: var(--ink); }
+	.country-stats { text-align: right; }
+	.cstat-num { display: block; font-family: var(--display); font-size: 1.5rem; font-weight: 900; color: var(--accent); line-height: 1; }
+	.cstat-period { display: block; font-family: var(--mono); font-size: 0.62rem; color: var(--faint); letter-spacing: 0.04em; margin-top: 0.2rem; }
+
+	.events { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--rule-strong); border-radius: 3px; overflow: hidden; background: var(--rule-strong); }
+	.event { padding: 1rem 1.25rem; background: rgba(255,252,240,0.9); }
+	.event-header { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 0.4rem; }
+	.event-name { font-weight: 600; font-size: 0.95rem; color: var(--ink); }
+	.event-deaths { font-family: var(--mono); font-size: 0.68rem; color: var(--accent); letter-spacing: 0.03em; flex-shrink: 0; }
+	.event-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.55; margin: 0; }
+
+	.prose-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.prose-section:last-child { border-bottom: none; }
+	.prose-section h2 { font-family: var(--display); font-size: 1.2rem; font-weight: 700; margin: 0 0 0.9rem; }
+	.prose-section p { font-size: 1.05rem; line-height: 1.78; color: var(--ink); margin: 0 0 1em; max-width: 65ch; }
+	.prose-section p:last-child { margin: 0; }
+	.prose-section :global(em) { font-style: italic; }
+
+	.sidebar { position: sticky; top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+	.sidebar-block { padding: 1.25rem 1.5rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: rgba(255,252,240,0.85); }
+	.sidebar-block--accent { border-top: 3px solid var(--accent); }
+	.sidebar-block .kicker { margin-bottom: 0.75rem; }
+	.big-num { font-family: var(--display); font-size: 2.2rem; font-weight: 900; color: var(--accent); line-height: 1; display: block; }
+	.big-num-label { font-family: var(--mono); font-size: 0.62rem; color: var(--muted); letter-spacing: 0.04em; margin-top: 0.2rem; display: block; }
+	.breakdown { list-style: none; padding: 0; margin: 0; }
+	.breakdown li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
+	.breakdown li:last-child { border-bottom: none; }
+	.breakdown li span:last-child { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); flex-shrink: 0; }
+	.source-list { list-style: none; padding: 0; margin: 0; }
+	.source-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); }
+	.source-list li:last-child { border-bottom: none; }
+	.source-list a { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: block; line-height: 1.45; }
+	.source-list a:hover { color: var(--accent); }
+
+	@media (max-width: 860px) { .page-layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
+</style>

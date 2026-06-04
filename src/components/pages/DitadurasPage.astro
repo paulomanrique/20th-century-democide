@@ -1,0 +1,155 @@
+---
+import { getCollection } from 'astro:content';
+import type { Lang } from '../../lib/i18n';
+import { t, localizedHref } from '../../lib/i18n';
+import Layout from '../../layouts/Layout.astro';
+import { displayTitle } from '../../lib/title';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const items = await getCollection('items', ({ data }) => !data.draft);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const href = (slug: string) => `${base}${localizedHref(slug, lang)}`;
+
+function link(id: string) {
+	const e = items.find((i) => i.id === id);
+	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
+}
+const fontes = [
+	link('democide-since-world-war-ii'),
+	link('lesser-murderers'),
+	link('definition-and-qualifications'),
+].filter(Boolean);
+
+const paises = [
+	{ paisKey: 'ditaduras.guatemala.pais', mortes: '~200K', periodo: '1954–1996', descKey: 'ditaduras.guatemala.desc',
+		metodos: ['ditaduras.guatemala.m1','ditaduras.guatemala.m2','ditaduras.guatemala.m3','ditaduras.guatemala.m4'] },
+	{ paisKey: 'ditaduras.argentina.pais', mortes: '10–30K', periodo: '1976–1983', descKey: 'ditaduras.argentina.desc',
+		metodos: ['ditaduras.argentina.m1','ditaduras.argentina.m2','ditaduras.argentina.m3','ditaduras.argentina.m4'] },
+	{ paisKey: 'ditaduras.chile.pais', mortes: '~3K diretas', periodo: '1973–1990', descKey: 'ditaduras.chile.desc',
+		metodos: ['ditaduras.chile.m1','ditaduras.chile.m2','ditaduras.chile.m3','ditaduras.chile.m4'] },
+	{ paisKey: 'ditaduras.brasil.pais', mortes: '~400–500 documentados', periodo: '1964–1985', descKey: 'ditaduras.brasil.desc',
+		metodos: ['ditaduras.brasil.m1','ditaduras.brasil.m2','ditaduras.brasil.m3','ditaduras.brasil.m4'] },
+	{ paisKey: 'ditaduras.elsalvador.pais', mortes: '~70–75K', periodo: '1979–1992', descKey: 'ditaduras.elsalvador.desc',
+		metodos: ['ditaduras.elsalvador.m1','ditaduras.elsalvador.m2','ditaduras.elsalvador.m3','ditaduras.elsalvador.m4'] },
+];
+
+const breakdown = [
+	{ labelKey: 'ditaduras.guatemala.short', value: '~200K' },
+	{ labelKey: 'ditaduras.elsalvador.short', value: '~70K' },
+	{ labelKey: 'ditaduras.argentina.short', value: '10–30K' },
+	{ labelKey: 'ditaduras.chile.short', value: '~3K' },
+	{ labelKey: 'ditaduras.brasil.short', value: '~500' },
+];
+---
+
+<Layout
+	title={`${t('ditaduras.h1', lang)} | ${t('democidios.h1', lang)} | ${t('site.title', lang)}`}
+	description={t('ditaduras.intro', lang)}
+	lang={lang}
+	currentPath="democidios/ditaduras-latinas/"
+>
+	<div class="page-layout">
+		<div class="content">
+			<nav class="breadcrumb">
+				<a href={href('democidios/')}>{t('common.democidios.breadcrumb', lang)}</a>
+				<span>›</span>
+				<span>{t('ditaduras.breadcrumb', lang)}</span>
+			</nav>
+
+			<header class="page-header">
+				<h1>{t('ditaduras.h1', lang)}</h1>
+				<p class="subtitle">{t('ditaduras.subtitle', lang)}</p>
+				<p class="header-intro">{t('ditaduras.intro', lang)}</p>
+			</header>
+
+			{paises.map((p) => (
+				<div class="country-section">
+					<div class="country-header">
+						<h2>{t(p.paisKey, lang)}</h2>
+						<div class="country-stats">
+							<span class="cstat-num">{p.mortes}</span>
+							<span class="cstat-period">{p.periodo}</span>
+						</div>
+					</div>
+					<p class="country-desc">{t(p.descKey, lang)}</p>
+					<div class="methods">
+						{p.metodos.map((m) => <span class="method-tag">{t(m, lang)}</span>)}
+					</div>
+				</div>
+			))}
+
+			<div class="prose-section">
+				<h2>{t('ditaduras.context.h2', lang)}</h2>
+				<p>{t('ditaduras.context.p1', lang)}</p>
+				<p>{t('ditaduras.context.p2', lang)}</p>
+			</div>
+		</div>
+
+		<aside class="sidebar">
+			<div class="sidebar-block sidebar-block--accent">
+				<p class="kicker">{t('ditaduras.sidebar.pattern.kicker', lang)}</p>
+				<p class="sidebar-note">{t('ditaduras.sidebar.pattern.text', lang)}</p>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker">{t('ditaduras.sidebar.countries.kicker', lang)}</p>
+				<ul class="breakdown">
+					{breakdown.map((b) => (
+						<li><span>{t(b.labelKey, lang)}</span><span>{b.value}</span></li>
+					))}
+				</ul>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker">{t('common.sources.kicker', lang)}</p>
+				<ul class="source-list">
+					{fontes.map((item) => item && (
+						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>
+					))}
+				</ul>
+			</div>
+		</aside>
+	</div>
+</Layout>
+
+<style>
+	.page-layout { display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
+	.breadcrumb { font-family: var(--mono); font-size: 0.68rem; color: var(--faint); margin-bottom: 1.5rem; display: flex; gap: 0.4rem; align-items: center; }
+	.breadcrumb a { color: var(--muted); text-decoration: none; } .breadcrumb a:hover { color: var(--accent); }
+	.page-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule-strong); }
+	h1 { font-family: var(--display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; font-style: italic; margin: 0 0 0.3rem; line-height: 1.05; letter-spacing: -0.02em; }
+	.subtitle { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; margin: 0 0 0.85rem; }
+	.header-intro { font-size: 1rem; line-height: 1.7; color: var(--muted); max-width: 60ch; margin: 0; }
+	.country-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.country-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; margin-bottom: 0.85rem; flex-wrap: wrap; }
+	h2 { font-family: var(--display); font-size: 1.25rem; font-weight: 700; margin: 0; color: var(--ink); }
+	.country-stats { text-align: right; }
+	.cstat-num { display: block; font-family: var(--display); font-size: 1.25rem; font-weight: 900; color: var(--accent); line-height: 1; }
+	.cstat-period { display: block; font-family: var(--mono); font-size: 0.6rem; color: var(--faint); letter-spacing: 0.04em; margin-top: 0.15rem; }
+	.country-desc { font-size: 1rem; line-height: 1.75; color: var(--ink); margin: 0 0 0.85rem; max-width: 65ch; }
+	.methods { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+	.method-tag { font-family: var(--mono); font-size: 0.62rem; color: var(--muted); border: 1px solid var(--rule-strong); border-radius: 2px; padding: 0.15rem 0.45rem; letter-spacing: 0.02em; }
+	.prose-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.prose-section:last-child { border-bottom: none; }
+	.prose-section h2 { font-family: var(--display); font-size: 1.2rem; font-weight: 700; margin: 0 0 0.9rem; }
+	.prose-section p { font-size: 1.05rem; line-height: 1.78; color: var(--ink); margin: 0 0 1em; max-width: 65ch; }
+	.prose-section p:last-child { margin: 0; }
+	.sidebar { position: sticky; top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+	.sidebar-block { padding: 1.25rem 1.5rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: rgba(255,252,240,0.85); }
+	.sidebar-block--accent { border-top: 3px solid var(--accent); }
+	.sidebar-block .kicker { margin-bottom: 0.75rem; }
+	.sidebar-note { font-size: 0.85rem; color: var(--muted); line-height: 1.55; margin: 0; }
+	.breakdown { list-style: none; padding: 0; margin: 0; }
+	.breakdown li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
+	.breakdown li:last-child { border-bottom: none; }
+	.breakdown li span:last-child { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); flex-shrink: 0; }
+	.source-list { list-style: none; padding: 0; margin: 0; }
+	.source-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); }
+	.source-list li:last-child { border-bottom: none; }
+	.source-list a { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: block; line-height: 1.45; }
+	.source-list a:hover { color: var(--accent); }
+	@media (max-width: 860px) { .page-layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
+</style>

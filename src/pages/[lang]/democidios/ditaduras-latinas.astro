@@ -1,0 +1,14 @@
+---
+import { LANGUAGES, DEFAULT_LANG } from '../../../lib/i18n';
+import type { Lang } from '../../../lib/i18n';
+import DitadurasPage from '../../../components/pages/DitadurasPage.astro';
+
+export function getStaticPaths() {
+	return LANGUAGES.filter((l) => l.code !== DEFAULT_LANG).map((l) => ({
+		params: { lang: l.code },
+	}));
+}
+
+const { lang } = Astro.params as { lang: Lang };
+---
+<DitadurasPage lang={lang} />

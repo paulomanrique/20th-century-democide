@@ -1,0 +1,154 @@
+---
+import { getCollection } from 'astro:content';
+import type { Lang } from '../../lib/i18n';
+import { t, localizedHref } from '../../lib/i18n';
+import Layout from '../../layouts/Layout.astro';
+import { displayTitle } from '../../lib/title';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const items = await getCollection('items', ({ data }) => !data.draft);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const href = (slug: string) => `${base}${localizedHref(slug, lang)}`;
+
+function link(id: string) {
+	const e = items.find((i) => i.id === id);
+	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
+}
+const fontes = [
+	link('holocaust-in-comparative-perspective'),
+	link('democide-nazi-genocide-and-mass-murder-note'),
+	link('definition-and-qualifications'),
+].filter(Boolean);
+---
+
+<Layout
+	title={`${t('nazismo.h1', lang)} | ${t('democidios.h1', lang)} | ${t('site.title', lang)}`}
+	description={t('nazismo.section1.p1', lang)}
+	lang={lang}
+	currentPath="democidios/nazismo/"
+>
+	<div class="page-layout">
+		<div class="content">
+			<nav class="breadcrumb">
+				<a href={href('democidios/')}>{t('common.democidios.breadcrumb', lang)}</a>
+				<span>›</span>
+				<span>{t('nazismo.h1', lang)}</span>
+			</nav>
+
+			<header class="page-header">
+				<h1>{t('nazismo.h1', lang)}</h1>
+				<div class="header-stats">
+					<div class="hstat"><span class="hstat-num">20,9M</span><span class="hstat-label">{t('nazismo.deaths.label', lang)}</span></div>
+					<div class="hstat"><span class="hstat-num">1933–1945</span><span class="hstat-label">{t('common.period.label', lang)}</span></div>
+				</div>
+			</header>
+
+			<div class="prose-section">
+				<h2>{t('nazismo.section1.h2', lang)}</h2>
+				<p>{t('nazismo.section1.p1', lang)}</p>
+				<p>{t('nazismo.section1.p2', lang)}</p>
+			</div>
+
+			<div class="prose-section">
+				<h2>{t('nazismo.section2.h2', lang)}</h2>
+				<p>{t('nazismo.section2.p1', lang)}</p>
+				<p>{t('nazismo.section2.p2', lang)}</p>
+			</div>
+
+			<div class="case-block">
+				<h3>{t('nazismo.cases.h3', lang)}</h3>
+				<div class="case-items">
+					{[1, 2, 3, 4, 5].map((n) => (
+						<div class="case-item">
+							<span class="ci-label">{t(`nazismo.case${n}.label`, lang)}</span>
+							<span class="ci-val">{t(`nazismo.case${n}.val`, lang)}</span>
+							<p>{t(`nazismo.case${n}.desc`, lang)}</p>
+						</div>
+					))}
+				</div>
+			</div>
+
+			<div class="prose-section">
+				<h2>{t('nazismo.section3.h2', lang)}</h2>
+				<p set:html={t('nazismo.section3.p1', lang)} />
+				<p>{t('nazismo.section3.p2', lang)}</p>
+			</div>
+		</div>
+
+		<aside class="sidebar">
+			<div class="sidebar-block sidebar-block--accent">
+				<p class="kicker">{t('nazismo.sidebar.estimate.kicker', lang)}</p>
+				<span class="big-num">20,9M</span>
+				<p class="big-num-label">{t('nazismo.sidebar.bignum.label', lang)}</p>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker">{t('nazismo.sidebar.breakdown.kicker', lang)}</p>
+				<ul class="breakdown">
+					<li><span>Holocausto (judeus)</span><span>~5,3–6M</span></li>
+					<li><span>POWs soviéticos</span><span>~3,3M</span></li>
+					<li><span>Poloneses</span><span>~1,8M</span></li>
+					<li><span>Sinti e Roma</span><span>~0,5–1M</span></li>
+					<li><span>Programa T4</span><span>~200–250K</span></li>
+				</ul>
+			</div>
+			<div class="sidebar-block">
+				<p class="kicker">{t('common.sources.kicker', lang)}</p>
+				<ul class="source-list">
+					{fontes.map((item) => item && (
+						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>
+					))}
+				</ul>
+			</div>
+		</aside>
+	</div>
+</Layout>
+
+<style>
+	.page-layout { display: grid; grid-template-columns: 1fr 260px; gap: 4rem; align-items: start; }
+	.breadcrumb { font-family: var(--mono); font-size: 0.68rem; color: var(--faint); margin-bottom: 1.5rem; display: flex; gap: 0.4rem; align-items: center; }
+	.breadcrumb a { color: var(--muted); text-decoration: none; }
+	.breadcrumb a:hover { color: var(--accent); }
+	.page-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule-strong); }
+	h1 { font-family: var(--display); font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; font-style: italic; margin: 0 0 1rem; line-height: 1.05; letter-spacing: -0.02em; }
+	.header-stats { display: flex; gap: 2rem; }
+	.hstat { display: flex; flex-direction: column; }
+	.hstat-num { font-family: var(--display); font-size: 1.5rem; font-weight: 900; color: var(--accent); line-height: 1; }
+	.hstat-label { font-family: var(--mono); font-size: 0.6rem; color: var(--faint); letter-spacing: 0.05em; text-transform: uppercase; margin-top: 0.2rem; }
+	.prose-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.prose-section:last-child { border-bottom: none; margin-bottom: 0; }
+	h2 { font-family: var(--display); font-size: 1.2rem; font-weight: 700; margin: 0 0 0.9rem; color: var(--ink); }
+	.prose-section p { font-size: 1.05rem; line-height: 1.78; color: var(--ink); margin: 0 0 1em; max-width: 65ch; }
+	.prose-section p:last-child { margin: 0; }
+	.prose-section :global(em) { font-style: italic; }
+
+	.case-block { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	h3 { font-family: var(--display); font-size: 1.1rem; font-weight: 700; margin: 0 0 1rem; color: var(--ink); }
+	.case-items { display: flex; flex-direction: column; gap: 1px; border: 1px solid var(--rule-strong); border-radius: 3px; overflow: hidden; background: var(--rule-strong); }
+	.case-item { padding: 1rem 1.25rem; background: rgba(255,252,240,0.9); }
+	.ci-label { display: block; font-weight: 600; font-size: 0.95rem; margin-bottom: 0.15rem; }
+	.ci-val { display: block; font-family: var(--mono); font-size: 0.68rem; color: var(--accent); letter-spacing: 0.03em; margin-bottom: 0.4rem; }
+	.case-item p { font-size: 0.85rem; color: var(--muted); line-height: 1.55; margin: 0; }
+
+	.sidebar { position: sticky; top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+	.sidebar-block { padding: 1.25rem 1.5rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: rgba(255,252,240,0.85); }
+	.sidebar-block--accent { border-top: 3px solid var(--accent); }
+	.sidebar-block .kicker { margin-bottom: 0.75rem; }
+	.big-num { font-family: var(--display); font-size: 2.4rem; font-weight: 900; color: var(--accent); line-height: 1; display: block; }
+	.big-num-label { font-family: var(--mono); font-size: 0.62rem; color: var(--muted); letter-spacing: 0.04em; margin-top: 0.2rem; display: block; }
+	.breakdown { list-style: none; padding: 0; margin: 0; }
+	.breakdown li { display: flex; justify-content: space-between; gap: 0.5rem; padding: 0.4rem 0; border-bottom: 1px solid var(--rule); font-size: 0.82rem; color: var(--muted); }
+	.breakdown li:last-child { border-bottom: none; }
+	.breakdown li span:last-child { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); flex-shrink: 0; }
+	.source-list { list-style: none; padding: 0; margin: 0; }
+	.source-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); }
+	.source-list li:last-child { border-bottom: none; }
+	.source-list a { font-size: 0.85rem; color: var(--muted); text-decoration: none; display: block; line-height: 1.45; }
+	.source-list a:hover { color: var(--accent); }
+
+	@media (max-width: 860px) { .page-layout { grid-template-columns: 1fr; } .sidebar { position: static; } }
+</style>

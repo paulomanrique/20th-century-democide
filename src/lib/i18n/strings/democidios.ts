@@ -201,4 +201,52 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '威权主义',
     ja: '権威主義',
   },
+  'democidios.regime.soviets': {
+    pt: 'União Soviética', en: 'Soviet Union', es: 'Unión Soviética',
+    fr: 'Union soviétique', it: 'Unione Sovietica', de: 'Sowjetunion',
+    zh: '苏联', ja: 'ソビエト連邦',
+  },
+  'democidios.regime.china': {
+    pt: 'China (Mao Tsé-Tung)', en: 'China (Mao Zedong)', es: 'China (Mao Zedong)',
+    fr: 'Chine (Mao Tsé-toung)', it: 'Cina (Mao Zedong)', de: 'China (Mao Zedong)',
+    zh: '中国（毛泽东）', ja: '中国（毛沢東）',
+  },
+  'democidios.regime.nazismo': {
+    pt: 'Alemanha Nazista', en: 'Nazi Germany', es: 'Alemania Nazi',
+    fr: 'Allemagne nazie', it: 'Germania nazista', de: 'Nazi-Deutschland',
+    zh: '纳粹德国', ja: 'ナチス・ドイツ',
+  },
+  'democidios.regime.kmt': {
+    pt: 'China Nacionalista (KMT)', en: 'Nationalist China (KMT)',
+    es: 'China Nacionalista (KMT)', fr: 'Chine nationaliste (KMT)',
+    it: 'Cina Nazionalista (KMT)', de: 'Nationalistisches China (KMT)',
+    zh: '国民党中国', ja: '国民党中国',
+  },
+  'democidios.regime.japan': {
+    pt: 'Japão Imperial', en: 'Imperial Japan', es: 'Japón Imperial',
+    fr: 'Japon impérial', it: 'Giappone Imperiale', de: 'Kaiserreich Japan',
+    zh: '大日本帝国', ja: '大日本帝国',
+  },
+  'democidios.regime.cambodia': {
+    pt: 'Camboja (Khmer Vermelho)', en: 'Cambodia (Khmer Rouge)',
+    es: 'Camboya (Jemer Rojo)', fr: 'Cambodge (Khmers rouges)',
+    it: 'Cambogia (Khmer Rossi)', de: 'Kambodscha (Rote Khmer)',
+    zh: '柬埔寨（红色高棉）', ja: 'カンボジア（クメール・ルージュ）',
+  },
+  'democidios.regime.turkey': {
+    pt: 'Turquia Otomana', en: 'Ottoman Turkey', es: 'Turquía Otomana',
+    fr: 'Turquie ottomane', it: 'Turchia Ottomana', de: 'Osmanische Türkei',
+    zh: '奥斯曼土耳其', ja: 'オスマン・トルコ',
+  },
+  'democidios.regime.colonies': {
+    pt: 'Colônias Europeias', en: 'European Colonies', es: 'Colonias Europeas',
+    fr: 'Colonies européennes', it: 'Colonie europee', de: 'Europäische Kolonien',
+    zh: '欧洲殖民地', ja: 'ヨーロッパの植民地',
+  },
+  'democidios.regime.latins': {
+    pt: 'Ditaduras Latino-Americanas', en: 'Latin American Dictatorships',
+    es: 'Dictaduras Latinoamericanas', fr: "Dictatures d'Amérique latine",
+    it: 'Dittature latinoamericane', de: 'Lateinamerikanische Diktaturen',
+    zh: '拉丁美洲独裁政权', ja: 'ラテンアメリカの独裁政権',
+  },
 };
