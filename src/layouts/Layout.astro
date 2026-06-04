@@ -20,8 +20,9 @@ const isSSG = !!lang;
 const effectiveLang: Lang = lang ?? DEFAULT_LANG;
 
 const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const siteRoot = (Astro.site?.toString() ?? '').replace(/\/+$/, '');
 const toBase = (target = '') => `${base}/${target.replace(/^\/+/, '')}`;
-const altUrl = (l: Lang) => `${base}${localizedHref(currentPath, l)}`;
+const altUrl = (l: Lang) => `${siteRoot}${localizedHref(currentPath, l)}`;
 
 const finalTitle = title ?? (isSSG ? t('site.title', effectiveLang) : '20th Century Democide');
 const finalDescription = description ?? (isSSG
@@ -61,6 +62,16 @@ const navItems: { slug: string; key: string; fallback: string }[] = [
 				<link rel="alternate" hreflang="x-default" href={altUrl(DEFAULT_LANG)} />
 			</>
 		)}
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={finalTitle} />
+		<meta property="og:description" content={finalDescription} />
+		<meta property="og:locale" content={effectiveLang === 'pt' ? 'pt_BR' : effectiveLang === 'en' ? 'en_US' : effectiveLang === 'es' ? 'es_ES' : effectiveLang === 'fr' ? 'fr_FR' : effectiveLang === 'it' ? 'it_IT' : effectiveLang === 'de' ? 'de_DE' : effectiveLang === 'zh' ? 'zh_CN' : 'ja_JP'} />
+		{isSSG && LANGUAGES.filter(({ code }) => code !== effectiveLang).map(({ code }) => (
+			<meta property="og:locale:alternate" content={code === 'pt' ? 'pt_BR' : code === 'en' ? 'en_US' : code === 'es' ? 'es_ES' : code === 'fr' ? 'fr_FR' : code === 'it' ? 'it_IT' : code === 'de' ? 'de_DE' : code === 'zh' ? 'zh_CN' : 'ja_JP'} />
+		))}
+		<meta name="twitter:card" content="summary" />
+		<meta name="twitter:title" content={finalTitle} />
+		<meta name="twitter:description" content={finalDescription} />
 		<title>{finalTitle}</title>
 	</head>
 	<body>
