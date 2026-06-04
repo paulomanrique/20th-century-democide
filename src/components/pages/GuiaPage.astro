@@ -1,0 +1,149 @@
+---
+import { getCollection } from 'astro:content';
+import type { Lang } from '../../lib/i18n';
+import { t, localizedHref } from '../../lib/i18n';
+import Layout from '../../layouts/Layout.astro';
+import { displayTitle } from '../../lib/title';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const items = await getCollection('items', ({ data }) => !data.draft);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const langHref = (slug: string) => `${base}${localizedHref(slug, lang)}`;
+
+function getItem(id: string) {
+	const entry = items.find((e) => e.id === id);
+	return entry ? { id: entry.id, title: displayTitle(entry.data.title, entry.id) } : null;
+}
+
+const sections = [
+	{ num: '01', slug: 'o-autor', titleKey: 'guide.s1.title', subtitleKey: 'guide.s1.subtitle', bodyKey: 'guide.s1.body',
+		itemIds: ['death-by-government', 'statistics-of-democide-note', 'chinas-bloody-century-note', 'lethal-politics-note'] },
+	{ num: '02', slug: 'o-que-e-democidio', titleKey: 'guide.s2.title', subtitleKey: 'guide.s2.subtitle', bodyKey: 'guide.s2.body',
+		itemIds: ['definition-and-qualifications', 'democide-versus-genocide', 'what-is-genocide', 'death-by-government-chapter-1'] },
+	{ num: '03', slug: 'a-escala', titleKey: 'guide.s3.title', subtitleKey: 'guide.s3.subtitle', bodyKey: 'guide.s3.body',
+		itemIds: ['20th-century-democide', 'war-isnt-this-centurys-biggest-killer', 'death-by-government-chapter-1', 'democide-summary-by-regime-table'] },
+	{ num: '04', slug: 'os-casos', titleKey: 'guide.s4.title', subtitleKey: 'guide.s4.subtitle', bodyKey: 'guide.s4.body',
+		itemIds: ['how-many-did-communism-murder', 'american-bombing-and-other-democide', 'holocaust-in-comparative-perspective',
+			'reevaluating-chinas-democide', 'reevaluating-colonial-democide', 'centi-kilo-murderers', 'lesser-murderers',
+			'khmer-rouge-and-rwandan-genocide-section'] },
+	{ num: '05', slug: 'a-analise', titleKey: 'guide.s5.title', subtitleKey: 'guide.s5.subtitle', bodyKey: 'guide.s5.body',
+		itemIds: ['social-field-of-democide', 'democide-since-world-war-ii', 'statistics-of-democide-notes', 'statistics-of-democide-sources'] },
+	{ num: '06', slug: 'a-tese', titleKey: 'guide.s6.title', subtitleKey: 'guide.s6.subtitle', bodyKey: 'guide.s6.body',
+		itemIds: ['murder', 'miracle', 'theory', 'policy', 'democide-versus-genocide'] },
+];
+---
+
+<Layout
+	title={`${t('nav.start', lang)} | ${t('site.title', lang)}`}
+	description={t('guide.intro', lang)}
+	lang={lang}
+	currentPath="guia/"
+>
+
+	<header class="guide-header">
+		<a href={langHref('')} class="back-link">{t('guide.back', lang)}</a>
+		<p class="kicker">{t('guide.kicker', lang)}</p>
+		<h1>{t('guide.h1', lang)}</h1>
+		<p class="guide-intro">{t('guide.intro', lang)}</p>
+		<nav class="guide-toc">
+			{sections.map((s) => (
+				<a href={`#${s.slug}`} class="toc-item">
+					<span class="toc-num">{s.num}</span>
+					<span class="toc-title">{t(s.titleKey, lang)}</span>
+				</a>
+			))}
+		</nav>
+	</header>
+
+	<div class="guide-body">
+		{sections.map((section) => {
+			const linkedItems = section.itemIds.map(getItem).filter(Boolean);
+			return (
+				<section class="guide-section" id={section.slug}>
+					<div class="section-header">
+						<span class="section-num">{section.num}</span>
+						<div>
+							<h2 class="section-title">{t(section.titleKey, lang)}</h2>
+							<p class="section-subtitle">{t(section.subtitleKey, lang)}</p>
+						</div>
+					</div>
+					<div class="section-body">
+						<div class="section-text" set:html={t(section.bodyKey, lang)} />
+						{linkedItems.length > 0 && (
+							<div class="section-links">
+								<p class="links-label kicker">{t('guide.primarySources', lang)}</p>
+								<ul class="source-list">
+									{linkedItems.map((item) => item && (
+										<li>
+											<a href={toBase(`items/${item.id}/`)}>{item.title}</a>
+										</li>
+									))}
+								</ul>
+							</div>
+						)}
+					</div>
+				</section>
+			);
+		})}
+	</div>
+
+	<div class="guide-footer">
+		<p>{t('guide.footer.p', lang)}</p>
+		<a href={toBase('collections/')}>{t('guide.footer.link', lang)}</a>
+	</div>
+
+</Layout>
+
+<style>
+	.guide-header { padding-bottom: 2.5rem; margin-bottom: 0; border-bottom: 1px solid var(--rule-strong); }
+	.back-link { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.04em; color: var(--muted); text-decoration: none; display: inline-block; margin-bottom: 1.5rem; }
+	.back-link:hover { color: var(--accent); }
+	h1 { font-family: var(--display); font-size: clamp(1.8rem, 5vw, 3rem); font-weight: 900; font-style: italic; margin: 0.2rem 0 0.9rem; line-height: 1.1; letter-spacing: -0.02em; }
+	.guide-intro { max-width: 58ch; color: var(--muted); line-height: 1.7; margin: 0 0 2rem; font-size: 1rem; }
+
+	.guide-toc { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+	.toc-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.4rem 0.85rem 0.4rem 0.6rem; border: 1px solid var(--rule-strong); border-radius: 2px; text-decoration: none; background: rgba(255, 252, 240, 0.8); transition: background 0.12s, border-color 0.12s; }
+	.toc-item:hover { background: var(--accent-pale); border-color: var(--accent); }
+	.toc-num { font-family: var(--mono); font-size: 0.6rem; color: var(--faint); letter-spacing: 0.05em; }
+	.toc-title { font-size: 0.85rem; font-weight: 600; color: var(--ink); }
+
+	.guide-body { border-left: 1px solid var(--rule); margin-left: 1.5rem; }
+	.guide-section { display: grid; grid-template-columns: 1fr; padding: 3rem 0 3rem 2.5rem; border-bottom: 1px solid var(--rule); position: relative; }
+	.guide-section::before { content: ''; position: absolute; left: -5px; top: 3.4rem; width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 2px solid var(--rule-strong); }
+	.guide-section:first-child::before { border-color: var(--accent); background: var(--accent); }
+	.guide-section:last-child { border-bottom: none; }
+
+	.section-header { display: flex; align-items: flex-start; gap: 1.25rem; margin-bottom: 1.25rem; }
+	.section-num { font-family: var(--mono); font-size: 0.65rem; color: var(--faint); letter-spacing: 0.08em; padding-top: 0.35rem; flex-shrink: 0; min-width: 1.5rem; }
+	.section-title { font-family: var(--display); font-size: 1.5rem; font-weight: 700; margin: 0 0 0.2rem; color: var(--ink); line-height: 1.2; }
+	.section-subtitle { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); letter-spacing: 0.04em; margin: 0; }
+
+	.section-body { display: grid; grid-template-columns: 1fr 280px; gap: 2.5rem; align-items: start; }
+	.section-text { font-size: 1.02rem; line-height: 1.75; color: var(--ink); max-width: 60ch; }
+	.section-text :global(em) { font-style: italic; }
+	.section-text :global(strong) { font-weight: 600; }
+
+	.section-links { padding: 1rem 1.25rem; border: 1px solid var(--rule); border-radius: 3px; background: rgba(255, 252, 240, 0.6); }
+	.links-label { margin: 0 0 0.6rem; }
+	.source-list { list-style: none; padding: 0; margin: 0; }
+	.source-list li { padding: 0.45rem 0; border-bottom: 1px solid var(--rule); }
+	.source-list li:last-child { border-bottom: none; }
+	.source-list a { font-size: 0.82rem; color: var(--muted); text-decoration: none; display: block; line-height: 1.4; }
+	.source-list a:hover { color: var(--accent); }
+
+	.guide-footer { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--rule-strong); text-align: center; }
+	.guide-footer p { font-size: 0.9rem; color: var(--muted); max-width: 56ch; margin: 0 auto 1rem; line-height: 1.6; }
+	.guide-footer a { font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.04em; color: var(--accent); text-decoration: none; }
+	.guide-footer a:hover { text-decoration: underline; }
+
+	@media (max-width: 760px) {
+		.section-body { grid-template-columns: 1fr; }
+		.guide-body { margin-left: 0.75rem; }
+		.guide-section { padding-left: 1.5rem; }
+	}
+</style>

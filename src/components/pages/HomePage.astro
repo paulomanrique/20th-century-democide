@@ -1,0 +1,190 @@
+---
+import type { Lang } from '../../lib/i18n';
+import { t, localizedHref } from '../../lib/i18n';
+import Layout from '../../layouts/Layout.astro';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const href = (slug: string) => `${base}${localizedHref(slug, lang)}`;
+---
+
+<Layout
+	title={t('site.title', lang)}
+	description={t('site.description', lang)}
+	lang={lang}
+	currentPath=""
+>
+	<section class="home">
+
+		<div class="home-intro">
+			<p class="overline" set:html={t('home.overline', lang)} />
+			<h1 set:html={t('home.h1', lang)} />
+			<div class="intro-body">
+				<p set:html={t('home.intro1', lang)} />
+				<p set:html={t('home.intro2', lang)} />
+			</div>
+		</div>
+
+		<a href={href('guia/')} class="start-link">{t('home.startLink', lang)}</a>
+
+		<nav class="home-nav">
+			<a href={href('autor/')} class="home-card home-card--featured">
+				<span class="card-num">01</span>
+				<h2>{t('card.author.h2', lang)}</h2>
+				<p>{t('card.author.p', lang)}</p>
+			</a>
+			<a href={href('tese/')} class="home-card">
+				<span class="card-num">02</span>
+				<h2>{t('card.thesis.h2', lang)}</h2>
+				<p>{t('card.thesis.p', lang)}</p>
+			</a>
+			<a href={href('democidios/')} class="home-card">
+				<span class="card-num">03</span>
+				<h2>{t('card.democides.h2', lang)}</h2>
+				<p>{t('card.democides.p', lang)}</p>
+			</a>
+			<a href={href('preservation/')} class="home-card">
+				<span class="card-num">04</span>
+				<h2>{t('card.preservation.h2', lang)}</h2>
+				<p>{t('card.preservation.p', lang)}</p>
+			</a>
+		</nav>
+
+	</section>
+</Layout>
+
+<style>
+	.home {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+		padding: 1.5rem 0 3rem;
+	}
+
+	.overline {
+		font-family: var(--mono);
+		font-size: 0.65rem;
+		letter-spacing: 0.08em;
+		color: var(--faint);
+		text-transform: uppercase;
+		margin: 0 0 1.1rem;
+	}
+
+	h1 {
+		font-family: var(--display);
+		font-size: clamp(2.2rem, 6vw, 4rem);
+		font-weight: 900;
+		line-height: 1.05;
+		letter-spacing: -0.025em;
+		margin: 0 0 1.5rem;
+		max-width: 16ch;
+		color: var(--ink);
+	}
+
+	h1 :global(em) {
+		font-style: italic;
+		color: var(--accent);
+	}
+
+	.intro-body {
+		max-width: 58ch;
+		border-left: 2px solid var(--rule-strong);
+		padding-left: 1.5rem;
+	}
+
+	.intro-body p {
+		font-size: 1.05rem;
+		line-height: 1.75;
+		color: var(--muted);
+		margin: 0 0 0.85em;
+	}
+
+	.intro-body p:last-child { margin: 0; }
+	.intro-body :global(strong) { color: var(--ink); font-weight: 600; }
+
+	.start-link {
+		display: inline-block;
+		align-self: flex-start;
+		padding: 0.65rem 1.1rem;
+		font-family: var(--mono);
+		font-size: 0.72rem;
+		letter-spacing: 0.06em;
+		color: var(--accent);
+		text-decoration: none;
+		background: var(--accent-pale);
+		border: 1px solid var(--accent);
+		border-radius: 2px;
+		transition: background 0.12s, color 0.12s;
+	}
+
+	.start-link:hover {
+		background: var(--accent);
+		color: var(--bg);
+	}
+
+	.home-nav {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 1px;
+		border: 1px solid var(--rule-strong);
+		border-radius: 3px;
+		overflow: hidden;
+		background: var(--rule-strong);
+	}
+
+	.home-card {
+		display: flex;
+		flex-direction: column;
+		padding: 1.75rem 1.5rem;
+		background: rgba(255, 252, 240, 0.9);
+		text-decoration: none;
+		color: inherit;
+		transition: background 0.15s;
+	}
+
+	.home-card:hover { background: var(--accent-pale); }
+
+	.home-card--featured { border-top: 3px solid var(--accent); }
+
+	.card-num {
+		font-family: var(--mono);
+		font-size: 0.6rem;
+		color: var(--faint);
+		letter-spacing: 0.08em;
+		margin-bottom: 0.75rem;
+	}
+
+	.home-card--featured .card-num { color: var(--accent); }
+
+	h2 {
+		font-family: var(--display);
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--ink);
+		margin: 0 0 0.6rem;
+		line-height: 1.2;
+	}
+
+	.home-card:hover h2 { color: var(--accent); }
+
+	.home-card p {
+		font-size: 0.88rem;
+		color: var(--muted);
+		line-height: 1.6;
+		margin: 0;
+		flex: 1;
+	}
+
+	@media (max-width: 860px) {
+		.home-nav { grid-template-columns: repeat(2, 1fr); }
+	}
+
+	@media (max-width: 520px) {
+		.home-nav { grid-template-columns: 1fr; }
+		.intro-body { padding-left: 1rem; }
+	}
+</style>

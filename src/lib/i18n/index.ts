@@ -28,6 +28,7 @@ import { ditaduras } from './strings/ditaduras';
 import { preservation } from './strings/preservation';
 import { trilha } from './strings/trilha';
 import { guide } from './strings/guide';
+import { site } from './strings/site';
 
 export const ui: Record<string, Record<Lang, string>> = {
   ...nav,
@@ -45,6 +46,7 @@ export const ui: Record<string, Record<Lang, string>> = {
   ...preservation,
   ...trilha,
   ...guide,
+  ...site,
 };
 
 export function t(key: string, lang: Lang): string {

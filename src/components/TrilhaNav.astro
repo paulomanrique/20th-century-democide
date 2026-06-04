@@ -1,21 +1,22 @@
 ---
+import type { Lang } from '../lib/i18n';
+import { t, localizedHref } from '../lib/i18n';
+
 interface Props {
 	current: 1 | 2 | 3 | 4;
 	position: 'top' | 'bottom';
+	lang: Lang;
 }
 
-const { current, position } = Astro.props;
-const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+const { current, position, lang } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+const href = (slug: string) => `${base}${localizedHref(slug, lang)}`;
 
 const STEPS = [
-	{ n: 1, slug: 'autor/', labelKey: 'trilha.step1.label', teaserKey: 'trilha.step1.teaser',
-		label: 'O Autor', teaser: 'Quem foi R.J. Rummel' },
-	{ n: 2, slug: 'tese/', labelKey: 'trilha.step2.label', teaserKey: 'trilha.step2.teaser',
-		label: 'A Tese', teaser: 'A origem do conceito de democídio' },
-	{ n: 3, slug: 'democidios/', labelKey: 'trilha.step3.label', teaserKey: 'trilha.step3.teaser',
-		label: 'Democídios', teaser: 'Os casos emblemáticos do século XX' },
-	{ n: 4, slug: 'preservation/', labelKey: 'trilha.step4.label', teaserKey: 'trilha.step4.teaser',
-		label: 'Preservação', teaser: 'O corpus preservado, em inglês original' },
+	{ n: 1, slug: 'autor/', labelKey: 'trilha.step1.label', teaserKey: 'trilha.step1.teaser' },
+	{ n: 2, slug: 'tese/', labelKey: 'trilha.step2.label', teaserKey: 'trilha.step2.teaser' },
+	{ n: 3, slug: 'democidios/', labelKey: 'trilha.step3.label', teaserKey: 'trilha.step3.teaser' },
+	{ n: 4, slug: 'preservation/', labelKey: 'trilha.step4.label', teaserKey: 'trilha.step4.teaser' },
 ];
 
 const nextStep = STEPS.find((s) => s.n === current + 1);
@@ -26,34 +27,33 @@ const isLast = current === 4;
 	<nav class="trilha-steps" aria-label="Trilha de leitura">
 		{STEPS.map((s) => (
 			<a
-				href={toBase(s.slug)}
+				href={href(s.slug)}
 				class={`trilha-dot ${s.n === current ? 'is-current' : ''}`}
 				aria-current={s.n === current ? 'step' : undefined}
 			>
 				<span class="trilha-num">{String(s.n).padStart(2, '0')}</span>
-				<span class="trilha-label" data-i18n={s.labelKey}>{s.label}</span>
+				<span class="trilha-label">{t(s.labelKey, lang)}</span>
 			</a>
 		))}
 	</nav>
 )}
 
 {position === 'bottom' && !isLast && nextStep && (
-	<a href={toBase(nextStep.slug)} class="trilha-cta">
-		<span class="cta-kicker" data-i18n="trilha.next.kicker">Próximo</span>
+	<a href={href(nextStep.slug)} class="trilha-cta">
+		<span class="cta-kicker">{t('trilha.next.kicker', lang)}</span>
 		<span class="cta-num">{String(nextStep.n).padStart(2, '0')}</span>
-		<span class="cta-label" data-i18n={nextStep.labelKey}>{nextStep.label}</span>
-		<span class="cta-teaser" data-i18n={nextStep.teaserKey}>{nextStep.teaser}</span>
+		<span class="cta-label">{t(nextStep.labelKey, lang)}</span>
+		<span class="cta-teaser">{t(nextStep.teaserKey, lang)}</span>
 	</a>
 )}
 
 {position === 'bottom' && isLast && (
-	<a href={toBase()} class="trilha-cta trilha-cta--finish">
-		<span class="cta-label" data-i18n="trilha.finish.label">Voltar ao início · explorar o corpus →</span>
+	<a href={href('')} class="trilha-cta trilha-cta--finish">
+		<span class="cta-label">{t('trilha.finish.label', lang)}</span>
 	</a>
 )}
 
 <style>
-	/* ── Top step indicator ───────────────────────────── */
 	.trilha-steps {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -99,7 +99,6 @@ const isLast = current === 4;
 		line-height: 1.2;
 	}
 
-	/* ── Bottom CTA ───────────────────────────────────── */
 	.trilha-cta {
 		display: grid;
 		grid-template-columns: auto auto 1fr;

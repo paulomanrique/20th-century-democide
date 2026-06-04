@@ -1,0 +1,166 @@
+---
+import { getCollection } from 'astro:content';
+import type { Lang } from '../../lib/i18n';
+import { t } from '../../lib/i18n';
+import Layout from '../../layouts/Layout.astro';
+import TrilhaNav from '../TrilhaNav.astro';
+import { displayTitle } from '../../lib/title';
+
+interface Props {
+	lang: Lang;
+}
+
+const { lang } = Astro.props;
+const items = await getCollection('items', ({ data }) => !data.draft);
+const toBase = (target = '') => `${import.meta.env.BASE_URL}${target.replace(/^\/+/, '')}`;
+
+function link(id: string) {
+	const e = items.find((i) => i.id === id);
+	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
+}
+
+const fontes = [
+	link('definition-and-qualifications'),
+	link('democide-versus-genocide'),
+	link('what-is-genocide'),
+	link('war-isnt-this-centurys-biggest-killer'),
+	link('murder'),
+	link('miracle'),
+	link('theory'),
+].filter(Boolean);
+---
+
+<Layout
+	title={`${t('tese.h1', lang)} | ${t('site.title', lang)}`}
+	description={t('tese.subtitle', lang)}
+	lang={lang}
+	currentPath="tese/"
+>
+	<TrilhaNav current={2} position="top" lang={lang} />
+	<div class="page-layout">
+		<div class="content">
+
+			<header class="page-header">
+				<h1>{t('tese.h1', lang)}</h1>
+				<p class="subtitle">{t('tese.subtitle', lang)}</p>
+			</header>
+
+			<div class="prose-section">
+				<h2>{t('tese.whatIs.h2', lang)}</h2>
+				<p set:html={t('tese.whatIs.p1', lang)} />
+				<p set:html={t('tese.whatIs.p2', lang)} />
+				<p>{t('tese.whatIs.p3', lang)}</p>
+			</div>
+
+			<div class="prose-section">
+				<h2>{t('tese.vsGenocide.h2', lang)}</h2>
+				<p set:html={t('tese.vsGenocide.p1', lang)} />
+				<p>{t('tese.vsGenocide.p2', lang)}</p>
+				<p set:html={t('tese.vsGenocide.p3', lang)} />
+			</div>
+
+			<div class="callout">
+				<blockquote>
+					"Power kills; absolute power kills absolutely."
+					<cite>— R.J. Rummel</cite>
+				</blockquote>
+			</div>
+
+			<div class="prose-section">
+				<h2>{t('tese.whyKill.h2', lang)}</h2>
+				<p>{t('tese.whyKill.p1', lang)}</p>
+				<p>{t('tese.whyKill.p2', lang)}</p>
+				<p>{t('tese.whyKill.p3', lang)}</p>
+			</div>
+
+			<div class="prose-section">
+				<h2>{t('tese.peace.h2', lang)}</h2>
+				<p set:html={t('tese.peace.p1', lang)} />
+				<p>{t('tese.peace.p2', lang)}</p>
+				<p>{t('tese.peace.p3', lang)}</p>
+			</div>
+
+		</div>
+
+		<aside class="sidebar">
+			<div class="sidebar-block sidebar-block--accent">
+				<p class="kicker">{t('tese.sidebar.thesis.kicker', lang)}</p>
+				<p class="pullquote">{t('tese.sidebar.pullquote', lang)}</p>
+			</div>
+
+			<div class="sidebar-block">
+				<p class="kicker">{t('tese.sidebar.sources.kicker', lang)}</p>
+				<ul class="source-list">
+					{fontes.map((item) => item && (
+						<li>
+							<a href={toBase(`items/${item.id}/`)}>{item.title}</a>
+						</li>
+					))}
+				</ul>
+			</div>
+
+			<div class="sidebar-block">
+				<p class="kicker">{t('tese.sidebar.spectrum.kicker', lang)}</p>
+				<div class="spectrum">
+					<div class="spectrum-item spectrum-item--high">
+						<span class="spectrum-label">{t('tese.spectrum.totalitarian.label', lang)}</span>
+						<span class="spectrum-val">{t('tese.spectrum.totalitarian.val', lang)}</span>
+					</div>
+					<div class="spectrum-item spectrum-item--mid">
+						<span class="spectrum-label">{t('tese.spectrum.authoritarian.label', lang)}</span>
+						<span class="spectrum-val">{t('tese.spectrum.authoritarian.val', lang)}</span>
+					</div>
+					<div class="spectrum-item spectrum-item--low">
+						<span class="spectrum-label">{t('tese.spectrum.democratic.label', lang)}</span>
+						<span class="spectrum-val">{t('tese.spectrum.democratic.val', lang)}</span>
+					</div>
+				</div>
+			</div>
+		</aside>
+	</div>
+	<TrilhaNav current={2} position="bottom" lang={lang} />
+</Layout>
+
+<style>
+	.page-layout { display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: start; }
+	.page-header { margin-bottom: 2.5rem; padding-bottom: 2rem; border-bottom: 1px solid var(--rule-strong); }
+	h1 { font-family: var(--display); font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 900; font-style: italic; margin: 0.2rem 0 0.4rem; line-height: 1.05; letter-spacing: -0.02em; }
+	.subtitle { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); letter-spacing: 0.04em; margin: 0; font-style: italic; }
+
+	.prose-section { margin-bottom: 2.5rem; padding-bottom: 2.5rem; border-bottom: 1px solid var(--rule); }
+	.prose-section:last-child { border-bottom: none; margin-bottom: 0; }
+	h2 { font-family: var(--display); font-size: 1.2rem; font-weight: 700; margin: 0 0 0.9rem; color: var(--ink); }
+	.prose-section p { font-size: 1.05rem; line-height: 1.78; color: var(--ink); margin: 0 0 1em; max-width: 65ch; }
+	.prose-section p:last-child { margin: 0; }
+	.prose-section :global(strong) { font-weight: 600; }
+	.prose-section :global(em) { font-style: italic; }
+
+	.callout { margin: 0 0 2.5rem; padding: 1.5rem 2rem; border-left: 4px solid var(--accent); background: var(--accent-pale); border-radius: 0 3px 3px 0; }
+	blockquote { margin: 0; font-family: var(--display); font-size: clamp(1.2rem, 3vw, 1.6rem); font-style: italic; color: var(--ink); line-height: 1.35; }
+	cite { display: block; margin-top: 0.75rem; font-family: var(--mono); font-size: 0.68rem; font-style: normal; letter-spacing: 0.04em; color: var(--muted); }
+
+	.sidebar { position: sticky; top: 1.5rem; display: flex; flex-direction: column; gap: 1.25rem; }
+	.sidebar-block { padding: 1.25rem 1.5rem; border: 1px solid var(--rule-strong); border-radius: 3px; background: rgba(255, 252, 240, 0.85); }
+	.sidebar-block--accent { border-top: 3px solid var(--accent); background: var(--accent-pale); }
+	.sidebar-block .kicker { margin-bottom: 0.75rem; }
+	.pullquote { font-family: var(--display); font-size: 1rem; font-style: italic; line-height: 1.5; color: var(--ink); margin: 0; }
+
+	.source-list { list-style: none; padding: 0; margin: 0; }
+	.source-list li { padding: 0.4rem 0; border-bottom: 1px solid var(--rule); }
+	.source-list li:last-child { border-bottom: none; }
+	.source-list a { font-size: 0.85rem; color: var(--muted); text-decoration: none; line-height: 1.45; display: block; }
+	.source-list a:hover { color: var(--accent); }
+
+	.spectrum { display: flex; flex-direction: column; gap: 2px; }
+	.spectrum-item { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0.75rem; border-radius: 2px; }
+	.spectrum-item--high { background: rgba(122, 46, 31, 0.15); }
+	.spectrum-item--mid  { background: rgba(122, 46, 31, 0.07); }
+	.spectrum-item--low  { background: rgba(122, 46, 31, 0.02); }
+	.spectrum-label { font-family: var(--mono); font-size: 0.68rem; font-weight: 500; color: var(--ink); letter-spacing: 0.03em; }
+	.spectrum-val { font-family: var(--mono); font-size: 0.62rem; color: var(--muted); letter-spacing: 0.02em; }
+
+	@media (max-width: 860px) {
+		.page-layout { grid-template-columns: 1fr; }
+		.sidebar { position: static; }
+	}
+</style>
