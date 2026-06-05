@@ -22,6 +22,9 @@ const effectiveLang: Lang = lang ?? DEFAULT_LANG;
 const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
 const siteRoot = (Astro.site?.toString() ?? '').replace(/\/+$/, '');
 const toBase = (target = '') => `${base}/${target.replace(/^\/+/, '')}`;
+/** Relative URL for in-site navigation (works in dev + prod). */
+const altHref = (l: Lang) => `${base}${localizedHref(currentPath, l)}`;
+/** Absolute URL for canonical / hreflang / og:* meta tags. */
 const altUrl = (l: Lang) => `${siteRoot}${localizedHref(currentPath, l)}`;
 
 const finalTitle = title ?? (isSSG ? t('site.title', effectiveLang) : '20th Century Democide');
@@ -77,7 +80,7 @@ const navItems: { slug: string; key: string; fallback: string }[] = [
 	<body>
 		<div class="shell">
 			<header class="site-header">
-				<a class="brand" href={isSSG ? altUrl(effectiveLang) : toBase()}>20th Century Democide</a>
+				<a class="brand" href={isSSG ? altHref(effectiveLang) : toBase()}>20th Century Democide</a>
 				<nav>
 					{navItems.map((item) => (
 						<a
@@ -90,7 +93,7 @@ const navItems: { slug: string; key: string; fallback: string }[] = [
 					<div class="lang-switcher" role="navigation" aria-label="Language">
 						{LANGUAGES.map(({ code, name }) => (
 							<a
-								href={altUrl(code)}
+								href={altHref(code)}
 								class={`lang-opt ${code === effectiveLang ? 'is-current' : ''}`}
 								aria-current={code === effectiveLang ? 'true' : undefined}
 							>{code.toUpperCase()}</a>
