@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import { rewriteCorpusLinks } from './src/lib/rehype-rewrite-corpus-links.mjs';
 
 const site = 'https://paulomanrique.github.io/20th-century-democide';
 const base = '/20th-century-democide/';
@@ -36,6 +37,9 @@ export default defineConfig({
 	output: 'static',
 	markdown: {
 		syntaxHighlight: 'shiki',
-		rehypePlugins: [prefixRootRelativeUrls(base)],
+		rehypePlugins: [
+			rewriteCorpusLinks({ basePath: base }),
+			prefixRootRelativeUrls(base),
+		],
 	},
 });
