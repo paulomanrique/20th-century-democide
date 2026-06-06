@@ -13,10 +13,10 @@ const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
 const href = (slug: string) => `${base}${localizedHref(slug, lang)}`;
 
 const STEPS = [
-	{ n: 1, slug: 'autor/', labelKey: 'trilha.step1.label', teaserKey: 'trilha.step1.teaser' },
-	{ n: 2, slug: 'tese/', labelKey: 'trilha.step2.label', teaserKey: 'trilha.step2.teaser' },
-	{ n: 3, slug: 'democidios/', labelKey: 'trilha.step3.label', teaserKey: 'trilha.step3.teaser' },
-	{ n: 4, slug: 'preservation/', labelKey: 'trilha.step4.label', teaserKey: 'trilha.step4.teaser' },
+	{ n: 1, slug: 'autor/', labelKey: 'trail.step1.label', teaserKey: 'trail.step1.teaser' },
+	{ n: 2, slug: 'tese/', labelKey: 'trail.step2.label', teaserKey: 'trail.step2.teaser' },
+	{ n: 3, slug: 'democidios/', labelKey: 'trail.step3.label', teaserKey: 'trail.step3.teaser' },
+	{ n: 4, slug: 'preservation/', labelKey: 'trail.step4.label', teaserKey: 'trail.step4.teaser' },
 ];
 
 const nextStep = STEPS.find((s) => s.n === current + 1);
@@ -24,23 +24,23 @@ const isLast = current === 4;
 ---
 
 {position === 'top' && (
-	<nav class="trilha-steps" aria-label="Trilha de leitura">
+	<nav class="trail-steps" aria-label="Trilha de leitura">
 		{STEPS.map((s) => (
 			<a
 				href={href(s.slug)}
-				class={`trilha-dot ${s.n === current ? 'is-current' : ''}`}
+				class={`trail-dot ${s.n === current ? 'is-current' : ''}`}
 				aria-current={s.n === current ? 'step' : undefined}
 			>
-				<span class="trilha-num">{String(s.n).padStart(2, '0')}</span>
-				<span class="trilha-label">{t(s.labelKey, lang)}</span>
+				<span class="trail-num">{String(s.n).padStart(2, '0')}</span>
+				<span class="trail-label">{t(s.labelKey, lang)}</span>
 			</a>
 		))}
 	</nav>
 )}
 
 {position === 'bottom' && !isLast && nextStep && (
-	<a href={href(nextStep.slug)} class="trilha-cta">
-		<span class="cta-kicker">{t('trilha.next.kicker', lang)}</span>
+	<a href={href(nextStep.slug)} class="trail-cta">
+		<span class="cta-kicker">{t('trail.next.kicker', lang)}</span>
 		<span class="cta-num">{String(nextStep.n).padStart(2, '0')}</span>
 		<span class="cta-label">{t(nextStep.labelKey, lang)}</span>
 		<span class="cta-teaser">{t(nextStep.teaserKey, lang)}</span>
@@ -48,13 +48,13 @@ const isLast = current === 4;
 )}
 
 {position === 'bottom' && isLast && (
-	<a href={href('')} class="trilha-cta trilha-cta--finish">
-		<span class="cta-label">{t('trilha.finish.label', lang)}</span>
+	<a href={href('')} class="trail-cta trail-cta--finish">
+		<span class="cta-label">{t('trail.finish.label', lang)}</span>
 	</a>
 )}
 
 <style>
-	.trilha-steps {
+	.trail-steps {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 1px;
@@ -65,7 +65,7 @@ const isLast = current === 4;
 		border-radius: 2px;
 		overflow: hidden;
 	}
-	.trilha-dot {
+	.trail-dot {
 		display: flex;
 		flex-direction: column;
 		gap: 0.25rem;
@@ -76,30 +76,30 @@ const isLast = current === 4;
 		transition: background 0.12s, color 0.12s;
 		border-top: 2px solid transparent;
 	}
-	.trilha-dot:hover {
+	.trail-dot:hover {
 		background: rgba(122, 46, 31, 0.04);
 		color: var(--accent);
 	}
-	.trilha-dot.is-current {
+	.trail-dot.is-current {
 		border-top-color: var(--accent);
 		color: var(--ink);
 		background: rgba(255, 252, 240, 1);
 	}
-	.trilha-num {
+	.trail-num {
 		font-family: var(--mono);
 		font-size: 0.6rem;
 		letter-spacing: 0.08em;
 		opacity: 0.6;
 	}
-	.trilha-dot.is-current .trilha-num { color: var(--accent); opacity: 1; }
-	.trilha-label {
+	.trail-dot.is-current .trail-num { color: var(--accent); opacity: 1; }
+	.trail-label {
 		font-family: var(--display);
 		font-size: 0.78rem;
 		font-weight: 700;
 		line-height: 1.2;
 	}
 
-	.trilha-cta {
+	.trail-cta {
 		display: grid;
 		grid-template-columns: auto auto 1fr;
 		align-items: baseline;
@@ -114,7 +114,7 @@ const isLast = current === 4;
 		background: rgba(122, 46, 31, 0.04);
 		transition: background 0.15s;
 	}
-	.trilha-cta:hover { background: rgba(122, 46, 31, 0.09); }
+	.trail-cta:hover { background: rgba(122, 46, 31, 0.09); }
 	.cta-kicker {
 		font-family: var(--mono);
 		font-size: 0.6rem;
@@ -142,17 +142,17 @@ const isLast = current === 4;
 		line-height: 1.5;
 	}
 
-	.trilha-cta--finish {
+	.trail-cta--finish {
 		grid-template-columns: 1fr;
 		text-align: center;
 	}
-	.trilha-cta--finish .cta-label {
+	.trail-cta--finish .cta-label {
 		font-style: normal;
 		font-size: 0.95rem;
 	}
 
 	@media (max-width: 560px) {
-		.trilha-steps { grid-template-columns: repeat(2, 1fr); }
-		.trilha-cta { grid-template-columns: auto 1fr; }
+		.trail-steps { grid-template-columns: repeat(2, 1fr); }
+		.trail-cta { grid-template-columns: auto 1fr; }
 	}
 </style>

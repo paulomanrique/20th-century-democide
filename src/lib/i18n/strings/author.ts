@@ -1,7 +1,7 @@
 import type { Lang } from '../index';
 
-export const autor: Record<string, Record<Lang, string>> = {
-  'autor.h1': {
+export const author: Record<string, Record<Lang, string>> = {
+  'author.h1': {
     pt: 'O Autor',
     en: 'The Author',
     es: 'El Autor',
@@ -9,7 +9,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '作者',
     ja: '著者',
   },
-  'autor.subtitle': {
+  'author.subtitle': {
     pt: 'R.J. Rummel (1932–2014)',
     en: 'R.J. Rummel (1932–2014)',
     es: 'R.J. Rummel (1932–2014)',
@@ -19,7 +19,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: 'R.J. Rummel（1932–2014）',
     ja: 'R.J. Rummel（1932–2014）',
   },
-  'autor.trajectory.h2': {
+  'author.trajectory.h2': {
     pt: 'Trajetória',
     en: 'Career',
     es: 'Trayectoria',
@@ -29,7 +29,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '生平',
     ja: '略歴',
   },
-  'autor.trajectory.p1': {
+  'author.trajectory.p1': {
     pt: 'Rudolph Joseph Rummel nasceu em 1932 em Cleveland, Ohio. Obteve seu doutorado em ciência política pela Northwestern University em 1963 e passou a maior parte de sua carreira na Universidade do Havaí, onde lecionou por mais de três décadas.',
     en: 'Rudolph Joseph Rummel was born in 1932 in Cleveland, Ohio. He received his doctorate in political science from Northwestern University in 1963 and spent most of his career at the University of Hawaii, where he taught for more than three decades.',
     es: 'Rudolph Joseph Rummel nació en 1932 en Cleveland, Ohio. Obtuvo su doctorado en ciencia política por la Northwestern University en 1963 y pasó la mayor parte de su carrera en la Universidad de Hawái, donde enseñó durante más de tres décadas.',
@@ -39,7 +39,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '鲁道夫·约瑟夫·鲁梅尔1932年生于俄亥俄州克利夫兰。1963年在西北大学获得政治学博士学位，在夏威夷大学度过了大部分职业生涯，在那里执教逾三十年。',
     ja: 'ルドルフ・ジョセフ・ルンメルは1932年オハイオ州クリーブランド生まれ。1963年にノースウェスタン大学で政治学の博士号を取得し、ハワイ大学で三十年以上にわたって教鞭を執った。',
   },
-  'autor.trajectory.p2': {
+  'author.trajectory.p2': {
     pt: 'Seu trabalho inicial focou em relações internacionais e análise de conflitos. Com o tempo, sua pesquisa convergiu para uma questão que poucos acadêmicos haviam enfrentado sistematicamente: quantas pessoas os governos mataram no século XX?',
     en: 'His early work focused on international relations and conflict analysis. Over time, his research converged on a question that few academics had systematically addressed: how many people did governments kill in the twentieth century?',
     es: 'Su trabajo inicial se centró en las relaciones internacionales y el análisis de conflictos. Con el tiempo, su investigación convergió en una pregunta que pocos académicos habían abordado sistemáticamente: ¿cuántas personas mataron los gobiernos en el siglo XX?',
@@ -49,7 +49,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '他早期的研究专注于国际关系和冲突分析。随着时间推移，他的研究聚焦于一个鲜有学者系统探讨的问题：20世纪各国政府究竟杀害了多少人？',
     ja: '初期の研究は国際関係と紛争分析に焦点を当てていた。やがて研究は、ほとんどの学者が系統的に取り組んでいなかった問いへと収束した——20世紀に政府はどれほどの人々を殺したのか。',
   },
-  'autor.trajectory.p3': {
+  'author.trajectory.p3': {
     pt: 'Rummel passou quarenta anos respondendo a essa pergunta. O resultado foi o corpus mais abrangente já produzido sobre assassinatos em massa cometidos por governos — dezenas de estudos de caso, análises estatísticas multivariadas e revisões metodológicas que continuou publicando até sua morte em 2014.',
     en: 'Rummel spent forty years answering that question. The result was the most comprehensive corpus ever produced on mass killings committed by governments — dozens of case studies, multivariate statistical analyses, and methodological reviews that he continued publishing until his death in 2014.',
     es: 'Rummel pasó cuarenta años respondiendo esa pregunta. El resultado fue el corpus más completo jamás producido sobre asesinatos en masa cometidos por gobiernos — decenas de estudios de caso, análisis estadísticos multivariados y revisiones metodológicas que continuó publicando hasta su muerte en 2014.',
@@ -59,7 +59,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔花了四十年时间回答这个问题。结果是迄今为止关于政府大规模屠杀最全面的研究成果——数十个案例研究、多变量统计分析和方法论评述，他一直发表至2014年辞世。',
     ja: 'ルンメルはその問いに答えるために40年を費やした。その成果は政府による大量殺害に関して史上最も包括的なコーパスとなった——数十の事例研究、多変量統計分析、方法論的考察は2014年の死去まで発表され続けた。',
   },
-  'autor.contribution.h2': {
+  'author.contribution.h2': {
     pt: 'A contribuição central',
     en: 'The Central Contribution',
     es: 'La contribución central',
@@ -69,7 +69,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '核心贡献',
     ja: '中心的貢献',
   },
-  'autor.contribution.p1': {
+  'author.contribution.p1': {
     pt: 'Rummel cunhou o termo <strong>democídio</strong> para descrever o que estava documentando: o assassinato de qualquer pessoa ou povo pelo seu próprio governo. O conceito era mais amplo do que genocídio — que exige intenção de destruir um grupo específico — e capturava formas de violência estatal que vinham sendo sistematicamente subcontadas: fomes forçadas, campos de trabalho, execuções em massa de oponentes políticos, bombardeios deliberados de civis.',
     en: 'Rummel coined the term <strong>democide</strong> to describe what he was documenting: the murder of any person or people by their own government. The concept was broader than genocide — which requires intent to destroy a specific group — and captured forms of state violence that had been systematically undercounted: forced famines, labor camps, mass executions of political opponents, deliberate bombing of civilians.',
     es: 'Rummel acuñó el término <strong>democidio</strong> para describir lo que estaba documentando: el asesinato de cualquier persona o pueblo por su propio gobierno. El concepto era más amplio que el genocidio — que exige intención de destruir un grupo específico — y capturaba formas de violencia estatal que habían sido sistemáticamente infracontadas: hambrunas forzadas, campos de trabajo, ejecuciones masivas de opositores políticos, bombardeos deliberados de civiles.',
@@ -79,7 +79,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔创造了<strong>民主灭绝</strong>这一术语来描述他所记录的现象：政府对其控制下的任何人或民族的谋杀。这一概念比种族灭绝更为宽泛——种族灭绝要求有摧毁特定群体的意图——它涵盖了长期被系统性低估的国家暴力形式：强制饥荒、劳改营、对政治对手的大规模处决、对平民的蓄意轰炸。',
     ja: 'ルンメルは自身が記録していた現象——政府による人々の殺害——を表すために<strong>デモサイド</strong>という用語を作った。この概念はジェノサイドよりも広く、特定集団の破壊意図を要件としない。強制飢饉、強制収容所、政治的反対者の大量処刑、市民への意図的な爆撃など、これまで系統的に過小評価されてきた国家暴力の形態を包含した。',
   },
-  'autor.contribution.p2': {
+  'author.contribution.p2': {
     pt: 'Sua estimativa principal: governos mataram aproximadamente <strong>262 milhões de pessoas</strong> entre 1900 e 1999. Quase quatro vezes o número de mortos em todos os conflitos armados do mesmo período.',
     en: 'His main estimate: governments killed approximately <strong>262 million people</strong> between 1900 and 1999. Nearly four times the number of deaths in all armed conflicts of the same period.',
     es: 'Su estimación principal: los gobiernos mataron aproximadamente <strong>262 millones de personas</strong> entre 1900 y 1999. Casi cuatro veces el número de muertos en todos los conflictos armados del mismo período.',
@@ -89,7 +89,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '他的主要估计：1900年至1999年间，各国政府杀害了约<strong>2.62亿人</strong>。这几乎是同期所有武装冲突死亡人数的四倍。',
     ja: '彼の主な推定：1900年から1999年の間に政府は約<strong>2億6200万人</strong>を殺害した。同時期のすべての武力衝突による死者数の約4倍にあたる。',
   },
-  'autor.contribution.p3': {
+  'author.contribution.p3': {
     pt: 'A tese que emergiu desses dados — que o poder político sem freios é o principal preditor de massacres em massa, e que governos democráticos raramente cometem democídio — tornou-se sua contribuição mais duradoura para a ciência política.',
     en: 'The thesis that emerged from this data — that unchecked political power is the main predictor of mass killings, and that democratic governments rarely commit democide — became his most enduring contribution to political science.',
     es: 'La tesis que emergió de estos datos — que el poder político sin control es el principal predictor de masacres en masa, y que los gobiernos democráticos raramente cometen democidio — se convirtió en su contribución más duradera a la ciencia política.',
@@ -99,7 +99,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '从这些数据中浮现的论点——不受制约的政治权力是大规模屠杀的主要预测因素，而民主政府很少实施民主灭绝——成为他对政治学最持久的贡献。',
     ja: 'このデータから導き出された論点——制御されない政治権力が大量虐殺の主な予測因子であり、民主主義政府はほとんどデモサイドを犯さない——は、政治学への彼の最も永続的な貢献となった。',
   },
-  'autor.legacy.h2': {
+  'author.legacy.h2': {
     pt: 'Reconhecimento e legado',
     en: 'Recognition and Legacy',
     es: 'Reconocimiento y legado',
@@ -109,7 +109,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '认可与遗产',
     ja: '評価と遺産',
   },
-  'autor.legacy.p1': {
+  'author.legacy.p1': {
     pt: 'Rummel foi indicado ao Prêmio Nobel da Paz em 1996. Embora sua obra não tenha alcançado o público geral da forma que merecia, tornou-se referência fundamental em estudos sobre genocídio, direitos humanos e resolução de conflitos.',
     en: 'Rummel was nominated for the Nobel Peace Prize in 1996. Although his work did not reach the general public in the way it deserved, it became a fundamental reference in studies on genocide, human rights, and conflict resolution.',
     es: 'Rummel fue nominado al Premio Nobel de la Paz en 1996. Aunque su obra no alcanzó al público general en la medida que merecía, se convirtió en referencia fundamental en estudios sobre genocidio, derechos humanos y resolución de conflictos.',
@@ -119,7 +119,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '1996年，鲁梅尔获得诺贝尔和平奖提名。尽管他的作品未能以应有的方式传播到大众，但它已成为种族灭绝、人权和冲突解决研究的基本参考文献。',
     ja: '1996年、ルンメルはノーベル平和賞にノミネートされた。彼の研究は一般大衆にはそれほど広まらなかったが、ジェノサイド、人権、紛争解決に関する研究の基本的な参照文献となった。',
   },
-  'autor.legacy.p2': {
+  'author.legacy.p2': {
     pt: 'Após sua aposentadoria, continuou revisando e atualizando suas estimativas em um blog pessoal, onde publicou revisões significativas — incluindo uma reavaliação do democídio chinês que dobrou sua estimativa original para 76 milhões. Esse material também está preservado neste arquivo.',
     en: 'After his retirement, he continued revising and updating his estimates on a personal blog, publishing significant revisions — including a reassessment of Chinese democide that doubled his original estimate to 76 million. This material is also preserved in this archive.',
     es: 'Tras su jubilación, continuó revisando y actualizando sus estimaciones en un blog personal, donde publicó revisiones significativas — incluyendo una reevaluación del democidio chino que duplicó su estimación original a 76 millones. Este material también está preservado en este archivo.',
@@ -129,7 +129,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '退休后，他继续在个人博客上修订和更新估计数据，发布了重要修订——包括将中国民主灭绝死亡人数重新评估为7600万，是原始估计的两倍。这些材料也保存在本档案中。',
     ja: '退職後も個人ブログで推定値の修正・更新を続け、重要な改訂を発表した。その中には中国のデモサイドを7600万人と再評価したものも含まれ、当初の推定の2倍となった。この資料もこのアーカイブに保存されている。',
   },
-  'autor.sidebar.works': {
+  'author.sidebar.works': {
     pt: 'Obras principais',
     en: 'Main Works',
     es: 'Obras principales',
@@ -139,7 +139,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '主要著作',
     ja: '主要著作',
   },
-  'autor.sidebar.stats': {
+  'author.sidebar.stats': {
     pt: 'Em números',
     en: 'By the Numbers',
     es: 'En cifras',
@@ -149,7 +149,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '数字概览',
     ja: '数字で見る',
   },
-  'autor.stat1.label': {
+  'author.stat1.label': {
     pt: 'mortes por democídio estimadas no século XX',
     en: 'democide deaths estimated in the 20th century',
     es: 'muertes por democidio estimadas en el siglo XX',
@@ -159,7 +159,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '20世纪估计的民主灭绝死亡人数',
     ja: '20世紀のデモサイド推定死者数',
   },
-  'autor.stat2.label': {
+  'author.stat2.label': {
     pt: 'anos de pesquisa',
     en: 'years of research',
     es: 'años de investigación',
@@ -169,7 +169,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '年研究生涯',
     ja: '年の研究',
   },
-  'autor.stat3.label': {
+  'author.stat3.label': {
     pt: 'livros sobre democídio publicados',
     en: 'books on democide published',
     es: 'libros sobre democidio publicados',
@@ -179,7 +179,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '出版的民主灭绝相关著作',
     ja: 'デモサイドに関する出版書籍',
   },
-  'autor.sidebar.works.blurb': {
+  'author.sidebar.works.blurb': {
     pt: 'Cinco livros publicados entre 1990 e 1997 sintetizam quarenta anos de pesquisa sobre democídio — incluindo <em>Death by Government</em> (1994) e <em>Statistics of Democide</em> (1997). Os textos completos, em inglês original, estão no arquivo de preservação.',
     en: 'Five books published between 1990 and 1997 synthesize forty years of research on democide — including <em>Death by Government</em> (1994) and <em>Statistics of Democide</em> (1997). The full texts, in original English, are in the preservation archive.',
     es: 'Cinco libros publicados entre 1990 y 1997 sintetizan cuarenta años de investigación sobre democidio — incluyendo <em>Death by Government</em> (1994) y <em>Statistics of Democide</em> (1997). Los textos completos, en inglés original, están en el archivo de preservación.',
@@ -189,7 +189,7 @@ export const autor: Record<string, Record<Lang, string>> = {
     zh: '1990至1997年间出版的五本著作综合了四十年的民主灭绝研究——包括《政府杀戮》（1994）和《民主灭绝统计》（1997）。完整文本（英文原文）保存于本档案。',
     ja: '1990年から1997年の間に出版された5冊の著作が、デモサイドに関する40年の研究を集約している——『政府による死』（1994年）と『デモサイドの統計』（1997年）を含む。原文（英語）の全文はこの保存アーカイブに収められている。',
   },
-  'autor.sidebar.works.link': {
+  'author.sidebar.works.link': {
     pt: 'Ver corpus preservado →',
     en: 'See preserved corpus →',
     es: 'Ver corpus preservado →',

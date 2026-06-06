@@ -1,7 +1,7 @@
 import type { Lang } from '../index';
 
-export const tese: Record<string, Record<Lang, string>> = {
-  'tese.h1': {
+export const thesis: Record<string, Record<Lang, string>> = {
+  'thesis.h1': {
     pt: 'A Tese',
     en: 'The Thesis',
     es: 'La Tesis',
@@ -11,7 +11,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '核心论点',
     ja: '論文',
   },
-  'tese.subtitle': {
+  'thesis.subtitle': {
     pt: 'Poder mata. Poder absoluto mata absolutamente.',
     en: 'Power kills. Absolute power kills absolutely.',
     es: 'El poder mata. El poder absoluto mata absolutamente.',
@@ -21,7 +21,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '权力杀人。绝对权力绝对杀人。',
     ja: '権力は殺す。絶対的権力は絶対的に殺す。',
   },
-  'tese.whatIs.h2': {
+  'thesis.whatIs.h2': {
     pt: 'O que é democídio',
     en: 'What is Democide',
     es: '¿Qué es el democidio?',
@@ -31,7 +31,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '什么是民主灭绝',
     ja: 'デモサイドとは何か',
   },
-  'tese.whatIs.p1': {
+  'thesis.whatIs.p1': {
     pt: 'O termo <strong>democídio</strong> foi cunhado por Rummel para preencher uma lacuna conceitual. O vocabulário existente — genocídio, massacre, politicídio — capturava categorias específicas de violência estatal, mas nenhum termo abarcava o fenômeno mais amplo: governos matando deliberadamente as pessoas sob seu controle.',
     en: 'The term <strong>democide</strong> was coined by Rummel to fill a conceptual gap. The existing vocabulary — genocide, massacre, politicide — captured specific categories of state violence, but no term encompassed the broader phenomenon: governments deliberately killing the people under their control.',
     es: 'El término <strong>democidio</strong> fue acuñado por Rummel para llenar un vacío conceptual. El vocabulario existente — genocidio, masacre, politicidio — capturaba categorías específicas de violencia estatal, pero ningún término abarcaba el fenómeno más amplio: los gobiernos matando deliberadamente a las personas bajo su control.',
@@ -41,7 +41,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔创造<strong>民主灭绝</strong>这一术语，以填补一个概念空白。现有词汇——种族灭绝、大屠杀、政治灭绝——涵盖了国家暴力的特定类别，但没有任何术语能涵盖更广泛的现象：政府蓄意杀害其控制下的人民。',
     ja: 'ルンメルは概念的空白を埋めるために<strong>デモサイド</strong>という用語を作った。既存の語彙——ジェノサイド、虐殺、ポリティサイド——は国家暴力の特定カテゴリーを捉えていたが、より広範な現象——政府が支配下の人々を意図的に殺すこと——を包含する言葉はなかった。',
   },
-  'tese.whatIs.p2': {
+  'thesis.whatIs.p2': {
     pt: 'A definição de Rummel é direta: <em>"o assassinato de qualquer pessoa ou povo pelo seu próprio governo, incluindo genocídio, politicídio e assassinato em massa."</em> Não importa se a vítima pertence a um grupo étnico específico, a uma classe social ou a uma facção política. Se o governo mata intencionalmente, é democídio.',
     en: 'Rummel\'s definition is straightforward: <em>"the murder of any person or people by their own government, including genocide, politicide and mass murder."</em> It does not matter whether the victim belongs to a specific ethnic group, a social class, or a political faction. If the government kills intentionally, it is democide.',
     es: 'La definición de Rummel es directa: <em>"el asesinato de cualquier persona o pueblo por su propio gobierno, incluido el genocidio, el politicidio y el asesinato en masa."</em> No importa si la víctima pertenece a un grupo étnico específico, una clase social o una facción política. Si el gobierno mata intencionalmente, es democidio.',
@@ -51,7 +51,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔的定义简洁明了：<em>"政府对任何人或民族的谋杀，包括种族灭绝、政治灭绝和大规模谋杀。"</em>受害者属于哪个族裔、社会阶层或政治派别并不重要。只要政府是蓄意杀害，就是民主灭绝。',
     ja: 'ルンメルの定義は明快だ：<em>「種族虐殺、政治的殺害、大量虐殺を含む、政府による人々の殺害」</em>。被害者が特定の民族集団、社会階級、政治派閥に属するかどうかは問わない。政府が意図的に殺害すれば、それはデモサイドである。',
   },
-  'tese.whatIs.p3': {
+  'thesis.whatIs.p3': {
     pt: 'Essa definição mais ampla revelou uma escala de violência que os conceitos anteriores escondiam. Fomes forçadas — como o Holodomor ucraniano ou o Grande Salto Adiante chinês — não eram genocídio no sentido jurídico, mas eram assassinatos em massa deliberados por política governamental. Campos de trabalho forçado com condições letais. Deportações em massa no inverno. Bombas sobre populações civis. Tudo isso passou a ser contável sob o mesmo guarda-chuva conceitual.',
     en: 'This broader definition revealed a scale of violence that previous concepts had obscured. Forced famines — such as the Ukrainian Holodomor or the Chinese Great Leap Forward — were not genocide in the legal sense, but they were deliberate mass murders by government policy. Forced labor camps with lethal conditions. Mass deportations in winter. Bombs on civilian populations. All of this became countable under the same conceptual umbrella.',
     es: 'Esta definición más amplia reveló una escala de violencia que los conceptos anteriores ocultaban. Las hambrunas forzadas — como el Holodomor ucraniano o el Gran Salto Adelante chino — no eran genocidio en el sentido jurídico, pero eran asesinatos en masa deliberados por política gubernamental. Campos de trabajo forzado con condiciones letales. Deportaciones masivas en invierno. Bombas sobre poblaciones civiles. Todo esto pasó a ser cuantificable bajo el mismo paraguas conceptual.',
@@ -61,7 +61,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '这一更宽泛的定义揭示了以往概念所掩盖的暴力规模。强制饥荒——如乌克兰的大饥荒（Holodomor）或中国的大跃进——在法律意义上并非种族灭绝，但它们是政府政策蓄意造成的大规模杀害。具有致命条件的强制劳改营。寒冬中的大规模流放。对平民的轰炸。所有这些都在同一概念框架下得以被计量。',
     ja: 'この広い定義は、従来の概念が隠していた暴力の規模を明らかにした。強制飢饉——ウクライナのホロドモールや中国の大躍進——は法的意味でのジェノサイドではなかったが、政府政策による意図的な大量殺害だった。致死的な条件の強制労働収容所。真冬の大規模追放。市民への爆撃。これらすべてが同じ概念の傘のもとで計量可能となった。',
   },
-  'tese.vsGenocide.h2': {
+  'thesis.vsGenocide.h2': {
     pt: 'Democídio vs. genocídio',
     en: 'Democide vs. Genocide',
     es: 'Democidio vs. genocidio',
@@ -71,7 +71,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '民主灭绝与种族灭绝',
     ja: 'デモサイドとジェノサイドの違い',
   },
-  'tese.vsGenocide.p1': {
+  'thesis.vsGenocide.p1': {
     pt: 'A distinção importa. O Estatuto de Roma define genocídio como atos cometidos com <em>"intenção de destruir, no todo ou em parte, um grupo nacional, étnico, racial ou religioso."</em> Essa exigência de intenção específica criou uma barreira legal e conceitual que excluiu muitas das maiores atrocidades do século XX.',
     en: 'The distinction matters. The Rome Statute defines genocide as acts committed with <em>"intent to destroy, in whole or in part, a national, ethnical, racial or religious group."</em> This requirement of specific intent created a legal and conceptual barrier that excluded many of the greatest atrocities of the twentieth century.',
     es: 'La distinción importa. El Estatuto de Roma define el genocidio como actos cometidos con <em>"intención de destruir, total o parcialmente, a un grupo nacional, étnico, racial o religioso."</em> Este requisito de intención específica creó una barrera legal y conceptual que excluyó muchas de las mayores atrocidades del siglo XX.',
@@ -81,7 +81,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '这一区分至关重要。《罗马规约》将种族灭绝定义为以<em>"摧毁某一民族、族裔、种族或宗教团体的全部或一部分为目的"</em>而实施的行为。这一特定意图的要求制造了一道法律和概念屏障，将20世纪许多最大的暴行排除在外。',
     ja: 'この区別は重要だ。ローマ規程はジェノサイドを<em>「国民的、民族的、人種的または宗教的集団の全部または一部を破壊する意図をもって行われる行為」</em>と定義している。この特定の意図の要件が法的・概念的障壁を生み出し、20世紀最大の残虐行為の多くを除外した。',
   },
-  'tese.vsGenocide.p2': {
+  'thesis.vsGenocide.p2': {
     pt: 'Stalin não matava ucranianos porque eram ucranianos — matava porque eram camponeses que resistiam à coletivização. Mao não matava chineses porque eram chineses — matava porque eram proprietários de terra, intelectuais, ou simplesmente porque a quota de grãos exportados tinha prioridade sobre suas vidas. Juridicamente, não era genocídio. Moralmente, a distinção é irrelevante para as vítimas.',
     en: 'Stalin did not kill Ukrainians because they were Ukrainian — he killed them because they were peasants resisting collectivization. Mao did not kill Chinese because they were Chinese — he killed them because they were landowners, intellectuals, or simply because export grain quotas took priority over their lives. Legally, it was not genocide. Morally, the distinction is irrelevant to the victims.',
     es: 'Stalin no mataba ucranianos porque eran ucranianos — los mataba porque eran campesinos que resistían la colectivización. Mao no mataba chinos porque eran chinos — los mataba porque eran terratenientes, intelectuales, o simplemente porque las cuotas de exportación de grano tenían prioridad sobre sus vidas. Jurídicamente, no era genocidio. Moralmente, la distinción es irrelevante para las víctimas.',
@@ -91,7 +91,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '斯大林杀害乌克兰人，不是因为他们是乌克兰人，而是因为他们是抵制集体化的农民。毛泽东杀害中国人，不是因为他们是中国人，而是因为他们是地主、知识分子，或仅仅因为粮食出口配额的优先级高于他们的生命。从法律上讲，这不是种族灭绝。从道德上讲，这种区分对受害者毫无意义。',
     ja: 'スターリンがウクライナ人を殺したのは彼らがウクライナ人だからではなく、集団化に抵抗する農民だったからだ。毛沢東が中国人を殺したのも中国人だからではなく、地主や知識人だったから、あるいは単に穀物輸出割当が彼らの命より優先されたからだ。法的にはジェノサイドではない。しかし被害者にとって、その区別は道徳的に無意味だ。',
   },
-  'tese.vsGenocide.p3': {
+  'thesis.vsGenocide.p3': {
     pt: 'Democídio remove essa barreira. A pergunta relevante não é <em>"qual grupo?",</em> mas <em>"o governo matou intencionalmente?"</em>',
     en: 'Democide removes that barrier. The relevant question is not <em>"which group?"</em> but <em>"did the government kill intentionally?"</em>',
     es: 'El democidio elimina esa barrera. La pregunta relevante no es <em>"¿qué grupo?"</em> sino <em>"¿el gobierno mató intencionalmente?"</em>',
@@ -101,7 +101,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '民主灭绝消除了这一障碍。相关问题不是<em>"哪个群体？"</em>，而是<em>"政府是否蓄意杀害？"</em>',
     ja: 'デモサイドはその障壁を取り除く。問うべきは<em>「どの集団か？」</em>ではなく<em>「政府は意図的に殺したか？」</em>である。',
   },
-  'tese.whyKill.h2': {
+  'thesis.whyKill.h2': {
     pt: 'Por que governos matam',
     en: 'Why Governments Kill',
     es: 'Por qué los gobiernos matan',
@@ -111,7 +111,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '政府为何杀人',
     ja: '政府はなぜ殺すのか',
   },
-  'tese.whyKill.p1': {
+  'thesis.whyKill.p1': {
     pt: 'A análise estatística de Rummel identificou um preditor dominante de democídio: a concentração de poder político. Regimes totalitários — onde o Estado controla a economia, a informação, o movimento das pessoas e a força militar sem freios institucionais — cometem democídio em escala incomparavelmente maior do que regimes autoritários parciais, que por sua vez excedem amplamente as democracias.',
     en: 'Rummel\'s statistical analysis identified a dominant predictor of democide: the concentration of political power. Totalitarian regimes — where the State controls the economy, information, people\'s movement, and military force without institutional constraints — commit democide on an incomparably larger scale than partial authoritarian regimes, which in turn far exceed democracies.',
     es: 'El análisis estadístico de Rummel identificó un predictor dominante del democidio: la concentración del poder político. Los regímenes totalitarios — donde el Estado controla la economía, la información, el movimiento de las personas y la fuerza militar sin frenos institucionales — cometen democidio en una escala incomparablemente mayor que los regímenes autoritarios parciales, que a su vez superan ampliamente a las democracias.',
@@ -121,7 +121,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔的统计分析确定了民主灭绝的主要预测因素：政治权力的集中。极权主义政权——国家在没有制度制衡的情况下控制经济、信息、人员流动和军事力量——实施民主灭绝的规模远远超过部分威权政权，而后者又大大超过民主政府。',
     ja: 'ルンメルの統計分析は、デモサイドの支配的な予測因子を特定した：政治権力の集中である。全体主義政権——国家が制度的制約なしに経済、情報、人々の移動、軍事力を統制する——は、部分的権威主義体制と比較にならないほど大規模なデモサイドを犯し、権威主義体制もまた民主主義を大幅に上回る。',
   },
-  'tese.whyKill.p2': {
+  'thesis.whyKill.p2': {
     pt: 'Não é a pobreza. Não é a diversidade étnica. Não é a história de conflitos. O preditor mais forte, em dezenas de análises multivariadas, é o quanto de poder o governo detém sem prestação de contas.',
     en: 'It is not poverty. It is not ethnic diversity. It is not a history of conflict. The strongest predictor, across dozens of multivariate analyses, is how much power the government holds without accountability.',
     es: 'No es la pobreza. No es la diversidad étnica. No es la historia de conflictos. El predictor más fuerte, en docenas de análisis multivariados, es cuánto poder detiene el gobierno sin rendición de cuentas.',
@@ -131,7 +131,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '不是贫困。不是族裔多样性。不是冲突历史。在数十项多变量分析中，最强的预测因素是政府在没有问责机制下掌握的权力大小。',
     ja: '貧困ではない。民族的多様性でもない。紛争の歴史でもない。数十の多変量分析を通じて、最も強力な予測因子は、政府が説明責任なしに保持する権力の大きさである。',
   },
-  'tese.whyKill.p3': {
+  'thesis.whyKill.p3': {
     pt: 'A lógica é simples: quando um governo não enfrenta eleições livres, imprensa independente, judiciário autônomo ou oposição organizada, não há custo político em matar. A violência torna-se um instrumento rotineiro de administração.',
     en: 'The logic is simple: when a government faces no free elections, independent press, autonomous judiciary, or organized opposition, there is no political cost to killing. Violence becomes a routine instrument of administration.',
     es: 'La lógica es simple: cuando un gobierno no enfrenta elecciones libres, prensa independiente, poder judicial autónomo ni oposición organizada, no hay costo político en matar. La violencia se convierte en un instrumento rutinario de administración.',
@@ -141,7 +141,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '逻辑很简单：当一个政府不面临自由选举、独立媒体、自主司法或有组织的反对力量时，杀人就没有政治代价。暴力成为日常行政工具。',
     ja: 'その論理はシンプルだ：自由選挙、独立したメディア、自律した司法、組織的な反対勢力のいずれにも直面しない政府にとって、殺害に政治的コストはない。暴力は行政の日常的な手段となる。',
   },
-  'tese.peace.h2': {
+  'thesis.peace.h2': {
     pt: 'A paz democrática interna',
     en: 'Democratic Peace Within',
     es: 'La paz democrática interna',
@@ -151,7 +151,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '国内民主和平',
     ja: '国内の民主的平和',
   },
-  'tese.peace.p1': {
+  'thesis.peace.p1': {
     pt: 'Rummel é conhecido na literatura de relações internacionais pela <em>teoria da paz democrática</em> — a observação de que democracias raramente fazem guerra entre si. Mas a conclusão que considerava mais importante era sua extensão interna: democracias também raramente cometem democídio contra seus próprios cidadãos.',
     en: 'Rummel is known in the international relations literature for the <em>democratic peace theory</em> — the observation that democracies rarely go to war with each other. But the conclusion he considered most important was its internal extension: democracies also rarely commit democide against their own citizens.',
     es: 'Rummel es conocido en la literatura de relaciones internacionales por la <em>teoría de la paz democrática</em> — la observación de que las democracias raramente hacen la guerra entre sí. Pero la conclusión que consideraba más importante era su extensión interna: las democracias también raramente cometen democidio contra sus propios ciudadanos.',
@@ -161,7 +161,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔在国际关系文献中以<em>民主和平论</em>著称——即民主国家之间很少相互开战的观察。但他认为最重要的结论是其国内延伸：民主国家也很少对自己的公民实施民主灭绝。',
     ja: 'ルンメルは国際関係論の文献において<em>民主的平和論</em>——民主主義国家同士はめったに戦争をしないという観察——で知られる。しかし彼が最も重要と考えた結論はその国内的拡張にあった：民主主義は自国民に対してもほとんどデモサイドを犯さない。',
   },
-  'tese.peace.p2': {
+  'thesis.peace.p2': {
     pt: 'Dos 262 milhões de mortes que estimou, a esmagadora maioria ocorreu em regimes totalitários ou fortemente autoritários. Governos democráticos — com toda sua imperfeição — simplesmente não produzem Gulags, Holocaustos, Holodomors ou Grandes Saltos Adiante.',
     en: 'Of the 262 million deaths he estimated, the overwhelming majority occurred under totalitarian or heavily authoritarian regimes. Democratic governments — with all their imperfection — simply do not produce Gulags, Holocausts, Holodomors, or Great Leaps Forward.',
     es: 'De los 262 millones de muertes que estimó, la gran mayoría ocurrió bajo regímenes totalitarios o fuertemente autoritarios. Los gobiernos democráticos — con toda su imperfección — simplemente no producen Gulags, Holocaustos, Holodomors ni Grandes Saltos Adelante.',
@@ -171,7 +171,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '在他估计的2.62亿死亡中，绝大多数发生在极权主义或高度威权主义政权之下。民主政府——尽管有其种种缺陷——根本不会制造古拉格、大屠杀、大饥荒或大跃进。',
     ja: '推定2億6200万の死亡のうち、圧倒的多数は全体主義または強度の権威主義体制のもとで起きた。民主主義政府は——そのあらゆる不完全さにもかかわらず——グラーグ、ホロコースト、ホロドモール、大躍進を生み出さない。',
   },
-  'tese.peace.p3': {
+  'thesis.peace.p3': {
     pt: 'A conclusão política que Rummel tirava disso era direta: se você quer reduzir o risco de massacres em massa, o caminho mais eficaz é expandir a democracia e limitar o poder estatal. Não é garantia. Mas é o que os dados mostram.',
     en: 'The political conclusion Rummel drew from this was straightforward: if you want to reduce the risk of mass killings, the most effective path is to expand democracy and limit state power. It is not a guarantee. But it is what the data show.',
     es: 'La conclusión política que Rummel extraía de esto era directa: si quieres reducir el riesgo de masacres en masa, el camino más eficaz es expandir la democracia y limitar el poder estatal. No es una garantía. Pero es lo que muestran los datos.',
@@ -181,7 +181,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔从中得出的政治结论很直接：如果你想降低大规模屠杀的风险，最有效的途径是扩大民主、限制国家权力。这不是保证。但这是数据所显示的。',
     ja: 'ルンメルが導いた政治的結論は明快だった：大量殺害のリスクを減らしたいなら、最も効果的な道は民主主義を拡大し国家権力を制限することだ。それは保証ではない。しかしデータはそれを示している。',
   },
-  'tese.sidebar.thesis.kicker': {
+  'thesis.sidebar.thesis.kicker': {
     pt: 'A tese em uma frase',
     en: 'The thesis in one sentence',
     es: 'La tesis en una frase',
@@ -191,7 +191,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '一句话概括论点',
     ja: '一文で表す論点',
   },
-  'tese.sidebar.pullquote': {
+  'thesis.sidebar.pullquote': {
     pt: 'Quanto mais poder um governo detém sem prestação de contas, mais mata. Quanto menos poder, menos mata.',
     en: 'The more power a government holds without accountability, the more it kills. The less power, the less it kills.',
     es: 'Cuanto más poder tiene un gobierno sin rendición de cuentas, más mata. Cuanto menos poder, menos mata.',
@@ -201,7 +201,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '政府在没有问责的情况下掌握的权力越大，杀人就越多。权力越小，杀人越少。',
     ja: '政府が説明責任なしに保持する権力が大きいほど、より多く殺す。権力が小さいほど、殺しは少ない。',
   },
-  'tese.sidebar.sources.kicker': {
+  'thesis.sidebar.sources.kicker': {
     pt: 'Fontes primárias',
     en: 'Primary sources',
     es: 'Fuentes primarias',
@@ -211,7 +211,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '原始资料',
     ja: '一次資料',
   },
-  'tese.sidebar.spectrum.kicker': {
+  'thesis.sidebar.spectrum.kicker': {
     pt: 'O espectro do poder',
     en: 'The power spectrum',
     es: 'El espectro del poder',
@@ -221,7 +221,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '权力谱系',
     ja: '権力のスペクトル',
   },
-  'tese.spectrum.totalitarian.label': {
+  'thesis.spectrum.totalitarian.label': {
     pt: 'Totalitário',
     en: 'Totalitarian',
     es: 'Totalitario',
@@ -231,7 +231,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '极权主义',
     ja: '全体主義',
   },
-  'tese.spectrum.totalitarian.val': {
+  'thesis.spectrum.totalitarian.val': {
     pt: 'Alta taxa de democídio',
     en: 'High democide rate',
     es: 'Alta tasa de democidio',
@@ -241,7 +241,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '高民主灭绝率',
     ja: 'デモサイド率が高い',
   },
-  'tese.spectrum.authoritarian.label': {
+  'thesis.spectrum.authoritarian.label': {
     pt: 'Autoritário',
     en: 'Authoritarian',
     es: 'Autoritario',
@@ -251,7 +251,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '威权主义',
     ja: '権威主義',
   },
-  'tese.spectrum.authoritarian.val': {
+  'thesis.spectrum.authoritarian.val': {
     pt: 'Taxa moderada',
     en: 'Moderate rate',
     es: 'Tasa moderada',
@@ -261,7 +261,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '中等比率',
     ja: '中程度の率',
   },
-  'tese.spectrum.democratic.label': {
+  'thesis.spectrum.democratic.label': {
     pt: 'Democrático',
     en: 'Democratic',
     es: 'Democrático',
@@ -271,7 +271,7 @@ export const tese: Record<string, Record<Lang, string>> = {
     zh: '民主制度',
     ja: '民主主義',
   },
-  'tese.spectrum.democratic.val': {
+  'thesis.spectrum.democratic.val': {
     pt: 'Taxa muito baixa',
     en: 'Very low rate',
     es: 'Tasa muy baja',

@@ -1,7 +1,7 @@
 import type { Lang } from '../index';
 
-export const democidios: Record<string, Record<Lang, string>> = {
-  'democidios.h1': {
+export const democides: Record<string, Record<Lang, string>> = {
+  'democides.h1': {
     pt: 'Democídios',
     en: 'Democides',
     es: 'Democidios',
@@ -11,7 +11,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '民主灭绝案例',
     ja: 'デモサイド事例',
   },
-  'democidios.intro': {
+  'democides.intro': {
     pt: 'Os principais casos documentados por Rummel, ordenados por estimativa de mortes. Selecione uma categoria para aprofundamento, ou explore os casos individualmente.',
     en: 'The main cases documented by Rummel, ordered by estimated deaths. Select a category for deeper study, or explore cases individually.',
     es: 'Los principales casos documentados por Rummel, ordenados por estimación de muertes. Seleccione una categoría para profundizar, o explore los casos individualmente.',
@@ -21,7 +21,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: 'Rummel记录的主要案例，按估计死亡人数排序。选择一个类别深入研究，或逐个浏览案例。',
     ja: 'Rummelが記録した主要事例を推定死者数順に掲載。カテゴリーを選んで深く研究するか、個別に事例を探索してください。',
   },
-  'democidios.total.label': {
+  'democides.total.label': {
     pt: 'Total estimado por Rummel — 20th century democide',
     en: 'Total estimated by Rummel — 20th century democide',
     es: 'Total estimado por Rummel — democidio del siglo XX',
@@ -31,7 +31,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: 'Rummel估计总数——20世纪民主灭绝',
     ja: 'Rummelによる推定合計——20世紀のデモサイド',
   },
-  'democidios.total.num': {
+  'democides.total.num': {
     pt: '262 milhões de mortes',
     en: '262 million deaths',
     es: '262 millones de muertes',
@@ -41,7 +41,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '2.62亿人死亡',
     ja: '2億6200万人の死',
   },
-  'democidios.caso.soviets.desc': {
+  'democides.case.soviets.desc': {
     pt: 'O maior democídio do século XX. Stalin sozinho é responsável por mais de 40 milhões de mortes.',
     en: 'The largest democide of the twentieth century. Stalin alone is responsible for more than 40 million deaths.',
     es: 'El mayor democidio del siglo XX. Stalin solo es responsable de más de 40 millones de muertes.',
@@ -51,7 +51,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '20世纪最大的民主灭绝。仅斯大林一人就造成超过4000万人死亡。',
     ja: '20世紀最大のデモサイド。スターリン一人で4000万人以上の死に責任がある。',
   },
-  'democidios.caso.china.desc': {
+  'democides.case.china.desc': {
     pt: 'A estimativa revisada de Rummel (2005) coloca a China comunista como o maior democídio individual.',
     en: 'Rummel\'s revised estimate (2005) places communist China as the largest individual democide.',
     es: 'La estimación revisada de Rummel (2005) sitúa a la China comunista como el mayor democidio individual.',
@@ -61,7 +61,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: 'Rummel的修订估计（2005年）将共产主义中国列为最大的单一民主灭绝案例。',
     ja: 'Rummelの修正推定（2005年）は共産主義中国を最大の単一デモサイドとしている。',
   },
-  'democidios.caso.nazismo.desc': {
+  'democides.case.nazism.desc': {
     pt: 'O regime que sistematizou o extermínio industrial. O Holocausto foi o maior componente, mas não o único.',
     en: 'The regime that systematized industrial extermination. The Holocaust was the largest component, but not the only one.',
     es: 'El régimen que sistematizó el exterminio industrial. El Holocausto fue el componente mayor, pero no el único.',
@@ -71,7 +71,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '将工业化灭绝系统化的政权。大屠杀是最大的组成部分，但不是唯一的。',
     ja: '工業的絶滅を体系化した政権。ホロコーストは最大の要素だったが、唯一ではない。',
   },
-  'democidios.caso.kmt.desc': {
+  'democides.case.kmt.desc': {
     pt: 'Frequentemente esquecida nas discussões sobre o século XX chinês.',
     en: 'Frequently overlooked in discussions about twentieth century China.',
     es: 'Frecuentemente olvidada en las discusiones sobre la China del siglo XX.',
@@ -81,7 +81,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '在关于20世纪中国的讨论中经常被忽视。',
     ja: '20世紀中国に関する議論でしばしば見落とされる。',
   },
-  'democidios.caso.japan.desc': {
+  'democides.case.japan.desc': {
     pt: 'Democídio praticado principalmente em territórios ocupados na Ásia.',
     en: 'Democide practiced mainly in occupied territories in Asia.',
     es: 'Democidio practicado principalmente en territorios ocupados en Asia.',
@@ -91,7 +91,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '主要在亚洲被占领领土上实施的民主灭绝。',
     ja: '主にアジアの占領地で実施されたデモサイド。',
   },
-  'democidios.caso.cambodia.desc': {
+  'democides.case.cambodia.desc': {
     pt: 'Em quatro anos, o Khmer Vermelho eliminou aproximadamente 25% da população cambojana.',
     en: 'In four years, the Khmer Rouge eliminated approximately 25% of the Cambodian population.',
     es: 'En cuatro años, el Jemer Rojo eliminó aproximadamente el 25% de la población camboyana.',
@@ -101,7 +101,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '四年内，红色高棉消灭了柬埔寨约25%的人口。',
     ja: '4年間で、クメール・ルージュはカンボジア人口の約25%を抹殺した。',
   },
-  'democidios.caso.turkey.desc': {
+  'democides.case.turkey.desc': {
     pt: 'Inclui o genocídio armênio de 1915–1916 e a perseguição de outras minorias cristãs.',
     en: 'Includes the Armenian genocide of 1915–1916 and the persecution of other Christian minorities.',
     es: 'Incluye el genocidio armenio de 1915–1916 y la persecución de otras minorías cristianas.',
@@ -111,7 +111,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '包括1915–1916年的亚美尼亚种族灭绝和对其他基督教少数民族的迫害。',
     ja: '1915–1916年のアルメニア虐殺と他のキリスト教少数派への迫害を含む。',
   },
-  'democidios.caso.colonies.desc': {
+  'democides.case.colonies.desc': {
     pt: 'As estimativas de Rummel para o período colonial foram revisadas para cima em 2005.',
     en: 'Rummel\'s estimates for the colonial period were revised upward in 2005.',
     es: 'Las estimaciones de Rummel para el período colonial fueron revisadas al alza en 2005.',
@@ -121,7 +121,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: 'Rummel对殖民时期的估计在2005年被上调。',
     ja: '植民地時代に関するRummelの推定は2005年に上方修正された。',
   },
-  'democidios.caso.latins.desc': {
+  'democides.case.latins.desc': {
     pt: 'Regimes apoiados ou tolerados durante a Guerra Fria que desapareceram e torturaram dezenas de milhares.',
     en: 'Regimes supported or tolerated during the Cold War that disappeared and tortured tens of thousands.',
     es: 'Regímenes apoyados o tolerados durante la Guerra Fría que desaparecieron y torturaron a decenas de miles.',
@@ -131,7 +131,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '冷战期间被支持或容忍的政权，使数万人失踪并遭受酷刑。',
     ja: '冷戦中に支援または黙認された政権で、数万人を失踪させ拷問した。',
   },
-  'democidios.tag.socialismo': {
+  'democides.tag.socialism': {
     pt: 'Socialismo',
     en: 'Socialism',
     es: 'Socialismo',
@@ -141,7 +141,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '社会主义',
     ja: '社会主義',
   },
-  'democidios.tag.nazismo': {
+  'democides.tag.nazism': {
     pt: 'Nazismo',
     en: 'Nazism',
     es: 'Nazismo',
@@ -151,7 +151,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '纳粹主义',
     ja: 'ナチズム',
   },
-  'democidios.tag.ditadura': {
+  'democides.tag.dictatorship': {
     pt: 'Ditadura',
     en: 'Dictatorship',
     es: 'Dictadura',
@@ -161,7 +161,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '独裁',
     ja: '独裁',
   },
-  'democidios.tag.militarismo': {
+  'democides.tag.militarism': {
     pt: 'Militarismo',
     en: 'Militarism',
     es: 'Militarismo',
@@ -171,7 +171,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '军国主义',
     ja: '軍国主義',
   },
-  'democidios.tag.etnonacionalismo': {
+  'democides.tag.ethnonationalism': {
     pt: 'Etnonacionalismo',
     en: 'Ethnonationalism',
     es: 'Etnonacionalismo',
@@ -181,7 +181,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '民族主义',
     ja: '民族主義',
   },
-  'democidios.tag.colonialismo': {
+  'democides.tag.colonialism': {
     pt: 'Colonialismo',
     en: 'Colonialism',
     es: 'Colonialismo',
@@ -191,7 +191,7 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '殖民主义',
     ja: '植民地主義',
   },
-  'democidios.tag.autoritarismo': {
+  'democides.tag.authoritarianism': {
     pt: 'Autoritarismo',
     en: 'Authoritarianism',
     es: 'Autoritarismo',
@@ -201,49 +201,49 @@ export const democidios: Record<string, Record<Lang, string>> = {
     zh: '威权主义',
     ja: '権威主義',
   },
-  'democidios.regime.soviets': {
+  'democides.regime.soviets': {
     pt: 'União Soviética', en: 'Soviet Union', es: 'Unión Soviética',
     fr: 'Union soviétique', it: 'Unione Sovietica', de: 'Sowjetunion',
     zh: '苏联', ja: 'ソビエト連邦',
   },
-  'democidios.regime.china': {
+  'democides.regime.china': {
     pt: 'China (Mao Tsé-Tung)', en: 'China (Mao Zedong)', es: 'China (Mao Zedong)',
     fr: 'Chine (Mao Tsé-toung)', it: 'Cina (Mao Zedong)', de: 'China (Mao Zedong)',
     zh: '中国（毛泽东）', ja: '中国（毛沢東）',
   },
-  'democidios.regime.nazismo': {
+  'democides.regime.nazism': {
     pt: 'Alemanha Nazista', en: 'Nazi Germany', es: 'Alemania Nazi',
     fr: 'Allemagne nazie', it: 'Germania nazista', de: 'Nazi-Deutschland',
     zh: '纳粹德国', ja: 'ナチス・ドイツ',
   },
-  'democidios.regime.kmt': {
+  'democides.regime.kmt': {
     pt: 'China Nacionalista (KMT)', en: 'Nationalist China (KMT)',
     es: 'China Nacionalista (KMT)', fr: 'Chine nationaliste (KMT)',
     it: 'Cina Nazionalista (KMT)', de: 'Nationalistisches China (KMT)',
     zh: '国民党中国', ja: '国民党中国',
   },
-  'democidios.regime.japan': {
+  'democides.regime.japan': {
     pt: 'Japão Imperial', en: 'Imperial Japan', es: 'Japón Imperial',
     fr: 'Japon impérial', it: 'Giappone Imperiale', de: 'Kaiserreich Japan',
     zh: '大日本帝国', ja: '大日本帝国',
   },
-  'democidios.regime.cambodia': {
+  'democides.regime.cambodia': {
     pt: 'Camboja (Khmer Vermelho)', en: 'Cambodia (Khmer Rouge)',
     es: 'Camboya (Jemer Rojo)', fr: 'Cambodge (Khmers rouges)',
     it: 'Cambogia (Khmer Rossi)', de: 'Kambodscha (Rote Khmer)',
     zh: '柬埔寨（红色高棉）', ja: 'カンボジア（クメール・ルージュ）',
   },
-  'democidios.regime.turkey': {
+  'democides.regime.turkey': {
     pt: 'Turquia Otomana', en: 'Ottoman Turkey', es: 'Turquía Otomana',
     fr: 'Turquie ottomane', it: 'Turchia Ottomana', de: 'Osmanische Türkei',
     zh: '奥斯曼土耳其', ja: 'オスマン・トルコ',
   },
-  'democidios.regime.colonies': {
+  'democides.regime.colonies': {
     pt: 'Colônias Europeias', en: 'European Colonies', es: 'Colonias Europeas',
     fr: 'Colonies européennes', it: 'Colonie europee', de: 'Europäische Kolonien',
     zh: '欧洲殖民地', ja: 'ヨーロッパの植民地',
   },
-  'democidios.regime.latins': {
+  'democides.regime.latins': {
     pt: 'Ditaduras Latino-Americanas', en: 'Latin American Dictatorships',
     es: 'Dictaduras Latinoamericanas', fr: "Dictatures d'Amérique latine",
     it: 'Dittature latinoamericane', de: 'Lateinamerikanische Diktaturen',

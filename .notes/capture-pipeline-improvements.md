@@ -1,16 +1,16 @@
-# Capture pipeline — melhorias planejadas
+# Capture pipeline — planned improvements
 
-Estado atual: `capture_all.mjs` roda single-pass com fallback wayback no
-primeiro erro. Lições de `fgcmirror` aplicáveis abaixo.
+Current state: `capture_all.mjs` runs single-pass with wayback fallback on
+the first error. Applicable lessons from `fgcmirror` below.
 
-## Prioridade A — aplicar logo após terminar o capture atual
+## Priority A — apply right after the current capture finishes
 
-### A1. Loop iterativo até convergir
-**Problema.** Single-pass: os 228 HTM novos vão revelar refs que ainda
-não estão no manifest. Lethal-politics-note tinha NOTE10–14 invisíveis
-até a captura. Cada captura nova é uma fonte de novas refs.
+### A1. Iterative loop until convergence
+**Problem.** Single-pass: the 228 new HTMs will reveal refs that are not
+in the manifest yet. Lethal-politics-note had NOTE10–14 invisible until
+capture. Every new capture is a source of new refs.
 
-**Implementação.** Wrapper `scripts/capture_iterate.mjs`:
+**Implementation.** Wrapper `scripts/capture_iterate.mjs`:
 ```
 for (let iter = 0; iter < 5; iter++) {
   const before = countManifest();
@@ -20,15 +20,16 @@ for (let iter = 0; iter < 5; iter++) {
   console.log(`iter ${iter}: +${after - before} items`);
 }
 ```
-`capture_all.mjs` já é idempotente em descoberta (filtra `indexedShortTitles`),
-então re-rodar só processa os novos.
+`capture_all.mjs` is already idempotent in discovery (filters
+`indexedShortTitles`), so re-running only processes the new ones.
 
-### A2. Idempotência verificada
-**Problema.** Re-rodar `capture_all` em estado parcial: itens 'pending'
-ou 'failed' ficam pra trás sem retry. Já 'published' são pulados ok.
+### A2. Verified idempotency
+**Problem.** Re-running `capture_all` in a partial state: 'pending' or
+'failed' items get left behind with no retry. 'published' ones are
+correctly skipped.
 
-**Implementação.** Adicionar modo `--retry-failed` e `--retry-pending`
-ao `capture_all.mjs`:
+**Implementation.** Add `--retry-failed` and `--retry-pending` modes
+to `capture_all.mjs`:
 ```
 const candidates = args['retry-failed']
   ? items.filter(i => i.capture_status === 'failed')
@@ -36,14 +37,14 @@ const candidates = args['retry-failed']
   ? items.filter(i => i.capture_status === 'pending')
   : newPending;
 ```
-E NÃO adicionar entries quando esses flags estão ligados.
+And do NOT add entries when these flags are on.
 
-### A3. Stickiness no primário
-**Problema.** Hoje: `try fetcher(originalUrl); catch → wayback fallback`.
-Qualquer 5xx, socket reset, ou timeout perde a primária mesmo quando
-ela tem o conteúdo bom.
+### A3. Stickiness on the primary source
+**Problem.** Today: `try fetcher(originalUrl); catch → wayback fallback`.
+Any 5xx, socket reset, or timeout loses the primary even when it has the
+good content.
 
-**Implementação.** Wrap fetch em retry loop com backoff:
+**Implementation.** Wrap fetch in a retry loop with backoff:
 ```
 async function fetchWithRetry(url, fetcher, opts = { tries: 5 }) {
   let lastErr;
@@ -62,15 +63,15 @@ async function fetchWithRetry(url, fetcher, opts = { tries: 5 }) {
   throw lastErr;
 }
 ```
-Hard 404 → wayback. Tudo mais → 5 retries no primário primeiro.
+Hard 404 → wayback. Everything else → 5 retries on the primary first.
 
-## Prioridade B — robustez (depois de A)
+## Priority B — robustness (after A)
 
-### B1. Wayback: múltiplos vizinhos via CDX
-**Problema.** `findWaybackSnapshot` retorna o primeiro snapshot 200.
-Se a captura específica estiver corrompida, perde. Não tenta vizinhos.
+### B1. Wayback: multiple neighbors via CDX
+**Problem.** `findWaybackSnapshot` returns the first 200 snapshot. If
+that specific capture is corrupted, it loses. It never tries neighbors.
 
-**Implementação.** Mudar lib pra retornar lista, tentar até N:
+**Implementation.** Change the lib to return a list, try up to N:
 ```
 async function findWaybackSnapshots(url, limit = 20) {
   const cdx = `https://web.archive.org/cdx/search/cdx?url=${enc(url)}
@@ -83,17 +84,17 @@ async function findWaybackSnapshots(url, limit = 20) {
   }));
 }
 
-// uso:
+// usage:
 for (const snap of await findWaybackSnapshots(url, 20)) {
   try { return await fetcher(snap.url); } catch {}
 }
 ```
 
-### B2. Miss tracking persistente
-**Problema.** Itens 'failed' viram massa parada. Sem histórico de
-tentativas, sem retry futuro automático.
+### B2. Persistent miss tracking
+**Problem.** 'failed' items become dead weight. No attempt history, no
+automatic future retry.
 
-**Implementação.** `data/manifests/miss-attempts.json`:
+**Implementation.** `data/manifests/miss-attempts.json`:
 ```json
 {
   "<item_id>": {
@@ -105,22 +106,22 @@ tentativas, sem retry futuro automático.
   }
 }
 ```
-Script `scripts/recover_misses.mjs` re-tenta entries com
-`(now - last_attempt) > retry_due_date(n_attempts)` (backoff
-exponencial: 1d, 3d, 7d, 14d).
+Script `scripts/recover_misses.mjs` retries entries with
+`(now - last_attempt) > retry_due_date(n_attempts)` (exponential
+backoff: 1d, 3d, 7d, 14d).
 
-## Prioridade C — long-tail
+## Priority C — long-tail
 
-### C1. CDX cache local
-**Onde.** `data/cdx-cache/<sha1(url)>.json` com TTL 7 dias.
-**Por quê.** Reduz hits no Wayback durante retries; permite trabalho
-offline na fase de normalize/fix.
+### C1. Local CDX cache
+**Where.** `data/cdx-cache/<sha1(url)>.json` with a 7-day TTL.
+**Why.** Reduces Wayback hits during retries; allows offline work
+during the normalize/fix phase.
 
 ### C2. Strip Wayback chrome
-**Quando.** Após fetch via wayback fallback. Hoje o HTML cru contém
-`<!-- BEGIN WAYBACK TOOLBAR -->`, `<script src="archive.org/...">`,
+**When.** After fetching via wayback fallback. Today the raw HTML
+contains `<!-- BEGIN WAYBACK TOOLBAR -->`, `<script src="archive.org/...">`,
 `data-wbm-*` attrs, `__wm.*` blocks.
-**Implementação.** Adicionar ao `normalizeHtml()`:
+**Implementation.** Add to `normalizeHtml()`:
 ```
 $('script[src*="archive.org"], link[href*="archive.org"]').remove();
 $('[data-wbm-postjsonp], [data-wbm-bm]').removeAttr('data-wbm-postjsonp data-wbm-bm');
@@ -129,33 +130,32 @@ $('*').contents().filter((_, n) => n.type === 'comment' &&
 ```
 
 ### C3. CDX wildcard discovery
-**Por quê.** Captura tudo arquivado sob `hawaii.edu/powerkills/*`,
-mesmo URLs que nunca aparecem como link em página alguma. Pode
-descobrir páginas "órfãs" preservadas só pelo Wayback.
-**Cuidado.** Pode trazer lixo (versões antigas de URLs já capturadas,
-páginas de teste). Filtrar por extension válida e dedup por
-content hash.
+**Why.** Captures everything archived under `hawaii.edu/powerkills/*`,
+even URLs that never appear as a link on any page. Can discover
+"orphan" pages preserved only by the Wayback Machine.
+**Caution.** May bring in junk (old versions of already-captured URLs,
+test pages). Filter by valid extension and dedup by content hash.
 
-### C4. sweep_refs como lib compartilhada
-**Estado.** Regex `\]\(([A-Z0-9._-]+\.(HTM|...))\)` aparece em
-`capture_all.mjs` e variante em `rehype-rewrite-corpus-links.mjs`.
-**Implementação.** `scripts/lib_sweep_refs.mjs` exporta `discoverRefs(text)`,
-usado por ambos.
+### C4. sweep_refs as a shared lib
+**State.** The regex `\]\(([A-Z0-9._-]+\.(HTM|...))\)` appears in
+`capture_all.mjs` and a variant in `rehype-rewrite-corpus-links.mjs`.
+**Implementation.** `scripts/lib_sweep_refs.mjs` exports `discoverRefs(text)`,
+used by both.
 
-## Ordem de execução proposta
+## Proposed execution order
 
-1. **Aguardar capture atual terminar** (target ~30 min ainda)
-2. **Validar resultado**: `npm run validate`, build, ver dist/
-3. **Aplicar A1+A2+A3** (iterative wrapper + retry modes + stickiness)
+1. **Wait for the current capture to finish** (target ~30 min remaining)
+2. **Validate the result**: `npm run validate`, build, inspect dist/
+3. **Apply A1+A2+A3** (iterative wrapper + retry modes + stickiness)
    — branch `chore/capture-resilience`
-4. **Rodar capture iterativa** — esperando 1-3 iterações
-5. **Aplicar B1+B2** se houver falhas residuais
-6. **Aplicar C1-C4** como cleanup/long-tail
+4. **Run iterative capture** — expecting 1-3 iterations
+5. **Apply B1+B2** if residual failures remain
+6. **Apply C1-C4** as cleanup/long-tail
 
-## Métricas de sucesso
+## Success metrics
 
-- Após iteração: `npm run validate:i18n` verde, build verde
-- `scripts/audit_corpus_refs.mjs` (a criar) reporta: total refs vs.
-  refs locais vs. refs fallback hawaii.edu
-- Alvo realista: 80%+ dos refs apontam pra items locais; o resto cai
-  pra fallback (páginas removidas, snapshots não-recuperáveis)
+- After iteration: `npm run validate:i18n` green, build green
+- `scripts/audit_corpus_refs.mjs` (to be created) reports: total refs vs.
+  local refs vs. hawaii.edu fallback refs
+- Realistic target: 80%+ of refs point to local items; the rest falls
+  back (removed pages, unrecoverable snapshots)

@@ -1,7 +1,7 @@
 import type { Lang } from '../index';
 
-export const colonialismo: Record<string, Record<Lang, string>> = {
-  'colonialismo.h1': {
+export const colonialism: Record<string, Record<Lang, string>> = {
+  'colonialism.h1': {
     pt: 'Colonialismo',
     en: 'Colonialism',
     es: 'Colonialismo',
@@ -11,7 +11,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '殖民主义',
     ja: '植民地主義',
   },
-  'colonialismo.subtitle': {
+  'colonialism.subtitle': {
     pt: 'O democídio que o século XX herdou e continuou',
     en: 'The democide the twentieth century inherited and continued',
     es: 'El democidio que el siglo XX heredó y continuó',
@@ -21,7 +21,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '20世纪继承并延续的民主灭绝',
     ja: '20世紀が引き継ぎ継続したデモサイド',
   },
-  'colonialismo.intro': {
+  'colonialism.intro': {
     pt: 'Rummel revisou suas estimativas do democídio colonial em 2005, reconhecendo que subestimara significativamente a violência das potências europeias nos seus impérios. O colonialismo produziu democídio de formas diversas: extermínio direto, fomes induzidas, trabalho forçado em condições letais e supressão violenta de rebeliões.',
     en: 'Rummel revised his estimates of colonial democide in 2005, acknowledging that he had significantly underestimated the violence of European powers in their empires. Colonialism produced democide in diverse ways: direct extermination, induced famines, forced labor under lethal conditions, and violent suppression of rebellions.',
     es: 'Rummel revisó sus estimaciones del democidio colonial en 2005, reconociendo que había subestimado significativamente la violencia de las potencias europeas en sus imperios. El colonialismo produjo democidio de diversas formas: exterminio directo, hambrunas inducidas, trabajo forzado en condiciones letales y supresión violenta de rebeliones.',
@@ -31,7 +31,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔在2005年修订了对殖民民主灭绝的估计，承认他大大低估了欧洲列强在其帝国中的暴力行为。殖民主义以多种方式制造了民主灭绝：直接灭绝、人为饥荒、致命条件下的强制劳动和对叛乱的暴力镇压。',
     ja: 'ルンメルは2005年に植民地デモサイドの推定を修正し、ヨーロッパ列強による帝国内の暴力を大幅に過小評価していたことを認めた。植民地主義は様々な形でデモサイドをもたらした：直接的な絶滅、人為的な飢饉、致死的条件下での強制労働、反乱の暴力的鎮圧。',
   },
-  'colonialismo.congo.h2': {
+  'colonialism.congo.h2': {
     pt: 'Congo Belga (Estado Livre do Congo)',
     en: 'Belgian Congo (Congo Free State)',
     es: 'Congo Belga (Estado Libre del Congo)',
@@ -41,7 +41,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '比属刚果（刚果自由邦）',
     ja: 'ベルギー領コンゴ（コンゴ自由国）',
   },
-  'colonialismo.congo.p1': {
+  'colonialism.congo.p1': {
     pt: 'O caso mais documentado e extremo do democídio colonial. Entre 1885 e 1908, o rei Leopoldo II da Bélgica administrou o Congo como propriedade pessoal através de um regime de terror destinado a maximizar a extração de borracha. Os métodos incluíam amputação de mãos como punição por cotas não cumpridas, tomada de reféns, execuções em massa e trabalho forçado.',
     en: 'The most documented and extreme case of colonial democide. Between 1885 and 1908, King Leopold II of Belgium administered the Congo as personal property through a terror regime designed to maximize rubber extraction. Methods included hand amputation as punishment for unmet quotas, hostage-taking, mass executions, and forced labor.',
     es: 'El caso más documentado y extremo del democidio colonial. Entre 1885 y 1908, el rey Leopoldo II de Bélgica administró el Congo como propiedad personal a través de un régimen de terror destinado a maximizar la extracción de caucho. Los métodos incluían amputación de manos como castigo por cuotas no cumplidas, toma de rehenes, ejecuciones en masa y trabajo forzado.',
@@ -51,7 +51,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '殖民民主灭绝中记录最详尽、最极端的案例。1885年至1908年间，比利时国王利奥波德二世将刚果作为私人财产进行管理，通过恐怖政权最大化橡胶开采。手段包括以截断双手作为未完成配额的惩罚、扣押人质、大规模处决和强制劳动。',
     ja: '植民地デモサイドの最も詳しく記録され、最も極端な事例。1885年から1908年の間、ベルギーのレオポルド2世はゴムの採取を最大化するための恐怖政治によってコンゴを個人財産として管理した。方法には、ノルマ未達成への罰としての手の切断、人質取り、大量処刑、強制労働が含まれた。',
   },
-  'colonialismo.congo.p2': {
+  'colonialism.congo.p2': {
     pt: 'As estimativas de mortes variam enormemente — de 1 milhão a 10 milhões. A população do Congo caiu pela metade entre 1880 e 1920, por uma combinação de assassinatos diretos, fome, doenças e queda da natalidade causadas pelo regime. Rummel inclui o Congo Belga como um dos casos mais graves do democídio colonial.',
     en: 'Death estimates vary enormously — from 1 million to 10 million. The Congo\'s population fell by half between 1880 and 1920, through a combination of direct killings, famine, disease, and birth decline caused by the regime. Rummel includes the Belgian Congo as one of the most serious cases of colonial democide.',
     es: 'Las estimaciones de muertes varían enormemente — de 1 millón a 10 millones. La población del Congo se redujo a la mitad entre 1880 y 1920, por una combinación de asesinatos directos, hambruna, enfermedades y caída de la natalidad causadas por el régimen. Rummel incluye el Congo Belga como uno de los casos más graves del democidio colonial.',
@@ -61,7 +61,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '死亡估计数差异极大——从100万到1000万不等。1880年至1920年间，刚果人口减少了一半，原因是政权导致的直接杀害、饥荒、疾病和出生率下降的综合作用。鲁梅尔将比属刚果列为殖民民主灭绝最严重的案例之一。',
     ja: '死亡推定は大きく異なる——100万人から1000万人まで。1880年から1920年の間に、コンゴの人口は政権による直接的な殺害、飢饉、病気、出生率低下の組み合わせにより半減した。ルンメルはベルギー領コンゴを植民地デモサイドの最も深刻な事例の一つとして挙げている。',
   },
-  'colonialismo.namibia.h2': {
+  'colonialism.namibia.h2': {
     pt: 'África do Sudoeste Alemã (Namíbia)',
     en: 'German South West Africa (Namibia)',
     es: 'África del Sudoeste Alemán (Namibia)',
@@ -71,7 +71,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '德属西南非洲（纳米比亚）',
     ja: 'ドイツ領南西アフリカ（ナミビア）',
   },
-  'colonialismo.namibia.p1': {
+  'colonialism.namibia.p1': {
     pt: 'Entre 1904 e 1908, o Império Alemão suprimiu as revoltas dos povos Herero e Namaqua na atual Namíbia com uma campanha de extermínio sistemático. O General Lothar von Trotha emitiu a <em>Vernichtungsbefehl</em> (ordem de extermínio), expulsando os Herero para o deserto do Kalahari e envenenando os poços de água.',
     en: 'Between 1904 and 1908, the German Empire suppressed the revolts of the Herero and Namaqua peoples in present-day Namibia with a campaign of systematic extermination. General Lothar von Trotha issued the <em>Vernichtungsbefehl</em> (extermination order), driving the Herero into the Kalahari Desert and poisoning water wells.',
     es: 'Entre 1904 y 1908, el Imperio Alemán reprimió las revueltas de los pueblos Herero y Namaqua en la actual Namibia con una campaña de exterminio sistemático. El General Lothar von Trotha emitió el <em>Vernichtungsbefehl</em> (orden de exterminio), expulsando a los Herero al desierto del Kalahari y envenenando los pozos de agua.',
@@ -81,7 +81,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '1904年至1908年间，德意志帝国在现今纳米比亚对赫雷罗人和纳马夸人的起义进行系统性灭绝镇压。洛塔尔·冯·特罗塔将军发布了<em>灭绝令</em>，将赫雷罗人驱入卡拉哈里沙漠并毒化水源。',
     ja: '1904年から1908年にかけて、ドイツ帝国は現在のナミビアにおけるヘレロ族とナマクア族の反乱を組織的な絶滅作戦で鎮圧した。ロタール・フォン・トロータ将軍は<em>絶滅命令（Vernichtungsbefehl）</em>を発令し、ヘレロ族をカラハリ砂漠に追いやり水源を毒した。',
   },
-  'colonialismo.namibia.p2': {
+  'colonialism.namibia.p2': {
     pt: 'Estima-se que 65–80% dos Herero e 50% dos Namaqua morreram. É amplamente reconhecido como o primeiro genocídio do século XX, precedendo o Holocausto por três décadas. A Alemanha reconheceu formalmente o genocídio em 2021.',
     en: 'It is estimated that 65–80% of the Herero and 50% of the Namaqua died. It is widely recognized as the first genocide of the twentieth century, preceding the Holocaust by three decades. Germany formally recognized the genocide in 2021.',
     es: 'Se estima que murieron el 65–80% de los Herero y el 50% de los Namaqua. Es ampliamente reconocido como el primer genocidio del siglo XX, precediendo al Holocausto por tres décadas. Alemania reconoció formalmente el genocidio en 2021.',
@@ -91,7 +91,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '估计有65–80%的赫雷罗人和50%的纳马夸人死亡。这被广泛认为是20世纪第一次种族灭绝，比大屠杀早了三十年。德国于2021年正式承认了这次种族灭绝。',
     ja: '推定でヘレロ族の65–80%、ナマクア族の50%が死亡した。ホロコーストに30年先立つ20世紀最初のジェノサイドとして広く認められている。ドイツは2021年にジェノサイドを公式に認めた。',
   },
-  'colonialismo.india.h2': {
+  'colonialism.india.h2': {
     pt: 'Índia Britânica — as fomes coloniais',
     en: 'British India — Colonial Famines',
     es: 'India Británica — las hambrunas coloniales',
@@ -101,7 +101,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '英属印度——殖民饥荒',
     ja: '英領インド——植民地の飢饉',
   },
-  'colonialismo.india.p1': {
+  'colonialism.india.p1': {
     pt: 'O historiador Mike Davis documentou as "fomes vitorianas tardias" que mataram entre 12 e 29 milhões de indianos entre 1876 e 1902. Rummel analisa o papel do governo colonial britânico nessas fomes: as políticas de exportação de grãos durante escassez, os impostos cobrados mesmo de populações em inanição, e a recusa em suspender o livre-mercado durante emergências alimentares constituem, em sua análise, democídio por negligência criminal.',
     en: 'Historian Mike Davis documented the "late Victorian famines" that killed between 12 and 29 million Indians between 1876 and 1902. Rummel analyzes the role of the British colonial government in these famines: grain export policies during scarcity, taxes collected even from starving populations, and the refusal to suspend the free market during food emergencies constitute, in his analysis, democide by criminal negligence.',
     es: 'El historiador Mike Davis documentó las "hambrunas victorianas tardías" que mataron entre 12 y 29 millones de indios entre 1876 y 1902. Rummel analiza el papel del gobierno colonial británico en estas hambrunas: las políticas de exportación de granos durante la escasez, los impuestos cobrados incluso a poblaciones en inanición, y la negativa a suspender el libre mercado durante emergencias alimentarias constituyen, en su análisis, democidio por negligencia criminal.',
@@ -111,7 +111,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '历史学家迈克·戴维斯记录了1876年至1902年间夺走1200万至2900万印度人生命的"维多利亚时代晚期大饥荒"。鲁梅尔分析了英国殖民政府在这些饥荒中的作用：短缺期间的粮食出口政策、即使对饥饿人口也征收的税收，以及在粮食危机期间拒绝暂停自由市场——在他的分析中，这些构成了由刑事疏忽导致的民主灭绝。',
     ja: '歴史家マイク・デイヴィスは1876年から1902年の間に1200万から2900万人のインド人を死亡させた「ヴィクトリア朝後期の大飢饉」を記録した。ルンメルはこれらの飢饉における英国植民地政府の役割を分析している：不作時の穀物輸出政策、餓死寸前の人々からも徴収された税金、食料緊急事態における自由市場の停止拒否は、彼の分析では刑事的怠慢によるデモサイドを構成する。',
   },
-  'colonialismo.india.p2': {
+  'colonialism.india.p2': {
     pt: 'A fome de 1943 em Bengala — que matou 2–3 milhões de pessoas durante a Segunda Guerra Mundial — é um exemplo mais recente e documentado, onde as políticas de Churchill de exportação de alimentos e recusa de socorro internacional contribuíram diretamente para as mortes.',
     en: 'The 1943 famine in Bengal — which killed 2–3 million people during World War II — is a more recent and documented example, where Churchill\'s policies of food exports and refusal of international aid contributed directly to the deaths.',
     es: 'La hambruna de 1943 en Bengala — que mató a 2–3 millones de personas durante la Segunda Guerra Mundial — es un ejemplo más reciente y documentado, donde las políticas de Churchill de exportación de alimentos y rechazo de socorro internacional contribuyeron directamente a las muertes.',
@@ -121,7 +121,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '1943年孟加拉饥荒——在二战期间夺去200–300万人的生命——是一个更近期且有据可查的例证，丘吉尔的粮食出口政策和拒绝国际援助直接导致了死亡。',
     ja: '1943年のベンガルの飢饉——第二次世界大戦中に200万から300万人を死亡させた——は、チャーチルの食料輸出政策と国際援助の拒否が死者に直接貢献したより最近の記録された例である。',
   },
-  'colonialismo.reeval.h2': {
+  'colonialism.reeval.h2': {
     pt: 'A reavaliação de Rummel (2005)', en: 'Rummel\'s Reassessment (2005)', es: 'La reevaluación de Rummel (2005)',
     fr: 'La réévaluation de Rummel (2005)',
     it: 'La rivalutazione di Rummel (2005)',
@@ -129,7 +129,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: 'Rummel的重新评估（2005年）',
     ja: 'ルンメルの再評価（2005年）',
   },
-  'colonialismo.reeval.p1': {
+  'colonialism.reeval.p1': {
     pt: 'Em sua revisão de 2005, Rummel reconheceu que as estimativas originais para o democídio colonial eram conservadoras demais. O artigo preservado neste arquivo — <em>"Reevaluating Colonial Democide"</em> — atualiza as estimativas levando em conta novos estudos históricos e revisões metodológicas.',
     en: 'In his 2005 revision, Rummel acknowledged that the original estimates for colonial democide were too conservative. The article preserved in this archive — <em>"Reevaluating Colonial Democide"</em> — updates the estimates taking into account new historical studies and methodological revisions.',
     es: 'En su revisión de 2005, Rummel reconoció que las estimaciones originales para el democidio colonial eran demasiado conservadoras. El artículo preservado en este archivo — <em>"Reevaluating Colonial Democide"</em> — actualiza las estimaciones teniendo en cuenta nuevos estudios históricos y revisiones metodológicas.',
@@ -139,7 +139,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '在2005年的修订中，鲁梅尔承认原来对殖民民主灭绝的估计过于保守。本档案保存的文章——<em>"重新评估殖民民主灭绝"</em>——结合新的历史研究和方法论修订，更新了估计数据。',
     ja: '2005年の改訂において、ルンメルは植民地デモサイドの当初の推定が保守的すぎたことを認めた。このアーカイブに保存されている論文——<em>「植民地デモサイドの再評価」</em>——は新たな歴史研究と方法論的修正を踏まえて推定値を更新している。',
   },
-  'colonialismo.reeval.p2': {
+  'colonialism.reeval.p2': {
     pt: 'A dificuldade metodológica do democídio colonial é real: os registros são fragmentados, as mortes foram frequentemente classificadas como "pacificação" ou resultado de "condições naturais", e o interesse político em minimizá-las persiste. Rummel é um dos poucos pesquisadores que tentou quantificar sistematicamente esse fenômeno.',
     en: 'The methodological difficulty of colonial democide is real: records are fragmented, deaths were frequently classified as "pacification" or the result of "natural conditions," and the political interest in minimizing them persists. Rummel is one of the few researchers who attempted to systematically quantify this phenomenon.',
     es: 'La dificultad metodológica del democidio colonial es real: los registros están fragmentados, las muertes fueron frecuentemente clasificadas como "pacificación" o resultado de "condiciones naturales", y el interés político en minimizarlas persiste. Rummel es uno de los pocos investigadores que intentó cuantificar sistemáticamente este fenómeno.',
@@ -149,7 +149,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '殖民民主灭绝的方法论困难是真实存在的：记录是碎片化的，死亡经常被归类为"平定"或"自然条件"的结果，而将其最小化的政治利益至今仍在。鲁梅尔是少数试图系统性量化这一现象的研究人员之一。',
     ja: '植民地デモサイドの方法論的困難は現実のものだ：記録は断片的で、死亡はしばしば「平定」や「自然条件」の結果として分類され、それを最小化しようとする政治的利益は持続している。ルンメルはこの現象を体系的に定量化しようとした数少ない研究者の一人である。',
   },
-  'colonialismo.sidebar.note.kicker': {
+  'colonialism.sidebar.note.kicker': {
     pt: 'Nota metodológica',
     en: 'Methodological Note',
     es: 'Nota metodológica',
@@ -159,7 +159,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '方法论注释',
     ja: '方法論的注記',
   },
-  'colonialismo.sidebar.note.text': {
+  'colonialism.sidebar.note.text': {
     pt: 'As estimativas do democídio colonial têm maior incerteza do que outros casos. Rummel as revisou para cima em 2005.',
     en: 'Estimates for colonial democide have greater uncertainty than other cases. Rummel revised them upward in 2005.',
     es: 'Las estimaciones del democidio colonial tienen mayor incertidumbre que otros casos. Rummel las revisó al alza en 2005.',
@@ -169,7 +169,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '殖民民主灭绝的估计比其他案例有更大的不确定性。Rummel于2005年将其上调。',
     ja: '植民地デモサイドの推定は他の事例よりも不確実性が高い。ルンメルは2005年にそれらを上方修正した。',
   },
-  'colonialismo.sidebar.cases.kicker': {
+  'colonialism.sidebar.cases.kicker': {
     pt: 'Casos principais',
     en: 'Main Cases',
     es: 'Casos principales',
@@ -179,7 +179,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '主要案例',
     ja: '主要事例',
   },
-  'colonialismo.case.congo': {
+  'colonialism.case.congo': {
     pt: 'Congo Belga',
     en: 'Belgian Congo',
     es: 'Congo Belga',
@@ -189,7 +189,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '比属刚果',
     ja: 'ベルギー領コンゴ',
   },
-  'colonialismo.case.herero': {
+  'colonialism.case.herero': {
     pt: 'Herero e Namaqua',
     en: 'Herero and Namaqua',
     es: 'Herero y Namaqua',
@@ -199,7 +199,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '赫雷罗人与纳马人',
     ja: 'ヘレロとナマクア',
   },
-  'colonialismo.case.india': {
+  'colonialism.case.india': {
     pt: 'Índia Britânica',
     en: 'British India',
     es: 'India Británica',
@@ -209,7 +209,7 @@ export const colonialismo: Record<string, Record<Lang, string>> = {
     zh: '英属印度',
     ja: 'イギリス領インド',
   },
-  'colonialismo.case.bengala': {
+  'colonialism.case.bengal': {
     pt: 'Bengala (1943)',
     en: 'Bengal (1943)',
     es: 'Bengala (1943)',

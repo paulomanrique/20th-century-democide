@@ -1,7 +1,7 @@
 import type { Lang } from '../index';
 
-export const nazismo: Record<string, Record<Lang, string>> = {
-  'nazismo.h1': {
+export const nazism: Record<string, Record<Lang, string>> = {
+  'nazism.h1': {
     pt: 'Nazismo',
     en: 'Nazism',
     es: 'Nazismo',
@@ -11,7 +11,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '纳粹主义',
     ja: 'ナチズム',
   },
-  'nazismo.deaths.label': {
+  'nazism.deaths.label': {
     pt: 'mortes estimadas por Rummel',
     en: 'deaths estimated by Rummel',
     es: 'muertes estimadas por Rummel',
@@ -21,7 +21,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: 'Rummel估计死亡人数',
     ja: 'Rummelによる推定死者数',
   },
-  'nazismo.section1.h2': {
+  'nazism.section1.h2': {
     pt: 'O extermínio sistematizado',
     en: 'Systematized Extermination',
     es: 'El exterminio sistematizado',
@@ -31,7 +31,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '系统化的灭绝',
     ja: '組織的な絶滅',
   },
-  'nazismo.section1.p1': {
+  'nazism.section1.p1': {
     pt: 'O regime nazista foi singular na história do democídio não pela escala absoluta — a União Soviética e a China comunista superaram seus números — mas pelo grau de sistematização industrial aplicado ao extermínio. O Terceiro Reich construiu uma burocracia dedicada ao assassinato em massa, com linhas ferroviárias, campos de concentração, câmaras de gás e crematórios organizados como infraestrutura estatal.',
     en: 'The Nazi regime was singular in the history of democide not for its absolute scale — the Soviet Union and communist China surpassed its numbers — but for the degree of industrial systematization applied to extermination. The Third Reich built a bureaucracy dedicated to mass murder, with railway lines, concentration camps, gas chambers, and crematoria organized as state infrastructure.',
     es: 'El régimen nazi fue singular en la historia del democidio no por su escala absoluta — la Unión Soviética y la China comunista superaron sus números — sino por el grado de sistematización industrial aplicado al exterminio. El Tercer Reich construyó una burocracia dedicada al asesinato en masa, con líneas ferroviarias, campos de concentración, cámaras de gas y crematorios organizados como infraestructura estatal.',
@@ -41,7 +41,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '纳粹政权在民主灭绝史上是独特的，不是因为其绝对规模——苏联和共产主义中国都超过了它的数字——而是因为应用于灭绝的工业系统化程度。第三帝国建立了专门用于大规模谋杀的官僚机构，将铁路线、集中营、毒气室和火葬场作为国家基础设施加以组织。',
     ja: 'ナチス政権がデモサイドの歴史において特異だったのは、その絶対的規模——ソ連と共産主義中国はその数字を上回った——ではなく、絶滅に適用された工業的な体系化の度合いにある。第三帝国は大量殺害のための官僚機構を構築し、鉄道、強制収容所、ガス室、火葬場を国家インフラとして組織した。',
   },
-  'nazismo.section1.p2': {
+  'nazism.section1.p2': {
     pt: 'Na análise de Rummel, o democídio nazista totaliza aproximadamente 20,9 milhões de mortes entre 1933 e 1945. O Holocausto representa o maior componente — mas não o único. O regime assassinou sistematicamente várias outras categorias de pessoas que considerava indesejáveis ou perigosas.',
     en: 'In Rummel\'s analysis, Nazi democide totals approximately 20.9 million deaths between 1933 and 1945. The Holocaust represents the largest component — but not the only one. The regime systematically murdered several other categories of people it considered undesirable or dangerous.',
     es: 'En el análisis de Rummel, el democidio nazi totaliza aproximadamente 20,9 millones de muertes entre 1933 y 1945. El Holocausto representa el mayor componente — pero no el único. El régimen asesinó sistemáticamente a varias otras categorías de personas que consideraba indeseables o peligrosas.',
@@ -51,7 +51,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '在鲁梅尔的分析中，纳粹民主灭绝在1933年至1945年间共造成约2090万人死亡。大屠杀是最大的组成部分——但不是唯一的。该政权系统性地谋杀了它认为不受欢迎或危险的其他几类人。',
     ja: 'ルンメルの分析では、ナチスのデモサイドは1933年から1945年の間に約2090万人の死亡に達する。ホロコーストが最大の要素だが——唯一ではない。この政権は不適切または危険と見なした他の複数の人々を組織的に殺害した。',
   },
-  'nazismo.section2.h2': {
+  'nazism.section2.h2': {
     pt: 'O Holocausto',
     en: 'The Holocaust',
     es: 'El Holocausto',
@@ -61,7 +61,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '大屠杀',
     ja: 'ホロコースト',
   },
-  'nazismo.section2.p1': {
+  'nazism.section2.p1': {
     pt: 'A "Solução Final" — o programa nazista de extermínio dos judeus europeus — resultou na morte de aproximadamente 5,3 a 6 milhões de judeus, segundo as estimativas de Rummel. O processo evoluiu de perseguições legais e violência de rua (1933–1939) para deportações em massa e fuzilamentos por esquadrões móveis (Einsatzgruppen) no leste europeu (1941–1942), culminando na operação industrial dos campos de extermínio — Auschwitz-Birkenau, Treblinka, Sobibor, Belzec, Chelmno, Majdanek.',
     en: 'The "Final Solution" — the Nazi program to exterminate European Jews — resulted in the death of approximately 5.3 to 6 million Jews, according to Rummel\'s estimates. The process evolved from legal persecution and street violence (1933–1939) to mass deportations and shootings by mobile squads (Einsatzgruppen) in Eastern Europe (1941–1942), culminating in the industrial operation of the extermination camps — Auschwitz-Birkenau, Treblinka, Sobibor, Belzec, Chelmno, Majdanek.',
     es: 'La "Solución Final" — el programa nazi de exterminio de los judíos europeos — resultó en la muerte de aproximadamente 5,3 a 6 millones de judíos, según las estimaciones de Rummel. El proceso evolucionó de persecuciones legales y violencia callejera (1933–1939) a deportaciones masivas y fusilamientos por escuadrones móviles (Einsatzgruppen) en Europa del Este (1941–1942), culminando en la operación industrial de los campos de exterminio — Auschwitz-Birkenau, Treblinka, Sobibor, Belzec, Chelmno, Majdanek.',
@@ -71,7 +71,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '"最终解决方案"——纳粹消灭欧洲犹太人的计划——根据鲁梅尔的估计，造成约530万至600万犹太人死亡。这一过程从法律迫害和街头暴力（1933–1939年）演变为东欧的大规模驱逐和机动部队（特别行动队）枪杀（1941–1942年），最终在灭绝营的工业化运作中达到顶点——奥斯维辛-比克瑙、特雷布林卡、索比堡、贝乌热茨、海乌姆诺、马伊达内克。',
     ja: '「最終解決」——ヨーロッパのユダヤ人を絶滅させるナチスのプログラム——はルンメルの推定によれば約530万から600万人のユダヤ人の死をもたらした。このプロセスは法的迫害と街頭暴力（1933–1939年）から、東ヨーロッパでの大量追放と移動部隊（アインザッツグルッペン）による銃殺（1941–1942年）へと発展し、絶滅収容所——アウシュビッツ・ビルケナウ、トレブリンカ、ソビボル、ベウジェツ、ヘウムノ、マイダネク——の工業的運営で頂点に達した。',
   },
-  'nazismo.section2.p2': {
+  'nazism.section2.p2': {
     pt: 'Rummel enquadra o Holocausto como o exemplo mais puro de genocídio dentro do espectro do democídio: havia intenção explícita e documentada de destruir o povo judeu como grupo. Mas seu trabalho coloca o Holocausto em perspectiva comparativa com outros democídios do século, algo que a historiografia convencional raramente faz.',
     en: 'Rummel frames the Holocaust as the purest example of genocide within the spectrum of democide: there was explicit and documented intent to destroy the Jewish people as a group. But his work places the Holocaust in comparative perspective with other democides of the century, something conventional historiography rarely does.',
     es: 'Rummel encuadra el Holocausto como el ejemplo más puro de genocidio dentro del espectro del democidio: había intención explícita y documentada de destruir al pueblo judío como grupo. Pero su trabajo coloca el Holocausto en perspectiva comparativa con otros democidios del siglo, algo que la historiografía convencional raramente hace.',
@@ -81,7 +81,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔将大屠杀定性为民主灭绝范围内种族灭绝的最纯粹例证：有明确且有记录的摧毁犹太民族作为整体的意图。但他的研究将大屠杀置于与本世纪其他民主灭绝的比较视角中——这是传统史学鲜少做到的。',
     ja: 'ルンメルはホロコーストをデモサイドのスペクトルにおけるジェノサイドの最も純粋な例として位置付けている：ユダヤ人民族を集団として破壊する明示的かつ記録された意図があった。しかし彼の研究はホロコーストを同世紀の他のデモサイドとの比較の視点に置いており、これは従来の歴史学がほとんどしてこなかったことだ。',
   },
-  'nazismo.cases.h3': {
+  'nazism.cases.h3': {
     pt: 'Outros grupos exterminados',
     en: 'Other Exterminated Groups',
     es: 'Otros grupos exterminados',
@@ -91,7 +91,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '其他被灭绝的群体',
     ja: '絶滅させられた他の集団',
   },
-  'nazismo.case1.label': {
+  'nazism.case1.label': {
     pt: 'Prisioneiros soviéticos de guerra',
     en: 'Soviet prisoners of war',
     es: 'Prisioneros soviéticos de guerra',
@@ -101,7 +101,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '苏联战俘',
     ja: 'ソ連軍捕虜',
   },
-  'nazismo.case1.val': {
+  'nazism.case1.val': {
     pt: '~3,3M mortos',
     en: '~3.3M killed',
     es: '~3,3M muertos',
@@ -111,7 +111,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '约330万人死亡',
     ja: '約330万人死亡',
   },
-  'nazismo.case1.desc': {
+  'nazism.case1.desc': {
     pt: 'Deliberadamente mortos por fome, exposição e execução. Uma das maiores atrocidades pouco discutidas da Segunda Guerra.',
     en: 'Deliberately killed by starvation, exposure, and execution. One of the least discussed major atrocities of World War II.',
     es: 'Deliberadamente muertos por hambre, exposición y ejecución. Una de las mayores atrocidades poco discutidas de la Segunda Guerra Mundial.',
@@ -121,7 +121,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '蓄意通过饥饿、暴露和处决杀害。二战中讨论最少的重大暴行之一。',
     ja: '意図的に飢餓、露出、処刑によって殺された。第二次世界大戦で最も語られることの少ない大規模残虐行為の一つ。',
   },
-  'nazismo.case2.label': {
+  'nazism.case2.label': {
     pt: 'Poloneses não-judeus',
     en: 'Non-Jewish Poles',
     es: 'Polacos no judíos',
@@ -131,7 +131,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '非犹太裔波兰人',
     ja: '非ユダヤ系ポーランド人',
   },
-  'nazismo.case2.val': {
+  'nazism.case2.val': {
     pt: '~1,8M mortos',
     en: '~1.8M killed',
     es: '~1,8M muertos',
@@ -141,7 +141,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '约180万人死亡',
     ja: '約180万人死亡',
   },
-  'nazismo.case2.desc': {
+  'nazism.case2.desc': {
     pt: 'Intelectuais, sacerdotes, líderes comunitários e civis nas operações de "limpeza" da população polonesa.',
     en: 'Intellectuals, priests, community leaders, and civilians in "cleansing" operations of the Polish population.',
     es: 'Intelectuales, sacerdotes, líderes comunitarios y civiles en operaciones de "limpieza" de la población polaca.',
@@ -151,7 +151,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '波兰"清洗"行动中的知识分子、神职人员、社区领袖和平民。',
     ja: 'ポーランド人「浄化」作戦における知識人、聖職者、コミュニティ指導者、市民。',
   },
-  'nazismo.case3.label': {
+  'nazism.case3.label': {
     pt: 'Programa T4 (eutanásia)',
     en: 'T4 Program (euthanasia)',
     es: 'Programa T4 (eutanasia)',
@@ -161,7 +161,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: 'T4行动（安乐死计划）',
     ja: 'T4作戦（安楽死計画）',
   },
-  'nazismo.case3.val': {
+  'nazism.case3.val': {
     pt: '~200–250K mortos',
     en: '~200–250K killed',
     es: '~200–250K muertos',
@@ -171,7 +171,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '约20–25万人死亡',
     ja: '約20万–25万人死亡',
   },
-  'nazismo.case3.desc': {
+  'nazism.case3.desc': {
     pt: 'Pessoas com deficiências físicas e mentais assassinadas sistematicamente como parte da política de "higiene racial".',
     en: 'People with physical and mental disabilities systematically murdered as part of the "racial hygiene" policy.',
     es: 'Personas con discapacidades físicas y mentales asesinadas sistemáticamente como parte de la política de "higiene racial".',
@@ -181,7 +181,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '残疾人士作为"种族卫生"政策的一部分被系统性地谋杀。',
     ja: '「人種衛生」政策の一環として、身体的・精神的障害を持つ人々が組織的に殺害された。',
   },
-  'nazismo.case4.label': {
+  'nazism.case4.label': {
     pt: 'Sinti e Roma',
     en: 'Sinti and Roma',
     es: 'Sinti y Roma',
@@ -191,7 +191,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '辛提人和罗姆人',
     ja: 'シンティとロマ',
   },
-  'nazismo.case4.val': {
+  'nazism.case4.val': {
     pt: '~500K–1M mortos',
     en: '~500K–1M killed',
     es: '~500K–1M muertos',
@@ -201,7 +201,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '约50–100万人死亡',
     ja: '約50万–100万人死亡',
   },
-  'nazismo.case4.desc': {
+  'nazism.case4.desc': {
     pt: 'Perseguição e extermínio dos povos ciganos na Europa ocupada.',
     en: 'Persecution and extermination of Romani peoples in occupied Europe.',
     es: 'Persecución y exterminio de los pueblos gitanos en la Europa ocupada.',
@@ -211,7 +211,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '在被占领的欧洲对吉普赛人民的迫害和灭绝。',
     ja: '占領下ヨーロッパにおけるロマ民族の迫害と絶滅。',
   },
-  'nazismo.case5.label': {
+  'nazism.case5.label': {
     pt: 'Trabalho forçado',
     en: 'Forced labor',
     es: 'Trabajo forzado',
@@ -221,7 +221,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '强制劳动',
     ja: '強制労働',
   },
-  'nazismo.case5.val': {
+  'nazism.case5.val': {
     pt: 'Centenas de milhares',
     en: 'Hundreds of thousands',
     es: 'Cientos de miles',
@@ -231,7 +231,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '数十万人',
     ja: '数十万人',
   },
-  'nazismo.case5.desc': {
+  'nazism.case5.desc': {
     pt: 'Trabalhadores forçados de toda a Europa ocupada, em condições deliberadamente letais.',
     en: 'Forced laborers from across occupied Europe, in deliberately lethal conditions.',
     es: 'Trabajadores forzados de toda la Europa ocupada, en condiciones deliberadamente letales.',
@@ -241,7 +241,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '来自整个被占领欧洲的强制工人，在蓄意致命的条件下工作。',
     ja: '占領下ヨーロッパ全域からの強制労働者が、意図的に致死的な条件下に置かれた。',
   },
-  'nazismo.section3.h2': {
+  'nazism.section3.h2': {
     pt: 'A perspectiva de Rummel', en: 'Rummel\'s Perspective', es: 'La perspectiva de Rummel',
     fr: 'La perspective de Rummel',
     it: 'La prospettiva di Rummel',
@@ -249,7 +249,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: 'Rummel的视角',
     ja: 'ルンメルの視点',
   },
-  'nazismo.section3.p1': {
+  'nazism.section3.p1': {
     pt: 'Em <em>Democide: Nazi Genocide and Mass Murder</em> (1992), Rummel analisa o regime nazista usando o mesmo framework metodológico aplicado a todos os outros casos: levantamento exaustivo de fontes, consolidação de estimativas e cálculo de intervalos de confiança. Sua conclusão reforça a tese central: a concentração absoluta de poder político e ideológico foi o que tornou possível o extermínio em escala industrial.',
     en: 'In <em>Democide: Nazi Genocide and Mass Murder</em> (1992), Rummel analyzes the Nazi regime using the same methodological framework applied to all other cases: exhaustive source survey, consolidation of estimates, and calculation of confidence intervals. His conclusion reinforces the central thesis: the absolute concentration of political and ideological power was what made extermination on an industrial scale possible.',
     es: 'En <em>Democide: Nazi Genocide and Mass Murder</em> (1992), Rummel analiza el régimen nazi usando el mismo marco metodológico aplicado a todos los demás casos: levantamiento exhaustivo de fuentes, consolidación de estimaciones y cálculo de intervalos de confianza. Su conclusión refuerza la tesis central: la concentración absoluta de poder político e ideológico fue lo que hizo posible el exterminio a escala industrial.',
@@ -259,7 +259,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '在《民主灭绝：纳粹种族灭绝与大规模谋杀》（1992年）中，鲁梅尔使用与所有其他案例相同的方法论框架分析了纳粹政权：全面的资料调查、估计值汇总以及置信区间计算。他的结论强化了核心论点：政治和意识形态权力的绝对集中是工业规模灭绝成为可能的原因。',
     ja: '『デモサイド：ナチスのジェノサイドと大量虐殺』（1992年）において、ルンメルはすべての他の事例に適用されたのと同じ方法論的枠組みでナチス政権を分析している：徹底的な資料調査、推定値の統合、信頼区間の計算。彼の結論は中心的論点を補強している：政治的・イデオロギー的権力の絶対的集中こそが工業的規模の絶滅を可能にしたものだと。',
   },
-  'nazismo.section3.p2': {
+  'nazism.section3.p2': {
     pt: 'Rummel também coloca o nazismo em perspectiva comparativa explícita com o comunismo soviético e chinês — uma comparação que muitos historiadores evitam por razões políticas, mas que seus dados tornam inevitável.',
     en: 'Rummel also places Nazism in explicit comparative perspective with Soviet and Chinese communism — a comparison many historians avoid for political reasons, but which his data makes inevitable.',
     es: 'Rummel también coloca el nazismo en perspectiva comparativa explícita con el comunismo soviético y chino — una comparación que muchos historiadores evitan por razones políticas, pero que sus datos hacen inevitable.',
@@ -269,7 +269,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔还将纳粹主义与苏联和中国共产主义进行了明确的比较——这是许多历史学家出于政治原因而回避的比较，但他的数据使其不可避免。',
     ja: 'ルンメルはナチズムをソ連と中国の共産主義との明示的な比較視点にも置いている——多くの歴史家が政治的理由から避けるこの比較を、彼のデータは不可避なものにしている。',
   },
-  'nazismo.sidebar.estimate.kicker': {
+  'nazism.sidebar.estimate.kicker': {
     pt: 'Estimativa de Rummel', en: 'Rummel\'s Estimate', es: 'Estimación de Rummel',
     fr: 'Estimation de Rummel',
     it: 'Stima di Rummel',
@@ -277,7 +277,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: 'Rummel的估计',
     ja: 'ルンメルの推定',
   },
-  'nazismo.sidebar.bignum.label': {
+  'nazism.sidebar.bignum.label': {
     pt: 'mortes · 1933–1945',
     en: 'deaths · 1933–1945',
     es: 'muertes · 1933–1945',
@@ -287,7 +287,7 @@ export const nazismo: Record<string, Record<Lang, string>> = {
     zh: '死亡 · 1933–1945',
     ja: '死者 · 1933–1945',
   },
-  'nazismo.sidebar.breakdown.kicker': {
+  'nazism.sidebar.breakdown.kicker': {
     pt: 'Componentes principais',
     en: 'Main Components',
     es: 'Componentes principales',

@@ -1,7 +1,7 @@
 import type { Lang } from '../index';
 
-export const socialismo: Record<string, Record<Lang, string>> = {
-  'socialismo.h1': {
+export const socialism: Record<string, Record<Lang, string>> = {
+  'socialism.h1': {
     pt: 'Socialismo',
     en: 'Socialism',
     es: 'Socialismo',
@@ -11,7 +11,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '社会主义政权',
     ja: '社会主義',
   },
-  'socialismo.subtitle': {
+  'socialism.subtitle': {
     pt: 'URSS · China · Camboja · Coreia do Norte',
     en: 'USSR · China · Cambodia · North Korea',
     es: 'URSS · China · Camboya · Corea del Norte',
@@ -21,7 +21,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '苏联 · 中国 · 柬埔寨 · 朝鲜',
     ja: 'ソ連 · 中国 · カンボジア · 北朝鮮',
   },
-  'socialismo.intro': {
+  'socialism.intro': {
     pt: 'Os regimes comunistas do século XX respondem pela maior parcela do democídio estimado por Rummel. Juntos, a União Soviética e a China comunista somam mais de 138 milhões de mortes — mais da metade do total global.',
     en: 'The communist regimes of the twentieth century account for the largest share of the democide estimated by Rummel. Together, the Soviet Union and communist China total more than 138 million deaths — more than half of the global total.',
     es: 'Los regímenes comunistas del siglo XX responden por la mayor parte del democidio estimado por Rummel. Juntos, la Unión Soviética y la China comunista suman más de 138 millones de muertes — más de la mitad del total global.',
@@ -31,7 +31,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '20世纪共产主义政权占鲁梅尔估计的民主灭绝总量的最大份额。苏联和共产主义中国合计造成1.38亿以上死亡——超过全球总数的一半。',
     ja: '20世紀の共産主義政権は、ルンメルが推定するデモサイドの最大の割合を占める。ソ連と共産主義中国を合わせると1億3800万人以上の死亡となり——世界の合計の半数以上にあたる。',
   },
-  'socialismo.urss.pais': {
+  'socialism.ussr.country': {
     pt: 'União Soviética',
     en: 'Soviet Union',
     es: 'Unión Soviética',
@@ -41,7 +41,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '苏联',
     ja: 'ソビエト連邦',
   },
-  'socialismo.china.pais': {
+  'socialism.china.country': {
     pt: 'China (Mao Tsé-Tung)',
     en: 'China (Mao Zedong)',
     es: 'China (Mao Zedong)',
@@ -51,7 +51,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '中国（毛泽东）',
     ja: '中国（毛沢東）',
   },
-  'socialismo.cambodia.pais': {
+  'socialism.cambodia.country': {
     pt: 'Camboja (Khmer Vermelho)',
     en: 'Cambodia (Khmer Rouge)',
     es: 'Camboya (Jemer Rojo)',
@@ -61,7 +61,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '柬埔寨（红色高棉）',
     ja: 'カンボジア（クメール・ルージュ）',
   },
-  'socialismo.vietnam.pais': {
+  'socialism.vietnam.country': {
     pt: 'Vietnã',
     en: 'Vietnam',
     es: 'Vietnam',
@@ -71,7 +71,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '越南',
     ja: 'ベトナム',
   },
-  'socialismo.korea.pais': {
+  'socialism.korea.country': {
     pt: 'Coreia do Norte',
     en: 'North Korea',
     es: 'Corea del Norte',
@@ -81,7 +81,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '朝鲜',
     ja: '北朝鮮',
   },
-  'socialismo.urss.gulag.nome': {
+  'socialism.ussr.gulag.name': {
     pt: 'Gulag',
     en: 'Gulag',
     es: 'Gulag',
@@ -91,7 +91,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '古拉格',
     ja: 'グラーグ',
   },
-  'socialismo.urss.gulag.desc': {
+  'socialism.ussr.gulag.desc': {
     pt: 'O sistema de campos de trabalho forçado que Rummel estima ter ceifado cerca de 39 milhões de vidas entre execuções, mortes por condições de trabalho e deportações.',
     en: 'The forced labor camp system that Rummel estimates claimed around 39 million lives through executions, deaths from working conditions, and deportations.',
     es: 'El sistema de campos de trabajo forzado que Rummel estima que se cobró alrededor de 39 millones de vidas entre ejecuciones, muertes por condiciones de trabajo y deportaciones.',
@@ -101,7 +101,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔估计，通过处决、恶劣工作条件致死和流放，该强制劳动营体系夺去了约3900万人的生命。',
     ja: 'ルンメルの推定では、処刑、劣悪な労働条件による死亡、強制移送を通じて約3900万人の命を奪った強制労働収容所システム。',
   },
-  'socialismo.urss.holodomor.nome': {
+  'socialism.ussr.holodomor.name': {
     pt: 'Holodomor',
     en: 'Holodomor',
     es: 'Holodomor',
@@ -111,7 +111,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '大饥荒（乌克兰）',
     ja: 'ホロドモール',
   },
-  'socialismo.urss.holodomor.desc': {
+  'socialism.ussr.holodomor.desc': {
     pt: 'A fome forçada na Ucrânia de 1932–1933. Rummel a classifica como democídio intencional: o Estado confiscou a produção de alimentos sabendo que a população morreria.',
     en: 'The forced famine in Ukraine of 1932–1933. Rummel classifies it as intentional democide: the State confiscated food production knowing the population would die.',
     es: 'La hambruna forzada en Ucrania de 1932–1933. Rummel la clasifica como democidio intencional: el Estado confiscó la producción de alimentos sabiendo que la población moriría.',
@@ -121,7 +121,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '1932–1933年乌克兰的强制饥荒。鲁梅尔将其归类为蓄意民主灭绝：国家在明知人民将会死亡的情况下没收了粮食生产。',
     ja: '1932–1933年のウクライナの強制飢饉。ルンメルはこれを意図的なデモサイドに分類している：国家は人民が死ぬことを知りながら食料生産を没収した。',
   },
-  'socialismo.urss.terror.nome': {
+  'socialism.ussr.terror.name': {
     pt: 'Grande Terror',
     en: 'Great Terror',
     es: 'Gran Terror',
@@ -131,7 +131,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '大清洗',
     ja: '大粛清',
   },
-  'socialismo.urss.terror.desc': {
+  'socialism.ussr.terror.desc': {
     pt: 'As purgas stalinistas de 1936–1938. Cerca de 750 mil execuções documentadas, mais centenas de milhares de mortes nos campos.',
     en: 'The Stalinist purges of 1936–1938. About 750,000 documented executions, plus hundreds of thousands of deaths in the camps.',
     es: 'Las purgas estalinistas de 1936–1938. Alrededor de 750 mil ejecuciones documentadas, más cientos de miles de muertes en los campos.',
@@ -141,7 +141,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '1936–1938年的斯大林大清洗。约有75万次有记录的处决，加上数十万在集中营中的死亡。',
     ja: '1936–1938年のスターリン粛清。約75万件の記録された処刑に加え、収容所でのさらに数十万の死亡。',
   },
-  'socialismo.urss.deportacoes.nome': {
+  'socialism.ussr.deportations.name': {
     pt: 'Deportações em massa',
     en: 'Mass deportations',
     es: 'Deportaciones masivas',
@@ -151,7 +151,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '大规模驱逐',
     ja: '大規模追放',
   },
-  'socialismo.urss.deportacoes.desc': {
+  'socialism.ussr.deportations.desc': {
     pt: 'Chechenos, tártaros da Crimeia, alemães do Volga e outros povos inteiros deportados para a Sibéria em condições deliberadamente letais.',
     en: 'Chechens, Crimean Tatars, Volga Germans, and other entire peoples deported to Siberia under deliberately lethal conditions.',
     es: 'Chechenos, tártaros de Crimea, alemanes del Volga y otros pueblos enteros deportados a Siberia en condiciones deliberadamente letales.',
@@ -161,7 +161,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '车臣人、克里米亚鞑靼人、伏尔加德意志人以及其他整个民族被驱逐到西伯利亚，条件蓄意致命。',
     ja: 'チェチェン人、クリミア・タタール人、ヴォルガ・ドイツ人、その他の民族全体が意図的に致死的な条件下でシベリアに追放された。',
   },
-  'socialismo.china.grandesalto.nome': {
+  'socialism.china.greatleap.name': {
     pt: 'Grande Salto Adiante',
     en: 'Great Leap Forward',
     es: 'Gran Salto Adelante',
@@ -171,7 +171,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '大跃进',
     ja: '大躍進',
   },
-  'socialismo.china.grandesalto.desc': {
+  'socialism.china.greatleap.desc': {
     pt: 'A fome de 1959–1961 causada pela coletivização forçada e pelas quotas de grãos que o Estado continuou exportando enquanto camponeses morriam. A maior fome da história humana.',
     en: 'The famine of 1959–1961 caused by forced collectivization and grain quotas the State continued exporting while peasants died. The largest famine in human history.',
     es: 'La hambruna de 1959–1961 causada por la colectivización forzada y las cuotas de granos que el Estado continuó exportando mientras los campesinos morían. La mayor hambruna de la historia humana.',
@@ -181,7 +181,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '1959–1961年的大饥荒，由强制集体化和国家在农民饿死时仍继续出口的粮食配额所致。人类历史上最大的饥荒。',
     ja: '強制集体化と農民が死にながらも国家が輸出し続けた穀物割当によって引き起こされた1959–1961年の飢饉。人類史上最大の飢饉。',
   },
-  'socialismo.china.revcultural.nome': {
+  'socialism.china.culturalrev.name': {
     pt: 'Revolução Cultural',
     en: 'Cultural Revolution',
     es: 'Revolución Cultural',
@@ -191,7 +191,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '文化大革命',
     ja: '文化大革命',
   },
-  'socialismo.china.revcultural.desc': {
+  'socialism.china.culturalrev.desc': {
     pt: 'A campanha de 1966–1976 que destruiu a classe intelectual chinesa, com execuções, suicídios e mortes nos campos de reeducação.',
     en: 'The 1966–1976 campaign that destroyed the Chinese intellectual class, with executions, suicides, and deaths in re-education camps.',
     es: 'La campaña de 1966–1976 que destruyó la clase intelectual china, con ejecuciones, suicidios y muertes en los campos de reeducación.',
@@ -201,7 +201,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '1966–1976年的运动摧毁了中国知识阶层，期间发生了处决、自杀和再教育营中的死亡。',
     ja: '1966–1976年の運動は中国の知識人階層を破壊し、処刑、自殺、再教育キャンプでの死亡をもたらした。',
   },
-  'socialismo.china.reformaagraria.nome': {
+  'socialism.china.landreform.name': {
     pt: 'Reforma Agrária',
     en: 'Land Reform',
     es: 'Reforma Agraria',
@@ -211,7 +211,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '土地改革',
     ja: '農業改革',
   },
-  'socialismo.china.reformaagraria.desc': {
+  'socialism.china.landreform.desc': {
     pt: 'A liquidação dos proprietários de terra após 1949, com julgamentos populares que terminavam em execução pública.',
     en: 'The liquidation of landowners after 1949, with people\'s tribunals that ended in public execution.',
     es: 'La liquidación de los propietarios de tierra después de 1949, con juicios populares que terminaban en ejecución pública.',
@@ -221,7 +221,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '1949年后对地主阶级的清算，通过以公开处决告终的人民法庭进行。',
     ja: '1949年以降の地主の粛清。公開処刑で終わる人民裁判とともに実施された。',
   },
-  'socialismo.china.laogai.nome': {
+  'socialism.china.laogai.name': {
     pt: 'Laogai',
     en: 'Laogai',
     es: 'Laogai',
@@ -231,7 +231,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '劳改',
     ja: '労改',
   },
-  'socialismo.china.laogai.desc': {
+  'socialism.china.laogai.desc': {
     pt: 'O sistema de trabalho forçado chinês, análogo ao Gulag soviético, operando desde 1950.',
     en: 'The Chinese forced labor system, analogous to the Soviet Gulag, operating since 1950.',
     es: 'El sistema de trabajo forzado chino, análogo al Gulag soviético, en funcionamiento desde 1950.',
@@ -241,7 +241,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '中国强制劳动体系，类似苏联古拉格，自1950年起运作。',
     ja: 'ソ連のグラーグに類似した中国の強制労働システムで、1950年から運営されている。',
   },
-  'socialismo.cambodia.phnompenh.nome': {
+  'socialism.cambodia.phnompenh.name': {
     pt: 'Evacuação de Phnom Penh',
     en: 'Evacuation of Phnom Penh',
     es: 'Evacuación de Phnom Penh',
@@ -251,7 +251,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '金边大撤离',
     ja: 'プノンペン強制疎開',
   },
-  'socialismo.cambodia.phnompenh.desc': {
+  'socialism.cambodia.phnompenh.desc': {
     pt: 'Em abril de 1975, toda a população de Phnom Penh (~2 milhões de pessoas) foi forçada a deixar a cidade em marchas letais.',
     en: 'In April 1975, the entire population of Phnom Penh (~2 million people) was forced to leave the city in lethal marches.',
     es: 'En abril de 1975, toda la población de Phnom Penh (~2 millones de personas) fue obligada a abandonar la ciudad en marchas letales.',
@@ -261,7 +261,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '1975年4月，金边全部人口（约200万人）被迫在致命的行军中离开城市。',
     ja: '1975年4月、プノンペンの全人口（約200万人）が致死的な行進の中で市外への退去を強制された。',
   },
-  'socialismo.cambodia.campos.nome': {
+  'socialism.cambodia.camps.name': {
     pt: 'Campos de trabalho forçado',
     en: 'Forced labor camps',
     es: 'Campos de trabajo forzado',
@@ -271,7 +271,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '强制劳动营',
     ja: '強制労働収容所',
   },
-  'socialismo.cambodia.campos.desc': {
+  'socialism.cambodia.camps.desc': {
     pt: 'A população foi redistribuída em "zonas cooperativas" com trabalho escravo, rações mínimas e execução por qualquer infração.',
     en: 'The population was redistributed into "cooperative zones" with slave labor, minimal rations, and execution for any infraction.',
     es: 'La población fue redistribuida en "zonas cooperativas" con trabajo esclavo, raciones mínimas y ejecución por cualquier infracción.',
@@ -281,7 +281,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '人口被重新分配到"合作区"，在奴役劳动、最低限度口粮和因任何违规而处决的条件下生活。',
     ja: '人口は「協同組合地帯」に再配置され、奴隷労働、最低限の食料、いかなる違反に対しても処刑が行われた。',
   },
-  'socialismo.cambodia.s21.nome': {
+  'socialism.cambodia.s21.name': {
     pt: 'S-21 e campos da morte',
     en: 'S-21 and killing fields',
     es: 'S-21 y campos de la muerte',
@@ -291,7 +291,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: 'S-21与杀戮场',
     ja: 'S-21と殺戮の場',
   },
-  'socialismo.cambodia.s21.desc': {
+  'socialism.cambodia.s21.desc': {
     pt: 'O centro de detenção e tortura em Phnom Penh. Apenas sete prisioneiros sobreviveram. Os campos da morte (Choeung Ek) receberam os restos.',
     en: 'The detention and torture center in Phnom Penh. Only seven prisoners survived. The killing fields (Choeung Ek) received the remains.',
     es: 'El centro de detención y tortura en Phnom Penh. Solo siete prisioneros sobrevivieron. Los campos de la muerte (Choeung Ek) recibieron los restos.',
@@ -301,7 +301,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '金边的拘留和酷刑中心。只有七名囚犯幸存。杀戮场（廖乌埃克）接收了遗骸。',
     ja: 'プノンペンの拘留・拷問施設。生き残った囚人はわずか7人。遺体は殺戮の場（チューン・エク）に送られた。',
   },
-  'socialismo.rummel.h2': {
+  'socialism.rummel.h2': {
     pt: 'A perspectiva de Rummel', en: 'Rummel\'s Perspective', es: 'La perspectiva de Rummel',
     fr: 'La perspective de Rummel',
     it: 'La prospettiva di Rummel',
@@ -309,7 +309,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: 'Rummel的视角',
     ja: 'ルンメルの視点',
   },
-  'socialismo.rummel.p1': {
+  'socialism.rummel.p1': {
     pt: 'Em <em>"How Many Did Communist Regimes Murder?"</em>, Rummel estima que regimes comunistas mataram entre 110 e 260 milhões de pessoas no século XX, com um valor central próximo de 110 milhões. A revisão de 2005 da estimativa chinesa elevou esse número significativamente.',
     en: 'In <em>"How Many Did Communist Regimes Murder?"</em>, Rummel estimates that communist regimes killed between 110 and 260 million people in the twentieth century, with a central value close to 110 million. The 2005 revision of the Chinese estimate raised this number significantly.',
     es: 'En <em>"How Many Did Communist Regimes Murder?"</em>, Rummel estima que los regímenes comunistas mataron entre 110 y 260 millones de personas en el siglo XX, con un valor central próximo a 110 millones. La revisión de 2005 de la estimación china elevó ese número significativamente.',
@@ -319,7 +319,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '在<em>《共产主义政权杀害了多少人？》</em>中，鲁梅尔估计共产主义政权在20世纪杀害了1.1亿至2.6亿人，中心值接近1.1亿。2005年对中国估计数的修订大幅提高了这一数字。',
     ja: '<em>「共産主義政権はどれほど多くの人を殺したか？」</em>において、ルンメルは共産主義政権が20世紀に1億1000万から2億6000万人を殺害したと推定し、中心値は約1億1000万人とした。2005年の中国推定値の修正でこの数字は大幅に増加した。',
   },
-  'socialismo.rummel.p2': {
+  'socialism.rummel.p2': {
     pt: 'Rummel é cuidadoso em distinguir os mecanismos: não foi a ideologia socialista <em>per se</em> que produziu o democídio, mas a concentração absoluta de poder que esses regimes criaram. A coletivização forçada, o controle estatal da alimentação, a eliminação de toda oposição — esses são os mecanismos. A ideologia foi o pretexto que os legitimou.',
     en: 'Rummel is careful to distinguish the mechanisms: it was not socialist ideology <em>per se</em> that produced democide, but the absolute concentration of power that these regimes created. Forced collectivization, state control of food, the elimination of all opposition — these are the mechanisms. Ideology was the pretext that legitimized them.',
     es: 'Rummel es cuidadoso en distinguir los mecanismos: no fue la ideología socialista <em>per se</em> la que produjo el democidio, sino la concentración absoluta de poder que estos regímenes crearon. La colectivización forzada, el control estatal de los alimentos, la eliminación de toda oposición — esos son los mecanismos. La ideología fue el pretexto que los legitimó.',
@@ -329,7 +329,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔谨慎地区分了机制：产生民主灭绝的不是社会主义意识形态本身，而是这些政权创造的权力绝对集中。强制集体化、国家对食物的控制、消灭一切反对力量——这些是机制。意识形态是使其合法化的借口。',
     ja: 'ルンメルはメカニズムを慎重に区別している：デモサイドを生み出したのは社会主義イデオロギー自体ではなく、これらの政権が作り出した権力の絶対的集中だった。強制集体化、食料の国家管理、あらゆる反対意見の排除——これらがメカニズムである。イデオロギーはそれらを正当化する口実だった。',
   },
-  'socialismo.sidebar.total.kicker': {
+  'socialism.sidebar.total.kicker': {
     pt: 'Total combinado',
     en: 'Combined total',
     es: 'Total combinado',
@@ -339,7 +339,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '合计总数',
     ja: '合計',
   },
-  'socialismo.sidebar.bignum.label': {
+  'socialism.sidebar.bignum.label': {
     pt: 'URSS + China (estimativa Rummel)',
     en: 'USSR + China (Rummel estimate)',
     es: 'URSS + China (estimación Rummel)',
@@ -349,7 +349,7 @@ export const socialismo: Record<string, Record<Lang, string>> = {
     zh: '苏联 + 中国（Rummel估计）',
     ja: 'ソ連 + 中国（ルンメル推定）',
   },
-  'socialismo.sidebar.regimes.kicker': {
+  'socialism.sidebar.regimes.kicker': {
     pt: 'Por regime',
     en: 'By regime',
     es: 'Por régimen',

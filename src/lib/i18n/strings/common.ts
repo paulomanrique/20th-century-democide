@@ -39,7 +39,7 @@ export const common: Record<string, Record<Lang, string>> = {
     zh: '查看分析 →',
     ja: '分析を見る →',
   },
-  'common.democidios.breadcrumb': {
+  'common.democides.breadcrumb': {
     pt: 'Democídios',
     en: 'Democides',
     es: 'Democidios',

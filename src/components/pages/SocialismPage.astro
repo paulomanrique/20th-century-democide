@@ -19,7 +19,7 @@ function link(id: string) {
 	const e = items.find((i) => i.id === id);
 	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
 }
-const fontes = [
+const sources = [
 	link('how-many-did-communism-murder'),
 	link('lethal-politics-note'),
 	link('reevaluating-chinas-democide'),
@@ -27,76 +27,76 @@ const fontes = [
 	link('khmer-rouge-and-rwandan-genocide-section'),
 ].filter(Boolean);
 
-const casos = [
-	{ paisKey: 'socialismo.urss.pais', mortes: '61,9M', periodo: '1917–1987',
-		eventos: [
-			{ nomeKey: 'socialismo.urss.gulag.nome', mortes: '~39M', descKey: 'socialismo.urss.gulag.desc' },
-			{ nomeKey: 'socialismo.urss.holodomor.nome', mortes: '~5M', descKey: 'socialismo.urss.holodomor.desc' },
-			{ nomeKey: 'socialismo.urss.terror.nome', mortes: '~750K diretas', descKey: 'socialismo.urss.terror.desc' },
-			{ nomeKey: 'socialismo.urss.deportacoes.nome', mortes: 'Centenas de milhares', descKey: 'socialismo.urss.deportacoes.desc' },
+const cases = [
+	{ countryKey: 'socialism.ussr.country', deaths: '61,9M', period: '1917–1987',
+		events: [
+			{ nameKey: 'socialism.ussr.gulag.name', deaths: '~39M', descKey: 'socialism.ussr.gulag.desc' },
+			{ nameKey: 'socialism.ussr.holodomor.name', deaths: '~5M', descKey: 'socialism.ussr.holodomor.desc' },
+			{ nameKey: 'socialism.ussr.terror.name', deaths: '~750K diretas', descKey: 'socialism.ussr.terror.desc' },
+			{ nameKey: 'socialism.ussr.deportations.name', deaths: 'Centenas de milhares', descKey: 'socialism.ussr.deportations.desc' },
 		],
 	},
-	{ paisKey: 'socialismo.china.pais', mortes: '76,7M', periodo: '1949–1976',
-		eventos: [
-			{ nomeKey: 'socialismo.china.grandesalto.nome', mortes: '~35–45M', descKey: 'socialismo.china.grandesalto.desc' },
-			{ nomeKey: 'socialismo.china.revcultural.nome', mortes: '~1–3M diretas', descKey: 'socialismo.china.revcultural.desc' },
-			{ nomeKey: 'socialismo.china.reformaagraria.nome', mortes: '~1–2M', descKey: 'socialismo.china.reformaagraria.desc' },
-			{ nomeKey: 'socialismo.china.laogai.nome', mortes: 'Centenas de milhares', descKey: 'socialismo.china.laogai.desc' },
+	{ countryKey: 'socialism.china.country', deaths: '76,7M', period: '1949–1976',
+		events: [
+			{ nameKey: 'socialism.china.greatleap.name', deaths: '~35–45M', descKey: 'socialism.china.greatleap.desc' },
+			{ nameKey: 'socialism.china.culturalrev.name', deaths: '~1–3M diretas', descKey: 'socialism.china.culturalrev.desc' },
+			{ nameKey: 'socialism.china.landreform.name', deaths: '~1–2M', descKey: 'socialism.china.landreform.desc' },
+			{ nameKey: 'socialism.china.laogai.name', deaths: 'Centenas de milhares', descKey: 'socialism.china.laogai.desc' },
 		],
 	},
-	{ paisKey: 'socialismo.cambodia.pais', mortes: '2,0M', periodo: '1975–1979',
-		eventos: [
-			{ nomeKey: 'socialismo.cambodia.phnompenh.nome', mortes: 'Dezenas de milhares', descKey: 'socialismo.cambodia.phnompenh.desc' },
-			{ nomeKey: 'socialismo.cambodia.campos.nome', mortes: 'Centenas de milhares', descKey: 'socialismo.cambodia.campos.desc' },
-			{ nomeKey: 'socialismo.cambodia.s21.nome', mortes: '~17.000 em S-21', descKey: 'socialismo.cambodia.s21.desc' },
+	{ countryKey: 'socialism.cambodia.country', deaths: '2,0M', period: '1975–1979',
+		events: [
+			{ nameKey: 'socialism.cambodia.phnompenh.name', deaths: 'Dezenas de milhares', descKey: 'socialism.cambodia.phnompenh.desc' },
+			{ nameKey: 'socialism.cambodia.camps.name', deaths: 'Centenas de milhares', descKey: 'socialism.cambodia.camps.desc' },
+			{ nameKey: 'socialism.cambodia.s21.name', deaths: '~17.000 em S-21', descKey: 'socialism.cambodia.s21.desc' },
 		],
 	},
 ];
 
 const breakdown = [
-	{ labelKey: 'socialismo.urss.pais', value: '61,9M' },
-	{ labelKey: 'socialismo.china.pais', value: '76,7M' },
-	{ labelKey: 'socialismo.cambodia.pais', value: '2,0M' },
-	{ labelKey: 'socialismo.vietnam.pais', value: '1,7M' },
-	{ labelKey: 'socialismo.korea.pais', value: '>1M' },
+	{ labelKey: 'socialism.ussr.country', value: '61,9M' },
+	{ labelKey: 'socialism.china.country', value: '76,7M' },
+	{ labelKey: 'socialism.cambodia.country', value: '2,0M' },
+	{ labelKey: 'socialism.vietnam.country', value: '1,7M' },
+	{ labelKey: 'socialism.korea.country', value: '>1M' },
 ];
 ---
 
 <Layout
-	title={`${t('socialismo.h1', lang)} | ${t('democidios.h1', lang)} | ${t('site.title', lang)}`}
-	description={t('socialismo.intro', lang)}
+	title={`${t('socialism.h1', lang)} | ${t('democides.h1', lang)} | ${t('site.title', lang)}`}
+	description={t('socialism.intro', lang)}
 	lang={lang}
 	currentPath="democidios/socialismo/"
 >
 	<div class="page-layout">
 		<div class="content">
 			<nav class="breadcrumb">
-				<a href={href('democidios/')}>{t('common.democidios.breadcrumb', lang)}</a>
+				<a href={href('democidios/')}>{t('common.democides.breadcrumb', lang)}</a>
 				<span>›</span>
-				<span>{t('socialismo.h1', lang)}</span>
+				<span>{t('socialism.h1', lang)}</span>
 			</nav>
 
 			<header class="page-header">
-				<h1>{t('socialismo.h1', lang)}</h1>
-				<p class="subtitle">{t('socialismo.subtitle', lang)}</p>
-				<p class="header-intro">{t('socialismo.intro', lang)}</p>
+				<h1>{t('socialism.h1', lang)}</h1>
+				<p class="subtitle">{t('socialism.subtitle', lang)}</p>
+				<p class="header-intro">{t('socialism.intro', lang)}</p>
 			</header>
 
-			{casos.map((caso) => (
+			{cases.map((entry) => (
 				<div class="country-section">
 					<div class="country-header">
-						<h2>{t(caso.paisKey, lang)}</h2>
+						<h2>{t(entry.countryKey, lang)}</h2>
 						<div class="country-stats">
-							<span class="cstat-num">{caso.mortes}</span>
-							<span class="cstat-period">{caso.periodo}</span>
+							<span class="cstat-num">{entry.deaths}</span>
+							<span class="cstat-period">{entry.period}</span>
 						</div>
 					</div>
 					<div class="events">
-						{caso.eventos.map((ev) => (
+						{entry.events.map((ev) => (
 							<div class="event">
 								<div class="event-header">
-									<span class="event-name">{t(ev.nomeKey, lang)}</span>
-									<span class="event-deaths">{ev.mortes}</span>
+									<span class="event-name">{t(ev.nameKey, lang)}</span>
+									<span class="event-deaths">{ev.deaths}</span>
 								</div>
 								<p class="event-desc">{t(ev.descKey, lang)}</p>
 							</div>
@@ -106,20 +106,20 @@ const breakdown = [
 			))}
 
 			<div class="prose-section">
-				<h2>{t('socialismo.rummel.h2', lang)}</h2>
-				<p set:html={t('socialismo.rummel.p1', lang)} />
-				<p set:html={t('socialismo.rummel.p2', lang)} />
+				<h2>{t('socialism.rummel.h2', lang)}</h2>
+				<p set:html={t('socialism.rummel.p1', lang)} />
+				<p set:html={t('socialism.rummel.p2', lang)} />
 			</div>
 		</div>
 
 		<aside class="sidebar">
 			<div class="sidebar-block sidebar-block--accent">
-				<p class="kicker">{t('socialismo.sidebar.total.kicker', lang)}</p>
+				<p class="kicker">{t('socialism.sidebar.total.kicker', lang)}</p>
 				<span class="big-num">~138M</span>
-				<p class="big-num-label">{t('socialismo.sidebar.bignum.label', lang)}</p>
+				<p class="big-num-label">{t('socialism.sidebar.bignum.label', lang)}</p>
 			</div>
 			<div class="sidebar-block">
-				<p class="kicker">{t('socialismo.sidebar.regimes.kicker', lang)}</p>
+				<p class="kicker">{t('socialism.sidebar.regimes.kicker', lang)}</p>
 				<ul class="breakdown">
 					{breakdown.map((b) => (
 						<li><span>{t(b.labelKey, lang)}</span><span>{b.value}</span></li>
@@ -129,7 +129,7 @@ const breakdown = [
 			<div class="sidebar-block">
 				<p class="kicker">{t('common.sources.kicker', lang)}</p>
 				<ul class="source-list">
-					{fontes.map((item) => item && (
+					{sources.map((item) => item && (
 						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>
 					))}
 				</ul>

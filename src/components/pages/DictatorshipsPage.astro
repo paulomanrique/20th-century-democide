@@ -19,84 +19,84 @@ function link(id: string) {
 	const e = items.find((i) => i.id === id);
 	return e ? { id: e.id, title: displayTitle(e.data.title, e.id) } : null;
 }
-const fontes = [
+const sources = [
 	link('democide-since-world-war-ii'),
 	link('lesser-murderers'),
 	link('definition-and-qualifications'),
 ].filter(Boolean);
 
-const paises = [
-	{ paisKey: 'ditaduras.guatemala.pais', mortes: '~200K', periodo: '1954–1996', descKey: 'ditaduras.guatemala.desc',
-		metodos: ['ditaduras.guatemala.m1','ditaduras.guatemala.m2','ditaduras.guatemala.m3','ditaduras.guatemala.m4'] },
-	{ paisKey: 'ditaduras.argentina.pais', mortes: '10–30K', periodo: '1976–1983', descKey: 'ditaduras.argentina.desc',
-		metodos: ['ditaduras.argentina.m1','ditaduras.argentina.m2','ditaduras.argentina.m3','ditaduras.argentina.m4'] },
-	{ paisKey: 'ditaduras.chile.pais', mortes: '~3K diretas', periodo: '1973–1990', descKey: 'ditaduras.chile.desc',
-		metodos: ['ditaduras.chile.m1','ditaduras.chile.m2','ditaduras.chile.m3','ditaduras.chile.m4'] },
-	{ paisKey: 'ditaduras.brasil.pais', mortes: '~400–500 documentados', periodo: '1964–1985', descKey: 'ditaduras.brasil.desc',
-		metodos: ['ditaduras.brasil.m1','ditaduras.brasil.m2','ditaduras.brasil.m3','ditaduras.brasil.m4'] },
-	{ paisKey: 'ditaduras.elsalvador.pais', mortes: '~70–75K', periodo: '1979–1992', descKey: 'ditaduras.elsalvador.desc',
-		metodos: ['ditaduras.elsalvador.m1','ditaduras.elsalvador.m2','ditaduras.elsalvador.m3','ditaduras.elsalvador.m4'] },
+const countries = [
+	{ countryKey: 'dictatorships.guatemala.country', deaths: '~200K', period: '1954–1996', descKey: 'dictatorships.guatemala.desc',
+		methods: ['dictatorships.guatemala.m1','dictatorships.guatemala.m2','dictatorships.guatemala.m3','dictatorships.guatemala.m4'] },
+	{ countryKey: 'dictatorships.argentina.country', deaths: '10–30K', period: '1976–1983', descKey: 'dictatorships.argentina.desc',
+		methods: ['dictatorships.argentina.m1','dictatorships.argentina.m2','dictatorships.argentina.m3','dictatorships.argentina.m4'] },
+	{ countryKey: 'dictatorships.chile.country', deaths: '~3K diretas', period: '1973–1990', descKey: 'dictatorships.chile.desc',
+		methods: ['dictatorships.chile.m1','dictatorships.chile.m2','dictatorships.chile.m3','dictatorships.chile.m4'] },
+	{ countryKey: 'dictatorships.brazil.country', deaths: '~400–500 documentados', period: '1964–1985', descKey: 'dictatorships.brazil.desc',
+		methods: ['dictatorships.brazil.m1','dictatorships.brazil.m2','dictatorships.brazil.m3','dictatorships.brazil.m4'] },
+	{ countryKey: 'dictatorships.elsalvador.country', deaths: '~70–75K', period: '1979–1992', descKey: 'dictatorships.elsalvador.desc',
+		methods: ['dictatorships.elsalvador.m1','dictatorships.elsalvador.m2','dictatorships.elsalvador.m3','dictatorships.elsalvador.m4'] },
 ];
 
 const breakdown = [
-	{ labelKey: 'ditaduras.guatemala.short', value: '~200K' },
-	{ labelKey: 'ditaduras.elsalvador.short', value: '~70K' },
-	{ labelKey: 'ditaduras.argentina.short', value: '10–30K' },
-	{ labelKey: 'ditaduras.chile.short', value: '~3K' },
-	{ labelKey: 'ditaduras.brasil.short', value: '~500' },
+	{ labelKey: 'dictatorships.guatemala.short', value: '~200K' },
+	{ labelKey: 'dictatorships.elsalvador.short', value: '~70K' },
+	{ labelKey: 'dictatorships.argentina.short', value: '10–30K' },
+	{ labelKey: 'dictatorships.chile.short', value: '~3K' },
+	{ labelKey: 'dictatorships.brazil.short', value: '~500' },
 ];
 ---
 
 <Layout
-	title={`${t('ditaduras.h1', lang)} | ${t('democidios.h1', lang)} | ${t('site.title', lang)}`}
-	description={t('ditaduras.intro', lang)}
+	title={`${t('dictatorships.h1', lang)} | ${t('democides.h1', lang)} | ${t('site.title', lang)}`}
+	description={t('dictatorships.intro', lang)}
 	lang={lang}
 	currentPath="democidios/ditaduras-latinas/"
 >
 	<div class="page-layout">
 		<div class="content">
 			<nav class="breadcrumb">
-				<a href={href('democidios/')}>{t('common.democidios.breadcrumb', lang)}</a>
+				<a href={href('democidios/')}>{t('common.democides.breadcrumb', lang)}</a>
 				<span>›</span>
-				<span>{t('ditaduras.breadcrumb', lang)}</span>
+				<span>{t('dictatorships.breadcrumb', lang)}</span>
 			</nav>
 
 			<header class="page-header">
-				<h1>{t('ditaduras.h1', lang)}</h1>
-				<p class="subtitle">{t('ditaduras.subtitle', lang)}</p>
-				<p class="header-intro">{t('ditaduras.intro', lang)}</p>
+				<h1>{t('dictatorships.h1', lang)}</h1>
+				<p class="subtitle">{t('dictatorships.subtitle', lang)}</p>
+				<p class="header-intro">{t('dictatorships.intro', lang)}</p>
 			</header>
 
-			{paises.map((p) => (
+			{countries.map((p) => (
 				<div class="country-section">
 					<div class="country-header">
-						<h2>{t(p.paisKey, lang)}</h2>
+						<h2>{t(p.countryKey, lang)}</h2>
 						<div class="country-stats">
-							<span class="cstat-num">{p.mortes}</span>
-							<span class="cstat-period">{p.periodo}</span>
+							<span class="cstat-num">{p.deaths}</span>
+							<span class="cstat-period">{p.period}</span>
 						</div>
 					</div>
 					<p class="country-desc">{t(p.descKey, lang)}</p>
 					<div class="methods">
-						{p.metodos.map((m) => <span class="method-tag">{t(m, lang)}</span>)}
+						{p.methods.map((m) => <span class="method-tag">{t(m, lang)}</span>)}
 					</div>
 				</div>
 			))}
 
 			<div class="prose-section">
-				<h2>{t('ditaduras.context.h2', lang)}</h2>
-				<p>{t('ditaduras.context.p1', lang)}</p>
-				<p>{t('ditaduras.context.p2', lang)}</p>
+				<h2>{t('dictatorships.context.h2', lang)}</h2>
+				<p>{t('dictatorships.context.p1', lang)}</p>
+				<p>{t('dictatorships.context.p2', lang)}</p>
 			</div>
 		</div>
 
 		<aside class="sidebar">
 			<div class="sidebar-block sidebar-block--accent">
-				<p class="kicker">{t('ditaduras.sidebar.pattern.kicker', lang)}</p>
-				<p class="sidebar-note">{t('ditaduras.sidebar.pattern.text', lang)}</p>
+				<p class="kicker">{t('dictatorships.sidebar.pattern.kicker', lang)}</p>
+				<p class="sidebar-note">{t('dictatorships.sidebar.pattern.text', lang)}</p>
 			</div>
 			<div class="sidebar-block">
-				<p class="kicker">{t('ditaduras.sidebar.countries.kicker', lang)}</p>
+				<p class="kicker">{t('dictatorships.sidebar.countries.kicker', lang)}</p>
 				<ul class="breakdown">
 					{breakdown.map((b) => (
 						<li><span>{t(b.labelKey, lang)}</span><span>{b.value}</span></li>
@@ -106,7 +106,7 @@ const breakdown = [
 			<div class="sidebar-block">
 				<p class="kicker">{t('common.sources.kicker', lang)}</p>
 				<ul class="source-list">
-					{fontes.map((item) => item && (
+					{sources.map((item) => item && (
 						<li><a href={toBase(`items/${item.id}/`)}>{item.title}</a></li>
 					))}
 				</ul>

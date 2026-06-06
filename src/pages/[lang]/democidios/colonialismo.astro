@@ -1,7 +1,7 @@
 ---
 import { LANGUAGES, DEFAULT_LANG } from '../../../lib/i18n';
 import type { Lang } from '../../../lib/i18n';
-import ColonialismoPage from '../../../components/pages/ColonialismoPage.astro';
+import ColonialismPage from '../../../components/pages/ColonialismPage.astro';
 
 export function getStaticPaths() {
 	return LANGUAGES.filter((l) => l.code !== DEFAULT_LANG).map((l) => ({
@@ -11,4 +11,4 @@ export function getStaticPaths() {
 
 const { lang } = Astro.params as { lang: Lang };
 ---
-<ColonialismoPage lang={lang} />
+<ColonialismPage lang={lang} />

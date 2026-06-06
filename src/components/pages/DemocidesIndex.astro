@@ -2,7 +2,7 @@
 import type { Lang } from '../../lib/i18n';
 import { t, localizedHref } from '../../lib/i18n';
 import Layout from '../../layouts/Layout.astro';
-import TrilhaNav from '../TrilhaNav.astro';
+import TrailNav from '../TrailNav.astro';
 
 interface Props {
 	lang: Lang;
@@ -12,71 +12,71 @@ const { lang } = Astro.props;
 const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
 const href = (slug: string) => `${base}${localizedHref(slug, lang)}`;
 
-const casos = [
-	{ regimeKey: 'democidios.regime.soviets', periodo: '1917–1987', mortes: '61,9M',
-		slug: 'socialismo', destaque: ['Gulag', 'Holodomor', 'Grande Terror', 'Deportações em massa'],
-		descKey: 'democidios.caso.soviets.desc', tagKey: 'democidios.tag.socialismo' },
-	{ regimeKey: 'democidios.regime.china', periodo: '1949–1976', mortes: '76,7M',
-		slug: 'socialismo', destaque: ['Grande Salto Adiante', 'Revolução Cultural', 'Reforma agrária'],
-		descKey: 'democidios.caso.china.desc', tagKey: 'democidios.tag.socialismo' },
-	{ regimeKey: 'democidios.regime.nazismo', periodo: '1933–1945', mortes: '20,9M',
-		slug: 'nazismo', destaque: ['Holocausto', 'Programa T4', 'Prisioneiros soviéticos', 'Trabalho forçado'],
-		descKey: 'democidios.caso.nazismo.desc', tagKey: 'democidios.tag.nazismo' },
-	{ regimeKey: 'democidios.regime.kmt', periodo: '1928–1949', mortes: '10,2M',
-		slug: null, destaque: ['Guerras civis', 'Execuções políticas', 'Fome de 1942–43'],
-		descKey: 'democidios.caso.kmt.desc', tagKey: 'democidios.tag.ditadura' },
-	{ regimeKey: 'democidios.regime.japan', periodo: '1900–1945', mortes: '5,9M',
-		slug: null, destaque: ['Nanquim', 'Manchúria', 'Filipinas', 'Prisioneiros de guerra'],
-		descKey: 'democidios.caso.japan.desc', tagKey: 'democidios.tag.militarismo' },
-	{ regimeKey: 'democidios.regime.cambodia', periodo: '1975–1979', mortes: '2,0M',
-		slug: 'socialismo', destaque: ['Evacuação forçada', 'Campos de trabalho', 'S-21', 'Campos da morte'],
-		descKey: 'democidios.caso.cambodia.desc', tagKey: 'democidios.tag.socialismo' },
-	{ regimeKey: 'democidios.regime.turkey', periodo: '1900–1923', mortes: '1,9M',
-		slug: null, destaque: ['Genocídio Armênio', 'Gregos e Assírios', 'Marchas da morte'],
-		descKey: 'democidios.caso.turkey.desc', tagKey: 'democidios.tag.etnonacionalismo' },
-	{ regimeKey: 'democidios.regime.colonies', periodo: '1900–1960', mortes: '~870K',
-		slug: 'colonialismo', destaque: ['Congo Belga', 'África do Sudoeste Alemã', 'Índia Britânica', 'Fomes coloniais'],
-		descKey: 'democidios.caso.colonies.desc', tagKey: 'democidios.tag.colonialismo' },
-	{ regimeKey: 'democidios.regime.latins', periodo: '1960–1990', mortes: '~300K',
-		slug: 'ditaduras-latinas', destaque: ['Argentina', 'Chile', 'Guatemala', 'Brasil'],
-		descKey: 'democidios.caso.latins.desc', tagKey: 'democidios.tag.autoritarismo' },
+const cases = [
+	{ regimeKey: 'democides.regime.soviets', period: '1917–1987', deaths: '61,9M',
+		slug: 'socialismo', highlights: ['Gulag', 'Holodomor', 'Grande Terror', 'Deportações em massa'],
+		descKey: 'democides.case.soviets.desc', tagKey: 'democides.tag.socialism' },
+	{ regimeKey: 'democides.regime.china', period: '1949–1976', deaths: '76,7M',
+		slug: 'socialismo', highlights: ['Grande Salto Adiante', 'Revolução Cultural', 'Reforma agrária'],
+		descKey: 'democides.case.china.desc', tagKey: 'democides.tag.socialism' },
+	{ regimeKey: 'democides.regime.nazism', period: '1933–1945', deaths: '20,9M',
+		slug: 'nazismo', highlights: ['Holocausto', 'Programa T4', 'Prisioneiros soviéticos', 'Trabalho forçado'],
+		descKey: 'democides.case.nazism.desc', tagKey: 'democides.tag.nazism' },
+	{ regimeKey: 'democides.regime.kmt', period: '1928–1949', deaths: '10,2M',
+		slug: null, highlights: ['Guerras civis', 'Execuções políticas', 'Fome de 1942–43'],
+		descKey: 'democides.case.kmt.desc', tagKey: 'democides.tag.dictatorship' },
+	{ regimeKey: 'democides.regime.japan', period: '1900–1945', deaths: '5,9M',
+		slug: null, highlights: ['Nanquim', 'Manchúria', 'Filipinas', 'Prisioneiros de guerra'],
+		descKey: 'democides.case.japan.desc', tagKey: 'democides.tag.militarism' },
+	{ regimeKey: 'democides.regime.cambodia', period: '1975–1979', deaths: '2,0M',
+		slug: 'socialismo', highlights: ['Evacuação forçada', 'Campos de trabalho', 'S-21', 'Campos da morte'],
+		descKey: 'democides.case.cambodia.desc', tagKey: 'democides.tag.socialism' },
+	{ regimeKey: 'democides.regime.turkey', period: '1900–1923', deaths: '1,9M',
+		slug: null, highlights: ['Genocídio Armênio', 'Gregos e Assírios', 'Marchas da morte'],
+		descKey: 'democides.case.turkey.desc', tagKey: 'democides.tag.ethnonationalism' },
+	{ regimeKey: 'democides.regime.colonies', period: '1900–1960', deaths: '~870K',
+		slug: 'colonialismo', highlights: ['Congo Belga', 'África do Sudoeste Alemã', 'Índia Britânica', 'Fomes coloniais'],
+		descKey: 'democides.case.colonies.desc', tagKey: 'democides.tag.colonialism' },
+	{ regimeKey: 'democides.regime.latins', period: '1960–1990', deaths: '~300K',
+		slug: 'ditaduras-latinas', highlights: ['Argentina', 'Chile', 'Guatemala', 'Brasil'],
+		descKey: 'democides.case.latins.desc', tagKey: 'democides.tag.authoritarianism' },
 ];
 ---
 
 <Layout
-	title={`${t('democidios.h1', lang)} | ${t('site.title', lang)}`}
-	description={t('democidios.intro', lang)}
+	title={`${t('democides.h1', lang)} | ${t('site.title', lang)}`}
+	description={t('democides.intro', lang)}
 	lang={lang}
 	currentPath="democidios/"
 >
 
-	<TrilhaNav current={3} position="top" lang={lang} />
+	<TrailNav current={3} position="top" lang={lang} />
 
 	<header class="page-header">
-		<h1>{t('democidios.h1', lang)}</h1>
-		<p class="intro">{t('democidios.intro', lang)}</p>
+		<h1>{t('democides.h1', lang)}</h1>
+		<p class="intro">{t('democides.intro', lang)}</p>
 	</header>
 
 	<div class="cases-grid">
-		{casos.map((caso) => (
-			<div class={`case-card ${caso.slug ? 'case-card--linked' : ''}`}>
+		{cases.map((entry) => (
+			<div class={`case-card ${entry.slug ? 'case-card--linked' : ''}`}>
 				<div class="case-top">
 					<div class="case-deaths">
-						<span class="deaths-num">{caso.mortes}</span>
+						<span class="deaths-num">{entry.deaths}</span>
 						<span class="deaths-label">{t('common.deaths.label', lang)}</span>
 					</div>
-					<span class="case-tag">{t(caso.tagKey, lang)}</span>
+					<span class="case-tag">{t(entry.tagKey, lang)}</span>
 				</div>
-				<h3 class="case-regime">{t(caso.regimeKey, lang)}</h3>
-				<p class="case-period">{caso.periodo}</p>
-				<p class="case-desc">{t(caso.descKey, lang)}</p>
+				<h3 class="case-regime">{t(entry.regimeKey, lang)}</h3>
+				<p class="case-period">{entry.period}</p>
+				<p class="case-desc">{t(entry.descKey, lang)}</p>
 				<ul class="case-highlights">
-					{caso.destaque.map((item) => (
+					{entry.highlights.map((item) => (
 						<li>{item}</li>
 					))}
 				</ul>
-				{caso.slug && (
-					<a href={href(`democidios/${caso.slug}/`)} class="case-link">
+				{entry.slug && (
+					<a href={href(`democidios/${entry.slug}/`)} class="case-link">
 						{t('common.see.analysis', lang)}
 					</a>
 				)}
@@ -85,11 +85,11 @@ const casos = [
 	</div>
 
 	<div class="total-bar">
-		<span class="total-label kicker">{t('democidios.total.label', lang)}</span>
-		<span class="total-num">{t('democidios.total.num', lang)}</span>
+		<span class="total-label kicker">{t('democides.total.label', lang)}</span>
+		<span class="total-num">{t('democides.total.num', lang)}</span>
 	</div>
 
-	<TrilhaNav current={3} position="bottom" lang={lang} />
+	<TrailNav current={3} position="bottom" lang={lang} />
 
 </Layout>
 

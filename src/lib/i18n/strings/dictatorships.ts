@@ -1,7 +1,7 @@
 import type { Lang } from '../index';
 
-export const ditaduras: Record<string, Record<Lang, string>> = {
-  'ditaduras.h1': {
+export const dictatorships: Record<string, Record<Lang, string>> = {
+  'dictatorships.h1': {
     pt: 'Ditaduras Latinas',
     en: 'Latin Dictatorships',
     es: 'Dictaduras Latinas',
@@ -11,7 +11,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '拉丁美洲独裁政权',
     ja: 'ラテン独裁政権',
   },
-  'ditaduras.subtitle': {
+  'dictatorships.subtitle': {
     pt: 'América Latina · Séculos XX',
     en: 'Latin America · 20th Century',
     es: 'América Latina · Siglo XX',
@@ -21,7 +21,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '拉丁美洲 · 20世纪',
     ja: 'ラテンアメリカ · 20世紀',
   },
-  'ditaduras.intro': {
+  'dictatorships.intro': {
     pt: 'As ditaduras latino-americanas do século XX produziram democídio em escala menor do que os regimes totalitários soviético e nazista, mas com métodos igualmente sistemáticos. Muitas operaram com apoio ou tolerância dos Estados Unidos no contexto da Guerra Fria. Na taxonomia de Rummel, enquadram-se entre os "menores assassinos" — regimes que mataram entre mil e um milhão de pessoas.',
     en: 'The Latin American dictatorships of the twentieth century produced democide on a smaller scale than the Soviet and Nazi totalitarian regimes, but with equally systematic methods. Many operated with US support or tolerance in the Cold War context. In Rummel\'s taxonomy, they fall among the "lesser murderers" — regimes that killed between one thousand and one million people.',
     es: 'Las dictaduras latinoamericanas del siglo XX produjeron democidio a menor escala que los regímenes totalitarios soviético y nazi, pero con métodos igualmente sistemáticos. Muchas operaron con apoyo o tolerancia de los Estados Unidos en el contexto de la Guerra Fría. En la taxonomía de Rummel, se encuadran entre los "menores asesinos" — regímenes que mataron entre mil y un millón de personas.',
@@ -31,7 +31,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '20世纪拉丁美洲独裁政权制造的民主灭绝规模小于苏联和纳粹极权政权，但手段同样系统化。许多政权在冷战背景下得到美国的支持或默许。在鲁梅尔的分类体系中，它们属于"较小杀手"——杀害人数在一千到一百万之间的政权。',
     ja: '20世紀のラテンアメリカの独裁政権は、ソ連とナチスの全体主義体制よりも小規模なデモサイドを生み出したが、同様に組織的な方法を用いた。多くは冷戦の文脈でアメリカの支援または黙認のもとで活動した。ルンメルの分類では、「より小さな殺人者」——千人から百万人を殺した政権——の中に位置する。',
   },
-  'ditaduras.breadcrumb': {
+  'dictatorships.breadcrumb': {
     pt: 'Ditaduras Latinas',
     en: 'Latin Dictatorships',
     es: 'Dictaduras Latinas',
@@ -41,7 +41,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '拉丁独裁政权',
     ja: 'ラテン独裁政権',
   },
-  'ditaduras.guatemala.pais': {
+  'dictatorships.guatemala.country': {
     pt: 'Guatemala',
     en: 'Guatemala',
     es: 'Guatemala',
@@ -51,7 +51,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '危地马拉',
     ja: 'グアテマラ',
   },
-  'ditaduras.guatemala.desc': {
+  'dictatorships.guatemala.desc': {
     pt: 'A Guerra Civil guatemalteca e as ditaduras que a conduziram produziram o maior democídio proporcional da América Latina. A Comissão para o Esclarecimento Histórico (ONU) concluiu que o Estado cometeu atos de genocídio contra populações indígenas Maia, particularmente durante o governo de Ríos Montt (1982–1983), apoiado pelos EUA.',
     en: 'The Guatemalan Civil War and the dictatorships that conducted it produced the largest proportional democide in Latin America. The Commission for Historical Clarification (UN) concluded that the State committed acts of genocide against Mayan indigenous populations, particularly during the government of Ríos Montt (1982–1983), supported by the US.',
     es: 'La Guerra Civil guatemalteca y las dictaduras que la condujeron produjeron el mayor democidio proporcional de América Latina. La Comisión para el Esclarecimiento Histórico (ONU) concluyó que el Estado cometió actos de genocidio contra poblaciones indígenas Mayas, particularmente durante el gobierno de Ríos Montt (1982–1983), apoyado por EE.UU.',
@@ -61,7 +61,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '危地马拉内战及其领导的独裁政权制造了拉丁美洲比例最高的民主灭绝。历史澄清委员会（联合国）得出结论，国家对玛雅土著人民实施了种族灭绝行为，尤其是在美国支持的里奥斯·蒙特政府（1982–1983年）期间。',
     ja: 'グアテマラ内戦とそれを主導した独裁政権は、ラテンアメリカで比例的に最大のデモサイドをもたらした。歴史解明委員会（国連）は、国家がマヤ先住民族に対してジェノサイドを犯したと結論付けた。特にアメリカに支持されたリオス・モント政権（1982–1983年）時代において。',
   },
-  'ditaduras.argentina.pais': {
+  'dictatorships.argentina.country': {
     pt: 'Argentina — Guerra Suja',
     en: 'Argentina — Dirty War',
     es: 'Argentina — Guerra Sucia',
@@ -71,7 +71,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '阿根廷——肮脏战争',
     ja: 'アルゼンチン——汚い戦争',
   },
-  'ditaduras.argentina.desc': {
+  'dictatorships.argentina.desc': {
     pt: 'A junta militar argentina implementou um programa sistemático de sequestro, tortura e assassinato de opositores políticos. Os "desaparecidos" eram frequentemente jogados vivos ao mar. A Comissão Nacional sobre o Desaparecimento de Pessoas documentou 8.961 casos, mas estima-se que o número real seja de 10 a 30 mil.',
     en: 'The Argentine military junta implemented a systematic program of kidnapping, torture, and murder of political opponents. The "disappeared" were often thrown alive into the sea. The National Commission on the Disappearance of Persons documented 8,961 cases, but the real number is estimated at 10 to 30 thousand.',
     es: 'La junta militar argentina implementó un programa sistemático de secuestro, tortura y asesinato de opositores políticos. Los "desaparecidos" eran frecuentemente arrojados vivos al mar. La Comisión Nacional sobre la Desaparición de Personas documentó 8.961 casos, pero se estima que el número real es de 10 a 30 mil.',
@@ -81,7 +81,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '阿根廷军政府对政治反对派实施了系统性的绑架、酷刑和杀害计划。"失踪者"经常被活着投入大海。关于人员失踪问题的全国委员会记录了8961个案例，但估计实际人数为1万至3万。',
     ja: 'アルゼンチン軍事政権は政治的反対者に対する組織的な誘拐、拷問、殺害プログラムを実施した。「失踪者」はしばしば生きたまま海に投げ込まれた。人員失踪問題に関する国家委員会は8961件を記録したが、実際の数は1万から3万と推定されている。',
   },
-  'ditaduras.chile.pais': {
+  'dictatorships.chile.country': {
     pt: 'Chile — Pinochet',
     en: 'Chile — Pinochet',
     es: 'Chile — Pinochet',
@@ -91,7 +91,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '智利——皮诺切特',
     ja: 'チリ——ピノチェト',
   },
-  'ditaduras.chile.desc': {
+  'dictatorships.chile.desc': {
     pt: 'O golpe de 11 de setembro de 1973 foi seguido pela Caravana da Morte e por uma sistemática eliminação de opositores. O Informe Rettig documentou 2.279 mortos e desaparecidos; o Informe Valech, 27.000 torturados. O número de mortos é menor que outros casos, mas o programa de tortura foi excepcionalmente abrangente.',
     en: 'The September 11, 1973 coup was followed by the Caravan of Death and a systematic elimination of opponents. The Rettig Report documented 2,279 dead and disappeared; the Valech Report, 27,000 tortured. The death toll is smaller than other cases, but the torture program was exceptionally comprehensive.',
     es: 'El golpe del 11 de septiembre de 1973 fue seguido por la Caravana de la Muerte y una sistemática eliminación de opositores. El Informe Rettig documentó 2.279 muertos y desaparecidos; el Informe Valech, 27.000 torturados. El número de muertos es menor que otros casos, pero el programa de tortura fue excepcionalmente amplio.',
@@ -101,7 +101,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '1973年9月11日政变后紧随死亡车队，并系统性地消灭反对者。雷蒂格报告记录了2279名死亡和失踪者；瓦莱赫报告记录了27000名遭受酷刑者。死亡人数少于其他案例，但酷刑计划异常全面。',
     ja: '1973年9月11日のクーデターは死のキャラバンと組織的な反対派の抹殺に続いた。レティグ報告は2279人の死者と失踪者を記録し、バレフ報告は2万7000人の拷問被害者を記録した。死者数は他の事例より少ないが、拷問プログラムは例外的に包括的だった。',
   },
-  'ditaduras.brasil.pais': {
+  'dictatorships.brazil.country': {
     pt: 'Brasil — Ditadura Militar',
     en: 'Brazil — Military Dictatorship',
     es: 'Brasil — Dictadura Militar',
@@ -111,7 +111,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '巴西——军事独裁',
     ja: 'ブラジル——軍事独裁',
   },
-  'ditaduras.brasil.desc': {
+  'dictatorships.brazil.desc': {
     pt: 'A ditadura brasileira foi relativamente menos letal em mortes diretas do que Argentina e Chile, mas operou uma vasta rede de tortura. A Comissão Nacional da Verdade (2014) documentou 434 mortos e desaparecidos políticos. A tortura foi usada sistematicamente contra presos políticos, com cumplicidade de setores da Igreja e do Judiciário.',
     en: 'The Brazilian dictatorship was relatively less lethal in direct deaths than Argentina and Chile, but operated a vast torture network. The National Truth Commission (2014) documented 434 dead and politically disappeared. Torture was used systematically against political prisoners, with complicity from sectors of the Church and Judiciary.',
     es: 'La dictadura brasileña fue relativamente menos letal en muertes directas que Argentina y Chile, pero operó una vasta red de tortura. La Comisión Nacional de la Verdad (2014) documentó 434 muertos y desaparecidos políticos. La tortura fue utilizada sistemáticamente contra los presos políticos, con complicidad de sectores de la Iglesia y el Poder Judicial.',
@@ -121,7 +121,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '巴西独裁政权在直接死亡方面相对比阿根廷和智利更少，但运作了庞大的酷刑网络。全国真相委员会（2014年）记录了434名死亡和政治失踪者。酷刑被系统性地用于政治犯，教会和司法机构的某些部门参与其中。',
     ja: 'ブラジルの独裁政権は直接的な死者数ではアルゼンチンとチリより相対的に少なかったが、広大な拷問ネットワークを運営した。国家真実委員会（2014年）は434人の死者と政治的失踪者を記録した。拷問は政治犯に対して組織的に使用され、教会と司法の一部が共謀した。',
   },
-  'ditaduras.elsalvador.pais': {
+  'dictatorships.elsalvador.country': {
     pt: 'El Salvador',
     en: 'El Salvador',
     es: 'El Salvador',
@@ -131,7 +131,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '萨尔瓦多',
     ja: 'エルサルバドル',
   },
-  'ditaduras.elsalvador.desc': {
+  'dictatorships.elsalvador.desc': {
     pt: 'A Guerra Civil salvadorenha incluiu o Massacre de El Mozote (1981), onde forças militares assassinaram cerca de 900 civis, incluindo crianças. Os Esquadrões da Morte — vinculados ao Estado — operaram com impunidade. O relatório da ONU atribuiu 85% das violações às forças governamentais.',
     en: 'The Salvadoran Civil War included the El Mozote Massacre (1981), where military forces murdered around 900 civilians, including children. The Death Squads — linked to the State — operated with impunity. The UN report attributed 85% of violations to government forces.',
     es: 'La Guerra Civil salvadoreña incluyó la Masacre de El Mozote (1981), donde fuerzas militares asesinaron a cerca de 900 civiles, incluidos niños. Los Escuadrones de la Muerte — vinculados al Estado — operaron con impunidad. El informe de la ONU atribuyó el 85% de las violaciones a las fuerzas gubernamentales.',
@@ -141,7 +141,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '萨尔瓦多内战包括埃尔莫索特大屠杀（1981年），军事力量杀害了约900名平民，包括儿童。与国家有联系的死亡小队肆无忌惮地活动。联合国报告将85%的侵权行为归因于政府军。',
     ja: 'エルサルバドル内戦には、軍が子供を含む約900人の民間人を殺害したエル・モソテの虐殺（1981年）が含まれる。国家と連携した死の部隊は処罰なしに活動した。国連報告は違反の85%を政府軍に帰した。',
   },
-  'ditaduras.context.h2': {
+  'dictatorships.context.h2': {
     pt: 'O contexto de Rummel', en: 'Rummel\'s Context', es: 'El contexto de Rummel',
     fr: 'Le contexte de Rummel',
     it: 'Il contesto di Rummel',
@@ -149,7 +149,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: 'Rummel的背景分析',
     ja: 'ルンメルの文脈',
   },
-  'ditaduras.context.p1': {
+  'dictatorships.context.p1': {
     pt: 'Rummel classifica a maioria das ditaduras latino-americanas entre o que chama de "centi-killers" e "lesser murderers" — regimes que mataram entre mil e cem mil pessoas. Numericamente menores do que os megamurderers, mas não menos importantes para compreender o fenômeno do democídio.',
     en: 'Rummel classifies most Latin American dictatorships among what he calls "centi-killers" and "lesser murderers" — regimes that killed between one thousand and one hundred thousand people. Numerically smaller than the megamurderers, but no less important for understanding the phenomenon of democide.',
     es: 'Rummel clasifica la mayoría de las dictaduras latinoamericanas entre lo que llama "centi-killers" y "lesser murderers" — regímenes que mataron entre mil y cien mil personas. Numéricamente menores que los megamurderers, pero no menos importantes para comprender el fenómeno del democidio.',
@@ -159,7 +159,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '鲁梅尔将大多数拉丁美洲独裁政权归类为他所称的"百杀者"和"较小杀手"——杀害人数在一千到十万之间的政权。数量上比大杀手小，但对理解民主灭绝现象同样重要。',
     ja: 'ルンメルはラテンアメリカの独裁政権の大部分を彼が「センチキラー」と「より小さな殺人者」と呼ぶもの——千人から十万人を殺した政権——に分類している。数字ではメガマーダーより小さいが、デモサイドの現象を理解する上で劣らず重要だ。',
   },
-  'ditaduras.context.p2': {
+  'dictatorships.context.p2': {
     pt: 'Um padrão recorrente em sua análise: o envolvimento dos Estados Unidos. Seja no golpe chileno (operação CONDOR), no treinamento de militares argentinos, no apoio à Junta guatemalteca ou na contrainsurgência salvadorenha, a potência democrática mais poderosa do mundo repetidamente apoiou regimes que praticavam democídio — uma contradição que Rummel não evita discutir.',
     en: 'A recurring pattern in his analysis: US involvement. Whether in the Chilean coup (Operation CONDOR), the training of Argentine military, support for the Guatemalan Junta, or Salvadoran counterinsurgency, the world\'s most powerful democracy repeatedly supported regimes that practiced democide — a contradiction Rummel does not avoid discussing.',
     es: 'Un patrón recurrente en su análisis: el involucramiento de los Estados Unidos. Ya sea en el golpe chileno (operación CÓNDOR), en el entrenamiento de militares argentinos, en el apoyo a la Junta guatemalteca o en la contrainsurgencia salvadoreña, la potencia democrática más poderosa del mundo apoyó repetidamente regímenes que practicaban el democidio — una contradicción que Rummel no evita discutir.',
@@ -169,7 +169,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '他分析中反复出现的模式：美国的参与。无论是智利政变（神鹰行动）、对阿根廷军人的训练、对危地马拉军政府的支持，还是萨尔瓦多反叛乱行动，世界上最强大的民主国家反复支持实施民主灭绝的政权——鲁梅尔并不回避讨论这一矛盾。',
     ja: '彼の分析における繰り返されるパターン：アメリカの関与。チリのクーデター（コンドル作戦）でも、アルゼンチン軍の訓練でも、グアテマラ軍事政権への支援でも、エルサルバドルの反乱鎮圧でも、世界最強の民主主義国はデモサイドを実践した政権を繰り返し支援した——ルンメルはこの矛盾を議論することを避けない。',
   },
-  'ditaduras.sidebar.pattern.kicker': {
+  'dictatorships.sidebar.pattern.kicker': {
     pt: 'Padrão comum',
     en: 'Common Pattern',
     es: 'Patrón común',
@@ -179,7 +179,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '共同模式',
     ja: '共通パターン',
   },
-  'ditaduras.sidebar.pattern.text': {
+  'dictatorships.sidebar.pattern.text': {
     pt: 'Apoio ou tolerância dos EUA, tortura sistemática, desaparecimentos, impunidade garantida por anistias.',
     en: 'US support or tolerance, systematic torture, disappearances, impunity guaranteed by amnesties.',
     es: 'Apoyo o tolerancia de EE.UU., tortura sistemática, desapariciones, impunidad garantizada por amnistías.',
@@ -189,7 +189,7 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '美国的支持或默许、系统性酷刑、强迫失踪、特赦保障的有罪不罚。',
     ja: 'アメリカの支援または黙認、組織的拷問、強制失踪、恩赦で保証された不処罰。',
   },
-  'ditaduras.sidebar.countries.kicker': {
+  'dictatorships.sidebar.countries.kicker': {
     pt: 'Por país',
     en: 'By country',
     es: 'Por país',
@@ -199,120 +199,120 @@ export const ditaduras: Record<string, Record<Lang, string>> = {
     zh: '按国家',
     ja: '国別',
   },
-  'ditaduras.guatemala.short': {
+  'dictatorships.guatemala.short': {
     pt: 'Guatemala', en: 'Guatemala', es: 'Guatemala', fr: 'Guatemala',
     it: 'Guatemala', de: 'Guatemala', zh: '危地马拉', ja: 'グアテマラ',
   },
-  'ditaduras.argentina.short': {
+  'dictatorships.argentina.short': {
     pt: 'Argentina', en: 'Argentina', es: 'Argentina', fr: 'Argentine',
     it: 'Argentina', de: 'Argentinien', zh: '阿根廷', ja: 'アルゼンチン',
   },
-  'ditaduras.chile.short': {
+  'dictatorships.chile.short': {
     pt: 'Chile', en: 'Chile', es: 'Chile', fr: 'Chili',
     it: 'Cile', de: 'Chile', zh: '智利', ja: 'チリ',
   },
-  'ditaduras.brasil.short': {
+  'dictatorships.brazil.short': {
     pt: 'Brasil', en: 'Brazil', es: 'Brasil', fr: 'Brésil',
     it: 'Brasile', de: 'Brasilien', zh: '巴西', ja: 'ブラジル',
   },
-  'ditaduras.elsalvador.short': {
+  'dictatorships.elsalvador.short': {
     pt: 'El Salvador', en: 'El Salvador', es: 'El Salvador', fr: 'Salvador',
     it: 'El Salvador', de: 'El Salvador', zh: '萨尔瓦多', ja: 'エルサルバドル',
   },
-  'ditaduras.guatemala.m1': {
+  'dictatorships.guatemala.m1': {
     pt: 'Massacres de aldeia', en: 'Village massacres', es: 'Masacres de aldea',
     fr: 'Massacres de village', it: 'Massacri di villaggi', de: 'Dorfmassaker',
     zh: '村庄屠杀', ja: '村落虐殺',
   },
-  'ditaduras.guatemala.m2': {
+  'dictatorships.guatemala.m2': {
     pt: 'Terra arrasada', en: 'Scorched earth', es: 'Tierra arrasada',
     fr: 'Terre brûlée', it: 'Terra bruciata', de: 'Verbrannte Erde',
     zh: '焦土政策', ja: '焦土作戦',
   },
-  'ditaduras.guatemala.m3': {
+  'dictatorships.guatemala.m3': {
     pt: 'Desaparecimentos', en: 'Disappearances', es: 'Desapariciones',
     fr: 'Disparitions', it: 'Sparizioni', de: 'Verschwindenlassen',
     zh: '强迫失踪', ja: '強制失踪',
   },
-  'ditaduras.guatemala.m4': {
+  'dictatorships.guatemala.m4': {
     pt: 'Tortura sistemática', en: 'Systematic torture', es: 'Tortura sistemática',
     fr: 'Torture systématique', it: 'Tortura sistematica', de: 'Systematische Folter',
     zh: '系统性酷刑', ja: '組織的拷問',
   },
-  'ditaduras.argentina.m1': {
+  'dictatorships.argentina.m1': {
     pt: 'Centros clandestinos de detenção', en: 'Clandestine detention centers',
     es: 'Centros clandestinos de detención', fr: 'Centres de détention clandestins',
     it: 'Centri di detenzione clandestini', de: 'Geheime Haftzentren',
     zh: '秘密拘留中心', ja: '秘密収容所',
   },
-  'ditaduras.argentina.m2': {
+  'dictatorships.argentina.m2': {
     pt: 'Voos da morte', en: 'Death flights', es: 'Vuelos de la muerte',
     fr: 'Vols de la mort', it: 'Voli della morte', de: 'Todesflüge',
     zh: '死亡航班', ja: '死のフライト',
   },
-  'ditaduras.argentina.m3': {
+  'dictatorships.argentina.m3': {
     pt: 'Tortura', en: 'Torture', es: 'Tortura', fr: 'Torture',
     it: 'Tortura', de: 'Folter', zh: '酷刑', ja: '拷問',
   },
-  'ditaduras.argentina.m4': {
+  'dictatorships.argentina.m4': {
     pt: 'Sequestro de crianças', en: 'Child abduction', es: 'Secuestro de niños',
     fr: "Enlèvement d'enfants", it: 'Rapimento di bambini', de: 'Kindesentführung',
     zh: '诱拐儿童', ja: '児童誘拐',
   },
-  'ditaduras.chile.m1': {
+  'dictatorships.chile.m1': {
     pt: 'Estádio Nacional', en: 'National Stadium', es: 'Estadio Nacional',
     fr: 'Stade national', it: 'Stadio Nazionale', de: 'Nationalstadion',
     zh: '国家体育场', ja: '国立競技場',
   },
-  'ditaduras.chile.m2': {
+  'dictatorships.chile.m2': {
     pt: 'Villa Grimaldi', en: 'Villa Grimaldi', es: 'Villa Grimaldi',
     fr: 'Villa Grimaldi', it: 'Villa Grimaldi', de: 'Villa Grimaldi',
     zh: '格里马尔迪庄园', ja: 'ヴィラ・グリマルディ',
   },
-  'ditaduras.chile.m3': {
+  'dictatorships.chile.m3': {
     pt: 'Tortura sistemática', en: 'Systematic torture', es: 'Tortura sistemática',
     fr: 'Torture systématique', it: 'Tortura sistematica', de: 'Systematische Folter',
     zh: '系统性酷刑', ja: '組織的拷問',
   },
-  'ditaduras.chile.m4': {
+  'dictatorships.chile.m4': {
     pt: 'Exílio forçado', en: 'Forced exile', es: 'Exilio forzado',
     fr: 'Exil forcé', it: 'Esilio forzato', de: 'Zwangsexil',
     zh: '强制流亡', ja: '強制亡命',
   },
-  'ditaduras.brasil.m1': {
+  'dictatorships.brazil.m1': {
     pt: 'DOI-CODI', en: 'DOI-CODI', es: 'DOI-CODI', fr: 'DOI-CODI',
     it: 'DOI-CODI', de: 'DOI-CODI', zh: 'DOI-CODI', ja: 'DOI-CODI',
   },
-  'ditaduras.brasil.m2': {
+  'dictatorships.brazil.m2': {
     pt: 'Tortura', en: 'Torture', es: 'Tortura', fr: 'Torture',
     it: 'Tortura', de: 'Folter', zh: '酷刑', ja: '拷問',
   },
-  'ditaduras.brasil.m3': {
+  'dictatorships.brazil.m3': {
     pt: 'Desaparecimentos', en: 'Disappearances', es: 'Desapariciones',
     fr: 'Disparitions', it: 'Sparizioni', de: 'Verschwindenlassen',
     zh: '强迫失踪', ja: '強制失踪',
   },
-  'ditaduras.brasil.m4': {
+  'dictatorships.brazil.m4': {
     pt: 'Censura e perseguição', en: 'Censorship and persecution',
     es: 'Censura y persecución', fr: 'Censure et persécution',
     it: 'Censura e persecuzione', de: 'Zensur und Verfolgung',
     zh: '审查与迫害', ja: '検閲と迫害',
   },
-  'ditaduras.elsalvador.m1': {
+  'dictatorships.elsalvador.m1': {
     pt: 'Esquadrões da Morte', en: 'Death squads', es: 'Escuadrones de la Muerte',
     fr: 'Escadrons de la mort', it: 'Squadroni della morte', de: 'Todesschwadronen',
     zh: '死亡小队', ja: '暗殺部隊',
   },
-  'ditaduras.elsalvador.m2': {
+  'dictatorships.elsalvador.m2': {
     pt: 'El Mozote', en: 'El Mozote', es: 'El Mozote', fr: 'El Mozote',
     it: 'El Mozote', de: 'El Mozote', zh: '埃尔莫索特', ja: 'エル・モソテ',
   },
-  'ditaduras.elsalvador.m3': {
+  'dictatorships.elsalvador.m3': {
     pt: 'Massacre sistemático', en: 'Systematic massacre', es: 'Masacre sistemática',
     fr: 'Massacre systématique', it: 'Massacro sistematico', de: 'Systematisches Massaker',
     zh: '系统性屠杀', ja: '組織的虐殺',
   },
-  'ditaduras.elsalvador.m4': {
+  'dictatorships.elsalvador.m4': {
     pt: 'Tortura', en: 'Torture', es: 'Tortura', fr: 'Torture',
     it: 'Tortura', de: 'Folter', zh: '酷刑', ja: '拷問',
   },
