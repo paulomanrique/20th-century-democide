@@ -1,0 +1,154 @@
+---
+title: "WF.CHAP8.HTM"
+itemId: wf-chap8
+collection: articles-and-papers
+originalUrl: "https://www.hawaii.edu/powerkills/WF.CHAP8.HTM"
+sourceType: original
+sourceUsed: "https://www.hawaii.edu/powerkills/WF.CHAP8.HTM"
+captureDate: "2026-06-06T03:18:13.665Z"
+provenance:
+  sourceId: hawaii-powerkills
+  rawPath: data/raw/hawaii-edu/wf-chap8.html
+  hash: 042060880099a966e43776ec00d8a899e684eb03d0fb586d5d7a59c6e4999119
+originalFormat: html
+assets: []
+editorialNotes:
+  - Automated Markdown conversion. Review formatting before treating as fully normalized.
+draft: false
+---
+# Chapter 8
+
+## Freedom is a Right  
+and Creates  
+Human Security[\*](#*)
+
+  
+  
+  
+  
+
+We have identified power with greatness, thugs with statesmen, and propaganda with results; we have let moral and cultural relativism silence our outrage, while conceding the moral high ground to the utopian dreamers; we have refused to recognize evil as evil; and we have ignored the catastrophic human cost of such confusions  
+\----This web site
+
+  
+  
+  
+  
+
+The best way to sum up this book is by reference to [Table 8.1](WF.TAB.8.1.GIF). In the top Table 8.1a one can clearly see the difference that freedom makes in the wealth and prosperity of a people. The greater their freedom, the more their purchasing power compared to other nations, the less their poverty, and the greater their human development. In short, freedom is the way to economic and social human security.
+
+Book's [Table of Contents](NOTE15.HTM)
+
+#### Related Documents On This Site
+
+["An Enlightened Foreign Policy"](MTF.CHAP8.HTM)
+
+["Waging denuclearization and social justice through democracy"](DENUKE.ART.HTM)
+
+["Democratization"](DEMOC.HTM)
+
+["Convocation Speech"](CONVOCATION.HTM)
+
+[_Freeman_ Interview of R.J. Rummel](FREEMAN.INTERVIEW.HTM)
+
+[_City Times_ Interviews with Laissez Faire Thinkers: R.J. Rummel](INTERVIEW.ITALY.HTM)
+
+There is more to human security than wealth and prosperity. There is also the security of knowing that one's life and that of one's loved ones are safe from lethal repression, genocide and mass murder, and deadly famines. Here Table 8.1b of [Table 8.1](WF.TAB.8.1.GIF) could not be more consistent-the more freedom of a people, the less their deaths due to famine, genocide and mass murder, and international and civil war. The [Appendix](WF.APPENDIX.HTM) to this book tests these and related statistics in various wars to make sure that freedom is, indeed, the factor responsible for greater human security. Given the scientific analyses there I can assert with considerable confidence that freedom is in fact what it appears to be in [Table 8.1](WF.TAB.8.1.GIF), and what I have claimed for it in the previous chapters, which is that _the freedom of a people is the cause of their greater wealth and prosperity, of human development, and of security from violence_.
+
+But as important as the statistics of these tables and those in the [Appendix](WF.APPENDIX.HTM) are, they are still only statistics and miss the sheer misery, pain, and horror of the unfree. They reflect a wretched and bloody Hell: billions of human beings are subject to absolute privation, exposure, famine, disease, torture, beatings, forced labor, genocide, mass murder, executions, deportations, political violence, and war. These billions live in fear for their lives, and for that of their lived ones. They have no human rights, no liberties. These pitiful people are only pieces on a playing board for the armed thugs and gangs that oppress their nations, raping them, looting them, exploiting them, and murdering them. We hide the identity of the gangs--we sanctify them--with the benign concept of "government," as in the "government" of Khmer Rouge Cambodia, Stalin's Soviet Union, or Hitler's Germany.
+
+The gangs that control these so-called governments oppress whole nations under cover of international law. They are like a gang that captures a group of hikers and then does with them what it wills, robbing all, torturing and murdering some because gang members don't like them or they are "disobedient," and raping others. Nonetheless, they "govern" by the right of sovereignty: the community of nations explicitly grants them the right by international law to govern a nation when they show that they effectively control the national government, and this right carries with it the promise that other nations will not intervene in their internal affairs. International law now recognizes that if these gangs go to extremes, such as massive ethnic cleansing or genocide, than the international community has a countervailing right to stop them. However, this area of international law is still developing, and as we saw in the current examples of Sudan, Burma, North Korea, Rwanda, Saudi Arabia, and China, and one could include Cuba, Pakistan, Iran, Iraq, and Syria, among others, the thugs still largely have their way with their victims.
+
+![Goya prowess](/assets/images/WF8.GOYA.PROWESS.JPG)
+
+This is unconscionable. As I showed in [Chapter 2](WF.CHAP2.HTM), citizens of all countries--a Chinese peasant, a Sudanese Black, a Saudi Arabian woman, or a Burmese Karen, and all six billion other people--have the right to freedom of speech, religion, organization, a fair trial, among other rights, and all these civil and political rights are subsumed by one overarching right to be free. This right overrules sovereignty, which is _granted_ according to tradition based on a system of international treaties, not natural law. Freedom, by contrast, is not something others grant you. It is a right due every human being. It can only be taken from a people and denied them by force of arms, by power.
+
+For too many intellectuals, however, it is not enough to point out that a people have a right to be free. They will counter by arguing that freedom is desirable, but first people must be made equal, given food to eat, work, and health care. Freedom must be limited as a means to good ends, such as the public welfare, prosperity, peace, ethnic unity, or national honor. There is a cottage industry among intellectuals who go about creating such justifications for denying people their freedom. Sometimes they are so persuasive that even reasonable people will accept their convoluted arguments. Need I mention the works of Marx and Lenin, for example, who provided "scientific" excuses for the tyranny of such thugs as Stalin, Mao, and Pol Pot? There even were many now-forgotten, or now-excused, intellectuals and other influential figures that praised the economic efficiency and progressiveness of Hitler and Mussolini before World War II. And one should not ignore the large number of Western intellectual, academics, and students who fell in love with Mao Tse-tung, some even carrying around his _Red Book_ of Mao quotations, while this absolute, tyrannical dictator of communist China murdered millions of people, created the world's greatest famine through his policies, and caused a civil war--the Cultural Revolution--that killed millions more.  
+  
+
+![Nazi murder](/assets/images/WF8.NAZ.MURDER.JPG)
+
+For many compassionate people, such intellectuals arguing that freedom must be sacrificed for a better life have had the best of the argument and the moral high ground. These intellectuals have tried to show that freedom empowers greed, barbaric competition, inefficiency, inequality, the debasement of morals, the weakening of ethnic or racial identity, and so on. In spite of the international certification of freedom as a human right by the United Nations, and treaties and agreements among nations, those defending freedom often feel guilty, as though they somehow lack sympathy for the poor and oppressed. For example, you might have heard it said of communist Castro's barbaric rule over the Cuban people: "After all, the Cubans have free medical care, a good educational system, and a right to work." Never mind that Castro is responsible for the murder of tens of thousands of Cubans, the torture, and beating of many more, and the imprisonment of vast numbers of those who have only protested their lack of rights.
+
+To be defensive about freedom in the face of such justifications is morally wrong headed. No moral code or civil law allows that a gang leader and his followers can murder, torture, and repress others at will as long as it enables them to provide their families with a good life. But even were it accepted that under the cover of government authority, a ruler can murder and repress his people so as it promotes human betterment, the burden of proof is on those who argue that therefore a people will be better off.
+
+And there is no such proof. Quite the opposite: in the twentieth century we have had the most costly and extensive tests of such arguments, involving billions of people. The Nazis, Italian fascists under Mussolini, Japanese militarists, and Chinese Nationalists under Chiang Kai-shek, have tested fascist promises of a better life. Likewise, Lenin, Stalin, Mao, and Pol Pot have tested the Utopian promises of communism, to mention the most prominent communist experiments; and Burma, Iraq, and Syria, among others, have as well tested state socialism. All these vast social experiments have failed, utterly and miserably, and they have done so at the vast human cost that has included global social upheaval, the displacement of millions, the impoverishment of billions, the death of tens of millions from famine, extreme internal violence, and the most destructive wars--not to mention the many tens of millions more murdered outright. _These social experiments carried out by force against billions of people have produced a vast nation of the dead, which if it were a sovereign country would be among the world's top ten in population._  
+  
+
+![Death by firing squad](/assets/images/WF8.GOYA.NOREMEDY.JPG)
+
+In sharp contrast, there are the arguments for freedom, which is, as I have shown in previous chapters, not only a right, _but a supreme moral good in itself_. The very fact of a people's freedom creates a better life for all, as sown in [Table 8.1](WF.TAB.8.1.GIF) and the [Appendix](WF.APPENDIX.HTM). As shown, free people create a _wealthy and prosperous society_. When people are free to go about their own business, they put their ingenuity and creativity in the service of all. They search for ways to satisfy the needs, desires, wants of others. The true Utopia lies not in some state-sponsored tyranny, but the free market in goods, ideas, and services, whose operating principle is that success depends on satisfying others. As described in [Chapter 4](WF.CHAP4.HTM), Bill Gates of Microsoft did not become a billionaire by stealing people's money, looting their possessions, taxing them and secreting money away in Switzerland, or using public funds to build himself mansions. No one _had_ to buy Gates' products or invest in his company. He became the world's richest man by providing people with computer software that they wanted, and that made easier their life or work. People rarely do things for others because they are completely selfless--we set aside and admire those rare Mother Theresas that are. Rather, almost all act out of self-interest, and it is therefore better to create a society in which self-interest leads to mutual betterment, rather than one in which a small coterie of fanatics exert their own self-interest at the expense of the lives and welfare of others.
+
+What underlines this moral good of freedom even more is the independence and incentives the farmer or peasant has to best use his land to produce crops and food that people need to live. The result is that in a democratically free country like the United States, farmers produce so much food as to create a surplus that the government then buys, stores, and grants in aid to poor countries. At the same time, in many of those countries where the rulers have denied their farmers any freedom in order to achieve some Utopian future, where they order farmers what to grow, where, and how, and at what prices to sell the resulting crops, famines have killed tens of millions of people. The roll call of these famines is long, but must include the Soviet Union, China, Ethiopia, Somalia, Sudan, Cambodia, and North Korea. It is not by chance, as shown in [Table 8.1](WF.TAB.8.1.GIF) that _no democratically free people have suffered from mass famine_.  
+  
+
+![N. Korean famine](/assets/images/WF8.NK.FAMINE.JPG)
+
+It is extraordinary how little known this is. There are plenty of hunger projects and plans to increase food aid for the starving millions, all of which is good enough in the short run. A starving person will die before the people can kick out their rulers or make them reform their policies. Yet simply feeding the starving today is not enough. They also have to be fed tomorrow and every day thereafter. However, free these people from their rulers' commands over their farming, and soon they will be able to feed themselves and others as well. There is a clich� about this: give a starving person a fish to eat and you feed him only for one day; teach him how to fish, and he feeds himself forever. Yet teaching is no good alone if a person is not free to apply their new knowledge: yes, teach them how to fish, but also promote the freedom they need to do so.
+
+Yet, the incredible economic productivity and wealth produced by a free people and their freedom from famines are not the only or perhaps even the most important moral good of freedom. When people are free, they comprise a spontaneous society the characteristics of which _strongly inhibit society-wide political violence_, as shown in [Table 8.1](WF.TAB.8.1.GIF). Freedom greatly reduces the possibility of revolutions, civil war, rebellions, guerrilla warfare, coups, violent riots, and the like. Most of the violence within nations occurs where thugs rule with absolute power. There is a continuum here. _The more power that the rulers have, and the less their people are free, then the more internal violence these people will suffer_.
+
+Keep in mind that throughout the world people are essentially the same. It is not that the people of any culture, civilization, or nation are by nature any more bloodthirsty, barbaric, power-hungry, or violent than those of another. What makes for peace within a nation is not national character, but social conditions that reduce tension and hostility between people, lessen the stakes of conflict, cross-pressure interests, and promote negotiation, tolerance, and compromise. Such are the conditions created by democratic freedom. The more a people are free, the greater such conditions inhibit internal violence. _Surely that which protects people against internal violence, that which so saves human lives, is a moral good. And this is freedom_.  
+  
+
+![Nazi mass murder](/assets/images/WF8.MASSMURDER.JPG)
+
+Then there is mass democide, the most destructive of human lives than any other form of violence. Except in the case of the Nazi Holocaust of European Jews, few people know how murderous the dictators of this world have been and could be. Virtually unknown is the fact that the number of non-Jewish Poles, Russians, Ukrainians, Yugoslavs, Frenchmen, Germans, and on, [murdered by Hitler](NAZIS.TAB1.1.GIF) surpasses by two or three times the Jews he killed. Then there are the shocking [tens of millions](DBG.TAB1.2.GIF) murdered by Stalin and Mao, and the [other millions](DBG.TAB1.3.GIF) wiped out by Pol Pot, Ho Chi Minh, Kim Il-sung, and their kind. Just omitting foreigners, who are most often murdered during a war, such thugs have murdered about 123,000,000 of their own people from 1900 to 1987. Adding foreigners they have killed raises the toll to an incredible near [170,000,000](DBG.TAB1.2.GIF). Adding to this unbelievable toll since 1987 is the million people the Hutu rulers of Rwanda may have slaughtered in four months ([Chapter 6](WF.CHAP6.HTM). Even now, these mass murders still go on in Burma, Sudan, Afghanistan, North Korea, Rwanda, Burundi, Zaire, Sierra Leone, Liberia, and the Congo, just to mention the most glaring examples.  
+  
+
+![Serb democide](/assets/images/WF8.SERB.DEMOCIDE.JPG)
+
+It should be clear, then, why I refer to the rulers of these murderous regimes as _thugs_. I am not a diplomat nor government official and do not have to worry about the delicate sensitivities of these rulers. I can speak truth to power, and call thugs the thugs they are. As should be clear from this book and web site, they often murder people by carefully thought out plans, they set up a bureaucracy to do so, they train people for this purpose, and then they order the killing. Sometimes they murder people because of their race, ethnicity, or religion; their parents or other relative's political activities, or beliefs, or speech; or their lack of proper enthusiasm for their glorious rulers. Sometimes they established a murder quota to fill, or kill people randomly to set an example. While we can approximate how many these thugs have killed, we cannot even guess at the heartbreak and misery these deaths have caused their loved ones, and how many of these grieving survivors have died of a broken heart or committed suicide.
+
+Moreover, the term murder hardly carries the full weight of the pain and misery of the victims. Some lucky ones died quickly with a shot to the back of the head, or had their head decapitated. Most died quite wretchedly, in pain from torture or beatings; by drowning, being buried or burned alive; or in agony from wounds. Many died from intentionally administered starvation, thirst, exposure, or disease. Some died horribly as the result of repeated human medical experiments. We have no pain/misery index to measure all this except for the incredible pile of corpses these thugs have created in nearly one century. We must assume that a penumbra of pain and misery, of love and hope squashed, and a future stolen surrounds each of these millions of corpses.  
+  
+
+![Castration](/assets/images/WF8.GOYA.CASTRATED.JPG)
+
+What is true about freedom and internal violence is also so for this mass democide. As clear from [Table 8.1](WF.TAB.8.1.GIF), _the more freedom a people have, the less likely their rulers are to murder them. The more power the thugs have, the more likely they will murder their people. Could there be a greater moral good than to end or minimize such mass murder? This is what freedom does and for this it is, emphatically, a moral good_.
+
+This is still more to say about freedom's value. While we now know that the world's ruling thugs generally kill several times more of their subjects than do wars, it is war on which moralists and pacifists generally focus their hatred, and their resources to end or moderate it. This singular concentration is understandable given the horror and human costs, and vital political significance of war. Yet, it should be clear by now that war is a symptom of freedom's denial; and that freedom is the cure. Three points bear repeating from [Chapter 7](WF.CHAP7.HTM).
+
+First, _democratically free people do not make war on each other_. This is so important that some scientists have made this historical fact the subject of whole books, such as Bruce Russett's _Grasping The Democratic Peace_, James Lee Ray's _Democracy and International Conflict_, and Spencer R. Weart's _Never At War_. There is a very good explanation for why democracies do not make war on each other, and it is the same as that for why there is by far the least internal violence and democide within democracies. The diverse groups, cross-national bonds, social links, and shared values of democratic peoples sew them together; and shared liberal values dispose them toward peaceful negotiation and compromise with each other. It is as though the people of democratic nations were one society. _The truth about democracies not making war on each other gives us a way of eliminating war from the world: globalize democratic freedom_.
+
+This solution is far in the future, however. It may only kick in when most nations are democratized. Therefore the second point: _the less free the people within any two nations, the bloodier and more destructive the wars between them; the greater their freedom, the less such wars_.
+
+And third, as seen in [Table 8.1](WF.TAB.8.1.GIF): _the more freedom the people of a nation have, the less bloody and destructive their wars_.
+
+What this means is that we do not have to wait for all, or almost all, nations to become liberal democracies to reduce the severity of war. As we promote freedom, as the people of more and more nations gain greater human rights and political liberties, as those people without any freedom become partly free, we will decrease the bloodiness of the world's wars. In short, _increasing freedom in the world decreases the death toll of its wars. Surely, whatever reduces, and then finally ends, the scourge of war from our history, without causing a greater evil, must be a moral good. And this is freedom_.
+
+![Hiroshima](/assets/images/WF8.HIROSHIMA.JPG)
+
+The implications of this for foreign policy and international activism are profound. Since peace, national security, and national welfare are the paramount concerns of a democratic nation's foreign policy, clearly the overriding goal should be to peacefully promote human rights and democratic freedom. This should be the bottom line of international negotiations, treaties, foreign aid, and military action (if necessary for defense or humanitarian reasons, as in Kosovo or Bosnia). As to defense policy, military planning is based on assessments of intentions and capability. What is clear is that the less the people of a nation are free, the more we should beware of the intentions of their rulers. In other words, it is not the democracies of the world that we need to defend against.
+
+Moreover, think about what the peace-creating power of freedom means for nuclear weapons. Many people are justly worried about the ultimate danger to humanity--nuclear war. They protest and demonstrate against nuclear weapons. Some cross the line into illegal activities, such as destroying military property, and risk prison to draw public attention to the danger of such weapons. Were these dedicated people to spend even half this effort on promoting freedom and human rights for the people of the most powerful dictatorships that have or may soon have such weapons--for instance, China, North Korea, Iraq, and Iran--they would be striking at the _root cause_ for the risk of nuclear attack.
+
+The power of freedom to end war, minimize violence within nations, and eradicate genocide and mass murder, almost seems magical. It is as though we have a single-drug cure for cancer. Had I not actually done much of the research myself over more than forty years, of which the most recent is shown on this web site, I would have doubted all this. Yet, my work and that of other social scientists and scholars have proven it true.
+
+Our knowledge of the peace-creating and peace-making effects of freedom now gives us a nonviolent way to promote a nonviolent world. As should now be clear, _democratic freedom is a method of nonviolence_. Enhancing, spreading, and promoting human rights and democracy are the way to enhance, spread, and promote nonviolence. Proponents of nonviolence have worked out many peaceful tactics for opposing dictators, such as sit-down strikes, general strikes, mass demonstrations, refusal to pay taxes, underground newspapers, sabotage by excessive obedience to the rules, and the like. Much thought has gone into how a people can nonviolently promote human rights. Overall, however, nonviolence works best among a free people, and _freedom itself promotes a nonviolent solution to social problems and conflicts_.
+
+In conclusion, then, we have then a wondrous human freedom as a moral force for the good. _It produces social justice, creates wealth and prosperity, minimizes violence, saves human lives, and is a solution to war_. In two words, it creates _human security_. Moreover, and most important, _you should not only be free because of how good it is for you. You should be free because it is your right as a human being_
+
+In opposition to freedom is power, its antonym. While freedom is a right, the power to govern is a privilege granted by a people to those they elect, and can hold responsible for its use. Too often, however, thugs seize control of a people with their guns and use them to make their power total and absolute. Where freedom produces wealth and prosperity, such absolute power causes impoverishment and famine. Where freedom minimizes internal violence, eliminates genocide and mass murder, and solves the problem of war, such absolute power unleashes internal violence, murders millions, and produces the bloodiest wars. In short, _power kills, absolute power kills absolutely_.
+
+Now, to summarize this whole book, why freedom?
+
+_Because it is your right. And it is a moral good-- it promotes wealth and prosperity, social justice, and nonviolence, and preserves human life_.
+
+* * *
+
+### NOTES
+
+> \* Written for this web site. I am indebted to Judson Knight for his careful editing and helpful comments on a draft of this chapter.  
+>   
+> 
+> * * *
+> 
+>   
+> 
+> You are the  visitor since 11/23/02
+> 
+> Go to [top](#TOP) of document  
+> Go to the [book's Appendix](WF.APPENDIX.HTM).
+> 
+> Go to [Table of Contents](NOTE15.HTM).
