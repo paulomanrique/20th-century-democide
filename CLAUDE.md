@@ -2,6 +2,15 @@
 
 Open-source preservation archive for R.J. Rummel's *powerkills* corpus (`hawaii.edu/powerkills`, starting from `20TH.HTM`). Static Astro site published on GitHub Pages with full provenance metadata, local asset copies, and a multilingual editorial layer.
 
+## 0. Language rule — English everywhere in code
+
+All project-authored artifacts must be written in **English**: file names, code comments, variable/function/class names, commit messages, script output/log messages, internal notes, and documentation.
+
+Exceptions (the only places non-English text belongs):
+- translated UI strings in `src/lib/i18n/strings/*.ts`;
+- translated editorial page content under `src/pages/[lang]/`;
+- the preserved corpus itself (verbatim, whatever language the source uses).
+
 ---
 
 ## 1. Mission and core principle
